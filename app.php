@@ -93,6 +93,47 @@
     <br>
 
     <div class="card">
+      <h5 class="card-header">History</h5>
+      <div class="card-body">
+        <style>
+          code {
+            font-size: 12pt;
+          }
+        </style>
+        <table class="table table-bordered table-striped">
+          <tr>
+            <th>Date</th>
+            <th>
+              Pouches Used
+            </th>
+            <th>
+              Total Mgs
+            </th>
+          </tr>
+
+          <?php
+
+          $history = pouchGetHistoryArray($username);
+
+          for ($i = 0; $i < sizeof($history); $i++) {
+            $historydate = $history[$i];
+
+            $historytotalmgs = pouchGetMgs($username,$historydate);
+            $historytotalpouches = pouchGetPouches($username,$historydate);
+
+            echo "<tr><td>".$historydate."</td><td>".$historytotalpouches."</td><td>".$historytotalmgs."</td></tr>";
+          }
+
+          ?>
+
+        </table>
+      </div>
+    </div>
+
+    <br>
+
+
+    <div class="card">
       <h5 class="card-header">Announcements</h5>
       <div class="card-body">
 
@@ -111,7 +152,7 @@
       </div>
     </div>
 
-
+    <!-- Clear Statistics for today popup -->
     <div class="modal fade" id="reset" tabindex="-1" aria-labelledby="reset" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -130,7 +171,7 @@
       </div>
     </div>
 
-
+    <!-- Delete Account popup -->
     <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="reset" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
