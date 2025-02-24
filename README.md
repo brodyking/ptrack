@@ -1,4 +1,4 @@
-# ptrack v2 - track your nicotine intake
+# ptrack v2.1 - track your nicotine intake
 
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 
