@@ -71,6 +71,12 @@ function userSessionGet($username)
     return -1;
 }
 
+function userChangePassword($username,$password) {
+    $pathto = userPathTo($username);
+    file_put_contents($pathto.$username.".password",$password);
+    return 0;
+}
+
 // POUCH FUNCTIONS
 function pouchInit($username, $day)
 {
