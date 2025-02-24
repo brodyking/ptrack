@@ -42,4 +42,6 @@ pouchExists(USERNAME,DAY) --BOOL-- returns true if there is a database for a giv
 pouchAdd(USERNAME,DAY,STRENGTH) --INT-- returns 0 after adding a pouch and its strength to the database.
 pouchGetMgs(USERNAME,DAY) --STRING-- returns total number of mgs for that day.
 pouchGetPouches(USERNAME,DAY) --STRING-- returns the total number of pouches for that day.
-
+pouchGetHistoryString(USERNAME) --STRING-- returns all dates as a string with a space between each.
+pouchGetHistoryArray(USERNAME) --ARRAY-- returns an array of all the dates in a users db.
+pouchGetHistoryOfDayArray(USERNAME,DAY) --ARRAY-- returns an array ["totalmgs"] and ["totalpouches"]
