@@ -69,7 +69,6 @@
             }
           });
         </script>
-        <br>
         <table class="table table-bordered table-striped">
           <tr>
             <th>Date</th>
