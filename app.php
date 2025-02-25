@@ -267,7 +267,9 @@
       &middot;
       <a style="text-decoration: none;" href="paperwork.php">Terms of Service</a>
       &middot;
-      <a style="text-decoration: none;" href="#" data-bs-toggle="modal" data-bs-target="#delete">Delete my Account</a>
+      <a style="text-decoration: none;" href="changepswd.php?username=<?php echo $username . "&id=" . $id?>">Change Password</a>
+      &middot;
+      <a style="text-decoration: none;" href="#" data-bs-toggle="modal" data-bs-target="#delete">Delete Account</a>
     </p>
 
     <script src="assets/js/bootstrap.js"></script>

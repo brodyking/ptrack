@@ -38,6 +38,9 @@
         case "deleted":
           echo '<div class="alert alert-success" role="alert">Account Deleted</div>';
           break;
+        case "passwordchange":
+          echo '<div class="alert alert-success" role="alert">Password Changed</div>';
+          break;
         default:
           break;
       }
