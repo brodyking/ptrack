@@ -77,6 +77,11 @@ function userChangePassword($username,$password) {
     return 0;
 }
 
+function userIsAdmin($username) {
+    $pathto = userPathTo($username);
+    return (file_exists($pathto.$username.".isadmin"));
+}
+
 // POUCH FUNCTIONS
 function pouchInit($username, $day)
 {
