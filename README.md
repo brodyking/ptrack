@@ -35,7 +35,13 @@ git clone https://github.com/brodyking/ptrack.git
 
 - API?? (maybe)
 
-## License
+## 🖥️ Development
+
+This project was made using [php](https://www.php.net/) and [chart.js](https://www.chartjs.org/). Without these pieces of software, alot of this would've never been made.
+
+If you would like to contribute, fork it! I doubt anyone wants to touch this dumpster-fire of a codebase but if you feel like it, go ahead!
+
+## 📄 License
 ```
 1. You may copy and modify this software, but may not use this software for commercial purposes.
 2. You must show credit to the original repo, [https://github.com/brodyking/ptrack](https://github.com/brodyking/ptrack).
