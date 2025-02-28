@@ -36,6 +36,7 @@ function userCreate($username, $password)
     $pathto = userPathTo($username);
     mkdir($pathto);
     write($pathto . $username . '.password', $password);
+    write($pathto.$username.'.joindate',date("m-d-Y"));
 
     return 0;
 }
