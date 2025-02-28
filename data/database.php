@@ -71,6 +71,17 @@ function userSessionGet($username)
     return -1;
 }
 
+function userChangePassword($username,$password) {
+    $pathto = userPathTo($username);
+    file_put_contents($pathto.$username.".password",$password);
+    return 0;
+}
+
+function userIsAdmin($username) {
+    $pathto = userPathTo($username);
+    return (file_exists($pathto.$username.".isadmin"));
+}
+
 // POUCH FUNCTIONS
 function pouchInit($username, $day)
 {
@@ -115,5 +126,31 @@ function pouchGetPouches($username, $day)
     $pathto = $pathto . '/' . $day . '/';
     return read($pathto . $username . ".totalpouches");
 }
+function pouchGetHistoryString($username) {
+    $pathto = userPathTo($username);
+    $history = scandir($pathto);
+    $historyString = "";
+    for ($i = 2; $i < sizeof($history);$i++) {
+        if (!is_dir($pathto . $history[$i])) {
+            break;
+        }
+      $historyString = $historyString . $history[$i] . ", ";
+    }
+    return $historyString;
+}
+function pouchGetHistoryArray($username) {
+    $pathto = userPathTo($username);
+    $history = scandir($pathto);
+    $historyArray = array();
+    $spotinnewarray = 0;
+    for ($i = 2; $i < sizeof($history);$i++) {
+        if (!is_dir($pathto . $history[$i])) {
+            break;
+        }
+        $historyArray[$spotinnewarray] = $history[$i];
+        $spotinnewarray++;
+    }
+    return $historyArray;
+}
 
-?>
+// ?>

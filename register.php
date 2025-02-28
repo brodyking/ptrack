@@ -12,7 +12,10 @@ $password = $_POST['password'];
 
 if (userExists($username)) {
     header("Location: index.php?error=regtaken");
-} else {
+} else if ($username == "") {
+    header("Location: index.php?error=cannotbeblank");
+}
+else {
 
     
     userCreate($username,$password);

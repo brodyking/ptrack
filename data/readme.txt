@@ -34,6 +34,7 @@ userDelete(USERNAME) --INT-- returns 0 after resetting password to random ints a
 userSessionInit(USERNAME,ID) --INT-- returns 0 after assigning the user.session file to the id.
 userSessionClear(USERNAME) --INT-- returns 0 after deleting the session file
 userSessionGet(USERNAME) --STRING-- returns the users current session. If none are found, -1 is returned.
+userChangePassword(USERNAME,PASSWORD) --INT-- returns 0 after changing the users password to the new one (the second arg). 
 
 ## POUCH FUNCTIONS
 
@@ -42,4 +43,5 @@ pouchExists(USERNAME,DAY) --BOOL-- returns true if there is a database for a giv
 pouchAdd(USERNAME,DAY,STRENGTH) --INT-- returns 0 after adding a pouch and its strength to the database.
 pouchGetMgs(USERNAME,DAY) --STRING-- returns total number of mgs for that day.
 pouchGetPouches(USERNAME,DAY) --STRING-- returns the total number of pouches for that day.
-
+pouchGetHistoryString(USERNAME) --STRING-- returns all dates as a string with a space between each.
+pouchGetHistoryArray(USERNAME) --ARRAY-- returns an array of all the dates in a users db.
