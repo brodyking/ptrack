@@ -48,6 +48,12 @@
 
     include("pages/index.html");
     ?>
+    <br>
+    <!-- Announcements -->
+    <?php include("pages/announcements.html"); ?>
+
+    <p style="margin:20px;" class="text-center text-secondary">&copy; 2025 Brody King - All Rights Reserved</p>
+
 
 
     <script src="assets/js/bootstrap.js"></script>

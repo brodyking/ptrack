@@ -42,8 +42,6 @@
     <!-- History -->
     <?php include("modules/history.php"); ?>
     <br>
-    <!-- Announcements -->
-    <?php include("pages/announcements.html"); ?>
     <!-- Clear Statistics for today popup -->
     <?php include("modules/appdialogs.php"); ?>
     <!-- Footer -->
