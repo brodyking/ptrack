@@ -9,7 +9,7 @@ TBD
 
 ## 📥 Installation
 
-You must have an apache php server, no database is is requierd. 
+You must have an apache php server, no database is is requierd. I have been using php 8.4 but I assume this will work with most other versions.
 
 You can download or clone this repo.
 
