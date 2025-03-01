@@ -83,6 +83,11 @@ function userIsAdmin($username) {
     return (file_exists($pathto.$username.".isadmin"));
 }
 
+function userJoinDate($username) {
+    $pathto = userPathTo($username);
+    return read($pathto.$username.".joindate");
+}
+
 // POUCH FUNCTIONS
 function pouchInit($username, $day)
 {
