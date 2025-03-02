@@ -28,6 +28,7 @@
       // Redirect to login
       header("Location: index.php?error=invalidsession");
     }
+    $id = userSessionCreate($username);
     //Creates new day if it does not exist    
     if (!pouchExists($username, date("m-d-Y"))) {
       pouchInit($username, date("m-d-Y"));

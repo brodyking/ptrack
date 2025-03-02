@@ -12,7 +12,7 @@ $strength = $_GET['strength'];
 
 if (userExists($username)) {
     if (userSessionGet($username) == $id) {
-
+        $id = userSessionCreate($username);
         if ($strength == "reset") {
             pouchInit($username,date('m-d-Y'));
         } else {
