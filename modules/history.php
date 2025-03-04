@@ -1,19 +1,26 @@
 <div class="card">
-      <h5 class="card-header">History</h5>
+      <h5 class="card-header"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16" style="vertical-align: 0%;">
+  <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1z"/>
+</svg> History</h5>
       <div class="card-body">
         <style>
           code {
             font-size: 12pt;
           }
         </style>
-        <h5 class="card-title">Pouches</h5>
+        <h5 class="card-title"> Pouches</h5>
         <canvas id="poucheschart" style="width:100%;max-width:700px;" class="border"></canvas>
-        <br>
         <script src="assets/js/chart.umd.js"></script>
         <?php
         $graphxvals = "[";
         $graphyvals = "[";
         $history = pouchGetHistoryArray($username);
+        if (sizeof($history) == 1) {
+          echo '<script> document.getElementById("poucheschart").remove();</script>';
+          echo "<div class='alert alert-info' role='alert'>A graph will be available when 2 or more days have been logged.</div>";
+        } else {
+          echo '<br>';
+        }
         for ($i = 0; $i < sizeof($history); $i++) {
           if ($i == sizeof($history) - 1) {
             $graphxvals = $graphxvals . "'" . $history[$i] . "']";
