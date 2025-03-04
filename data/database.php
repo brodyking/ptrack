@@ -36,6 +36,7 @@ function userCreate($username, $password)
     $pathto = userPathTo($username);
     mkdir($pathto);
     write($pathto . $username . '.password', $password);
+    write($pathto . $username . '.joindate', date("m-d-Y"));
 
     return 0;
 }
@@ -70,16 +71,30 @@ function userSessionGet($username)
     }
     return -1;
 }
-
-function userChangePassword($username,$password) {
+function userSessionCreate($username)
+{
     $pathto = userPathTo($username);
-    file_put_contents($pathto.$username.".password",$password);
+    $newid = random_int(100000000, 1000000000);
+    write($pathto . $username . ".session", $newid);
+    return $newid;
+}
+function userChangePassword($username, $password)
+{
+    $pathto = userPathTo($username);
+    file_put_contents($pathto . $username . ".password", $password);
     return 0;
 }
 
-function userIsAdmin($username) {
+function userIsAdmin($username)
+{
     $pathto = userPathTo($username);
-    return (file_exists($pathto.$username.".isadmin"));
+    return (file_exists($pathto . $username . ".isadmin"));
+}
+
+function userJoinDate($username)
+{
+    $pathto = userPathTo($username);
+    return read($pathto . $username . ".joindate");
 }
 
 // POUCH FUNCTIONS
@@ -126,24 +141,26 @@ function pouchGetPouches($username, $day)
     $pathto = $pathto . '/' . $day . '/';
     return read($pathto . $username . ".totalpouches");
 }
-function pouchGetHistoryString($username) {
+function pouchGetHistoryString($username)
+{
     $pathto = userPathTo($username);
     $history = scandir($pathto);
     $historyString = "";
-    for ($i = 2; $i < sizeof($history);$i++) {
+    for ($i = 2; $i < sizeof($history); $i++) {
         if (!is_dir($pathto . $history[$i])) {
             break;
         }
-      $historyString = $historyString . $history[$i] . ", ";
+        $historyString = $historyString . $history[$i] . ", ";
     }
     return $historyString;
 }
-function pouchGetHistoryArray($username) {
+function pouchGetHistoryArray($username)
+{
     $pathto = userPathTo($username);
     $history = scandir($pathto);
     $historyArray = array();
     $spotinnewarray = 0;
-    for ($i = 2; $i < sizeof($history);$i++) {
+    for ($i = 2; $i < sizeof($history); $i++) {
         if (!is_dir($pathto . $history[$i])) {
             break;
         }

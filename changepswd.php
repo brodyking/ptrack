@@ -14,7 +14,7 @@
 
         <?php
 
-        include("modules/head.php");
+
         include("data/database.php");
 
 
@@ -32,6 +32,7 @@
             // Redirect to login
             header("Location: index.php?error=invalidsession");
         }
+        $id = userSessionCreate($username);
 
 
         if (isset($_POST['oldpassword']) && isset($_POST['newpassword'])) {
@@ -52,18 +53,19 @@
             header("Location: changepswd.php?username=".$username."&id=".$id);
         }*/
 
+        include("modules/head.php");
         // Error Logging
         if (isset($_GET['error'])) {
             switch ($_GET['error']) {
                 case "wrongold":
-                    echo '<div class="alert alert-danger" role="alert">Incorrect Old Password</div>';
+                    echo '<br><div class="alert alert-danger" role="alert">Incorrect Old Password</div>';
                     break;
                 default:
                     break;
             }
         }
         ?>
-
+        <br>
         <div class="card">
             <h5 class="card-header">Change Password</h5>
             <div class="card-body">
