@@ -9,45 +9,61 @@
 </head>
 
 <body data-bs-theme="dark" style="padding: 10px;">
-  <div style="max-width:700px;margin:auto;">
+  <div style="max-width:900px;margin:auto;">
     <?php
-    include("modules/head.php"); // Top Navigation Barr
-    include("data/database.php"); // Access Dataabase
-    
+    include "data/database.php"; // Access Dataabase
+
     // Verify that userrname and ID are present in URL
     if (!isset($_GET['username']) || !isset($_GET['id'])) {
-      header("Location: index.php?error=invalidsession");
+        header("Location: index.php?error=invalidsession");
     }
     // Set variables
     $username = $_GET['username'];
     $id = $_GET['id'];
     // Check if users session is valid
     if (userSessionGet($username) != $id) {
-      // Reset the session for security purposes.
-      userSessionClear($username);
-      // Redirect to login
-      header("Location: index.php?error=invalidsession");
+        // Reset the session for security purposes.
+        userSessionClear($username);
+        // Redirect to login
+        header("Location: index.php?error=invalidsession");
     }
     $id = userSessionCreate($username);
-    //Creates new day if it does not exist    
+    //Creates new day if it does not exist
     if (!pouchExists($username, date("m-d-Y"))) {
-      pouchInit($username, date("m-d-Y"));
+        pouchInit($username, date("m-d-Y"));
     }
     ?>
-    <!-- Pouch Selection -->
-    <?php include("modules/selection.php"); ?>
+    <!-- Navbar -->
+    <?php
+    include "modules/head.php";
+    include "modules/today.php";
+    ?>
+
     <br>
-    <!-- Statistics for currrent day -->
-    <?php include("modules/statistics.php"); ?>
-    <br>
-    <!-- History -->
-    <?php include("modules/history.php"); ?>
-    <br>
-    <!-- Clear Statistics for today popup -->
-    <?php include("modules/appdialogs.php"); ?>
-    <!-- Footer -->
-    <?php include("modules/footer.php"); ?>
-    <script src="assets/js/bootstrap.js"></script>
+
+    <div class="card p-0 border-0">
+      <div class="row g-2" style="margin: 0px!important;">
+        <div class="col-md">
+          <!-- Pouch Selection -->
+          <?php include "modules/selection.php"; ?>
+          <br>
+          <!-- Statistics for currrent day -->
+          <?php include "modules/statistics.php"; ?>
+        </div>
+        &nbsp;
+        <div class="col-md">
+
+          <!-- History -->
+          <?php include "modules/history.php"; ?>
+        </div>
+      </div>
+      <br>
+      <!-- Clear Statistics for today popup -->
+      <?php include "modules/appdialogs.php"; ?>
+      <!-- Footer -->
+      <?php include "modules/footer.php"; ?>
+      <script src="assets/js/bootstrap.js"></script>
+      </div></div>
 </body>
 
 </html>
