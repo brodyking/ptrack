@@ -14,7 +14,7 @@
 
         <?php
 
-        include("modules/head.php");
+
         include("data/database.php");
 
 
@@ -53,11 +53,12 @@
             header("Location: changepswd.php?username=".$username."&id=".$id);
         }*/
 
+        include("modules/head.php");
         // Error Logging
         if (isset($_GET['error'])) {
             switch ($_GET['error']) {
                 case "wrongold":
-                    echo '<div class="alert alert-danger" role="alert">Incorrect Old Password</div>';
+                    echo '<br><div class="alert alert-danger" role="alert">Incorrect Old Password</div>';
                     break;
                 default:
                     break;
