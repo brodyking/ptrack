@@ -1,11 +1,16 @@
 <img src="./assets/logo.png" width="100px" align="left">
 
-### `ptrack v3.1 (indev)`
+### `ptrack v3.1`
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 
 ## ⚡ Release Notes
 
-TBD
+- Enhanced security. ID's now change on pageload and are only good for one use.
+- Settings Page.
+- Design overhaul for login, homepage, settings. Includes a wider page, new navbar, split view for some pages, and icons.
+- New Logo.
+- General Cleanup and Formatting.
+
 
 ## 📥 Installation
 
@@ -19,14 +24,14 @@ git clone https://github.com/brodyking/ptrack.git
 
 ## 👨‍💻 Roadmap
 
-- Better User Auth.
+- Better Graph.
 
-- Better Mobile Support.
+- Better User Auth.
 
 - Track money/spending.
 
-- API?? (maybe)
-
+- API. I created some basic API usage in api.php but it is basically useless. Will have more soon.
+  
 ## 🖥️ Development
 
 This project was made using [php](https://www.php.net/) and [chart.js](https://www.chartjs.org/). Without these pieces of software, alot of this would've never been made.
