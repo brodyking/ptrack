@@ -65,7 +65,7 @@
             }
         }
         ?>
-
+        <br>
         <div class="card">
             <h5 class="card-header">Change Password</h5>
             <div class="card-body">
