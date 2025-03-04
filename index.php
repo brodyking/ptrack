@@ -138,10 +138,11 @@
     </div>
 
     <br>
-    <?php include "pages/paperwork.html"; ?>
+    <?php
+    include "pages/paperwork.html";
+    include "modules/footer.php";
+    ?>
 
-    <p style="margin:20px;" class="text-center text-secondary">v3.1<br>&copy; 2025 Brody King - All Rights Reserved
-    </p>
 
 
   </div>

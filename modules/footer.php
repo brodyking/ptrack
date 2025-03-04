@@ -1,5 +1,1 @@
-<p style="margin-top:30px;" class="text-center">
-    <a style="text-decoration: none;" href="paperwork.php">Terms of Service</a>
-    &middot;
-    <a style="text-decoration: none;" href="https://www.github.com/brodyking/ptrack/">GitHub</a>
-</p>
+<p style="margin:20px;" class="text-center text-secondary">v3.1<br>&copy; 2025 Brody King - All Rights Reserved</p>
