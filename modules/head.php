@@ -1,3 +1,4 @@
+<?php include "pages/motd.html"; ?>
 <div class="card">
     <nav class="navbar navbar-expand-lg rounded card-header p-0 border-bottom-0">
         <div class="container-fluid pe-1 ps-2">
@@ -10,7 +11,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
                 <span class="nav-link" aria-current="page">
-                v3.1</span>
+                v3.2</span>
             </li>
             </ul>
            <div class="d-flex">
