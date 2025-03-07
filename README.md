@@ -1,15 +1,11 @@
 <img src="./assets/logo.png" width="100px" align="left">
 
-### `ptrack v3.1`
+### `ptrack v3.2`
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 
 ## ⚡ Release Notes
 
-- Enhanced security. ID's now change on pageload and are only good for one use.
-- Settings Page.
-- Design overhaul for login, homepage, settings. Includes a wider page, new navbar, split view for some pages, and icons.
-- New Logo.
-- General Cleanup and Formatting.
+TBD
 
 
 ## 📥 Installation
