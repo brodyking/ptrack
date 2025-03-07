@@ -32,7 +32,7 @@
             // Redirect to login
             header("Location: index.php?error=invalidsession");
         }
-        $id = userSessionCreate($username);
+        $id = userSessionSecureInit($username); 
 
 
         if (isset($_POST['oldpassword']) && isset($_POST['newpassword'])) {

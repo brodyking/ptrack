@@ -27,7 +27,7 @@
         // Redirect to login
         header("Location: index.php?error=invalidsession");
     }
-    $id = userSessionCreate($username);
+    $id = userSessionSecureInit($username);
     //Creates new day if it does not exist
     if (!pouchExists($username, date("m-d-Y"))) {
         pouchInit($username, date("m-d-Y"));
@@ -43,7 +43,7 @@
 
     <div class="card p-0 border-0">
       <div class="row g-2" style="margin: 0px!important;">
-        <div class="col-md">
+        <div class="col-md ps-0">
           <!-- Pouch Selection -->
           <?php include "modules/selection.php"; ?>
           <br>
@@ -51,7 +51,7 @@
           <?php include "modules/statistics.php"; ?>
         </div>
         &nbsp;
-        <div class="col-md">
+        <div class="col-md pe-0">
 
           <!-- History -->
           <?php include "modules/history.php"; ?>
