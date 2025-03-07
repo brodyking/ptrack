@@ -14,7 +14,7 @@
 </head>
 
 <body data-bs-theme="dark" style="padding: 10px;">
-  <div style="max-width:900px;margin:auto;">
+  <div style="max-width:400px;margin:auto;">
     <?php
     include "data/database.php"; // Access Dataabase
 
@@ -42,7 +42,7 @@
     <?php include "modules/head.php"; ?>
     <br>
 
-    <div class="card" style="max-width: 425px; margin: auto;">
+    <div class="card">
       <h5 class="card-header"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
           class="bi bi-gear-wide-connected" viewBox="0 0 16 16" style="vertical-align: 0%;">
           <path
