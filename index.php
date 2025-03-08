@@ -109,7 +109,10 @@
                             echo '<div class="alert alert-danger" role="alert">Incorrect Password. </div>';
                             break;
                         case "noreg":
-                            echo '<div class="alert alert-warning" role="alert">User Registration is not currently available.</div>';
+                            echo '<div class="alert alert-danger" role="alert">User Registration is disabled.</div>';
+                            break;
+                        case "nologin":
+                            echo '<div class="alert alert-danger" role="alert">Account Login is disabled.</div>';
                             break;
                         case "invalidsession":
                             echo '<div class="alert alert-danger" role="alert">Invalid Session.  <a href="#faq-invalid-session" class="text-danger-emphasis">Troubleshoot</a> </div>';
