@@ -1,4 +1,4 @@
-<?php include "pages/motd.html"; ?>
+<?php if (settingsGet("site.isindev") == "true") { include "pages/motd.html"; } ?>
 <div class="card">
     <nav class="navbar navbar-expand-lg rounded card-header p-0 border-bottom-0">
         <div class="container-fluid pe-1 ps-2">
