@@ -13,11 +13,15 @@ if (!isset($_POST['username']) || !isset($_POST['password'])) {
     } elseif ($username == "") {
         header("Location: index.php?error=cannotbeblank");
     } else {
-        userCreate($username, $password);
 
-        $id = random_int(100000000, 1000000000);
-        userSessionInit($username, $id);
-        header("Location:  app.php?firstlogin=true&username=" . $username . "&id=" . $id);
+        if (settingsGet("users.allowNewAccounts") != "true") {
+            header("Location: index.php?error=noreg");
+        } else {
+            userCreate($username, $password);
+            $id = random_int(100000000, 1000000000);
+            userSessionInit($username, $id);
+            header("Location:  app.php?firstlogin=true&username=" . $username . "&id=" . $id);
+        }
     }
 }
 ?>
