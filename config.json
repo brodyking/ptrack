@@ -1,4 +1,6 @@
 {
     "site.name": "Pouchtrack", 
-    "site.version": "v3.2"
+    "site.version": "v3.2",
+    "users.allowNewAccounts": "true",
+    "users.allowLogin": "true"
 }
