@@ -15,6 +15,18 @@ function isEmpty($file)
     return (read($file) == '');
 }
 
+// CONFIG ACCESS
+function settingsGet($variable) {
+    $settingsjson = file_get_contents("config.json");
+    $settings = json_decode($settingsjson,true);
+    return $settings[$variable];
+}
+function getSiteName() {
+    return settingsGet("site.name");
+}
+function getSiteVersion() {
+    return settingsGet("site.version");
+}
 // USER FUNCTIONS
 function userPathTo($username)
 {
