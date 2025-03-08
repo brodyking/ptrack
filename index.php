@@ -4,7 +4,7 @@
 <head>
   <link href="assets/css/bootstrap.css" rel="stylesheet">
   <?php include "data/database.php"; // Access Dataabase ?>
-  <title>Settings ~ <?php echo getSiteName(); ?></title>
+  <title>Login ~ <?php echo getSiteName(); ?></title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/logo.png">
@@ -65,7 +65,7 @@
 
     <div class="container p-3 text-center">
       <h1 class="mb-3 fw-semibold lh-1 text-center text-gradient"
-        style="  background: -webkit-linear-gradient(#ffffff,rgb(138, 142, 146));-webkit-background-clip: text;-webkit-text-fill-color: transparent;margin-top:50px;font-size:28pt;">
+        style="  background: -webkit-linear-gradient(#77a6f7,#106EFD);-webkit-background-clip: text;-webkit-text-fill-color: transparent;margin-top:50px;font-size:28pt;">
         Next-Generation Nicotine Tracking</h1>
       <p class="text-center" style="font-size:13pt;">Track your nicotine habits, with ease.</p>
       <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register">
