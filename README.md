@@ -4,8 +4,14 @@
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 
 ## ⚡ Release Notes
+v3.2 is a minor update that focuses on improvements to the codebase. It also includes:
 
-TBD
+- Ability to "Add to Homescreen" on iOS
+
+- Secure Session. Changes your Session ID every pageload. You can also toggle it in the settings.
+
+- Configuration file built with json included in source code.
+
 
 
 ## 📥 Installation
@@ -20,14 +26,12 @@ git clone https://github.com/brodyking/ptrack.git
 
 ## 👨‍💻 Roadmap
 
-- Better Graph.
+- Better Databse
 
-- Better User Auth.
+- Better Graph.
 
 - Track money/spending.
 
-- API. I created some basic API usage in api.php but it is basically useless. Will have more soon.
-  
 ## 🖥️ Development
 
 This project was made using [php](https://www.php.net/) and [chart.js](https://www.chartjs.org/). Without these pieces of software, alot of this would've never been made.
