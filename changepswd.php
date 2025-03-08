@@ -3,7 +3,8 @@
 
 <head>
   <link href="assets/css/bootstrap.css" rel="stylesheet">
-  <title>Change Password ~ Pouchtrack</title>
+  <?php include "data/database.php"; // Access Dataabase ?>
+  <title>Change Password ~ <?php echo getSiteName(); ?></title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/logo.png">
@@ -19,10 +20,6 @@
 
 
         <?php
-
-
-        include("data/database.php");
-
 
         // Check if username and id are present in url
         if (!isset($_GET['username']) || !isset($_GET['id'])) {

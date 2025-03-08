@@ -3,7 +3,8 @@
 
 <head>
   <link href="assets/css/bootstrap.css" rel="stylesheet">
-  <title>Home ~ Pouchtrack</title>
+  <?php include "data/database.php"; // Access Dataabase ?>
+  <title>App ~ <?php echo getSiteName(); ?></title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/logo.png">
@@ -16,7 +17,6 @@
 <body data-bs-theme="dark" style="padding: 10px;">
   <div style="max-width:900px;margin:auto;">
     <?php
-    include "data/database.php"; // Access Dataabase
 
     // Verify that userrname and ID are present in URL
     if (!isset($_GET['username']) || !isset($_GET['id'])) {
