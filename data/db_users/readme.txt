@@ -1,7 +1,1 @@
-## POSSIBLE FLAGS/DATA ENTRIES FOR USERS
-
-    Name             | Info
-    -----------------------------------------------------------------
-    .password        | Stores the users password
-    .isdeleted       | Only appears if user deletes their account
-    .isadmin         | If file exists, the user is marked as an admin
+User data goes here. This file is needed so that the folder is here. You can delete this.

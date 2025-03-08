@@ -2,10 +2,17 @@
 <html>
 
 <head>
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Change Password ~ Pouchtrack</title>
-    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <?php include "data/database.php"; // Access Dataabase ?>
+  <title>Change Password ~ <?php echo getSiteName(); ?></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/logo-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
 </head>
 
 <body data-bs-theme="dark" style="padding: 10px;">
@@ -13,10 +20,6 @@
 
 
         <?php
-
-
-        include("data/database.php");
-
 
         // Check if username and id are present in url
         if (!isset($_GET['username']) || !isset($_GET['id'])) {
@@ -32,7 +35,7 @@
             // Redirect to login
             header("Location: index.php?error=invalidsession");
         }
-        $id = userSessionCreate($username);
+        $id = userSessionSecureInit($username); 
 
 
         if (isset($_POST['oldpassword']) && isset($_POST['newpassword'])) {

@@ -15,6 +15,18 @@ function isEmpty($file)
     return (read($file) == '');
 }
 
+// CONFIG ACCESS
+function settingsGet($variable) {
+    $settingsjson = file_get_contents("config.json");
+    $settings = json_decode($settingsjson,true);
+    return $settings[$variable];
+}
+function getSiteName() {
+    return settingsGet("site.name");
+}
+function getSiteVersion() {
+    return settingsGet("site.version");
+}
 // USER FUNCTIONS
 function userPathTo($username)
 {
@@ -37,7 +49,7 @@ function userCreate($username, $password)
     mkdir($pathto);
     write($pathto . $username . '.password', $password);
     write($pathto . $username . '.joindate', date("m-d-Y"));
-
+    write($pathto . $username . '.secureid',"true");
     return 0;
 }
 function userDelete($username)
@@ -77,6 +89,34 @@ function userSessionCreate($username)
     $newid = random_int(100000000, 1000000000);
     write($pathto . $username . ".session", $newid);
     return $newid;
+}
+function userSessionSecureInit($username) {
+    if (userSessionSecureGet($username)) {
+        return userSessionCreate($username);
+    } else {
+        return userSessionGet($username);
+    }
+}
+function userSessionSecureGet($username) {
+
+    $pathto = userPathTo($username);
+    $value = read($pathto . $username . '.secureid');
+    if ($value == "true") {
+        return true;
+    }
+    return false;
+}
+function userSessionSecureSet($username,$value) {
+    $pathto = userPathTo($username);
+    if ($value == "true") {
+        write($pathto.$username.".secureid","true");
+    } else {
+        write($pathto.$username.".secureid","false");
+    }
+}
+function userPasswordGet($username) {
+    $pathto = userPathTo($username);
+    return read($pathto.$username.".password");
 }
 function userChangePassword($username, $password)
 {
