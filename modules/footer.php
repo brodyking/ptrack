@@ -1,1 +1,1 @@
-<p style="margin:20px;" class="text-center text-secondary">v3.2<br>&copy; 2025 Brody King - All Rights Reserved</p>
+<p style="margin:20px;" class="text-center text-secondary"><?php echo getSiteVersion(); ?><br>&copy; 2025 Brody King - All Rights Reserved</p>
