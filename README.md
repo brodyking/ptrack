@@ -1,18 +1,11 @@
 <img src="./assets/logo.png" width="100px" align="left">
 
-### `ptrack v3.2`
+### `ptrack v4`
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 
 ## ⚡ Release Notes
-v3.2 is a minor update that focuses on improvements to the codebase. It also includes:
 
-- Ability to "Add to Homescreen" on iOS
-
-- Secure Session. Changes your Session ID every pageload. You can also toggle it in the settings.
-
-- Configuration file built with json included in source code.
-
-
+TBD
 
 ## 📥 Installation
 
