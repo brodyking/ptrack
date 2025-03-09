@@ -67,7 +67,7 @@
       <h1 class="mb-3 fw-semibold lh-1 text-center text-gradient"
         style="  background: -webkit-linear-gradient(#77a6f7,#106EFD);-webkit-background-clip: text;-webkit-text-fill-color: transparent;margin-top:50px;font-size:28pt;">
         Next-Generation Nicotine Tracking</h1>
-      <p class="text-center" style="font-size:13pt;">Track your nicotine habits, with ease.</p>
+      <p class="text-center" style="font-size:13pt;">Track your nicotine habits, <i>with ease</i>.</p>
       <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-add"
           viewBox="0 0 16 16">
