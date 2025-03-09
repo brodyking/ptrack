@@ -139,7 +139,7 @@ function userIsAdmin($username)
 
 function userJoinDate($username)
 {
-    userSettingsGet($username,"joindate");
+    return userSettingsGet($username,"joindate");
 }
 
 // POUCH FUNCTIONS
