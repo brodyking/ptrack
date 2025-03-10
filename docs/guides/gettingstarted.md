@@ -32,7 +32,7 @@ Done!
 
 ## Configuration and Security
 
-**IMPORTANT**: Make sure to deny the public access to `/data/`. This folder contains all the data for users. You can [read more here](/docs/database.md).
+**IMPORTANT**: Make sure to deny the public access to `/data/`. This folder contains all the data for users. You can [read more here](/docs/references/database.md).
 
 You can edit a few settings in `config.json`, such as the site name:
 
