@@ -1,11 +1,16 @@
 <img src="./assets/logo.png" width="100px" align="left">
 
-### `ptrack v4`
+### Pouchtrack `v4.0`
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 
 ## ⚡ Release Notes
 
-TBD
+- Overhauled Database: Now stores user data in json. Much simplier. Check the history of ```data/database.php``` to see what I mean.
+  - **NOTE**: You cannot transfer a database from v3.2 or below to v4
+
+- Slight Logo Change
+
+- Removed old "Todays Statistics"
 
 ## 📥 Installation
 
@@ -19,15 +24,17 @@ git clone https://github.com/brodyking/ptrack.git
 
 ## 👨‍💻 Roadmap
 
-- Better Databse
+- [x] Better Databse.
 
-- Better Graph.
+- [ ] Forgot Password/Email.
 
-- Track money/spending.
+- [ ] Better Graph/Ability to set time from for graph.
+
+- [ ] Track money/spending.
 
 ## 🖥️ Development
 
-This project was made using [php](https://www.php.net/) and [chart.js](https://www.chartjs.org/). Without these pieces of software, alot of this would've never been made.
+This project was made using [php](https://www.php.net/), [bootstrap](https://getbootstrap.com/) and [chart.js](https://www.chartjs.org/). Without these pieces of software, alot of this would've never been made.
 
 If you would like to contribute, fork it! I doubt anyone wants to touch this dumpster-fire of a codebase but if you feel like it, go ahead!
 
