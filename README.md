@@ -33,6 +33,8 @@ For a more detailed guide, look at **[Getting Started](/docs/guides/gettingstart
 
 - [x] Better Databse.
 
+- [ ] UI Overhaul. Current design is janky on mobile, needs more attention. 
+
 - [ ] Forgot Password/Email.
 
 - [ ] Better Graph/Ability to set time from for graph.
