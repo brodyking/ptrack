@@ -1,9 +1,14 @@
+# Pouchtrack
+
 <img src="./assets/logo.png" width="100px" align="left">
 
-### Pouchtrack `v4.0`
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 
-## ⚡ Release Notes
+**[Documentation](/docs/index.md)** &middot; **[Live Demo](https://pt.benadryl.dev)**
+
+
+
+## ⚡ v4.0 Release Notes
 
 - Overhauled Database: Now stores user data in json. Much simplier. Check the history of ```data/database.php``` to see what I mean.
   - **NOTE**: You cannot transfer a database from v3.2 or below to v4
@@ -20,7 +25,9 @@ You can download or clone this repo.
 
 ```bash
 git clone https://github.com/brodyking/ptrack.git
-``` 
+```
+
+For a more detailed guide, look at **[Getting Started](/docs/guides/gettingstarted.md)** in the docs.
 
 ## 👨‍💻 Roadmap
 
