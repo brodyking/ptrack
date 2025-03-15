@@ -36,7 +36,7 @@
     },
     "count": {
         "name": "count",
-        "description": "Used in api.php for adding, and reseting pouch usage",
+        "description": "Used in api.php for adding, and resetting pouch usage",
         "version": 1.0,
         "author": "Brody King",
         "source": "scripts/source/count.php"
@@ -50,7 +50,7 @@
     },
     "deleteaccount": {
         "name": "deleteaccount",
-        "description": "Deletes users account directory and redirects to login page",
+        "description": "Sets an account as deleted",
         "version": 1.0,
         "author": "Brody King",
         "source": "scripts/source/deleteaccount.php"
