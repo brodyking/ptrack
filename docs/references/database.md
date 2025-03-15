@@ -13,7 +13,7 @@
 
 ## Table of Contents
 
-- [Pouchtrack: Database](#pouchtrack-database)
+- [Database](#database)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Locations](#locations)
