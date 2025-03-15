@@ -1,0 +1,86 @@
+{
+    "nav-loggedin": {
+        "name": "nav-loggedin",
+        "description": "Shown when the user is logged in",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/nav-loggedin.php"
+    },
+    "nav-splash": {
+        "name": "nav-splash",
+        "description": "Shown on the homepage when not logged in",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/nav-splash.php"
+    },
+    "login": {
+        "name": "login",
+        "description": "Login form. Used in splash-content",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/login.php"
+    },
+    "register": {
+        "name": "register",
+        "description": "Registration popup. Does not include button",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/register.php"
+    },
+    "graph": {
+        "name": "graph",
+        "description": "Graph card used on dashboard.",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/graph.php"
+    },
+    "selection": {
+        "name": "selection",
+        "description": "Slection for picking pouches used on dashboard.",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/selection.php"
+    },
+    "splash": {
+        "name": "splash",
+        "description": "Title and buttons for registration/login shown when user is not logged in",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/splash.php"
+    },
+    "footer": {
+        "name": "footer",
+        "description": "Small footer text shown at the bottom of the page",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/footer.php"
+    },
+    "splash-content": {
+        "name": "splash-content",
+        "description": "The layout for all the content on the splash page (when user is not logged in)",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/splash-content.php"
+    },
+    "announcements": {
+        "name": "announcements",
+        "description": "Recent updates shown in splash-content",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/announcements.php"
+    },
+    "settings": {
+        "name": "settings",
+        "description": "Setting popup for when a user is logged in. Also contains change password popup.",
+        "version": 1.0,
+        "author" : "Brody King",
+        "source": "modules/source/settings.php"
+    },
+    "paperwork": {
+        "name": "paperwork",
+        "description": "Terms of Conditions and Privacy Policy.",
+        "version": 1.0,
+        "author" : "Brody King",
+        "source": "modules/source/paperwork.php"
+    }
+}
