@@ -78,7 +78,7 @@
     },
     "paperwork": {
         "name": "paperwork",
-        "description": "Terms of Conditions and Privacy Policy.",
+        "description": "Terms and Conditions and Privacy Policy.",
         "version": 1.0,
         "author" : "Brody King",
         "source": "modules/source/paperwork.php"
