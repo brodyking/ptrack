@@ -1,0 +1,72 @@
+{
+    "isloggedin": {
+        "name": "isloggedin",
+        "description": "Returns true if a ID and username are in $_GET, and if ID is valid",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/isloggedin.php"
+    },
+    "error": {
+        "name": "error",
+        "description": "Error Handling",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/error.php"
+    },
+    "checktoday": {
+        "name": "checktoday",
+        "description": "Checks if the current day has a value. If not, it creates one with 0 as value.",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/checktoday.php"
+    },
+    "login": {
+        "name": "login",
+        "description": "All login code used in api.php",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/login.php"
+    },
+    "register": {
+        "name": "register",
+        "description": "All registration code used in api.php",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/register.php"
+    },
+    "count": {
+        "name": "count",
+        "description": "Used in api.php for adding, and resetting pouch usage",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/count.php"
+    },
+    "logout": {
+        "name": "logout",
+        "description": "Deletes users session.json, redirects to login",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/logout.php"
+    },
+    "deleteaccount": {
+        "name": "deleteaccount",
+        "description": "Sets an account as deleted",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/deleteaccount.php"
+    },
+    "secureid": {
+        "name": "secureid",
+        "description": "Change a users secureid.",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/secureid.php"
+    },
+    "changepswd": {
+        "name": "changepswd",
+        "description": "Change a users password.",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/changepswd.php"
+    }
+}
