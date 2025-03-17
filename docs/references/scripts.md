@@ -1,6 +1,6 @@
 # Scripts
 
-**Page Modified**: March 15, 2025
+**Page Modified**: March 16, 2025
 \
 **Author**: Brody King
 \
@@ -25,7 +25,7 @@
 Scripts are very similar to [modules](modules.md), only difference is that they are only used to store backend code, mostly for the [API](api.md).
 
 ## Locations
-These are the locations of the modules, module sources, their functions, and more.
+These are the locations of the scripts, script sources, their functions, and more.
 
 | Location | Description |
 | -------- | ----------- |
@@ -34,19 +34,19 @@ These are the locations of the modules, module sources, their functions, and mor
 | `/scripts/source/` | Where all script source files are kept |
 
 ## Usage
-This section is a tutorial on how to create and use modules.
+This section is a tutorial on how to create and use scripts.
 
 ### Creating Scripts
 
-All modules are defined in `scripts/scripts.json`, and all source code for each module is stored in `scripts/source/`. Here is an example module:
+All scripts are defined in `scripts/scripts.json`, and all source code for each scripts is stored in `scripts/source/`. Here is an example script:
 
 ```json
 "example": {
     "name": "example",
-    "description": "what the module does",
+    "description": "what the script does",
     "version": 1.0,
     "author" : "your name",
-    "source": "modules/source/NAMEOFMODULE.php"
+    "source": "modules/source/NAMEOFSCRIPT.php"
 }
 ```
 
@@ -58,7 +58,7 @@ You will create a file for your script in the source directory, and specify its 
 
 ### Accessing Scripts
 
-Modules are accessed in various ways. 
+Scripts are accessed in various ways. 
 
 | Function | Parameters | Returns |
 | -------- | ---------- | ------- |
