@@ -68,7 +68,7 @@ function errorPretty() {
 
 function errorPrint() {
     global $errorOutput;
-    echo '<div class="alert alert-danger" role="alert"><b>'.errorPretty()."</b> (".$errorOutput.')</div>' ;
+    echo '<div class="alert alert-danger" role="alert"><i class="bi bi-exclamation-triangle-fill"></i> <b>'.errorPretty()."</b> (".$errorOutput.')</div>' ;
 }
 function errorClose() {
     global $errorOutput;
