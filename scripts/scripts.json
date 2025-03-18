@@ -9,7 +9,7 @@
     "error": {
         "name": "error",
         "description": "Error Handling",
-        "version": 1.0,
+        "version": 1.1,
         "author": "Brody King",
         "source": "scripts/source/error.php"
     },

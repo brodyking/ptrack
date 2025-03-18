@@ -30,7 +30,7 @@ function errorPretty() {
         case "login.nouser":
             return "No user exists under that username.";
         case "login.userdeleted":
-            return "That user has deleted their account.";
+            return "User has deleted their account.";
         case "login.incorrect":
             return "Incorrect Password.";
         case "register.disabled":
