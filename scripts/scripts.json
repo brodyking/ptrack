@@ -2,7 +2,7 @@
     "isloggedin": {
         "name": "isloggedin",
         "description": "Returns true if a ID and username are in $_GET, and if ID is valid",
-        "version": 1.0,
+        "version": 1.1,
         "author": "Brody King",
         "source": "scripts/source/isloggedin.php"
     },
