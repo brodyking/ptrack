@@ -1,6 +1,6 @@
 <div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settings"
     aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="settings"><i class="bi bi-gear-wide-connected"></i> Settings</h1>
@@ -50,7 +50,7 @@
 
 <!-- Delete Account popup -->
 <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="reset" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="delete"><i class="bi bi-exclamation-triangle-fill"></i> Warning</h1>
