@@ -9,6 +9,7 @@ Here are all of the available pages. They are listed in order from install to de
 | Name | Description | Modified |
 | :---------- | :---------- | :--------|
 | **[Getting Started »](guides/gettingstarted.md)** | Installing and Hosting Pouchtrack | 03/10/25 |
+| **[Ids »](guides/ids.md)** | The ID System for user Auth | 03/17/25 |
 
 ### References 
 | Name | Description | Modified |
