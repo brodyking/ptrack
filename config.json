@@ -1,6 +1,6 @@
 {
     "site.name": "Pouchtrack", 
-    "site.version": "v4.0",
+    "site.version": "v4.1",
     "site.isindev": true,
 
     "users.allowNewAccounts": true,
