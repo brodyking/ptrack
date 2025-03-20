@@ -9,7 +9,11 @@ This project aims at allowing one to track their nicotine intake, specifically n
 
 ## ⚡ v4.1 Release Notes
 
-TBD
+This update includes general bug fixes and slight improvements.
+
+- More Documentation, Changed grammar for some Error Messages, etc.
+
+- Updated TOS
 
 ## 📥 Installation
 
@@ -28,6 +32,8 @@ For a more detailed guide, look at **[Getting Started](/docs/guides/gettingstart
 - [x] Better Databse.
 
 - [x] UI Overhaul.
+
+- [ ] Database Backups to prevent Data Loss while writing.
 
 - [ ] Session Expires
 
