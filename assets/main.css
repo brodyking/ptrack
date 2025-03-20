@@ -4,6 +4,10 @@ body{
     padding: 10px;
 }
 
+.timesnewroman {
+    font-family: 'Times New Roman', Times, serif;
+}
+
 main {
     background-color: #212529;
     max-width: 750px;
@@ -33,7 +37,14 @@ nav{
 .loginbuttonsplash {
     display: none;
 }
-
+.splash-title {
+    /*background: -webkit-linear-gradient(#77a6f7,#106EFD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    margin-top:50px;
+    font-size:30pt;
+    font-style: italic;
+}
 
 /* Smartphones (landscape) ----------- */
 @media only screen 

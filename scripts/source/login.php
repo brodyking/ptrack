@@ -13,8 +13,7 @@ function login() {
         apiError("login.userdeleted");
     } else if (userAuth($_POST['username'],$_POST['password'])) {
         // Check if password is correct
-        userSessionCreate($_POST['username']);
-        Header("Location: /?username=".$_POST['username']."&id=".userSessionGet($_POST['username']));
+        Header("Location: /?username=".$_POST['username']."&id=".userSessionCreate($_POST['username']));
     } else {
         // If password is incorrect
         apiError('login.incorrect');

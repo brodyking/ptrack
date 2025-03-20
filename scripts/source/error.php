@@ -30,7 +30,7 @@ function errorPretty() {
         case "login.nouser":
             return "No user exists under that username.";
         case "login.userdeleted":
-            return "That user has deleted their account.";
+            return "User has deleted their account.";
         case "login.incorrect":
             return "Incorrect Password.";
         case "register.disabled":
@@ -68,7 +68,7 @@ function errorPretty() {
 
 function errorPrint() {
     global $errorOutput;
-    echo '<div class="alert alert-danger" role="alert"><b>'.errorPretty()."</b> (".$errorOutput.')</div>' ;
+    echo '<div class="alert alert-danger" role="alert"><i class="bi bi-exclamation-triangle-fill"></i> <b>'.errorPretty()."</b> (".$errorOutput.')</div>' ;
 }
 function errorClose() {
     global $errorOutput;

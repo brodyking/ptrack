@@ -7,22 +7,13 @@ This project aims at allowing one to track their nicotine intake, specifically n
 **[Documentation](/docs/index.md)** &middot; **[Live Demo](https://pt.benadryl.dev)**
 
 
-## ⚡ v4.0 Release Notes
-v4.0 is a massive rewrite for almost every point on the application. There is almost no compatability between v3.2 and 4.0. Be careful when updating.
+## ⚡ v4.1 Release Notes
 
-- Overhauled Database
-  - Now stores user data in json. Much simplier. Check the history of ```data/database.php``` to see what I mean.
-  - **NOTE**: You cannot transfer data from v3.2 or below to v4.0
+This update includes general bug fixes and slight improvements.
 
-- Overhauled UI: 
-  - Single page UI. Every action is done within the `/index.php`
-  - Much more organized on the frontend and backend.
-  - It is slower, because we are using bootstrap-icons. I may change this in the future if it proves to be a big problem.
+- More Documentation, Changed grammar for some Error Messages, etc.
 
-- Smaller Fixes/Changes include:
-  - Slight Logo Change
-  - Protection from `&` in username, causing things to break.
-  - Documentation for developing/managing.  
+- Updated TOS
 
 ## 📥 Installation
 
@@ -41,6 +32,10 @@ For a more detailed guide, look at **[Getting Started](/docs/guides/gettingstart
 - [x] Better Databse.
 
 - [x] UI Overhaul.
+
+- [ ] Database Backups to prevent Data Loss while writing.
+
+- [ ] Session Expires
 
 - [ ] Better Graph/Ability to set time from for graph.
 
