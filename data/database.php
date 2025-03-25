@@ -58,6 +58,7 @@ function userCreate($username, $password)
     $pathto = userPathTo($username);
     mkdir($pathto);
     write($pathto."pouches.json","");
+    write($pathto."cans.json","");
     $accountdata = array();
     $accountdata["username"] = $username;
     $accountdata["password"] = $password;
@@ -182,6 +183,44 @@ function pouchGetHistoryArray($username)
 {
     $pathto = userPathTo($username);
     $old = json_decode(read($pathto."pouches.json"),true);
+    return array_keys($old);
+}
+
+function canInit($username, $day)
+{
+    $pathto = userPathTo($username);
+    $old = json_decode(read($pathto."cans.json"),true);
+    $old[$day] = 0;
+    $new = json_encode($old,JSON_PRETTY_PRINT);
+    write($pathto."cans.json",$new);   
+    return 0;
+}
+
+function canExists($username, $day)
+{
+    $pathto = userPathTo($username);
+    $old = json_decode(read($pathto."cans.json"),true);
+    return isset($old[$day]);
+
+}
+
+function canAdd($username,$day) {
+    $pathto = userPathTo($username);
+    $old = json_decode(read($pathto."cans.json"),true);
+    $old[$day] = $old[$day] + 1;
+    $new = json_encode($old,JSON_PRETTY_PRINT);
+    write($pathto."cans.json",$new);
+}
+function canGet($username, $day)
+{
+    $pathto = userPathTo($username);
+    $old = json_decode(read($pathto."cans.json"),true);
+    return $old[$day];
+}
+function canGetHistoryArray($username)
+{
+    $pathto = userPathTo($username);
+    $old = json_decode(read($pathto."cans.json"),true);
     return array_keys($old);
 }
 // ?>
