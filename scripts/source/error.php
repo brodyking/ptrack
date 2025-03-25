@@ -61,6 +61,12 @@ function errorPretty() {
             return "Incorrect old password.";
         case "changepswd.invalidid":
             return "Invalid Session.";
+        case "cans.missingparams": 
+            return "Missing parameters while modifying Cans.";
+        case "cans.nouser":
+            return "No user exists under that username.";
+        case "cans.invalidsession":
+            return "Invalid Session.";
         default:
             return "Unknown Error.";
     }
