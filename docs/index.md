@@ -4,7 +4,7 @@ Welcome to the Pouchtrack Docs. This resource has helpful information reguarding
 
 Here are all of the available pages. They are listed in order from install to development. If you dont know where to start, head to [Getting Started](gettingstarted.md).
 
-> [!NOTE] Notice
+> [!NOTE]
 > This documentation is **not complete**. There may be outdated information. I have tried to document most of this codebase, but it is very challenging.
 
 
