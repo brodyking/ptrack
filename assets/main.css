@@ -46,6 +46,7 @@ nav{
     font-style: italic;
 }
 
+
 /* Smartphones (landscape) ----------- */
 @media only screen 
 and (max-width : 450px) {
@@ -58,6 +59,12 @@ and (max-width : 450px) {
         border: none!important;
         border-radius: 0px!important;
         background: none;
+    }
+    .modepicker {
+        justify-content: center !important;
+    }
+    .mode {
+        background-color: #212529;
     }
     /*
     #nav {
