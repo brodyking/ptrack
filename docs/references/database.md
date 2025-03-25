@@ -1,6 +1,6 @@
 # Database
 
-**Page Modified**: March 10, 2025
+**Page Modified**: March 25, 2025
 \
 **Author**: Brody King
 \
@@ -24,6 +24,7 @@
     - [Default Data for account.json](#default-data-for-accountjson)
     - [User/Account Functions](#useraccount-functions)
     - [Pouch Functions](#pouch-functions)
+    - [Can Functions](#can-functions)
 
 
 ## Introduction
@@ -41,6 +42,8 @@ These are the locations of important database functions and actual data.
 | [`/data/db_users/`](/data/db_users/) | Holds all user data. |
 
 ## Accessing the File System
+
+These functions are here to save time writing out the long php defaults. Feel free to use both.
 
 | Function | Parameter | Description |
 | -------- | ---- | ----------- | 
@@ -60,13 +63,14 @@ These functions are used to interact with `config.json`
 
 ## Accessing User Information
 
-User Information is stored in a sub-directory at `/data/db_users/USERNAME/`. There are 2 files by default in the users folder. 
+User Information is stored in a sub-directory at `/data/db_users/USERNAME/`. There are 4 files by default in the users folder. 
 
 ### User Data Locations
 
 | File | Description |
 | ---- | ----------- |
 | `account.json` | Stores Information related to the users account. |
+| `cans.json` | Stores Can Usage Data. |
 | `pouches.json` | Stores Pouch Usage Data. |
 | `session.json` | Stores Current Session ID. |
 
@@ -109,8 +113,17 @@ Inside of `account.json`, there are multiple variables pre-defined.
 | Function | Parameter | Description |
 | -------- | ---- | ----------- | 
 | `pouchInit()` | `$username`, `$day` | Creates a blank day on `$day`. |
-| `pouchExists()` | `$username`, `$day` | Checks if the day exists in `pouches.json`. This determines if `app.php` will call `pouchInit()` |
+| `pouchExists()` | `$username`, `$day` | Checks if the day exists in `pouches.json`. |
 | `pouchAdd()` | `$username`, `$day`, `$strength` | Adds a new pouch to `pouches.json` |
 | `pouchGetMgs()` | `$username`, `$day` | Returns the amount of mgs used on `$day` |
 | `pouchGetPouches()` | `$username`, `$day` | Returns the amount of pouches used on`$day` |
-| `pouchGetHistoryArray` | `$username` | Returns an array of all dates with entries.
+| `pouchGetHistoryArray()` | `$username` | Returns an array of all dates with entries.
+
+### Can Functions
+| Function | Parameter | Description |
+| -------- | ---- | ----------- | 
+| `canInit()` | `$username`, `$day` | Creates a blank day on `$day`. |
+| `canExists()` | `$username`, `$day` | Checks if the day exists in `cans.json`. |
+| `canAdd()` | `$username`, `$day`| Adds a new can to `cans.json` |
+| `canGet()` | `$username`, `$day` | Returns the amount of cans used on `$day` |
+| `canGetHistoryArray()` | `$username` | Returns an array of all dates with entries of cans.
