@@ -1,6 +1,6 @@
 <div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settings"
     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog  modal-dialog-scrollable modal-fullscreen-sm-down">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="settings"><i class="bi bi-gear-wide-connected"></i> Settings</h1>

@@ -1,6 +1,6 @@
 # Modules
 
-**Page Modified**: March 15, 2025
+**Page Modified**: March 25, 2025
 \
 **Author**: Brody King
 \
@@ -70,14 +70,18 @@ If a module has no php in it, you can use `modulesRender()`. If it has php conte
 | Module Name | Description |
 | ----------- | ----------- |
 | [announcements](/modules/source/announcements.php) | Recent updates shown in splash-content |
+| [dashboard](/modules/source/dashboard.php) | Contains all graphs and selections in tabs |
 | [footer](/modules/source/footer.php) | Small footer text shown at the bottom of the page |
-| [graph](/modules/source/graph.php) | Graph card used on dashboard. |
+| [graph-cans](/modules/source/graph-cans.php) | Graph card for cans used on dashboard. |
+| [graph-pouches](/modules/source/graph-pouches.php) | Graph card for pouches used on dashboard. |
 | [login](/modules/source/login.php) | Login form. Used in splash-content |
 | [nav-loggedin](/modules/source/nav-loggedin.php) | Navigation bar shown when the user is loged in |
 | [nav-splash](/modules/source/nav-splash.php) | Navigation bar shown when the user is not logged in |
 | [paperwork](/modules/source/paperwork.php) | Terms and Conditions and Privacy Policy |
 | [register](/modules/source/register.php) | Registration popup. Does not include activation button. |
-| [selection](/modules/source/selection.php) | Selection for picking pouches, used on dashboard. |
+| [selection-cans](/modules/source/selection-cans.php) | Selection for tracking cans, used on dashboard. |
+| [selection-pouches](/modules/source/selection-pouches.php) | Selection for picking pouches, used on dashboard. |
 | [settings](/modules/source/settings.php) | Settings popup, includes change password popup aswell |
 | [splash-content](/modules/source/splash-content.php) | The layout for all content on the splash page when the user is not logged in|
 | [splash](/modules/source/splash.php) | Title and buttons shown at the top when the user is not logged in|
+| [welcome](/modules/source/welcome.php) | Shows a welcome message and stats for the day |

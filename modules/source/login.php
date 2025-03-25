@@ -5,12 +5,13 @@
               </svg> Login</h5>
             <div class="card-body">
               <form method="POST" action="api.php?action=login">
-              <div class="mb-3">
-                  <label for="recipient-name" class="col-form-label">Username</label>
+              <label class="col-form-label">Username</label>
+              <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">@</span>
                   <input type="text" class="form-control" name="username">
               </div>
+              <label class="col-form-label">Password</label>
               <div class="mb-3">
-                  <label for="message-text" class="col-form-label">Password</label>
                   <input type="password" class="form-control" name="password">
               </div>
               <button type="submit" class="btn btn-primary">Login</button>

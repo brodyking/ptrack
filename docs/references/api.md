@@ -1,6 +1,6 @@
 # API
 
-**Page Modified**: March 15, 2025
+**Page Modified**: March 25, 2025
 \
 **Author**: Brody King
 \
@@ -20,6 +20,7 @@
     - [Login](#login)
     - [Register](#register)
     - [Count](#count)
+    - [Cans](#cans)
     - [Logout](#logout)
     - [Delete Account](#delete-account)
     - [SecureID](#secureid)
@@ -103,6 +104,25 @@ Modify the amount of pouches for the current day.
 | `count.missingparams` | |
 | `count.nouser` | User dosent exist | 
 | `count.invalidsession` | Wrong ID |
+
+### Cans
+Modify the amount of cans for the current day.
+
+| Scripts Used | URL |
+| ------------ | --- |
+| [cans](/scripts/source/cans.php) | `api.php?action=cans` |
+
+| Parameter Needed | Method |
+| ---------------- | ---------------------- |
+| `username` | `GET` |
+| `id` | `GET` |
+| `deed` | `GET` |
+
+| Error | Description |
+| ----- | ----------- |
+| `cans.missingparams` | |
+| `cans.nouser` | User dosent exist | 
+| `cans.invalidsession` | Wrong ID |
 
 ### Logout
 Logout of an account

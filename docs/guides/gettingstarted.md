@@ -1,6 +1,6 @@
 # Getting Started
 
-**Page Modified**: March 10, 2025
+**Page Modified**: March 25, 2025
 \
 **Author**: Brody King
 \
@@ -11,7 +11,7 @@
 
 ## Table of Contents
 
-- [Pouchtrack: Getting Started](#pouchtrack-getting-started)
+- [Getting Started](#getting-started)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Configuration and Security](#configuration-and-security)
@@ -32,7 +32,8 @@ Done!
 
 ## Configuration and Security
 
-**IMPORTANT**: Make sure to deny the public access to `/data/`. This folder contains all the data for users. You can [read more here](/docs/references/database.md).
+> [!CAUTION] 
+> **IMPORTANT SECURITY NOTICE:** Make sure to deny the public access to `/data/`. This folder contains all the data for users. You can [read more here](/docs/references/database.md). If you fail todo so, all and any data put into this site is exposed to the public internet.
 
 You can edit a few settings in `config.json`, such as the site name:
 

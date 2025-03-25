@@ -1,15 +1,15 @@
 <div class="card">
     <h5 class="card-header">
         <i class="bi bi-bar-chart-fill"></i>
-        Usage
+        Pouch Usage
     </h5>
     <div class="card-body">
 
         <canvas id="poucheschart" style="width:100%;" class="border rounded"></canvas>
         <script src="/assets/js/chart.umd.js"></script>
         <?php
-        $graphxvals = "[";
-        $graphyvals = "[";
+        $pouchesgraphxvals = "[";
+        $pouchesgraphyvals = "[";
         $history = pouchGetHistoryArray($username);
         if (sizeof($history) == 1) {
             echo '<script> document.getElementById("poucheschart").remove();</script>';
@@ -19,25 +19,25 @@
         }
         for ($i = 0; $i < sizeof($history); $i++) {
             if ($i == sizeof($history) - 1) {
-                $graphxvals = $graphxvals . "'" . $history[$i] . "']";
+                $pouchesgraphxvals = $pouchesgraphxvals . "'" . $history[$i] . "']";
             } else {
-                $graphxvals = $graphxvals . "'" . $history[$i] . "', ";
+                $pouchesgraphxvals = $pouchesgraphxvals . "'" . $history[$i] . "', ";
             }
         }
         for ($i = 0; $i < sizeof($history); $i++) {
-            $graphyvalscurrent = pouchGetPouches($username, $history[$i]);
+            $pouchesgraphyvalscurrent = pouchGetPouches($username, $history[$i]);
             if ($i == sizeof($history) - 1) {
-                $graphyvals = $graphyvals . $graphyvalscurrent . "]";
+                $pouchesgraphyvals = $pouchesgraphyvals . $pouchesgraphyvalscurrent . "]";
             } else {
-                $graphyvals = $graphyvals . $graphyvalscurrent . ", ";
+                $pouchesgraphyvals = $pouchesgraphyvals . $pouchesgraphyvalscurrent . ", ";
             }
         }
         ?>
         <script>
             Chart.defaults.color = 'white';
             Chart.defaults.borderColor = '#495057';
-            const xValues = <?php echo $graphxvals; ?>;
-            const yValues = <?php echo $graphyvals; ?>;
+            const xValues = <?php echo $pouchesgraphxvals; ?>;
+            const yValues = <?php echo $pouchesgraphyvals; ?>;
             new Chart("poucheschart", {
                 type: "line",
                 data: {
@@ -125,14 +125,14 @@
     </div>
 
     <div class="modal fade" id="reset" tabindex="-1" aria-labelledby="reset" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="register">Warning</h1>
+                    <h1 class="modal-title fs-5" id="register"><i class="bi bi-exclamation-triangle-fill"></i> Warning</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>You are about to reset your statistics for today. You cannot undo this action. And no
+                    <p>You are about to reset your <b>pouches</b> for today. You cannot undo this action. And no
                         cheating!!</p>
                 </div>
                 <div class="modal-footer">
@@ -143,4 +143,3 @@
         </div>
     </div>
     </div>
-    

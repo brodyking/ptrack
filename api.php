@@ -6,6 +6,7 @@ include "scripts/scripts.php";
 include scriptsGet("login");
 include scriptsGet("register");
 include scriptsGet("count");
+include scriptsGet("cans");
 include scriptsGet("logout");
 include scriptsGet("deleteaccount");
 include scriptsGet("secureid");
@@ -42,6 +43,10 @@ switch ($_GET["action"]) {
 
     case "count":
         countAPI();
+        break;
+
+    case "cans":
+        cans();
         break;
 
     case "logout":

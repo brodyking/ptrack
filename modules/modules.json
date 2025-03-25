@@ -2,7 +2,7 @@
     "nav-loggedin": {
         "name": "nav-loggedin",
         "description": "Shown when the user is logged in",
-        "version": 1.0,
+        "version": 1.1,
         "author": "Brody King",
         "source": "modules/source/nav-loggedin.php"
     },
@@ -16,7 +16,7 @@
     "login": {
         "name": "login",
         "description": "Login form. Used in splash-content",
-        "version": 1.0,
+        "version": 1.1,
         "author": "Brody King",
         "source": "modules/source/login.php"
     },
@@ -27,24 +27,45 @@
         "author": "Brody King",
         "source": "modules/source/register.php"
     },
-    "graph": {
-        "name": "graph",
-        "description": "Graph card used on dashboard.",
+    "graph-pouches": {
+        "name": "graph-pouches",
+        "description": "Graph card for pouches used on dashboard.",
         "version": 1.0,
         "author": "Brody King",
-        "source": "modules/source/graph.php"
+        "source": "modules/source/graph-pouches.php"
     },
-    "selection": {
-        "name": "selection",
+    "graph-cans": {
+        "name": "graph-cans",
+        "description": "Graph card for cans used on dashboard.",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/graph-cans.php"
+    },
+    "selection-pouches": {
+        "name": "selection-pouches",
         "description": "Slection for picking pouches used on dashboard.",
         "version": 1.0,
         "author": "Brody King",
-        "source": "modules/source/selection.php"
+        "source": "modules/source/selection-pouches.php"
+    },
+    "selection-cans": {
+        "name": "selection-cans",
+        "description": "Selection for adding cans for current day",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/selection-cans.php"
+    },
+    "welcome": {
+        "name": "welcome",
+        "description": "Welcome message when logged in",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/welcome.php"
     },
     "splash": {
         "name": "splash",
         "description": "Title and buttons for registration/login shown when user is not logged in",
-        "version": 1.0,
+        "version": 1.1,
         "author": "Brody King",
         "source": "modules/source/splash.php"
     },
@@ -72,7 +93,7 @@
     "settings": {
         "name": "settings",
         "description": "Setting popup for when a user is logged in. Also contains change password popup.",
-        "version": 1.0,
+        "version": 1.1,
         "author" : "Brody King",
         "source": "modules/source/settings.php"
     },
@@ -82,5 +103,12 @@
         "version": 1.0,
         "author" : "Brody King",
         "source": "modules/source/paperwork.php"
+    },
+    "dashboard": {
+        "name": "dashboard",
+        "description": "Selections and Graph for index.php",
+        "version": 1.0,
+        "author" : "Brody King",
+        "source": "modules/source/dashboard.php"
     }
 }

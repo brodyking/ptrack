@@ -1,6 +1,6 @@
 # Scripts
 
-**Page Modified**: March 16, 2025
+**Page Modified**: March 25, 2025
 \
 **Author**: Brody King
 \
@@ -54,7 +54,8 @@ If you havent noticed, this is the exact same syntax as a module.
 
 You will create a file for your script in the source directory, and specify its path in the json file. 
 
-**You NEVER leave anything outside of a function, besides variables. All code that is to be run should be put inside of a function**
+> [!WARNING]
+> Never leave anything outside of a function, besides variables. All code that is to be run should be put inside of a function
 
 ### Accessing Scripts
 
@@ -73,8 +74,9 @@ include scriptsGet("nameofascript");
 
 | Script Name | Description |
 | ----------- | ----------- |
+| [cans](/scripts/source/cans.php) | Used for adding and resetting cans. Similar to `count`. |
 | [changepswd](/scripts/source/changepswd.php) | Change a users password |
-| [checktoday](/scripts/source/checktoday.php) | Chhecks if the current day has a value. If not, it creates one with `0` as its value.
+| [checktoday](/scripts/source/checktoday.php) | Checks if pouches and cans have an entry for the day. Creates one if not made. |
 | [count](/scripts/source/count.php) | Used for adding, and resetting pouch usage.
 | [deleteaccount](/scripts/source/deleteaccount.php) | Sets an account as deleted.
 | [error](/scripts/source/error.php) | [Error Handling](error.md).|
