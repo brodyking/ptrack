@@ -64,8 +64,8 @@
             // Rendered Items when logged in
             include modulesGetPath("nav-loggedin");
             include modulesGetPath("settings");
-            include modulesGetPath("selection");
-            include modulesGetPath("graph");
+            include modulesGetPath("welcome");
+            include modulesGetPath("dashboard");
 
         } else {
 
