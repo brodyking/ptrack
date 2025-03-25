@@ -21,8 +21,6 @@ This feature update includes many new features.
   - More Icons and Username field 
   - Navigation bar (while logged in) is more concise.
 
-For a more detailed guide, look at **[Getting Started](/docs/guides/gettingstarted.md)** in the docs.
-
 ## Roadmap
 
 - [x] Better Database.
