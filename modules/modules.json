@@ -30,14 +30,14 @@
     "graph-pouches": {
         "name": "graph-pouches",
         "description": "Graph card for pouches used on dashboard.",
-        "version": 1.0,
+        "version": 2.0,
         "author": "Brody King",
         "source": "modules/source/graph-pouches.php"
     },
     "graph-cans": {
         "name": "graph-cans",
         "description": "Graph card for cans used on dashboard.",
-        "version": 1.0,
+        "version": 2.0,
         "author": "Brody King",
         "source": "modules/source/graph-cans.php"
     },
