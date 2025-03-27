@@ -25,6 +25,7 @@
     - [User/Account Functions](#useraccount-functions)
     - [Pouch Functions](#pouch-functions)
     - [Can Functions](#can-functions)
+    - [Month/Date Functions](#monthdate-functions)
 
 
 ## Introduction
@@ -118,6 +119,7 @@ Inside of `account.json`, there are multiple variables pre-defined.
 | `pouchGetMgs()` | `$username`, `$day` | Returns the amount of mgs used on `$day` |
 | `pouchGetPouches()` | `$username`, `$day` | Returns the amount of pouches used on`$day` |
 | `pouchGetHistoryArray()` | `$username` | Returns an array of all dates with entries.
+| `pouchGetHistoryArrayMonth()` | `$username`, `$month` | Same as above, but takes in a month. Months are `01`-`12`. |
 
 ### Can Functions
 | Function | Parameter | Description |
@@ -127,3 +129,10 @@ Inside of `account.json`, there are multiple variables pre-defined.
 | `canAdd()` | `$username`, `$day`| Adds a new can to `cans.json` |
 | `canGet()` | `$username`, `$day` | Returns the amount of cans used on `$day` |
 | `canGetHistoryArray()` | `$username` | Returns an array of all dates with entries of cans.
+| `canGetHistoryArrayMonth()` | `$username`, `$month` | Same as above, but takes in a month. Months are `01`-`12`. |
+
+### Month/Date Functions
+| Function | Parameter | Description |
+| -------- | --------- | ----------- |
+| `monthIsValid()` | `$input` | Takes in a number and returns T/F if its a valid month. Months are `01`-`12`. |
+| `monthsGet()` | | Returns an array of months. Each items is its own array with index 0 being its number, and index 1 being its actual name. Ex: `["02","February"]`. |
