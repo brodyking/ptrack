@@ -1,5 +1,5 @@
 <p align="center"><img src="./assets/logo.png" width="80px"></p>
-<h2 align="center">Pouchtrack v4.2</h2>
+<h2 align="center">Pouchtrack v4.3</h2>
 <p align="center">
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 </p>
@@ -10,16 +10,7 @@ This project aims at allowing one to track their nicotine intake, specifically n
 
 ## Release Notes
 
-This feature update includes many new features.
-
-- Ability to track cans, alongside pouches
-  - This also includes new layout controls for the homepage
-
-- Small UI tweaks
-  - Settings page now renders fullscreen on mobile
-  - Brought back old gradient from 4.0
-  - More Icons and Username field 
-  - Navigation bar (while logged in) is more concise.
+TBD
 
 ## Roadmap
 
