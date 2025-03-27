@@ -4,16 +4,70 @@
         Pouch Usage
     </h5>
     <div class="card-body">
+        <form method="GET" class="mb-2 input-group" action="/">
+            <?php
 
+            if (!isset($_GET["pmonth"])) {
+                $pouchesmonth = date("m");
+            } else if (!monthsIsValid($_GET["pmonth"])) {
+                $pouchesmonth = date("m");
+            } else {
+                $pouchesmonth = $_GET["pmonth"];
+            }
+
+            ?>
+            <?php 
+
+                if ($pouchesmonth == "01") {
+                    echo '<a class="btn btn-outline-secondary disabled"><i class="bi bi-rewind-fill"></i></a>';
+                } else {
+                    echo '<a href="/?username='.$username.'&id='.$id.'&pmonth='.($pouchesmonth-1).'" class="btn btn-outline-primary"><i class="bi bi-rewind-fill"></i></a>';
+                }
+
+            ?>
+            <input type="text" name="username" value="<?php echo $username; ?>" style="display: none;">
+            <input type="text" name="id" value="<?php echo $id; ?>" style="display: none;">
+
+            <select onchange="this.form.submit()" class="form-select" name="pmonth" aria-label="Default select example">
+                <?php
+
+                $monthslist = monthsGet();
+
+                foreach ($monthslist as $monthoption) {
+                    if ($monthoption[0] == $pouchesmonth) {
+                        echo '<option selected value="' . $monthoption[0] . '">' . $monthoption[1] . '</option>';
+                    } else {
+                        echo '<option value="' . $monthoption[0] . '">' . $monthoption[1] . '</option>';
+                    }
+                }
+
+                ?>
+            </select>
+            <?php 
+
+                if ($pouchesmonth == "12") {
+                    echo '<a class="btn btn-outline-secondary disabled"><i class="bi bi-fast-forward-fill"></i></a>';
+                } else {
+                    echo '<a href="/?username='.$username.'&id='.$id.'&pmonth='.($pouchesmonth+1).'" class="btn btn-outline-primary"><i class="bi bi-fast-forward-fill"></i></a>';
+                }
+
+            ?>
+        </form>
         <canvas id="poucheschart" style="width:100%;" class="border rounded"></canvas>
         <script src="/assets/js/chart.umd.js"></script>
         <?php
         $pouchesgraphxvals = "[";
         $pouchesgraphyvals = "[";
-        $history = pouchGetHistoryArray($username);
+
+
+
+        $history = pouchGetHistoryArrayMonth($username, $pouchesmonth);
         if (sizeof($history) == 1) {
             echo '<script> document.getElementById("poucheschart").remove();</script>';
-            echo "<div class='alert alert-info' role='alert'>A graph will be available when 2 or more days have been logged.</div>";
+            echo "<div class='alert alert-light' role='alert'>A graph will be available when 2 or more days have been logged.</div>";
+        } else if (sizeof($history) == 0) {
+            echo '<script> document.getElementById("poucheschart").remove();</script>';
+            echo "<div class='alert alert-light' role='alert'>No entries for this month</div>";
         } else {
             echo '<br>';
         }
@@ -128,7 +182,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="register"><i class="bi bi-exclamation-triangle-fill"></i> Warning</h1>
+                    <h1 class="modal-title fs-5" id="register"><i class="bi bi-exclamation-triangle-fill"></i> Warning
+                    </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -142,4 +197,4 @@
             </div>
         </div>
     </div>
-    </div>
+</div>

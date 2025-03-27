@@ -1,19 +1,73 @@
 <div class="card">
     <h5 class="card-header">
         <i class="bi bi-bar-chart-fill"></i>
-        Can Usage 
+        Can Usage
     </h5>
     <div class="card-body">
+        <form method="GET" class="mb-2 input-group" action="/">
+            <?php
 
+            if (!isset($_GET["cmonth"])) {
+                $cansmonth = date("m");
+            } else if (!monthsIsValid($_GET["cmonth"])) {
+                $cansmonth = date("m");
+            } else {
+                $cansmonth = $_GET["cmonth"];
+            }
+
+            ?>
+            <?php 
+
+                if ($cansmonth == "01") {
+                    echo '<a class="btn btn-outline-secondary disabled"><i class="bi bi-rewind-fill"></i></a>';
+                } else {
+                    echo '<a href="/?username='.$username.'&id='.$id.'&cmonth='.($cansmonth-1).'" class="btn btn-outline-primary"><i class="bi bi-rewind-fill"></i></a>';
+                }
+
+            ?>
+            <input type="text" name="username" value="<?php echo $username; ?>" style="display: none;">
+            <input type="text" name="id" value="<?php echo $id; ?>" style="display: none;">
+
+            <select onchange="this.form.submit()" class="form-select" name="cmonth" aria-label="Default select example">
+                <?php
+
+                $monthslist = monthsGet();
+
+                foreach ($monthslist as $monthoption) {
+                    if ($monthoption[0] == $cansmonth) {
+                        echo '<option selected value="' . $monthoption[0] . '">' . $monthoption[1] . '</option>';
+                    } else {
+                        echo '<option value="' . $monthoption[0] . '">' . $monthoption[1] . '</option>';
+                    }
+                }
+
+                ?>
+            </select>
+            <?php 
+
+                if ($cansmonth == "12") {
+                    echo '<a class="btn btn-outline-secondary disabled"><i class="bi bi-fast-forward-fill"></i></a>';
+                } else {
+                    echo '<a href="/?username='.$username.'&id='.$id.'&cmonth='.($cansmonth+1).'" class="btn btn-outline-primary"><i class="bi bi-fast-forward-fill"></i></a>';
+                }
+
+            ?>
+        </form>
         <canvas id="canschart" style="width:100%;" class="border rounded"></canvas>
         <script src="/assets/js/chart.umd.js"></script>
         <?php
         $cansgraphxvals = "[";
         $cansgraphyvals = "[";
-        $history = canGetHistoryArray($username);
+
+
+
+        $history = canGetHistoryArrayMonth($username, $cansmonth);
         if (sizeof($history) == 1) {
             echo '<script> document.getElementById("canschart").remove();</script>';
-            echo "<div class='alert alert-info' role='alert'>A graph will be available when 2 or more days have been logged.</div>";
+            echo "<div class='alert alert-light' role='alert'>A graph will be available when 2 or more days have been logged.</div>";
+        } else if (sizeof($history) == 0) {
+            echo '<script> document.getElementById("canschart").remove();</script>';
+            echo "<div class='alert alert-light' role='alert'>No entries for this month</div>";
         } else {
             echo '<br>';
         }
@@ -120,15 +174,16 @@
         </div>
     </div>
 
-    <div class="modal fade" id="reset-cans" tabindex="-1" aria-labelledby="reset" aria-hidden="true">
+    <div class="modal fade" id="reset-cans" tabindex="-1" aria-labelledby="reset-cans" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="register"><i class="bi bi-exclamation-triangle-fill"></i>Warning</h1>
+                    <h1 class="modal-title fs-5" id="register"><i class="bi bi-exclamation-triangle-fill"></i> Warning
+                    </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>You are about to reset your <b>cans</b> for today. You cannot undo this action. And no
+                    <p>You are about to reset your <b>pouches</b> for today. You cannot undo this action. And no
                         cheating!!</p>
                 </div>
                 <div class="modal-footer">
@@ -138,4 +193,4 @@
             </div>
         </div>
     </div>
-    </div>
+</div>
