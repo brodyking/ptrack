@@ -1,6 +1,6 @@
 # Database
 
-**Page Modified**: March 25, 2025
+**Page Modified**: March 27, 2025
 \
 **Author**: Brody King
 \
@@ -82,7 +82,7 @@ Inside of `account.json`, there are multiple variables pre-defined.
 | -------- | ---- | ------------- | ----------- |
 | `username` | string | | Stores the users username. |
 | `password` | string | | Stores the users password. |
-| `joindate` | string | `date("m-d-Y);` | Stores the date the user signed up. |
+| `joindate` | string | `date("m-d-Y");` | Stores the date the user signed up. |
 | `secureID` | bool | `true` | Determines if Secure Session is enabled. |
 | `isdeleted` | bool | `false` | Marked true if the user has requested to delete their account. |
 
