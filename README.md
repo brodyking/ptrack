@@ -1,5 +1,5 @@
 <p align="center"><img src="./assets/logo.png" width="80px"></p>
-<h2 align="center">Pouchtrack v4.3</h2>
+<h2 align="center">Pouchtrack v5</h2>
 <p align="center">
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 </p>
@@ -20,12 +20,11 @@ TBD
 
 - [x] Track Cans
 
+- [x] Better Graph / Ability to set time from for graph.
+
 - [ ] Database Backups to prevent Data Loss while writing.
 
 - [ ] Session Expires
-
-- [ ] Better Graph / Ability to set time from for graph.
-
 
 ##  Development and Credits
 
