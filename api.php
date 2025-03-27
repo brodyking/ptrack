@@ -28,7 +28,7 @@ function apiFinish()
 }
 
 if (!isset($_GET["action"])) {
-    apiError("invalidAction");
+    apiError("api.missingparams");
 }
 
 switch ($_GET["action"]) {
@@ -66,7 +66,7 @@ switch ($_GET["action"]) {
         break;
 
     default:
-        apiError("invalidaction");
+        apiError("api.missingparams");
         break;
 
 }
