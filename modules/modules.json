@@ -86,7 +86,7 @@
     "announcements": {
         "name": "announcements",
         "description": "Recent updates shown in splash-content",
-        "version": 1.0,
+        "version": 1.1,
         "author": "Brody King",
         "source": "modules/source/announcements.php"
     },
