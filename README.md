@@ -23,7 +23,7 @@ This project aims at allowing one to track their nicotine intake, specifically n
 
 - [x] Track Cans
 
-- [x] Better Graph / Ability to set time from for graph.
+- [ ] Allow for multiple years in chart. 
 
 - [ ] Database Backups to prevent Data Loss while writing.
 
