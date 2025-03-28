@@ -185,6 +185,31 @@ function pouchGetHistoryArray($username)
     $old = json_decode(read($pathto."pouches.json"),true);
     return array_keys($old);
 }
+function pouchGetHistoryArrayMonth($username,$month) {
+    $pathto = userPathTo($username);
+    $old = array_keys(json_decode(read($pathto."pouches.json"),true));
+    $new = [];
+    $newspot = 0;
+    for ($i = 0; $i < count($old); $i++) {
+        if (substr($old[$i],0,2) ==  $month) {
+           $new[$newspot] = $old[$i]; 
+           $newspot++;
+        }
+    }
+    return $new;
+}
+
+function monthsIsValid($input) {
+    $months = ["01","02","03","04","05","06","07","08","09","10","11","12"];
+    foreach ($months as $month) {
+        if ($input == $month) return true;
+    }
+    return false;
+}
+
+function monthsGet() {
+    return [["01","January"],["02","February"],["03","March"],["04","April"],["05","May"],["06","June"],["07","July"],["08","August"],["09","September"],["10","October"],["11","November"],["12","December"]];
+}
 
 function canInit($username, $day)
 {
@@ -223,4 +248,19 @@ function canGetHistoryArray($username)
     $old = json_decode(read($pathto."cans.json"),true);
     return array_keys($old);
 }
+
+function canGetHistoryArrayMonth($username,$month) {
+    $pathto = userPathTo($username);
+    $old = array_keys(json_decode(read($pathto."cans.json"),true));
+    $new = [];
+    $newspot = 0;
+    for ($i = 0; $i < count($old); $i++) {
+        if (substr($old[$i],0,2) ==  $month) {
+           $new[$newspot] = $old[$i]; 
+           $newspot++;
+        }
+    }
+    return $new;
+}
+
 // ?>

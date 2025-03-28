@@ -27,8 +27,29 @@ function apiFinish()
     }
 }
 
+function apiFinishMode($input)
+{
+    if (userSessionSecureGet($_GET['username'])) {
+        if ($input == "pouches") {
+            Header("Location: /?username=" . $_GET["username"] . "&id=" . userSessionCreate($_GET['username']) . "&pmonth");
+        } else if ($input == "cans") {
+            Header("Location: /?username=" . $_GET["username"] . "&id=" . userSessionCreate($_GET['username']) . "&cmonth");
+        } else {
+            Header("Location: /?username=" . $_GET["username"] . "&id=" . userSessionCreate($_GET['username']));
+        }
+    } else {
+        if ($input == "pouches") {
+            Header("Location: /?username=" . $_GET["username"] . "&id=" . $_GET['id'] . "&pmonth");
+        } else if ($input == "cans") {
+            Header("Location: /?username=" . $_GET["username"] . "&id=" . $_GET['id'] . "&cmonth");
+        } else {
+            Header("Location: /?username=" . $_GET["username"] . "&id=" . $_GET['id']);
+        }
+    }
+}
+
 if (!isset($_GET["action"])) {
-    apiError("invalidAction");
+    apiError("api.missingparams");
 }
 
 switch ($_GET["action"]) {
@@ -66,7 +87,7 @@ switch ($_GET["action"]) {
         break;
 
     default:
-        apiError("invalidaction");
+        apiError("api.missingparams");
         break;
 
 }

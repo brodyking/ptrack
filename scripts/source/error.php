@@ -23,6 +23,8 @@ function errorIsRecieved() {
 function errorPretty() {
     global $errorOutput;
     switch ($errorOutput) {
+        case "api.missingparams":
+            return "Missing parameters while accessing API.";
         case "login.disabled": 
             return "Login is currently disabled.";
         case "login.missingparams":

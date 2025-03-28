@@ -12,10 +12,10 @@ function cans() {
     } else if ($_GET['deed'] == "reset") {
         // If it is a reset request
         canInit($_GET['username'],date("m-d-Y"));
-        apiFinish();
+        apiFinishMode("cans");
     } else {
         canAdd($_GET['username'],date("m-d-Y"));
-        apiFinish(); 
+        apiFinishMode("cans"); 
     }
 }
 ?>

@@ -1,5 +1,5 @@
 <p align="center"><img src="./assets/logo.png" width="80px"></p>
-<h2 align="center">Pouchtrack v4.2</h2>
+<h2 align="center">Pouchtrack v5</h2>
 <p align="center">
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 </p>
@@ -10,31 +10,26 @@ This project aims at allowing one to track their nicotine intake, specifically n
 
 ## Release Notes
 
-This feature update includes many new features.
+- You can now sort cans and pouches by month. 
 
-- Ability to track cans, alongside pouches
-  - This also includes new layout controls for the homepage
+- Adding to pouches or cans keeps you on the same tab. 
 
-- Small UI tweaks
-  - Settings page now renders fullscreen on mobile
-  - Brought back old gradient from 4.0
-  - More Icons and Username field 
-  - Navigation bar (while logged in) is more concise.
+- Minor Bug Fixes
+  - Better error handling when API receives no action
+  - Spelling fixes in documentation
+
 
 ## Roadmap
 
-- [x] Better Database.
-
-- [x] UI Overhaul.
-
 - [x] Track Cans
+
+- [ ] Allow for multiple years in chart. 
 
 - [ ] Database Backups to prevent Data Loss while writing.
 
 - [ ] Session Expires
 
-- [ ] Better Graph / Ability to set time from for graph.
-
+- [ ] Light Theme
 
 ##  Development and Credits
 

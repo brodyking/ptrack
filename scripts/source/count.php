@@ -13,10 +13,10 @@ function countAPI() {
     } else if ($_GET['strength'] == "reset") {
         // If it is a reset request
         pouchInit($_GET['username'],date("m-d-Y"));
-        apiFinish();
+        apiFinishMode("pouches");
     } else {
         pouchAdd($_GET['username'],date("m-d-Y"),$_GET['strength']);
-        apiFinish(); 
+        apiFinishMode("pouches"); 
     }
 }
 

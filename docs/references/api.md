@@ -1,6 +1,6 @@
 # API
 
-**Page Modified**: March 25, 2025
+**Page Modified**: March 27, 2025
 \
 **Author**: Brody King
 \
@@ -43,6 +43,7 @@ A few functions are included in the api for error handling and such.
 | ------------- | ---------- | ---------- |
 | `apiError()` | `$msg` | Redirects to `/?error=` to display the error |
 | `apiFinish()` | | Redirects to `/` with username and ID. This also detects if secureID is enabled and changes it if its on. |
+| `apiFinishMode()` | `$input` | Adds `cmonth` or `pmonth` to the headers, so that the user is sent to the tab they were on before using the API. Valid inputs are `pouches` and `cans` | 
 
 ## Usage
 This is a pretty large section, so I will try and make it as simple and quick. Here are the ways to interact with the API

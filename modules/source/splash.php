@@ -1,5 +1,5 @@
 <h1 class="mb-3 fw-semibold lh-1 text-center text-gradient"
-    style="  background: -webkit-linear-gradient(#36FFA2,#1D8756);-webkit-background-clip: text;-webkit-text-fill-color: transparent;margin-top:50px;font-size:28pt;">
+    style="  background: -webkit-linear-gradient(#36FFA2,#1D8756);-webkit-background-clip: text;-webkit-text-fill-color: transparent;margin-top:50px;font-size:32pt;">
     Next-Generation Nicotine Tracking</h1>
 <p class="text-center junicode" style="font-size:13pt;margin-bottom: 0px;font-style:italic;">
     Track your nicotine habits, with ease.
