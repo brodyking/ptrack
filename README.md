@@ -10,13 +10,16 @@ This project aims at allowing one to track their nicotine intake, specifically n
 
 ## Release Notes
 
-TBD
+- You can now sort cans and pouches by month. 
+
+- Adding to pouches or cans keeps you on the same tab. 
+
+- Minor Bug Fixes
+  - Better error handling when API receives no action
+  - Spelling fixes in documentation
+
 
 ## Roadmap
-
-- [x] Better Database.
-
-- [x] UI Overhaul.
 
 - [x] Track Cans
 
@@ -25,6 +28,8 @@ TBD
 - [ ] Database Backups to prevent Data Loss while writing.
 
 - [ ] Session Expires
+
+- [ ] Light Theme
 
 ##  Development and Credits
 

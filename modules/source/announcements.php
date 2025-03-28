@@ -8,18 +8,12 @@
           </path>
         </svg> Announcements</h5>
       <div class="card-body">
-      <h5 class="card-title">Recent Updates v4.2</h5>
-        <p>This feature update includes many new features.
-          <ul>
-
-            <li>Ability to track cans, alongside pouches</li>
-            <li>This also includes new layout controls for the homepage</li>
-            
-          <li>Small UI tweaks</li>
-          <li>Settings page now renders fullscreen on mobile</li>
-          <li>Brought back old gradient from 4.0</li>
-          <li>More Icons and Username field</li>
-          <li>Navigation bar (while logged in) is more concise.</li>
+      <h5 class="card-title">Recent Updates v5.0</h5>
+        <p>This Major Release includes the following updates.
+        <ul>
+          <li>You can now sort cans and pouches by month.</li>
+          <li>Adding to pouches or cans keeps you on the same tab.</li>
+          <li>Minor Bug Fixes</li>
         </ul>
         </p>
       </div>
