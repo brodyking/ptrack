@@ -6,8 +6,8 @@
 \
 **Type**: Guide
 
-|**[« Index](/docs/index.md)** |
-| --------------------------- | 
+| **[« Index](/docs/index.md)** |
+| ----------------------------- |
 
 ## Table of Contents
 
@@ -26,24 +26,24 @@ Clone the git repository with the following command, or download the [latest rel
 git clone https://github.com/brodyking/ptrack
 ```
 
-Extract it and move it into the root directory of your web server. 
+Extract it and move it into the root directory of your web server.
 
 Done!
 
 ## Configuration and Security
 
-> [!CAUTION] 
+> [!CAUTION]
 > **IMPORTANT SECURITY NOTICE:** Make sure to deny the public access to `/data/`. This folder contains all the data for users. You can [read more here](/docs/references/database.md). If you fail to do so, any and all data put into this site is exposed to the public internet.
 
 You can edit a few settings in `config.json`, such as the site name:
 
 ```json
 {
-    "site.name": "Pouchtrack", 
-    "site.version": "v0",
-    "site.isindev": false,
+  "site.name": "Pouchtrack",
+  "site.version": "v0",
+  "site.isindev": false,
 
-    "users.allowNewAccounts": true,
-    "users.allowLogin": true
+  "users.allowNewAccounts": true,
+  "users.allowLogin": true
 }
 ```

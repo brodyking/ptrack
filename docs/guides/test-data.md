@@ -1,4 +1,4 @@
-# Test Data 
+# Test Data
 
 **Page Modified**: March 27, 2025
 \
@@ -6,8 +6,8 @@
 \
 **Type**: Guide
 
-|**[« Index](/docs/index.md)** |
-| --------------------------- | 
+| **[« Index](/docs/index.md)** |
+| ----------------------------- |
 
 ## Table of Contents
 
@@ -18,10 +18,13 @@
   - [Can Data](#can-data)
 
 ## Introduction
+
 When working on this project, you may want to generate test data for users. Here are some ways todo so.
 
 ## Pouch Data
+
 Here below is a script that will do so, with one caveat.
+
 ```php
 <?php
 // put this file in the root directory with a different name, then open in a web browser.
@@ -59,7 +62,9 @@ file_put_contents("test.json",$data);
 This file will generate it correctly, but the dates will be `01\/01\/2025`. You can use vscode to replace all `\/` with `/`.
 
 ## Can Data
+
 Here is the script I used. Its very similar to the pouch data.
+
 ```php
 <?php
 // put this file in the root directory with a different name, then open in a web browser.
@@ -93,4 +98,5 @@ str_replace($data,"\/","/");
 file_put_contents("test.json",$data);
 ?>
 ```
+
 Again, this file will generate it correctly, but the dates will be `01\/01\/2025`. You can use vscode to replace all `\/` with `/`.
