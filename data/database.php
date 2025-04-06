@@ -68,8 +68,8 @@ function userCreate($username, $password)
     $accountdata["username"] = $username;
     $accountdata["password"] = $password;
     $accountdata["joindate"] = date("m-d-Y");
-    $accountdata["secureid"] = "true";
     $accountdata["isdeleted"] = "false";
+    $accountdata["secureid"] = "false";
     $accountdata = json_encode($accountdata, JSON_PRETTY_PRINT);
     write($pathto . "account.json", $accountdata);
     return 0;
@@ -79,19 +79,18 @@ function userDelete($username)
     userSettingsSet($username, "password", (string) random_int(100000000, 100000000000));
     userSettingsSet($username, "isdeleted", "true");
 }
-function userSessionInit($username, $id)
-{
-    $pathto = userPathTo($username);
-    $idtosend = array();
-    $idtosend["id"] = $id;
-    write($pathto . 'session.json', json_encode($idtosend, JSON_PRETTY_PRINT));
-    return 0;
-}
-
 function userSessionClear($username)
 {
     $pathto = userPathTo($username);
     unlink($pathto . 'session.json');
+    if (isset($_COOKIE['username'])) {
+        unset($_COOKIE['username']);
+        setcookie('username', '', -1, '/');
+    }
+    if (isset($_COOKIE['id'])) {
+        unset($_COOKIE['id']);
+        setcookie('id', '', -1, '/');
+    }
     return 0;
 }
 
@@ -114,15 +113,6 @@ function userSessionCreate($username)
     $newid = json_encode($newid, JSON_PRETTY_PRINT);
     write($pathto . "session.json", $newid);
     return $newidint;
-}
-function userSessionSecureGet($username)
-{
-    $issecuresession = userSettingsGet($username, "secureid");
-    return ($issecuresession == "true");
-}
-function userSessionSecureSet($username, $value)
-{
-    userSettingsSet($username, "secureid", $value);
 }
 function userPasswordGet($username)
 {
