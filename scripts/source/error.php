@@ -1,18 +1,22 @@
 <?php
 $errorOutput = "";
-function errorSet($errorname) {
+function errorSet($errorname)
+{
     global $errorOutput;
-    $errorOutput = $errorname ;
+    $errorOutput = $errorname;
 }
-function errorGet() {
+function errorGet()
+{
     global $errorOutput;
     return $errorOutput;
 }
-function errorIsSet() {
+function errorIsSet()
+{
     global $errorOutput;
     return isset($errorOutput);
 }
-function errorIsRecieved() {
+function errorIsRecieved()
+{
     if (isset($_GET['error'])) {
         errorSet($_GET['error']);
         return true;
@@ -20,12 +24,13 @@ function errorIsRecieved() {
     return false;
 }
 
-function errorPretty() {
+function errorPretty()
+{
     global $errorOutput;
     switch ($errorOutput) {
         case "api.missingparams":
             return "Missing parameters while accessing API.";
-        case "login.disabled": 
+        case "login.disabled":
             return "Login is currently disabled.";
         case "login.missingparams":
             return "Missing parameters while logging in.";
@@ -53,6 +58,8 @@ function errorPretty() {
             return "No user exists under that username.";
         case "deleteaccount.missingparams":
             return "Missing parameters while deleting account.";
+        case "deleteaccount.invalidsession":
+            return "Invalid Session.";
         case "secureid.missingparams":
             return "Missing parameters while changing Secure ID status.";
         case "secureid.invalidid":
@@ -63,7 +70,7 @@ function errorPretty() {
             return "Incorrect old password.";
         case "changepswd.invalidid":
             return "Invalid Session.";
-        case "cans.missingparams": 
+        case "cans.missingparams":
             return "Missing parameters while modifying Cans.";
         case "cans.nouser":
             return "No user exists under that username.";
@@ -74,11 +81,13 @@ function errorPretty() {
     }
 }
 
-function errorPrint() {
+function errorPrint()
+{
     global $errorOutput;
-    echo '<div class="alert alert-danger" role="alert"><i class="bi bi-exclamation-triangle-fill"></i> <b>'.errorPretty()."</b> (".$errorOutput.')</div>' ;
+    echo '<div class="alert alert-danger" role="alert"><i class="bi bi-exclamation-triangle-fill"></i> <b>' . errorPretty() . "</b> (" . $errorOutput . ')</div>';
 }
-function errorClose() {
+function errorClose()
+{
     global $errorOutput;
     $errorOutput = "";
 }

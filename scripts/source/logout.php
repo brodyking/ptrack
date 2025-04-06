@@ -1,9 +1,10 @@
 <?php
 
-function logout() {
-    if (userExists($_GET['username'])) {
+function logout()
+{
+    if (userExists($_COOKIE['username'])) {
         // Clear session id
-        userSessionClear($_GET['username']);
+        userSessionClear($_COOKIE['username']);
         // Redirect to login
         header("Location: /");
     } else {
