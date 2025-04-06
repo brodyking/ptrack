@@ -7,8 +7,6 @@ This project aims at allowing one to track their nicotine intake, specifically n
 <a href="docs/guides/gettingstarted.md">Get Started</a> &middot; <a href="docs/index.md">Documentation</a> &middot; <a href="https://pt.benadryl.dev">Live Demo</a>
 </b></p>
 
-<img src="assets/screenshot.png">
-
 ## Release Notes
 
 This Minor Release includes the following updates.
@@ -16,6 +14,10 @@ This Minor Release includes the following updates.
 - Slightly Improved UI
 
 - Cookies for Improved Security.
+
+## Screenshot
+
+<img src="assets/screenshot.png">
 
 ## Roadmap
 
