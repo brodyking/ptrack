@@ -9,7 +9,7 @@
         </svg> Release Notes</h5>
       <div class="card-body">
         <h5 class="card-title">Recent Updates v5.1</h5>
-        <p>This Major Release includes the following updates.
+        <p>This Minor Release includes the following updates.
         <ul>
           <li>Slightly Improved UI</li>
           <li>Cookies for Improved Security.</li>
