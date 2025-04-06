@@ -86,24 +86,22 @@ Inside of `account.json`, there are multiple variables pre-defined.
 
 ### User/Account Functions
 
-| Function                 | Parameter                     | Description                                                                      |
-| ------------------------ | ----------------------------- | -------------------------------------------------------------------------------- |
-| `userPathTo()`           | `$username`                   | Returns the path to the users folder.                                            |
-| `userExists()`           | `$username`                   | Returns if the user exists.                                                      |
-| `userSettingsGet()`      | `$username`, `$key`           | Returns the value for `$key` in their `account.json`.                            |
-| `userSettingsSet()`      | `$username`, `$key`, `$value` | Sets `$key` in the users `account.json` to `$value`.                             |
-| `userAuth()`             | `$username`, `$password`      | Returns if `$password` is equal to the users actual password.                    |
-| `userCreate()`           | `$username`, `$password`      | Creates a new user with all the default information.                             |
-| `userDelete()`           | `$username`                   | Set `isdeleted` to true, locks account by changing password.                     |
-| `userSessionInit()`      | `$username`,`$id`             | Writes `$id` into `session.json`.                                                |
-| `userSessionGet()`       | `$username`                   | Returns the users current ID.                                                    |
-| `userSessionCreate()`    | `$username`                   | Creates a randomized session, then writes to `session.json`. Returns the new ID. |
-| `userSessionSecureGet()` | `$username`                   | Returns if the user is using Secure Session                                      |
-| `userSessionSecureSet()` | `$username`                   | Calls `userSettingsSet()` to write the new value.                                |
-| `userPasswordGet()`      | `$username`                   | Calls `userSettingsGet()`, returns the users password                            |
-| `userChangePassword()`   | `$username`, `$password`      | Calls `userSettingsSet()` to set a new password                                  |
-| `userIsAdmin()`          | `$username`                   | Calls `userSettingsGet()`, returns if `isadmin` is set to true                   |
-| `userJoinDate()`         | `$username`                   | Calls `userSettingsGet()`, returns the users `joindate`                          |
+| Function               | Parameter                     | Description                                                         |
+| ---------------------- | ----------------------------- | ------------------------------------------------------------------- |
+| `userPathTo()`         | `$username`                   | Returns the path to the users folder.                               |
+| `userExists()`         | `$username`                   | Returns if the user exists.                                         |
+| `userSettingsGet()`    | `$username`, `$key`           | Returns the value for `$key` in their `account.json`.               |
+| `userSettingsSet()`    | `$username`, `$key`, `$value` | Sets `$key` in the users `account.json` to `$value`.                |
+| `userAuth()`           | `$username`, `$password`      | Returns if `$password` is equal to the users actual password.       |
+| `userCreate()`         | `$username`, `$password`      | Creates a new user with all the default information.                |
+| `userDelete()`         | `$username`                   | Set `isdeleted` to true, locks account by changing password.        |
+| `userSessionClear()`   | `$username`                   | Deletes all the users cookies, and deletes `session.json`           |
+| `userSessionGet()`     | `$username`                   | Returns the users current ID.                                       |
+| `userSessionCreate() ` | `$username`                   | Creates a new session, stores in `session.json`, returns the new id |
+| `userPasswordGet()`    | `$username`                   | Calls `userSettingsGet()`, returns the users password               |
+| `userChangePassword()` | `$username`, `$password`      | Calls `userSettingsSet()` to set a new password                     |
+| `userIsAdmin()`        | `$username`                   | Calls `userSettingsGet()`, returns if `isadmin` is set to true      |
+| `userJoinDate()`       | `$username`                   | Calls `userSettingsGet()`, returns the users `joindate`             |
 
 ### Pouch Functions
 

@@ -1,6 +1,6 @@
 # API
 
-**Page Modified**: March 27, 2025
+**Page Modified**: April 5, 2025
 \
 **Author**: Brody King
 \
@@ -23,7 +23,6 @@
     - [Cans](#cans)
     - [Logout](#logout)
     - [Delete Account](#delete-account)
-    - [SecureID](#secureid)
     - [Change Password](#change-password)
 
 ## Definition
@@ -43,8 +42,8 @@ A few functions are included in the api for error handling and such.
 | Function Name     | Parameters | Definition                                                                                                                                             |
 | ----------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `apiError()`      | `$msg`     | Redirects to `/?error=` to display the error                                                                                                           |
-| `apiFinish()`     |            | Redirects to `/` with username and ID. This also detects if secureID is enabled and changes it if its on.                                              |
-| `apiFinishMode()` | `$input`   | Adds `cmonth` or `pmonth` to the headers, so that the user is sent to the tab they were on before using the API. Valid inputs are `pouches` and `cans` |
+| `apiFinish()`     |            | Redirects to `/` |
+| `apiFinishMode()` | `$input`   | Adds `cmonth` or `pmonth` as GET in the url, so that the user is sent to the tab they were on before using the API. Valid inputs are `pouches` and `cans` |
 
 ## Usage
 
@@ -163,25 +162,6 @@ Switches the `isdeleted` flag on for the user, and changes their password.
 | Error                         | Description |
 | ----------------------------- | ----------- |
 | `deleteaccount.missingparams` |             |
-
-### SecureID
-
-Changes the SecureID flag for their account.
-
-| Scripts Used                             | URL                       |
-| ---------------------------------------- | ------------------------- |
-| [secureid](/scripts/source/secureid.php) | `api.php?action=secureid` |
-
-| Parameter Needed | Method |
-| ---------------- | ------ |
-| `username`       | `POST` |
-| `id`             | `POST` |
-| `issecure`       | `POST` |
-
-| Error                    | Description     |
-| ------------------------ | --------------- |
-| `secureid.missingparams` |                 |
-| `secureid.invalidid`     | Invalid Session |
 
 ### Change Password
 
