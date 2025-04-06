@@ -9,7 +9,6 @@ include scriptsGet("count");
 include scriptsGet("cans");
 include scriptsGet("logout");
 include scriptsGet("deleteaccount");
-include scriptsGet("secureid");
 include scriptsGet("changepswd");
 
 function apiError($msg)
@@ -20,31 +19,16 @@ function apiError($msg)
 // This is used when the API is done. It checks if the user has secure session and makes a new id depending on that.
 function apiFinish()
 {
-    if (userSessionSecureGet($_GET['username'])) {
-        Header("Location: /?username=" . $_GET["username"] . "&id=" . userSessionCreate($_GET['username']));
-    } else {
-        Header("Location: /?username=" . $_GET["username"] . "&id=" . $_GET['id']);
-    }
+    Header("Location: /");
 }
-
 function apiFinishMode($input)
 {
-    if (userSessionSecureGet($_GET['username'])) {
-        if ($input == "pouches") {
-            Header("Location: /?username=" . $_GET["username"] . "&id=" . userSessionCreate($_GET['username']) . "&pmonth");
-        } else if ($input == "cans") {
-            Header("Location: /?username=" . $_GET["username"] . "&id=" . userSessionCreate($_GET['username']) . "&cmonth");
-        } else {
-            Header("Location: /?username=" . $_GET["username"] . "&id=" . userSessionCreate($_GET['username']));
-        }
+    if ($input == "pouches") {
+        Header("Location: /?pmonth");
+    } else if ($input == "cans") {
+        Header("Location: /?cmonth");
     } else {
-        if ($input == "pouches") {
-            Header("Location: /?username=" . $_GET["username"] . "&id=" . $_GET['id'] . "&pmonth");
-        } else if ($input == "cans") {
-            Header("Location: /?username=" . $_GET["username"] . "&id=" . $_GET['id'] . "&cmonth");
-        } else {
-            Header("Location: /?username=" . $_GET["username"] . "&id=" . $_GET['id']);
-        }
+        Header("Location: /");
     }
 }
 
@@ -76,10 +60,6 @@ switch ($_GET["action"]) {
 
     case "deleteaccount":
         deleteaccount();
-        break;
-
-    case "secureid":
-        secureid();
         break;
 
     case "changepswd":
