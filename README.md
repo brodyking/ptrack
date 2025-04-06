@@ -23,13 +23,11 @@ This Minor Release includes the following updates.
 
 - [x] Track Cans
 
-- [ ] Allow for multiple years in chart.
+- [x] Allow for multiple years in chart.
+
+- [x] Session Expires
 
 - [ ] Database Backups to prevent Data Loss while writing.
-
-- [ ] Session Expires
-
-- [ ] Light Theme
 
 ## Development and Credits
 
