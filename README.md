@@ -9,7 +9,7 @@ This project aims at allowing one to track their nicotine intake, specifically n
 
 ## Release Notes
 
-This Minor Release includes the following updates.
+This Minor Update includes the following updates.
 
 - Slightly Improved UI
 
