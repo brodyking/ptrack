@@ -1,5 +1,5 @@
 <p align="center"><img src="./assets/logo.png" width="80px"></p>
-<h2 align="center">Pouchtrack v5</h2>
+<h2 align="center">Pouchtrack v5.1</h2>
 <p align="center">
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 </p>
@@ -7,23 +7,15 @@ This project aims at allowing one to track their nicotine intake, specifically n
 <a href="docs/guides/gettingstarted.md">Get Started</a> &middot; <a href="docs/index.md">Documentation</a> &middot; <a href="https://pt.benadryl.dev">Live Demo</a>
 </b></p>
 
-
 ## Release Notes
 
-- You can now sort cans and pouches by month. 
-
-- Adding to pouches or cans keeps you on the same tab. 
-
-- Minor Bug Fixes
-  - Better error handling when API receives no action
-  - Spelling fixes in documentation
-
+TBD
 
 ## Roadmap
 
 - [x] Track Cans
 
-- [ ] Allow for multiple years in chart. 
+- [ ] Allow for multiple years in chart.
 
 - [ ] Database Backups to prevent Data Loss while writing.
 
@@ -31,7 +23,7 @@ This project aims at allowing one to track their nicotine intake, specifically n
 
 - [ ] Light Theme
 
-##  Development and Credits
+## Development and Credits
 
 This project was made using [php](https://www.php.net/), [bootstrap](https://getbootstrap.com/) and [chart.js](https://www.chartjs.org/). Without these pieces of software, alot of this would've never been made.
 
