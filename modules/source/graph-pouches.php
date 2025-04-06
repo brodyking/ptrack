@@ -16,13 +16,13 @@
             }
 
             ?>
-            <?php 
+            <?php
 
-                if ($pouchesmonth == "01") {
-                    echo '<a class="btn btn-outline-secondary disabled"><i class="bi bi-rewind-fill"></i></a>';
-                } else {
-                    echo '<a href="/?username='.$username.'&id='.$id.'&pmonth='.($pouchesmonth-1).'" class="btn btn-outline-primary"><i class="bi bi-rewind-fill"></i></a>';
-                }
+            if ($pouchesmonth == "01") {
+                echo '<a class="btn btn-outline-secondary disabled"><i class="bi bi-rewind-fill"></i></a>';
+            } else {
+                echo '<a href="/?pmonth=' . ($pouchesmonth - 1) . '" class="btn btn-outline-primary"><i class="bi bi-rewind-fill"></i></a>';
+            }
 
             ?>
             <input type="text" name="username" value="<?php echo $username; ?>" style="display: none;">
@@ -43,13 +43,13 @@
 
                 ?>
             </select>
-            <?php 
+            <?php
 
-                if ($pouchesmonth == "12") {
-                    echo '<a class="btn btn-outline-secondary disabled"><i class="bi bi-fast-forward-fill"></i></a>';
-                } else {
-                    echo '<a href="/?username='.$username.'&id='.$id.'&pmonth='.($pouchesmonth+1).'" class="btn btn-outline-primary"><i class="bi bi-fast-forward-fill"></i></a>';
-                }
+            if ($pouchesmonth == "12") {
+                echo '<a class="btn btn-outline-secondary disabled"><i class="bi bi-fast-forward-fill"></i></a>';
+            } else {
+                echo '<a href="/?pmonth=' . ($pouchesmonth + 1) . '" class="btn btn-outline-primary"><i class="bi bi-fast-forward-fill"></i></a>';
+            }
 
             ?>
         </form>
@@ -191,8 +191,7 @@
                         cheating!!</p>
                 </div>
                 <div class="modal-footer">
-                    <a href="api.php?action=count&strength=reset&<?php echo "username=" . $username . "&id=" . $id ?>"
-                        class="btn btn-danger">Reset</a>
+                    <a href="api.php?action=count&strength=reset" class="btn btn-danger">Reset</a>
                 </div>
             </div>
         </div>

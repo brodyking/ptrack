@@ -1,3 +1,12 @@
+<div class="card" id="cookies">
+  <h5 class="card-header">
+    <i class="bi bi-cookie"></i> Cookie Policy
+  </h5>
+  <div class="card-body">
+    This website uses Cookies to store your login data and session ID. Nothing else is collected or stored.
+  </div>
+</div>
+
 <div class="card" id="terms">
   <h5 class="card-header">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-paper-fill"

@@ -1,6 +1,6 @@
 <?php
 function isLoggedIn()
 {
-  return isset($_GET['username']) && isset($_GET['id']) && userSessionGet($_GET['username']) == $_GET['id'];
+  return isset($_COOKIE['username']) && isset($_COOKIE['id']) && userSessionGet($_COOKIE['username']) == $_COOKIE['id'];
 }
 ?>
