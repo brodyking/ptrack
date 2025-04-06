@@ -1,6 +1,6 @@
 # Modules
 
-**Page Modified**: March 25, 2025
+**Page Modified**: April 5, 2025
 \
 **Author**: Brody King
 \
@@ -75,6 +75,7 @@ If a module has no php in it, you can use `modulesRender()`. If it has php conte
 | [footer](/modules/source/footer.php)                       | Small footer text shown at the bottom of the page                            |
 | [graph-cans](/modules/source/graph-cans.php)               | Graph card for cans used on dashboard.                                       |
 | [graph-pouches](/modules/source/graph-pouches.php)         | Graph card for pouches used on dashboard.                                    |
+| [install](/modules/source/install.php)                     | Install instructions for mobile users                                        |
 | [login](/modules/source/login.php)                         | Login form. Used in splash-content                                           |
 | [nav-loggedin](/modules/source/nav-loggedin.php)           | Navigation bar shown when the user is loged in                               |
 | [nav-splash](/modules/source/nav-splash.php)               | Navigation bar shown when the user is not logged in                          |
