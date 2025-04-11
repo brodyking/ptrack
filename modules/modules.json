@@ -58,7 +58,7 @@
     "welcome": {
         "name": "welcome",
         "description": "Welcome message when logged in",
-        "version": 1.0,
+        "version": 1.1,
         "author": "Brody King",
         "source": "modules/source/welcome.php"
     },
