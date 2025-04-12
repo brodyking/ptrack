@@ -19,9 +19,9 @@
             <?php
 
             if ($cansmonth == "01") {
-                echo '<a class="btn btn-outline-secondary disabled"><i class="bi bi-rewind-fill"></i></a>';
+                echo '<a class="btn btn-outline-light disabled"><i class="bi bi-rewind-fill"></i></a>';
             } else {
-                echo '<a href="/?cmonth=' . ($cansmonth - 1) . '" class="btn btn-outline-primary"><i class="bi bi-rewind-fill"></i></a>';
+                echo '<a href="/?cmonth=' . ($cansmonth - 1) . '" class="btn btn-outline-light"><i class="bi bi-rewind-fill"></i></a>';
             }
 
             ?>
@@ -46,9 +46,9 @@
             <?php
 
             if ($cansmonth == "12") {
-                echo '<a class="btn btn-outline-secondary disabled"><i class="bi bi-fast-forward-fill"></i></a>';
+                echo '<a class="btn btn-outline-light disabled"><i class="bi bi-fast-forward-fill"></i></a>';
             } else {
-                echo '<a href="/?cmonth=' . ($cansmonth + 1) . '" class="btn btn-outline-primary"><i class="bi bi-fast-forward-fill"></i></a>';
+                echo '<a href="/?cmonth=' . ($cansmonth + 1) . '" class="btn btn-outline-light"><i class="bi bi-fast-forward-fill"></i></a>';
             }
 
             ?>
@@ -64,10 +64,10 @@
         $history = canGetHistoryArrayMonth($username, $cansmonth);
         if (sizeof($history) == 1) {
             echo '<script> document.getElementById("canschart").remove();</script>';
-            echo "<div class='alert alert-light' role='alert'>A graph will be available when 2 or more days have been logged.</div>";
+            echo "<div class='card-body border rounded mt-2 mb-2' role='alert'>A graph will be available when 2 or more days have been logged.</div>";
         } else if (sizeof($history) == 0) {
             echo '<script> document.getElementById("canschart").remove();</script>';
-            echo "<div class='alert alert-light' role='alert'>No entries for this month</div>";
+            echo "<div class='card-body border rounded mt-2 mb-2' role='alert'>No entries for this month</div>";
         } else {
             echo '<br>';
         }
@@ -129,11 +129,11 @@
 
 
         <p class="d-grid gap-2 d-md-flex justify-content-md-end mb-0">
-            <a class="btn btn-primary btn-sm" data-bs-toggle="collapse" href="#cansgraphtable" role="button"
+            <a class="btn btn-secondary-new btn-sm" data-bs-toggle="collapse" href="#cansgraphtable" role="button"
                 aria-expanded="false" aria-controls="graphtable">
                 View Table
             </a>
-            <a class="btn btn-primary btn-sm" data-bs-toggle="collapse" href="#cansgraphjson" role="button"
+            <a class="btn btn-secondary-new btn-sm" data-bs-toggle="collapse" href="#cansgraphjson" role="button"
                 aria-expanded="false" aria-controls="graphjson">
                 View JSON
             </a>

@@ -47,8 +47,22 @@
             errorPrint();
         }
 
+
+        if (isset($_GET["paperwork"])) {
+            include modulesGetPath("nav-splash");
+            include modulesGetPath("paperwork");
+        } else if (isset($_GET["login"])) {
+            include modulesGetPath("nav-splash");
+            include modulesGetPath("login");
+        } else if (isset($_GET["register"])) {
+            include modulesGetPath("nav-splash");
+            include modulesGetPath("register");
+        } else if (isset($_GET["changes"])) {
+            include modulesGetPath("nav-splash");
+            include modulesGetPath("changes");
+        }
         // Check if logged in
-        if (isLoggedIn()) {
+        else if (isLoggedIn()) {
 
             $username = $_COOKIE['username'];
 
@@ -71,10 +85,6 @@
             // Rendered Items when logged out
             include modulesGetPath("nav-splash");
             include modulesGetPath("splash");
-            include modulesGetPath("register");
-            include modulesGetPath("splash-content");
-            include modulesGetPath("paperwork");
-
         }
 
         ?>

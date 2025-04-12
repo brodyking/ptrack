@@ -1,5 +1,6 @@
-<nav id="nav" class="navbar navbar-expand-lg bg-body-tertiary border rounded">
-  <div class="container-fluid">
+<nav id="nav" class="navbar navbar-expand-lg bg-body-tertiary border rounded"
+  style="background-color: #dee2e608!important;">
+  <div class="container-fluid pe-2 ps-2">
     <a class="navbar-brand" href="/">
       <img src="/assets/logo.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
       Pouchtrack</a>
@@ -18,8 +19,6 @@
           <ul class="dropdown-menu mb-2">
             <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#settings"><i
                   class="bi bi-gear-wide-connected"></i> Settings</a></li>
-            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#changepswd"><i
-                  class="bi bi-key"></i> Change Password</a></li>
             <li><a class="dropdown-item" href="api.php?action=logout"><i class="bi bi-door-open"></i> Logout</a></li>
           </ul>
         </li>
