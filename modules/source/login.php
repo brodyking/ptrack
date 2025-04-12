@@ -9,7 +9,6 @@
     <form method="POST" action="api.php?action=login">
       <label class="col-form-label">Username</label>
       <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">@</span>
         <input type="text" class="form-control" name="username">
       </div>
       <label class="col-form-label">Password</label>
