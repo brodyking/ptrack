@@ -1,5 +1,6 @@
-<nav id="nav" class="navbar navbar-expand-lg bg-body-tertiary border rounded">
-  <div class="container-fluid">
+<nav id="nav" class="navbar navbar-expand-lg bg-body-tertiary border rounded"
+  style="background-color: #dee2e608!important;">
+  <div class="container-fluid pe-2 ps-2">
     <a class="navbar-brand" href="/">
       <img src="/assets/logo.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
       Pouchtrack</a>
