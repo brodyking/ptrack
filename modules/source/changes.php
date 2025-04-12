@@ -10,7 +10,7 @@
     <p>This Minor Release includes general bug fixes and the following UI improvements:
     <ul>
       <li>New buttons for increased readability.</li>
-      <li>New landing page.</li>
+      <li>New landing and settings page.</li>
       <li>Login and Register are on seperate pages.</li>
       <li>Solid background color when logged in for better readability.</li>
       <li>Fixed centered text rendering issues when on mobile.</li>
