@@ -17,7 +17,7 @@
                 <input type="text" class="form-control" disabled value="<?php echo $id; ?>">
                 <br>
                 <h5 class="title">Delete Account</h5>
-                <a class="btn btn-danger" style="text-decoration: none;" href="#" data-bs-dismiss="modal"
+                <a class="btn btn-secondary-new" style="text-decoration: none;" href="#" data-bs-dismiss="modal"
                     data-bs-toggle="modal" data-bs-target="#delete">Delete Account</a>
             </div>
         </div>
@@ -40,7 +40,7 @@
                     once you click Delete. Do you wish to continue?</p>
             </div>
             <div class="modal-footer">
-                <a href="api.php?action=deleteaccount" class="btn btn-danger">Delete
+                <a href="api.php?action=deleteaccount" class="btn btn-primary-new">Delete
                     my
                     Account</a>
             </div>
@@ -67,7 +67,7 @@
                         <label class="col-form-label">New Password</label>
                         <input type="password" class="form-control" name="newpassword">
                     </div>
-                    <button type="submit" class="btn btn-primary">Change Password</button>
+                    <button type="submit" class="btn btn-secondary-new">Change Password</button>
                 </form>
             </div>
             <div class="modal-footer">
