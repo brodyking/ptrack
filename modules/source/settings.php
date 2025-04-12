@@ -7,18 +7,25 @@
             </div>
             <div class="modal-body">
 
-                <h5 class="title">Username</h5>
-                <input type="username" class="form-control" disabled value="@<?php echo $username; ?>">
-                <br>
-                <h5 class="title">Join Date</h5>
-                <input type="text" class="form-control" disabled value="<?php echo userJoinDate($username); ?>">
-                <br>
-                <h5 class="title">Session ID</h5>
-                <input type="text" class="form-control" disabled value="<?php echo $id; ?>">
-                <br>
-                <h5 class="title">Delete Account</h5>
-                <a class="btn btn-secondary-new" style="text-decoration: none;" href="#" data-bs-dismiss="modal"
-                    data-bs-toggle="modal" data-bs-target="#delete">Delete Account</a>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" style="background-color: #dee2e608!important"
+                        id="basic-addon1">Username</span>
+                    <input type="username" class="form-control" disabled value="<?php echo $username; ?>">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" style="background-color: #dee2e608!important" id="basic-addon1">Join
+                        Date</span>
+                    <input type="text" class="form-control" disabled value="<?php echo userJoinDate($username); ?>">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" style="background-color: #dee2e608!important"
+                        id="basic-addon1">Session ID</span>
+                    <input type="text" class="form-control" disabled value="<?php echo $id; ?>">
+                </div>
+                <a class="btn btn-secondary-new w-100 mb-3" href="#" data-bs-toggle="modal"
+                    data-bs-target="#changepswd"><i class="bi bi-key"></i> Change Password</a>
+                <a class="btn btn-secondary-new w-100" style="text-decoration: none;" href="#" data-bs-dismiss="modal"
+                    data-bs-toggle="modal" data-bs-target="#delete"><i class="bi bi-trash"></i> Delete Account</a>
             </div>
         </div>
     </div>

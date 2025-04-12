@@ -19,8 +19,6 @@
           <ul class="dropdown-menu mb-2">
             <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#settings"><i
                   class="bi bi-gear-wide-connected"></i> Settings</a></li>
-            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#changepswd"><i
-                  class="bi bi-key"></i> Change Password</a></li>
             <li><a class="dropdown-item" href="api.php?action=logout"><i class="bi bi-door-open"></i> Logout</a></li>
           </ul>
         </li>
