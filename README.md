@@ -1,5 +1,5 @@
 <p align="center"><img src="./assets/logo.png" width="80px"></p>
-<h2 align="center">Pouchtrack v5.2</h2>
+<h2 align="center">Pouchtrack v5.3</h2>
 <p align="center">
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 </p>
@@ -9,13 +9,7 @@ This project aims at allowing one to track their nicotine intake, specifically n
 
 ## Release Notes
 
-This Minor Release includes general bug fixes and the following UI improvements:
-
-- New buttons for increased readability.
-- New landing and settings page.
-- Login and Register are on seperate pages.
-- Solid background color when logged in for better readability.
-- Fixed centered text rendering issues when on mobile.
+TBD
 
 ## Roadmap
 
