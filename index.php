@@ -25,9 +25,9 @@
     include scriptsGet("checktoday");
 
     ?>
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/icons/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="assets/main.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/icons/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="/assets/main.css" rel="stylesheet">
     <title>Pouchtrack</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -94,7 +94,7 @@
     <?php
     include modulesGetPath("footer");
     ?>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
