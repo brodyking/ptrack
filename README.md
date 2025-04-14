@@ -11,7 +11,7 @@ This project aims at allowing one to track their nicotine intake, specifically n
 
 This Minor Update includes the following
 
-- Consistant navbar when changing pages
+- Consistent navbar when changing pages
 
 - 404 page
 

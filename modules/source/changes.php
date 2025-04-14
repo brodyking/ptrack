@@ -22,7 +22,7 @@
   <div class="card-body">
     <p>This Minor Update includes the following
     <ul>
-      <li>Consistant navbar when changing pages</li>
+      <li>Consistent navbar when changing pages</li>
       <li>404 page</li>
       <li>Better routing</li>
     </ul>
