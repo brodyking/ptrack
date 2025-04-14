@@ -47,43 +47,45 @@
             errorPrint();
         }
 
-
-        if (isset($_GET["paperwork"])) {
-            include modulesGetPath("nav-splash");
-            include modulesGetPath("paperwork");
-        } else if (isset($_GET["login"])) {
-            include modulesGetPath("nav-splash");
-            include modulesGetPath("login");
-        } else if (isset($_GET["register"])) {
-            include modulesGetPath("nav-splash");
-            include modulesGetPath("register");
-        } else if (isset($_GET["changes"])) {
-            include modulesGetPath("nav-splash");
-            include modulesGetPath("changes");
-        }
-        // Check if logged in
-        else if (isLoggedIn()) {
+        // If the user is logged in, we set cookies and local variables that are used later. 
+        if (isLoggedIn()) {
 
             $username = $_COOKIE['username'];
-
-            // Secure Session ID Changing
             $id = $_COOKIE['id'];
 
-
-            // Checks if entry for current date is set, if not, creates a blank one
+            // Checks if current day has an entry
             checkToday();
 
             // Rendered Items when logged in
-            include modulesGetPath("nav-loggedin");
             include modulesGetPath("settings");
             include modulesGetPath("install");
+        }
+
+        // Global navigation
+        include modulesGetPath("nav");
+
+        // Individual pages
+        if (isset($_GET["paperwork"])) {
+            // Paperwork/TOS
+            include modulesGetPath("paperwork");
+        } else if (isset($_GET["login"])) {
+            // Login
+            include modulesGetPath("login");
+        } else if (isset($_GET["register"])) {
+            // Register
+            include modulesGetPath("register");
+        } else if (isset($_GET["changes"])) {
+            // Changelog
+            include modulesGetPath("changes");
+        } else if (isset($_GET["404"])) {
+            // 404 Page
+            include modulesGetPath("404");
+        } else if (isLoggedIn()) {
+            // Dashboard w/ Graph
             include modulesGetPath("welcome");
             include modulesGetPath("dashboard");
-
         } else {
-
-            // Rendered Items when logged out
-            include modulesGetPath("nav-splash");
+            // Splash
             include modulesGetPath("splash");
         }
 
