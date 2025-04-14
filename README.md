@@ -9,7 +9,13 @@ This project aims at allowing one to track their nicotine intake, specifically n
 
 ## Release Notes
 
-TBD
+This Minor Update includes the following
+
+- Consistant navbar when changing pages
+
+- 404 page
+
+- Better routing
 
 ## Roadmap
 
