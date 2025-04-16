@@ -1,3 +1,13 @@
+<?php
+
+// Missing Email Warning
+if (userSettingsGet($username, "email") == "N/A") {
+  echo "<div class='alert alert-warning container'><b>Email Missing!</b> If you need account assistance in the future, we will be unable to help. <a href='#' class='text-warning' style='float:right;' data-bs-toggle='modal' data-bs-target='#changeemail'>Add Email</a></div>";
+}
+
+
+?>
+
 <div class="container p-0 m-0 mb-4 text-center" style="min-width: 100%;">
   <h1 class="mb-3 fw-semibold lh-1 text-gradient splash-title-secondary" style="margin-top:50px;font-size:38pt;">
     Welcome back, <span class="splash-title-primary"><?php echo $username; ?></span>.
