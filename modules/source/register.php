@@ -8,16 +8,22 @@
   <div class="card-body">
     <form method="POST" action="api.php?action=register">
       <div class="mb-3">
-        <label for="recipient-name" class="col-form-label">Username</label>
-        <input type="text" class="form-control" name="username">
+        <label for="recipient-name" class="col-form-label">Username <span class="text-secondary">(You cannot change this
+            later)</span></label>
+        <input required type="text" class="form-control" name="username">
+      </div>
+      <div class="mb-3">
+        <label for="recipient-name" class="col-form-label">Email <span class="text-secondary">(Optional)</span></label>
+        <input type="email" class="form-control" name="email">
       </div>
       <div class="mb-3">
         <label for="message-text" class="col-form-label">Password</label>
-        <input type="password" class="form-control" name="password">
+        <input required type="password" class="form-control" name="password">
       </div>
       <div class="mb-3">
-        By clicking Register, you agree to the Terms of Service, Privacy Policy, and Cookie Policy located <a
-          href="/?paperwork">here</a>.
+        <label class="col-form-label"><input type="checkbox" class="form-input" required> I agree to the
+          Terms of Service, Privacy Policy, and
+          Cookie Policy located <a href="/?paperwork">here</a>.</label>
       </div>
       <div class="mb-3">
         <button type="submit" class="btn btn-secondary-new">Register</button>

@@ -44,6 +44,8 @@ function userSettingsGet($username, $key)
 {
     $pathto = userPathTo($username);
     $account = json_decode(read($pathto . "account.json"), true);
+    if (!isset($account[$key]))
+        return "N/A";
     return $account[$key];
 }
 function userSettingsSet($username, $key, $value)
@@ -54,11 +56,19 @@ function userSettingsSet($username, $key, $value)
     $account = json_encode($account, JSON_PRETTY_PRINT);
     write($pathto . "account.json", $account);
 }
+function userSettingsDelete($username, $key)
+{
+    $pathto = userPathTo($username);
+    $account = json_decode(read($pathto . "account.json"), true);
+    unset($account[$key]);
+    $account = json_encode($account, JSON_PRETTY_PRINT);
+    write($pathto . "account.json", $account);
+}
 function userAuth($username, $password)
 {
     return $password == userSettingsGet($username, "password");
 }
-function userCreate($username, $password)
+function userCreate($username, $email, $password)
 {
     $pathto = userPathTo($username);
     mkdir($pathto);
@@ -66,6 +76,9 @@ function userCreate($username, $password)
     write($pathto . "cans.json", "");
     $accountdata = array();
     $accountdata["username"] = $username;
+    if ($email != "") {
+        $accountdata["email"] = $email;
+    }
     $accountdata["password"] = $password;
     $accountdata["joindate"] = date("m-d-Y");
     $accountdata["isdeleted"] = "false";

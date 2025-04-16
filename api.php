@@ -10,6 +10,7 @@ include scriptsGet("cans");
 include scriptsGet("logout");
 include scriptsGet("deleteaccount");
 include scriptsGet("changepswd");
+include scriptsGet("changeemail");
 
 function apiError($msg)
 {
@@ -66,6 +67,9 @@ switch ($_GET["action"]) {
         changepswd();
         break;
 
+    case "changeemail":
+        changeemail();
+        break;
     default:
         apiError("api.missingparams");
         break;

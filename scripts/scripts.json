@@ -6,6 +6,13 @@
         "author": "Brody King",
         "source": "scripts/source/cans.php"
     },
+    "changeemail": {
+        "name": "changeemail",
+        "description": "Change a users email.",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/changeemail.php"
+    },
     "changepswd": {
         "name": "changepswd",
         "description": "Change a users password.",
@@ -65,7 +72,7 @@
     "register": {
         "name": "register",
         "description": "All registration code used in api.php",
-        "version": 1.1,
+        "version": 1.2,
         "author": "Brody King",
         "source": "scripts/source/register.php"
     }
