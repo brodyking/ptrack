@@ -2,7 +2,8 @@
     style="background-color: #dee2e608!important;">
     <div class="container-fluid pe-1 ps-2">
         <a class="navbar-brand" href="/">
-            <img src="/assets/logo.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
+            <img src="/assets/logo.png" alt="Logo" width="24" height="24"
+                class="d-inline-block align-text-top border rounded">
             Pouchtrack</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,8 +27,12 @@
             <?php
 
             if (isLoggedIn()) {
-                echo '      <ul class="navbar-nav ms-auto">
-        <li><a class="nav-link install-help-mobile" href="#" data-bs-toggle="modal" data-bs-target="#install"><i
+                echo '      <ul class="navbar-nav ms-auto">';
+                if (userIsAdmin($username)) {
+                    echo '<li><a class="nav-link" href="/?manage"><i
+              class="bi bi-hammer"></i> Manage</a></li>';
+                }
+                echo '<li><a class="nav-link install-help-mobile" href="#" data-bs-toggle="modal" data-bs-target="#install"><i
               class="bi bi-download"></i> Install</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
