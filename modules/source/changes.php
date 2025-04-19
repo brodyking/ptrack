@@ -3,6 +3,10 @@
     padding-bottom: .5em;
   }
 
+  .card-body>ul>li>ul {
+    padding-top: .5em;
+  }
+
   .card-body>ul>li>ul>li {
     padding-bottom: .5em;
   }
@@ -22,7 +26,14 @@
   <div class="card-body">
     <p>This Minor Update includes the following
     <ul>
-      <li>TBD</li>
+      <li>Email for creating new accounts.
+        <ul>
+          <li>New registration page and Settings menu additinos.</li>
+          <li>Email is still optional.</li>
+        </ul>
+      </li>
+      <li>New Domain (pt.benadryl.dev -> pouchtrack.net)</li>
+      <li>New Logo</li>
     </ul>
     </p>
   </div>

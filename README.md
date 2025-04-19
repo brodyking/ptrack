@@ -18,6 +18,8 @@ This Minor Update includes the following
 
 - New Domain (pt.benadryl.dev -> pouchtrack.net)
 
+- New Logo
+
 ## Roadmap
 
 - [x] Track Cans
