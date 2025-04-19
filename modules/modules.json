@@ -55,6 +55,15 @@
         "author": "Brody King",
         "source": "modules/source/login.php"
     },
+    "manage": {
+        "name": "manage",
+        "description": "Analytics and stuff",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/manage.php"
+    },
+
+
     "nav": {
         "name": "nav",
         "description": "Global navigation bar",

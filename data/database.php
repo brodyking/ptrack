@@ -83,6 +83,7 @@ function userCreate($username, $email, $password)
     $accountdata["joindate"] = date("m-d-Y");
     $accountdata["isdeleted"] = "false";
     $accountdata["secureid"] = "false";
+    $accountdata["isadmin"] = "false";
     $accountdata = json_encode($accountdata, JSON_PRETTY_PRINT);
     write($pathto . "account.json", $accountdata);
     return 0;
@@ -272,6 +273,49 @@ function canGetHistoryArrayMonth($username, $month)
         }
     }
     return $new;
+}
+
+// TRACKING
+
+function trackingViewsGetKeys()
+{
+    return array_keys(json_decode(read("data/db_tracking/views.json"), true));
+}
+
+function trackingViewsGetValue($key)
+{
+    $views = json_decode(read("data/db_tracking/views.json"), true);
+    return $views[$key];
+}
+
+function trackingViewsAdd($date)
+{
+    if (settingsGet("tracking.views")) {
+        $old = json_decode(read("data/db_tracking/views.json"), true);
+        if (isset($old[$date])) {
+            $old[$date] = $old[$date] + 1;
+        } else {
+            $old[$date] = 1;
+        }
+        $new = json_encode($old, JSON_PRETTY_PRINT);
+        file_put_contents("data/db_tracking/views.json", $new);
+    }
+}
+
+function trackingLogsAdd($username, $page, $date, $device)
+{
+    if (settingsGet("tracking.logs")) {
+        $logs = file_get_contents("data/db_tracking/logs.json");
+        $logs = json_decode($logs, true);
+        array_push($logs, "<span class='text-primary'>[{$date}]</span> <span class='text-success'>[username: {$username}]</span> <span class='text-warning'>[location: {$page}]</span> [device: {$device}]");
+        $logs = json_encode($logs, JSON_PRETTY_PRINT);
+        file_put_contents("data/db_tracking/logs.json", $logs);
+    }
+}
+
+function trackingLogsGet()
+{
+    return json_decode(file_get_contents("data/db_tracking/logs.json"), true);
 }
 
 // ?>
