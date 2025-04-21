@@ -3,8 +3,8 @@
     "site.version": "v5.4",
     "site.allowmanage": true,
 
-    "tracking.logs": false,
-    "tracking.views": false,
+    "tracking.logs": true,
+    "tracking.views": true,
 
     "users.allowNewAccounts": true,
     "users.allowLogin": true
