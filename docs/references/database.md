@@ -1,6 +1,6 @@
 # Database
 
-**Page Modified**: April 5, 2025
+**Page Modified**: April 21, 2025
 \
 **Author**: Brody King
 \
@@ -24,6 +24,9 @@
     - [Pouch Functions](#pouch-functions)
     - [Can Functions](#can-functions)
     - [Month/Date Functions](#monthdate-functions)
+  - [Tracking Functins](#tracking-functins)
+    - [Tracking Views](#tracking-views)
+    - [Tracking Logs](#tracking-logs)
 
 ## Introduction
 
@@ -133,3 +136,22 @@ Inside of `account.json`, there are multiple variables pre-defined.
 | ---------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `monthIsValid()` | `$input`  | Takes in a number and returns T/F if its a valid month. Months are `01`-`12`.                                                                      |
 | `monthsGet()`    |           | Returns an array of months. Each items is its own array with index 0 being its number, and index 1 being its actual name. Ex: `["02","February"]`. |
+
+## Tracking Functins
+
+These are used for analytics. There are views and logs.
+
+### Tracking Views
+
+| Function                   | Parameter | Description                    |
+| -------------------------- | --------- | ------------------------------ |
+| `trackingViewsGetKeys() `  |           | Returns all days with views    |
+| `trackingViewsGetValue() ` | `$key`    | Returns the amount on that day |
+| `trackingViewsAdd()`       | `$date`   | Adds a view on that day        |
+
+### Tracking Logs
+
+| Function            | Parameter                                | Description                 |
+| ------------------- | ---------------------------------------- | --------------------------- |
+| `trackingLogsAdd()` | `$username`, `$page`, `$date`, `$device` | Adds that day into the logs |
+| `trackingLogsGet()` |                                          | Returns all logs            |

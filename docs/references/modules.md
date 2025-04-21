@@ -1,6 +1,6 @@
 # Modules
 
-**Page Modified**: April 5, 2025
+**Page Modified**: April 21, 2025
 \
 **Author**: Brody King
 \
@@ -68,22 +68,22 @@ If a module has no php in it, you can use `modulesRender()`. If it has php conte
 
 ## Included Modules
 
-| Module Name                                                | Description                                                                  |
-| ---------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [announcements](/modules/source/announcements.php)         | Recent updates shown in splash-content                                       |
-| [dashboard](/modules/source/dashboard.php)                 | Contains all graphs and selections in tabs                                   |
-| [footer](/modules/source/footer.php)                       | Small footer text shown at the bottom of the page                            |
-| [graph-cans](/modules/source/graph-cans.php)               | Graph card for cans used on dashboard.                                       |
-| [graph-pouches](/modules/source/graph-pouches.php)         | Graph card for pouches used on dashboard.                                    |
-| [install](/modules/source/install.php)                     | Install instructions for mobile users                                        |
-| [login](/modules/source/login.php)                         | Login form. Used in splash-content                                           |
-| [nav-loggedin](/modules/source/nav-loggedin.php)           | Navigation bar shown when the user is loged in                               |
-| [nav-splash](/modules/source/nav-splash.php)               | Navigation bar shown when the user is not logged in                          |
-| [paperwork](/modules/source/paperwork.php)                 | Terms and Conditions and Privacy Policy                                      |
-| [register](/modules/source/register.php)                   | Registration popup. Does not include activation button.                      |
-| [selection-cans](/modules/source/selection-cans.php)       | Selection for tracking cans, used on dashboard.                              |
-| [selection-pouches](/modules/source/selection-pouches.php) | Selection for picking pouches, used on dashboard.                            |
-| [settings](/modules/source/settings.php)                   | Settings popup, includes change password popup aswell                        |
-| [splash-content](/modules/source/splash-content.php)       | The layout for all content on the splash page when the user is not logged in |
-| [splash](/modules/source/splash.php)                       | Title and buttons shown at the top when the user is not logged in            |
-| [welcome](/modules/source/welcome.php)                     | Shows a welcome message and stats for the day                                |
+| Module Name                                                | Description                                                                           |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| [404](/modules/source/404.php)                             | 404 Page                                                                              |
+| [changes](/modules/source/changes.php)                     | Recent Updates                                                                        |
+| [dashboard](/modules/source/dashboard.php)                 | Selections and Graph for index                                                        |
+| [footer](/modules/source/footer.php)                       | Small footer text shown at the bottom of the page                                     |
+| [graph-cans](/modules/source/graph-cans.php)               | Graph card for pouches used on dashboard                                              |
+| [graph-pouches](/modules/source/graph-pouches.php)         | Graph card for cans used on dashboard.                                                |
+| [install](/modules/source/install.php)                     | Install instructions for mobile                                                       |
+| [login](/modules/source/login.php)                         | Login form.                                                                           |
+| [manage](/modules/source/manage.php)                       | Analytics and stuff                                                                   |
+| [nav](/modules/source/nav.php)                             | Global navigation bar                                                                 |
+| [paperwork](/modules/source/paperwork.php)                 | Terms and Conditions, Privacy Policy, Cookie Policy                                   |
+| [register](/modules/source/register.php)                   | Register form                                                                         |
+| [selection-cans](/modules/source/selection-cans.php)       | Selection for adding cans for current day                                             |
+| [selection-pouches](/modules/source/selection-pouches.php) | Selection for picking pouches used on dashboard                                       |
+| [settings](/modules/source/settings.php)                   | Settings popup for when a user is logged in. Also contains change password and email. |
+| [splash](/modules/source/splash.php)                       | Front page when user is not logged in                                                 |
+| [welcome](/modules/source/welcome.php)                     | Welcome message when user is logged in                                                |
