@@ -28,7 +28,7 @@
     <ul>
       <li>Email for creating new accounts.
         <ul>
-          <li>New registration page and Settings menu additinos.</li>
+          <li>New registration page and Settings menu additions.</li>
           <li>Email is still optional.</li>
         </ul>
       </li>
