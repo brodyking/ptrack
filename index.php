@@ -108,7 +108,7 @@
 
         if (!isset($_GET['manage'])) {
             trackingViewsAdd(date("m-d-Y"));
-            trackingLogsAdd($tracking["username"], $tracking["page"], $tracking["date"], $tracking["device"]);
+            trackingLogsAdd($tracking["username"], $tracking["page"], $tracking["date"], $tracking["device"], $_SERVER['REMOTE_ADDR']);
         }
 
         ?>
