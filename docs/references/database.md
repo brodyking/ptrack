@@ -151,7 +151,7 @@ These are used for analytics. There are views and logs.
 
 ### Tracking Logs
 
-| Function            | Parameter                                | Description                 |
-| ------------------- | ---------------------------------------- | --------------------------- |
-| `trackingLogsAdd()` | `$username`, `$page`, `$date`, `$device` | Adds that day into the logs |
-| `trackingLogsGet()` |                                          | Returns all logs            |
+| Function            | Parameter                                       | Description                  |
+| ------------------- | ----------------------------------------------- | ---------------------------- |
+| `trackingLogsAdd()` | `$username`, `$page`, `$date`, `$device`, `$ip` | Adds that day into the logs  |
+| `trackingLogsGet()` |                                                 | Returns all logs in an array |
