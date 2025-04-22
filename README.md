@@ -13,7 +13,7 @@ This Minor Update includes the following
 
 - Email for creating new accounts.
 
-  - New registration page and Settings menu additinos.
+  - New registration page and Settings menu additions.
   - Email is still optional.
 
 - New Domain (pt.benadryl.dev -> pouchtrack.net)
