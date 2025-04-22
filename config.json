@@ -1,7 +1,10 @@
 {
     "site.name": "Pouchtrack", 
-    "site.version": "v5.3",
-    "site.isindev": false,
+    "site.version": "v5.4",
+    "site.allowmanage": true,
+
+    "tracking.logs": true,
+    "tracking.views": true,
 
     "users.allowNewAccounts": true,
     "users.allowLogin": true

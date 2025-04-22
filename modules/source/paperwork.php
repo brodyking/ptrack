@@ -3,7 +3,7 @@
     <i class="bi bi-cookie"></i> Cookie Policy
   </h5>
   <div class="card-body">
-    This website uses Cookies to store your login data and session ID. Nothing else is collected or stored.
+    This website uses Cookies to store your login data and session ID. Nothing else is stored in cookies.
   </div>
 </div>
 
@@ -57,6 +57,10 @@
         site, anonymous data presented on a large scale, etc.
         I will never sell your data to advertisers. I will never publicly post your data with your name
         attatched.
+      </li>
+      <li>
+        Your IP address, Geolocation, Browser information, Date of usage, Which page you are viewing, and more are all
+        collected and stored by either <a href="https://namecheap.com">Namecheap</a> or Pouchtrack.
       </li>
     </ol>
   </div>

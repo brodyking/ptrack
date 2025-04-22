@@ -55,6 +55,15 @@
         "author": "Brody King",
         "source": "modules/source/login.php"
     },
+    "manage": {
+        "name": "manage",
+        "description": "Analytics and stuff",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/manage.php"
+    },
+
+
     "nav": {
         "name": "nav",
         "description": "Global navigation bar",
@@ -72,7 +81,7 @@
     "register": {
         "name": "register",
         "description": "Registration popup. Does not include button",
-        "version": 2.0,
+        "version": 2.1,
         "author": "Brody King",
         "source": "modules/source/register.php"
     },
@@ -93,7 +102,7 @@
     "settings": {
         "name": "settings",
         "description": "Setting popup for when a user is logged in. Also contains change password popup.",
-        "version": 1.3,
+        "version": 1.4,
         "author" : "Brody King",
         "source": "modules/source/settings.php"
     },

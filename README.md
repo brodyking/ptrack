@@ -1,5 +1,5 @@
 <p align="center"><img src="./assets/logo.png" width="80px"></p>
-<h2 align="center">Pouchtrack v5.3</h2>
+<h2 align="center">Pouchtrack v5.4</h2>
 <p align="center">
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 </p>
@@ -11,11 +11,14 @@ This project aims at allowing one to track their nicotine intake, specifically n
 
 This Minor Update includes the following
 
-- Consistent navbar when changing pages
+- Email for creating new accounts.
 
-- 404 page
+  - New registration page and Settings menu additinos.
+  - Email is still optional.
 
-- Better routing
+- New Domain (pt.benadryl.dev -> pouchtrack.net)
+
+- New Logo
 
 ## Roadmap
 

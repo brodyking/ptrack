@@ -44,6 +44,8 @@ function userSettingsGet($username, $key)
 {
     $pathto = userPathTo($username);
     $account = json_decode(read($pathto . "account.json"), true);
+    if (!isset($account[$key]))
+        return "N/A";
     return $account[$key];
 }
 function userSettingsSet($username, $key, $value)
@@ -54,11 +56,19 @@ function userSettingsSet($username, $key, $value)
     $account = json_encode($account, JSON_PRETTY_PRINT);
     write($pathto . "account.json", $account);
 }
+function userSettingsDelete($username, $key)
+{
+    $pathto = userPathTo($username);
+    $account = json_decode(read($pathto . "account.json"), true);
+    unset($account[$key]);
+    $account = json_encode($account, JSON_PRETTY_PRINT);
+    write($pathto . "account.json", $account);
+}
 function userAuth($username, $password)
 {
     return $password == userSettingsGet($username, "password");
 }
-function userCreate($username, $password)
+function userCreate($username, $email, $password)
 {
     $pathto = userPathTo($username);
     mkdir($pathto);
@@ -66,10 +76,14 @@ function userCreate($username, $password)
     write($pathto . "cans.json", "");
     $accountdata = array();
     $accountdata["username"] = $username;
+    if ($email != "") {
+        $accountdata["email"] = $email;
+    }
     $accountdata["password"] = $password;
     $accountdata["joindate"] = date("m-d-Y");
     $accountdata["isdeleted"] = "false";
     $accountdata["secureid"] = "false";
+    $accountdata["isadmin"] = "false";
     $accountdata = json_encode($accountdata, JSON_PRETTY_PRINT);
     write($pathto . "account.json", $accountdata);
     return 0;
@@ -259,6 +273,53 @@ function canGetHistoryArrayMonth($username, $month)
         }
     }
     return $new;
+}
+
+// TRACKING
+
+function trackingViewsGetKeys()
+{
+    return array_keys(json_decode(read("data/db_tracking/views.json"), true));
+}
+
+function trackingViewsGetValue($key)
+{
+    $views = json_decode(read("data/db_tracking/views.json"), true);
+    return $views[$key];
+}
+
+function trackingViewsAdd($date)
+{
+    if (settingsGet("tracking.views")) {
+        $old = json_decode(read("data/db_tracking/views.json"), true);
+        if (isset($old[$date])) {
+            $old[$date] = $old[$date] + 1;
+        } else {
+            $old[$date] = 1;
+        }
+        $new = json_encode($old, JSON_PRETTY_PRINT);
+        file_put_contents("data/db_tracking/views.json", $new);
+    }
+}
+
+function trackingLogsAdd($username, $page, $date, $device, $ip)
+{
+    if (settingsGet("tracking.logs")) {
+        $logs = file_get_contents("data/db_tracking/logs.json");
+        $logs = json_decode($logs, true);
+
+        $tosend = ["username" => $username, "page" => $page, "date" => $date, "device" => $device, "ip" => $ip];
+
+        array_push($logs, $tosend);
+
+        $logs = json_encode($logs, JSON_PRETTY_PRINT);
+        file_put_contents("data/db_tracking/logs.json", $logs);
+    }
+}
+
+function trackingLogsGet()
+{
+    return json_decode(file_get_contents("data/db_tracking/logs.json"), true);
 }
 
 // ?>

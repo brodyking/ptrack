@@ -1,6 +1,6 @@
 # Database
 
-**Page Modified**: April 5, 2025
+**Page Modified**: April 21, 2025
 \
 **Author**: Brody King
 \
@@ -24,6 +24,9 @@
     - [Pouch Functions](#pouch-functions)
     - [Can Functions](#can-functions)
     - [Month/Date Functions](#monthdate-functions)
+  - [Tracking Functins](#tracking-functins)
+    - [Tracking Views](#tracking-views)
+    - [Tracking Logs](#tracking-logs)
 
 ## Introduction
 
@@ -86,22 +89,23 @@ Inside of `account.json`, there are multiple variables pre-defined.
 
 ### User/Account Functions
 
-| Function               | Parameter                     | Description                                                         |
-| ---------------------- | ----------------------------- | ------------------------------------------------------------------- |
-| `userPathTo()`         | `$username`                   | Returns the path to the users folder.                               |
-| `userExists()`         | `$username`                   | Returns if the user exists.                                         |
-| `userSettingsGet()`    | `$username`, `$key`           | Returns the value for `$key` in their `account.json`.               |
-| `userSettingsSet()`    | `$username`, `$key`, `$value` | Sets `$key` in the users `account.json` to `$value`.                |
-| `userAuth()`           | `$username`, `$password`      | Returns if `$password` is equal to the users actual password.       |
-| `userCreate()`         | `$username`, `$password`      | Creates a new user with all the default information.                |
-| `userDelete()`         | `$username`                   | Set `isdeleted` to true, locks account by changing password.        |
-| `userSessionClear()`   | `$username`                   | Deletes all the users cookies, and deletes `session.json`           |
-| `userSessionGet()`     | `$username`                   | Returns the users current ID.                                       |
-| `userSessionCreate() ` | `$username`                   | Creates a new session, stores in `session.json`, returns the new id |
-| `userPasswordGet()`    | `$username`                   | Calls `userSettingsGet()`, returns the users password               |
-| `userChangePassword()` | `$username`, `$password`      | Calls `userSettingsSet()` to set a new password                     |
-| `userIsAdmin()`        | `$username`                   | Calls `userSettingsGet()`, returns if `isadmin` is set to true      |
-| `userJoinDate()`       | `$username`                   | Calls `userSettingsGet()`, returns the users `joindate`             |
+| Function               | Parameter                          | Description                                                                                      |
+| ---------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `userPathTo()`         | `$username`                        | Returns the path to the users folder.                                                            |
+| `userExists()`         | `$username`                        | Returns if the user exists.                                                                      |
+| `userSettingsGet()`    | `$username`, `$key`                | Returns the value for `$key` in their `account.json`. If they key is not set, it returns `"N/A"` |
+| `userSettingsSet()`    | `$username`, `$key`, `$value`      | Sets `$key` in the users `account.json` to `$value`.                                             |
+| `userSettingsDelete()` | `$username`, `$key`                | Deletes (unsets) the setting from the users `account.json`                                       |
+| `userAuth()`           | `$username`, `$password`           | Returns if `$password` is equal to the users actual password.                                    |
+| `userCreate()`         | `$username`, `$email`, `$password` | Creates a new user with all the default information.                                             |
+| `userDelete()`         | `$username`                        | Set `isdeleted` to true, locks account by changing password.                                     |
+| `userSessionClear()`   | `$username`                        | Deletes all the users cookies, and deletes `session.json`                                        |
+| `userSessionGet()`     | `$username`                        | Returns the users current ID.                                                                    |
+| `userSessionCreate() ` | `$username`                        | Creates a new session, stores in `session.json`, returns the new id                              |
+| `userPasswordGet()`    | `$username`                        | Calls `userSettingsGet()`, returns the users password                                            |
+| `userChangePassword()` | `$username`, `$password`           | Calls `userSettingsSet()` to set a new password                                                  |
+| `userIsAdmin()`        | `$username`                        | Calls `userSettingsGet()`, returns if `isadmin` is set to true                                   |
+| `userJoinDate()`       | `$username`                        | Calls `userSettingsGet()`, returns the users `joindate`                                          |
 
 ### Pouch Functions
 
@@ -132,3 +136,22 @@ Inside of `account.json`, there are multiple variables pre-defined.
 | ---------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `monthIsValid()` | `$input`  | Takes in a number and returns T/F if its a valid month. Months are `01`-`12`.                                                                      |
 | `monthsGet()`    |           | Returns an array of months. Each items is its own array with index 0 being its number, and index 1 being its actual name. Ex: `["02","February"]`. |
+
+## Tracking Functins
+
+These are used for analytics. There are views and logs.
+
+### Tracking Views
+
+| Function                   | Parameter | Description                    |
+| -------------------------- | --------- | ------------------------------ |
+| `trackingViewsGetKeys() `  |           | Returns all days with views    |
+| `trackingViewsGetValue() ` | `$key`    | Returns the amount on that day |
+| `trackingViewsAdd()`       | `$date`   | Adds a view on that day        |
+
+### Tracking Logs
+
+| Function            | Parameter                                       | Description                  |
+| ------------------- | ----------------------------------------------- | ---------------------------- |
+| `trackingLogsAdd()` | `$username`, `$page`, `$date`, `$device`, `$ip` | Adds that day into the logs  |
+| `trackingLogsGet()` |                                                 | Returns all logs in an array |
