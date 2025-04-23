@@ -2,8 +2,7 @@
     style="background-color: #dee2e608!important;">
     <div class="container-fluid pe-1 ps-2">
         <a class="navbar-brand" href="/">
-            <img src="/assets/logo.png" alt="Logo" width="24" height="24"
-                class="d-inline-block align-text-top border rounded">
+            <img src="/assets/logo.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
             Pouchtrack</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
