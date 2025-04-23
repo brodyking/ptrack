@@ -153,20 +153,23 @@
     </div>
     <div class="tab-pane" id="logs" role="tabpanel" aria-labelledby="logs-tab" tabindex="0">
         <div class="card">
-            <h5 class="card-header">Logs</h5>
+            <h5 class="card-header">Logs <span class="text-secondary">sorted by newest first</span></h5>
             <div class="card-body">
 
                 <?php
 
                 $logs = trackingLogsGet();
-                echo "<code><pre>";
+                $logsformatted = "";
                 foreach ($logs as $entry) {
-                    echo "[<span class='text-primary'>{$entry["date"]}</span>] " .
-                        "[<span class='text-success'>{$entry["username"]}</span>@<span class='text-warning'>{$entry["page"]}</span>] " .
-                        "[<span class='text-info'>{$entry["ip"]}</span>@<span class='text-danger'>{$entry["device"]}</span>] " .
-                        "<br>";
+                    foreach ($logs as $entry) {
+                        $logsformatted = "[<span class='text-primary'>{$entry["date"]}</span>] " .
+                            "[<span class='text-success'>{$entry["username"]}</span>@<span class='text-warning'>{$entry["page"]}</span>] " .
+                            "[<span class='text-primary'>{$entry["url"]}</span>] " .
+                            "[<span class='text-info'>{$entry["ip"]}</span>@<span class='text-danger'>{$entry["device"]}</span>] " .
+                            "<br>" . $logsformatted;
+                    }
                 }
-                echo "</pre></code>";
+                echo "<code><pre>{$logsformatted}</pre></code>";
 
                 ?>
             </div>
@@ -174,7 +177,7 @@
     </div>
     <div class="tab-pane" id="raw-logs" role="tabpanel" aria-labelledby="logs-tab" tabindex="0">
         <div class="card">
-            <h5 class="card-header">Raw Logs</h5>
+            <h5 class="card-header">Logs <span class="text-secondary">sorted by oldest first</span></h5>
             <div class="card-body">
                 <ul class="list-group">
                     <code>

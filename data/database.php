@@ -302,13 +302,13 @@ function trackingViewsAdd($date)
     }
 }
 
-function trackingLogsAdd($username, $page, $date, $device, $ip)
+function trackingLogsAdd($username, $page, $date, $device, $ip, $url)
 {
     if (settingsGet("tracking.logs")) {
         $logs = file_get_contents("data/db_tracking/logs.json");
         $logs = json_decode($logs, true);
 
-        $tosend = ["username" => $username, "page" => $page, "date" => $date, "device" => $device, "ip" => $ip];
+        $tosend = ["username" => $username, "page" => $page, "date" => $date, "device" => $device, "ip" => $ip, "url" => $url];
 
         array_push($logs, $tosend);
 

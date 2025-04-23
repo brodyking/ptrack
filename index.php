@@ -108,7 +108,10 @@
 
         if (!isset($_GET['manage'])) {
             trackingViewsAdd(date("m-d-Y"));
-            trackingLogsAdd($tracking["username"], $tracking["page"], $tracking["date"], $tracking["device"], $_SERVER['REMOTE_ADDR']);
+            $uri = $_SERVER['REQUEST_URI'];
+            $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+            $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+            trackingLogsAdd($tracking["username"], $tracking["page"], $tracking["date"], $tracking["device"], $_SERVER['REMOTE_ADDR'], $url);
         }
 
         ?>
