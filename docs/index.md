@@ -1,5 +1,7 @@
 # 📖 Pouchtrack Docs v5.4 📖
 
+<b><a href="../README.md">« Back to Readme</a></b>
+
 Welcome to the Pouchtrack Docs. This resource has helpful information reguarding installing, developing, and troubleshooting this awful codebase.
 
 Here are all of the available pages. They are listed in order from install to development. If you dont know where to start, head to [Getting Started](gettingstarted.md). If you plan on developing for Pouchtrack, PLEASE look at the [Design Philosophy](guides/design-philosophy.md).

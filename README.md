@@ -1,6 +1,6 @@
 <h1><img src="./assets/logo.png" width="23px"> Pouchtrack</h1>
 
-<b><a href="https://github.com/brodyking/ptrack/releases/tag/v5.5">v5.5</a> &middot; <a href="https://pouchtrack.net">Pouchtrack.net</a> &middot; <a href="docs/guides/gettingstarted.md">Get Started</a> &middot; <a href="docs/index.md">Documentation</a> </b>
+<b>v5.5 &middot; <a href="https://pouchtrack.net">Pouchtrack.net</a> &middot; <a href="docs/guides/gettingstarted.md">Get Started</a> &middot; <a href="docs/index.md">Documentation</a> </b>
 
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 
