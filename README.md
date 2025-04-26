@@ -1,24 +1,12 @@
-<p align="center"><img src="./assets/logo.png" width="80px"></p>
-<h2 align="center">Pouchtrack v5.4</h2>
-<p align="center">
+<h1><img src="./assets/logo.png" width="23px"> Pouchtrack</h1>
+
+<b><a href="https://github.com/brodyking/ptrack/releases/tag/v5.5">v5.5</a> &middot; <a href="https://pouchtrack.net">Pouchtrack.net</a> &middot; <a href="docs/guides/gettingstarted.md">Get Started</a> &middot; <a href="docs/index.md">Documentation</a> </b>
+
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
-</p>
-<p align="center"><b>
-<a href="docs/guides/gettingstarted.md">Get Started</a> &middot; <a href="docs/index.md">Documentation</a> &middot; <a href="https://pt.benadryl.dev">Live Demo</a>
-</b></p>
 
 ## Release Notes
 
-This Minor Update includes the following
-
-- Email for creating new accounts.
-
-  - New registration page and Settings menu additions.
-  - Email is still optional.
-
-- New Domain (pt.benadryl.dev -> pouchtrack.net)
-
-- New Logo
+TBD
 
 ## Roadmap
 
