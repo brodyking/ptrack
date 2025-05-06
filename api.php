@@ -11,6 +11,7 @@ include scriptsGet("logout");
 include scriptsGet("deleteaccount");
 include scriptsGet("changepswd");
 include scriptsGet("changeemail");
+include scriptsGet("resetdata");
 
 function apiError($msg)
 {
@@ -70,6 +71,11 @@ switch ($_GET["action"]) {
     case "changeemail":
         changeemail();
         break;
+
+    case "resetdata":
+        resetdata();
+        break;
+
     default:
         apiError("api.missingparams");
         break;
