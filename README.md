@@ -23,6 +23,7 @@ Version 5.5 has included the following changes:
 - **Seperate pages finally have their own title in the tab bar.**
   - See the new script, **[pagetitle.php](scripts/source/pagetitle.php)**.
 - **Slight logo and navbar changes.**
+- **Now using Roboto as our font.**
 
 ## Development and Roadmap
 
