@@ -1,33 +1,44 @@
-<h1><img src="./assets/logo.png" width="23px"> Pouchtrack</h1>
-
-<b>v5.5 &middot; <a href="https://pouchtrack.net">Pouchtrack.net</a> &middot; <a href="docs/guides/gettingstarted.md">Get Started</a> &middot; <a href="docs/index.md">Documentation</a> </b>
+# Pouchtrack
 
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 
+## Useful links
+
+Some good places to get started.
+
+- **<a href="https://pouchtrack.net">Pouchtrack.net</a>** - Public Instance. Using the current stable release.
+- **<a href="LICENSE.md">License</a>** - Its short, trust me.
+- **<a href="docs/index.md">Documentation</a>** - Markdown documentation included in the source code directly. (in `docs/` directory)
+  - **<a href="docs/guides/gettingstarted.md">Get Started</a>** - The few easy steps to get Pouchtrack working.
+  - **<a href="docs/guides/design-philosophy.md">Design Philosophy</a>** - The structure of the codebase.
+
 ## Release Notes
 
-TBD
+Version 5.5 has included the following changes:
 
-## Roadmap
+- **User's can now reset all data from previous days.**
+  - See the new script, **[resetdata.php](scripts/source/resetdata.php)**. From there, you can trace back the new additions to the **[Database](docs/references/database.md)**.
+- **New settings page.**
+  - Before, the settings dialog was included in the html on every page render. This can bloat up the page, and is redundant when most of the time, you dont need it.
+- **Seperate pages finally have their own title in the tab bar.**
+  - See the new script, **[pagetitle.php](scripts/source/pagetitle.php)**.
+- **Slight logo and navbar changes.**
 
-- [x] Track Cans
+## Development and Roadmap
 
+This project was created with and uses the following. Thank you to the maintainers of these projects.
+
+- **<a href="https://www.php.net">php</a>** v8.4.5
+- **<a href="https://www.getbootstrap.com">bootstrap</a>** v5.3.3
+- **<a href="https://www.chartjs.org">chartjs</a>** v4.4.0
+
+Our current roadmap looks sort of like this. (nothing is promised, these are moreso features I am hoping to add)
+
+- [x] Track Cans.
 - [x] Allow for multiple years in chart.
-
-- [x] Session Expires
-
+- [x] Session Expires.
 - [ ] Database Backups to prevent Data Loss while writing.
-
-## Development and Credits
-
-This project was made using [php](https://www.php.net/), [bootstrap](https://getbootstrap.com/) and [chart.js](https://www.chartjs.org/). Without these pieces of software, alot of this would've never been made.
+- [ ] Edit previous days.
 
 If you would like to contribute, fork it! I doubt anyone wants to touch this dumpster-fire of a codebase but if you feel like it, go ahead!
-You can find useful information in the [docs](docs/index.md). I'm an idiot and make all my own tools, which is why they suck and are a confusing mess.
-
-## License
-
-1. You may copy and modify this software, but may not use this software for commercial purposes.
-2. You must show credit to the original repo, [https://github.com/brodyking/ptrack](https://github.com/brodyking/ptrack).
-3. These are subject to change. Subsequent changes to new versions apply to older versions (dosent apply to version 2.1 and below).
-4. Software is given "as-is", and we are not responsible for any warranty or liability.
+You can find useful information in the **[docs](docs/index.md)**. I'm an idiot and make all my own tools, which is why they suck and are a confusing mess.
