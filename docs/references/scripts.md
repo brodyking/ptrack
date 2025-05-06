@@ -1,6 +1,6 @@
 # Scripts
 
-**Page Modified**: March 25, 2025
+**Page Modified**: April 26, 2025
 \
 **Author**: Brody King
 \
@@ -18,7 +18,6 @@
   - [Usage](#usage)
     - [Creating Scripts](#creating-scripts)
     - [Accessing Scripts](#accessing-scripts)
-  - [Included Scripts](#included-scripts)
 
 ## Definition
 
@@ -72,19 +71,3 @@ To use a script, you have to include it. Here is an example:
 ```php
 include scriptsGet("nameofascript");
 ```
-
-## Included Scripts
-
-| Script Name                                        | Description                                                                    |
-| -------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [cans](/scripts/source/cans.php)                   | Used for adding and resetting cans. Similar to `count`.                        |
-| [changepswd](/scripts/source/changepswd.php)       | Change a users password                                                        |
-| [checktoday](/scripts/source/checktoday.php)       | Checks if pouches and cans have an entry for the day. Creates one if not made. |
-| [count](/scripts/source/count.php)                 | Used for adding, and resetting pouch usage.                                    |
-| [deleteaccount](/scripts/source/deleteaccount.php) | Sets an account as deleted.                                                    |
-| [error](/scripts/source/error.php)                 | [Error Handling](error.md).                                                    |
-| [isloggedin](/scripts/source/isloggedin.php)       | Returns true if a ID and username are in $\_GET[], and if ID is valid          |
-| [login](/scripts/source/login.php)                 | All login code used in API                                                     |
-| [logout](/scripts/source/logout.php)               | Deletes the users `session.json` and redirects to `/`                          |
-| [register](/scripts/source/register.php)           | All registration code used in the api                                          |
-| [secureid](/scripts/source/secureid.php)           | Change a users preference for secureid                                         |
