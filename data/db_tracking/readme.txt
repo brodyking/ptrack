@@ -1,0 +1,1 @@
+New logs and views will show up as json files in this folder. You can delete this file.
