@@ -15,7 +15,11 @@
     padding-bottom: 0px;
   }
 </style>
-
+<div class="container p-0 m-0 mb-4 text-center" style="min-width: 100%;">
+  <h1 class="mb-5 fw-semibold lh-1" style="margin-top:50px;font-size:38pt;">
+    Changes
+  </h1>
+</div>
 <div class="card">
   <h5 class="card-header"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
       class="bi bi-megaphone-fill" viewBox="0 0 16 16" style="vertical-align: 0%;">
