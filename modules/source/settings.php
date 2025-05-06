@@ -1,33 +1,45 @@
-<div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settings" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="settings"><i class="bi bi-gear-wide-connected"></i> Settings</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
+<div class="container p-0 m-0 mb-4 text-center" style="min-width: 100%;">
+    <h1 class="mb-5 fw-semibold lh-1" style="margin-top:50px;font-size:38pt;">
+        Settings
+    </h1>
+</div>
+<div class="row g-2" style="margin: 0px!important;">
+    <div class="col-md ps-0 mt-0">
+        <div class="card">
+            <h5 class="card-header"><i class="bi bi-person-lines-fill"></i> Overview</h5>
+            <div class="card-body">
 
                 <div class="input-group mb-3">
-                    <span class="input-group-text" style="background-color: #dee2e608!important"
-                        id="basic-addon1">Username</span>
+                    <span class="input-group-text" style="background-color: #dee2e608!important" id="basic-addon1"><i
+                            class="bi bi-person-badge-fill"></i> Username</span>
                     <input type="username" class="form-control" disabled value="<?php echo $username; ?>">
                 </div>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" style="background-color: #dee2e608!important"
-                        id="basic-addon1">Email</span>
+                    <span class="input-group-text" style="background-color: #dee2e608!important" id="basic-addon1"><i
+                            class="bi bi-envelope-at-fill"></i> Email</span>
                     <input type="username" class="form-control" disabled
                         value="<?php echo userSettingsGet($username, "email"); ?>">
                 </div>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" style="background-color: #dee2e608!important" id="basic-addon1">Join
-                        Date</span>
+                    <span class="input-group-text" style="background-color: #dee2e608!important" id="basic-addon1"><i
+                            class="bi bi-calendar-date-fill"></i> Join Date</span>
                     <input type="text" class="form-control" disabled value="<?php echo userJoinDate($username); ?>">
                 </div>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" style="background-color: #dee2e608!important"
-                        id="basic-addon1">Session ID</span>
+                    <span class="input-group-text" style="background-color: #dee2e608!important" id="basic-addon1"><i
+                            class="bi bi-cookie"></i> Session
+                        ID</span>
                     <input type="text" class="form-control" disabled value="<?php echo $id; ?>">
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md pe-0 mt-0">
+        <div class="card">
+            <h5 class="card-header"><i class="bi bi-hammer"></i> Actions</h5>
+            <div class="card-body">
+                <a class="btn btn-secondary-new w-100 mb-3" href="#" data-bs-toggle="modal"
+                    data-bs-target="#resetdata"><i class="bi bi-trash"></i> Reset Data</a>
                 <a class="btn btn-secondary-new w-100 mb-3" href="#" data-bs-toggle="modal"
                     data-bs-target="#changepswd"><i class="bi bi-key"></i> Change Password</a>
                 <a class="btn btn-secondary-new w-100 mb-3" href="#" data-bs-toggle="modal"
@@ -39,6 +51,26 @@
     </div>
 </div>
 </div>
+</div>
+
+<!-- Reset Data popup -->
+<div class="modal fade" id="resetdata" tabindex="-1" aria-labelledby="reset" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="resetdata"><i class="bi bi-exclamation-triangle-fill"></i> Warning</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>You are about to reset all your account data. This is permanent and you will not have access to your
+                    information
+                    once you click Reset. Do you wish to continue?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="api.php?action=resetdata" class="btn btn-primary-new">Reset Data</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Delete Account popup -->
