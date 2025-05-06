@@ -173,6 +173,14 @@ function pouchAdd($username, $day, $strength)
     $new = json_encode($old, JSON_PRETTY_PRINT);
     write($pathto . "pouches.json", $new);
 }
+
+function pouchReset($username)
+{
+    $pathto = userPathTo($username);
+    $new = json_encode(array(), JSON_PRETTY_PRINT);
+    write($pathto . "pouches.json", $new);
+}
+
 function pouchGetMgs($username, $day)
 {
     $pathto = userPathTo($username);
@@ -247,6 +255,14 @@ function canAdd($username, $day)
     $new = json_encode($old, JSON_PRETTY_PRINT);
     write($pathto . "cans.json", $new);
 }
+
+function canReset($username)
+{
+    $pathto = userPathTo($username);
+    $new = json_encode(array(), JSON_PRETTY_PRINT);
+    write($pathto . "cans.json", $new);
+}
+
 function canGet($username, $day)
 {
     $pathto = userPathTo($username);
