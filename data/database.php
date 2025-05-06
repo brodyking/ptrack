@@ -306,6 +306,12 @@ function trackingViewsGetValue($key)
 
 function trackingViewsAdd($date)
 {
+
+    if (!file_exists("data/db_tracking/views.json")) {
+        fopen("data/db_tracking/views.json", "w");
+        write("data/db_tracking/views.json", "{}");
+    }
+
     if (settingsGet("tracking.views")) {
         $old = json_decode(read("data/db_tracking/views.json"), true);
         if (isset($old[$date])) {
@@ -320,6 +326,11 @@ function trackingViewsAdd($date)
 
 function trackingLogsAdd($username, $page, $date, $device, $ip, $url)
 {
+    if (!file_exists("data/db_tracking/logs.json")) {
+        fopen("data/db_tracking/logs.json", "w");
+        write("data/db_tracking/logs.json", "{}");
+    }
+
     if (settingsGet("tracking.logs")) {
         $logs = file_get_contents("data/db_tracking/logs.json");
         $logs = json_decode($logs, true);
