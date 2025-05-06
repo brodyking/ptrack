@@ -136,6 +136,10 @@ th{
     display: none!important;
 }
 
+.input-group-text > .bi {
+    padding-right: 5px;
+}
+
 /* Smartphones (landscape) ----------- */
 @media only screen 
 and (max-width : 450px) {
@@ -197,5 +201,8 @@ and (max-width : 450px) {
     }
     .splash-title-mobile {
         font-size: 45pt!important;
+    }
+    .row > .col-md {
+        padding: 0px;
     }
 }
