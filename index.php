@@ -13,8 +13,7 @@
     */
 
     // Timezone
-    date_default_timezone_set('America/Chicago');
-
+    
     // Database
     include "data/database.php";
     // Modules
@@ -26,6 +25,7 @@
     include scriptsGet("isloggedin");
     include scriptsGet("error");
     include scriptsGet("checktoday");
+    include scriptsGet("pagetitle");
 
     ?>
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
@@ -64,7 +64,6 @@
             checkToday();
 
             // Rendered Items when logged in
-            include modulesGetPath("settings");
             include modulesGetPath("install");
         }
 
@@ -73,42 +72,77 @@
 
         // Individual pages
         if (isset($_GET["paperwork"])) {
+
             // Paperwork/TOS
             include modulesGetPath("paperwork");
+            pagetitleSet("Paperwork");
             $tracking["page"] = "paperwork";
+
         } else if (isset($_GET["login"])) {
+
             // Login
             include modulesGetPath("login");
+            pagetitleSet("Login");
             $tracking["page"] = "login";
+
         } else if (isset($_GET["register"])) {
+
             // Register
             include modulesGetPath("register");
+            pagetitleSet("Register");
             $tracking["page"] = "register";
+
         } else if (isset($_GET["changes"])) {
+
             // Changelog
             include modulesGetPath("changes");
+            pagetitleSet("Changes");
             $tracking["page"] = "changes";
+
         } else if (isset($_GET["404"])) {
+
             // 404 Page
             include modulesGetPath("404");
+            pagetitleSet("404");
             $tracking["page"] = "404";
+
         } else if (isLoggedIn() && userIsAdmin($username) && isset($_GET["manage"]) && settingsGet("site.allowmanage") == true) {
+
+            // Manager Page
             include modulesGetPath("manage");
+            pagetitleSet("Manage");
+
+        } else if (isLoggedIn() && isset($_GET["settings"])) {
+
+            // Settings Page
+            include modulesGetPath("settings");
+            pagetitleSet("Settings");
+
         } else if (isLoggedIn()) {
+
             // Dashboard w/ Graph
             include modulesGetPath("welcome");
             include modulesGetPath("dashboard");
+            pagetitleSet("Dashboard");
             $tracking["page"] = "dashboard";
+
         } else {
+
             // Splash
             include modulesGetPath("splash");
             $tracking["page"] = "splash";
+
         }
+
+        pagetitleShow();
 
 
         if (!isset($_GET['manage'])) {
             trackingViewsAdd(date("m-d-Y"));
-            trackingLogsAdd($tracking["username"], $tracking["page"], $tracking["date"], $tracking["device"], $_SERVER['REMOTE_ADDR']);
+            $uri = $_SERVER['REQUEST_URI'];
+            $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+            $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+            trackingLogsAdd($tracking["username"], $tracking["page"], $tracking["date"], $tracking["device"], $_SERVER['REMOTE_ADDR'], $url);
         }
 
         ?>

@@ -1,6 +1,6 @@
 # Database
 
-**Page Modified**: April 21, 2025
+**Page Modified**: April 26, 2025
 \
 **Author**: Brody King
 \
@@ -114,6 +114,7 @@ Inside of `account.json`, there are multiple variables pre-defined.
 | `pouchInit()`                 | `$username`, `$day`              | Creates a blank day on `$day`.                             |
 | `pouchExists()`               | `$username`, `$day`              | Checks if the day exists in `pouches.json`.                |
 | `pouchAdd()`                  | `$username`, `$day`, `$strength` | Adds a new pouch to `pouches.json`                         |
+| `pouchReset()`                | `$username`                      | Replaces `pouches.json` with an empty array.               |
 | `pouchGetMgs()`               | `$username`, `$day`              | Returns the amount of mgs used on `$day`                   |
 | `pouchGetPouches()`           | `$username`, `$day`              | Returns the amount of pouches used on`$day`                |
 | `pouchGetHistoryArray()`      | `$username`                      | Returns an array of all dates with entries.                |
@@ -126,6 +127,7 @@ Inside of `account.json`, there are multiple variables pre-defined.
 | `canInit()`                 | `$username`, `$day`   | Creates a blank day on `$day`.                             |
 | `canExists()`               | `$username`, `$day`   | Checks if the day exists in `cans.json`.                   |
 | `canAdd()`                  | `$username`, `$day`   | Adds a new can to `cans.json`                              |
+| `canReset()`                | `$username`           | Replaces `cans.json` with an empty array.                  |
 | `canGet()`                  | `$username`, `$day`   | Returns the amount of cans used on `$day`                  |
 | `canGetHistoryArray()`      | `$username`           | Returns an array of all dates with entries of cans.        |
 | `canGetHistoryArrayMonth()` | `$username`, `$month` | Same as above, but takes in a month. Months are `01`-`12`. |

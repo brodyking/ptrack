@@ -173,6 +173,14 @@ function pouchAdd($username, $day, $strength)
     $new = json_encode($old, JSON_PRETTY_PRINT);
     write($pathto . "pouches.json", $new);
 }
+
+function pouchReset($username)
+{
+    $pathto = userPathTo($username);
+    $new = json_encode(array(), JSON_PRETTY_PRINT);
+    write($pathto . "pouches.json", $new);
+}
+
 function pouchGetMgs($username, $day)
 {
     $pathto = userPathTo($username);
@@ -247,6 +255,14 @@ function canAdd($username, $day)
     $new = json_encode($old, JSON_PRETTY_PRINT);
     write($pathto . "cans.json", $new);
 }
+
+function canReset($username)
+{
+    $pathto = userPathTo($username);
+    $new = json_encode(array(), JSON_PRETTY_PRINT);
+    write($pathto . "cans.json", $new);
+}
+
 function canGet($username, $day)
 {
     $pathto = userPathTo($username);
@@ -290,7 +306,14 @@ function trackingViewsGetValue($key)
 
 function trackingViewsAdd($date)
 {
+
     if (settingsGet("tracking.views")) {
+
+        if (!file_exists("data/db_tracking/views.json")) {
+            fopen("data/db_tracking/views.json", "w");
+            write("data/db_tracking/views.json", "{}");
+        }
+
         $old = json_decode(read("data/db_tracking/views.json"), true);
         if (isset($old[$date])) {
             $old[$date] = $old[$date] + 1;
@@ -302,13 +325,21 @@ function trackingViewsAdd($date)
     }
 }
 
-function trackingLogsAdd($username, $page, $date, $device, $ip)
+function trackingLogsAdd($username, $page, $date, $device, $ip, $url)
 {
+
+
     if (settingsGet("tracking.logs")) {
+
+        if (!file_exists("data/db_tracking/logs.json")) {
+            fopen("data/db_tracking/logs.json", "w");
+            write("data/db_tracking/logs.json", "{}");
+        }
+
         $logs = file_get_contents("data/db_tracking/logs.json");
         $logs = json_decode($logs, true);
 
-        $tosend = ["username" => $username, "page" => $page, "date" => $date, "device" => $device, "ip" => $ip];
+        $tosend = ["username" => $username, "page" => $page, "date" => $date, "device" => $device, "ip" => $ip, "url" => $url];
 
         array_push($logs, $tosend);
 

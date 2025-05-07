@@ -69,11 +69,25 @@
         "author": "Brody King",
         "source": "scripts/source/logout.php"
     },
+    "pagetitle": {
+        "name": "pagetitle",
+        "description": "Changes title of page dynamically with JS.",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/pagetitle.php"
+    },
     "register": {
         "name": "register",
         "description": "All registration code used in api.php",
         "version": 1.2,
         "author": "Brody King",
         "source": "scripts/source/register.php"
+    },
+    "resetdata": {
+        "name": "resetdata",
+        "description": "Reset pouch and can data for user",
+        "version": 1.2,
+        "author": "Brody King",
+        "source": "scripts/source/resetdata.php"
     }
 }

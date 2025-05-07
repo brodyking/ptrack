@@ -1,3 +1,8 @@
+<div class="container p-0 m-0 mb-4 text-center" style="min-width: 100%;">
+  <h1 class="mb-5 fw-semibold lh-1" style="margin-top:50px;font-size:38pt;">
+    Paperwork
+  </h1>
+</div>
 <div class="card" id="cookies">
   <h5 class="card-header">
     <i class="bi bi-cookie"></i> Cookie Policy
