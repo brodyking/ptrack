@@ -14,17 +14,6 @@ Some good places to get started.
 
 ## Release Notes
 
-Version 5.5 has included the following changes:
-
-- **User's can now reset all data from previous days.**
-  - See the new script, **[resetdata.php](scripts/source/resetdata.php)**. From there, you can trace back the new additions to the **[Database](docs/references/database.md)**.
-- **New settings page.**
-  - Before, the settings dialog was included in the html on every page render. This can bloat up the page, and is redundant when most of the time, you dont need it.
-- **Seperate pages finally have their own title in the tab bar.**
-  - See the new script, **[pagetitle.php](scripts/source/pagetitle.php)**.
-- **Slight logo and navbar changes.**
-- **Now using Roboto as our font.**
-
 ## Development and Roadmap
 
 This project was created with and uses the following. Thank you to the maintainers of these projects.
