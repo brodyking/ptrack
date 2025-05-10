@@ -6,9 +6,10 @@
 
     /*
 
-    (c) 2025 Brody King. All Rights Reserved
+    (c) 2025 Brody King. Read licence before modification.
 
     https://github.com/brodyking/ptrack/
+    https://github.com/brodyking/ptrack/blob/main/LICENSE.md
 
     */
 
