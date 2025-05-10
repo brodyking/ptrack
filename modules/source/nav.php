@@ -3,7 +3,7 @@
     <div class="container-fluid pe-1 ps-2">
         <a class="navbar-brand me-0" href="/">
             <img src="/assets/logo.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
-            Pouchtrack
+            <?php echo settingsGet("site.name"); ?>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
