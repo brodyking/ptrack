@@ -16,14 +16,14 @@
     "dashboard": {
         "name": "dashboard",
         "description": "Selections and Graph for index.php",
-        "version": 1.2,
+        "version": 1.3,
         "author" : "Brody King",
         "source": "modules/source/dashboard.php"
     },
     "footer": {
         "name": "footer",
         "description": "Small footer text shown at the bottom of the page",
-        "version": 1.1,
+        "version": 1.2,
         "author": "Brody King",
         "source": "modules/source/footer.php"
     },
@@ -58,12 +58,10 @@
     "manage": {
         "name": "manage",
         "description": "Analytics and stuff",
-        "version": 1.1,
+        "version": 1.2,
         "author": "Brody King",
         "source": "modules/source/manage.php"
     },
-
-
     "nav": {
         "name": "nav",
         "description": "Global navigation bar",
@@ -102,14 +100,14 @@
     "settings": {
         "name": "settings",
         "description": "Setting popup for when a user is logged in. Also contains change password popup.",
-        "version": 1.4,
+        "version": 1.5,
         "author" : "Brody King",
         "source": "modules/source/settings.php"
     },
     "splash": {
         "name": "splash",
         "description": "Title and buttons for registration/login shown when user is not logged in",
-        "version": 2.0,
+        "version": 2.1,
         "author": "Brody King",
         "source": "modules/source/splash.php"
     },

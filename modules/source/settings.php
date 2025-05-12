@@ -1,3 +1,8 @@
+<style>
+    body {
+        background: linear-gradient(180deg, rgba(14, 23, 41, 1) 47%, rgba(2, 41, 29, 1) 100%) !important;
+    }
+</style>
 <div class="container p-0 m-0 mb-4 text-center" style="min-width: 100%;">
     <h1 class="mb-5 fw-semibold lh-1" style="margin-top:50px;font-size:38pt;">
         Settings
