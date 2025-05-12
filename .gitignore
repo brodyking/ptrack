@@ -1,5 +1,6 @@
 data/db_users/*
+data/db_tracking/logs.html
+data/db_tracking/logs.txt
 data/db_tracking/views.json
-data/db_tracking/logs.json
 .DS_Store
 data/.DS_Store

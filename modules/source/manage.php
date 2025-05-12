@@ -1,65 +1,94 @@
 <script src="/assets/js/chart.umd.js"></script>
 <style>
-    main {
-        max-width: 1200px !important;
-        margin: auto;
+    body {
+        background-color: rgb(14, 37, 41) !important;
     }
 
-    nav,
-    .info {
-        max-width: 850px !important;
-        margin: auto;
-        margin-bottom: 15px;
+    main {
+        max-width: 1200px;
+    }
+
+    #nav {
+        display: none;
     }
 </style>
 
-<div class="card info">
-    <div class="card-header">
-        <b>Total Views: </b> <?php
-
-        $trackingdatestotal = trackingViewsGetKeys();
-        $total = 0;
-
-        foreach ($trackingdatestotal as $trackingday) {
-            $total += trackingViewsGetValue($trackingday);
-        }
-
-        echo $total;
-
-        ?>
-        <br>
-        <b>Views Today: </b> <?php
 
 
-        echo trackingViewsGetValue(date("m-d-Y"));
 
-        ?>
+
+<nav id="nav-manager" class="navbar navbar-expand-lg bg-body-tertiary border rounded"
+    style="background-color: #dee2e608!important;">
+    <div class="container-fluid pe-1 ps-2">
+        <a class="navbar-brand me-0" href="/?manage">
+            <i class="bi bi-hammer"></i> Manage
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            Menu <i class="bi bi-list"></i></span>
+        </button>
+        <div class="collapse navbar-collapse ms-1" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-0 ps-0 me-auto" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#views"
+                        type="button" role="tab" aria-selected="true"><i class="bi bi-clipboard-data-fill"></i>
+                        Views</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#users" type="button"
+                        role="tab" aria-selected="false"><i class="bi bi-people-fill"></i> Users</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#logs" type="button"
+                        role="tab" aria-selected="false"><i class="bi bi-terminal-fill"></i> Logs</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="config-tab" data-bs-toggle="tab" data-bs-target="#config" type="button"
+                        role="tab" aria-selected="false"><i class="bi bi-gear-fill"></i> Config</button>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/?settings"><i class="bi bi-person-circle"></i>
+                        <?php echo $username; ?></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><i class="bi bi-door-open-fill"></i> Exit</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="card-body p-1 ps-3 text-secondary">
-        <i><?php echo date("m-d-Y h:i:s A"); ?></i>
-    </div>
-</div>
+</nav>
 
-<ul class="nav nav-underline ms-2" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#views" type="button"
-            role="tab" aria-selected="true"><i class="bi bi-clipboard-data-fill"></i> Views</button>
-    </li>
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#users" type="button" role="tab"
-            aria-selected="false"><i class="bi bi-people-fill"></i> Users</button>
-    </li>
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#logs" type="button" role="tab"
-            aria-selected="false"><i class="bi bi-terminal-fill"></i> Logs</button>
-    </li>
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#raw-logs" type="button"
-            role="tab" aria-selected="false"><i class="bi bi-braces-asterisk"></i> Logs JSON</button>
-    </li>
-</ul>
-<div class="tab-content border rounded p-2">
-    <div class="tab-pane fade show active" id="views" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+<div class="tab-content">
+    <div class="tab-pane show active" id="views" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <div class="card info">
+            <div class="card-header">
+                <b>Total Views: </b> <?php
+
+                $trackingdatestotal = trackingViewsGetKeys();
+                $total = 0;
+
+                foreach ($trackingdatestotal as $trackingday) {
+                    $total += trackingViewsGetValue($trackingday);
+                }
+
+                echo $total;
+
+                ?>
+                <br>
+                <b>Views Today: </b> <?php
+
+
+                echo trackingViewsGetValue(date("m-d-Y"));
+
+                ?>
+            </div>
+            <div class="card-body p-1 ps-3 text-secondary">
+                <i><?php echo date("m-d-Y h:i:s A"); ?></i>
+            </div>
+        </div>
         <div class="card">
             <h5 class="card-header">Views</h5>
             <div class="card-body">
@@ -153,43 +182,39 @@
     </div>
     <div class="tab-pane" id="logs" role="tabpanel" aria-labelledby="logs-tab" tabindex="0">
         <div class="card">
-            <h5 class="card-header">Logs <span class="text-secondary">sorted by newest first</span></h5>
+            <h5 class="card-header">Logs <span class="text-secondary">sorted by oldest first</span></h5>
+            <div class="card-body">
+
+                <a href="#footer" class="btn btn-primary-new mb-4 me-2">Jump to Bottom <i
+                        class="bi bi-caret-down-fill"></i></a>
+                <a href="/data/db_tracking/logs.txt" class="btn btn-secondary-new mb-4">View in TXT <i
+                        class="bi bi-filetype-txt"></i></a>
+                <?php
+
+                $logs = trackingLogsGetHtml();
+
+                echo "<code><pre class='border rounded p-2'>{$logs}</pre></code>";
+
+                ?>
+
+                <a href="#nav-manager" class="btn btn-primary-new m5-4 me-2">Jump to Top <i
+                        class="bi bi-caret-up-fill"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="config" role="tabpanel" aria-labelledby="config-tab" tabindex="0">
+        <div class="card">
+            <h5 class="card-header">Config</h5>
             <div class="card-body">
 
                 <?php
 
-                $logs = trackingLogsGet();
-                $logsformatted = "";
-                foreach ($logs as $entry) {
-                    foreach ($logs as $entry) {
-                        $logsformatted = "[<span class='text-primary'>{$entry["date"]}</span>] " .
-                            "[<span class='text-success'>{$entry["username"]}</span>@<span class='text-warning'>{$entry["page"]}</span>] " .
-                            "[<span class='text-primary'>{$entry["url"]}</span>] " .
-                            "[<span class='text-info'>{$entry["ip"]}</span>@<span class='text-danger'>{$entry["device"]}</span>] " .
-                            "<br>" . $logsformatted;
-                    }
-                }
-                echo "<code><pre>{$logsformatted}</pre></code>";
+                $configtxt = file_get_contents("config.json");
+
+                echo "<code><pre class='border rounded p-2'>{$configtxt}</pre></code>";
 
                 ?>
-            </div>
-        </div>
-    </div>
-    <div class="tab-pane" id="raw-logs" role="tabpanel" aria-labelledby="logs-tab" tabindex="0">
-        <div class="card">
-            <h5 class="card-header">Logs <span class="text-secondary">sorted by oldest first</span></h5>
-            <div class="card-body">
-                <ul class="list-group">
-                    <code>
 
-
-                        <?php
-
-                        echo "<pre>" . file_get_contents("data/db_tracking/logs.json") . "</pre>";
-
-                        ?>
-</code>
-                </ul>
             </div>
         </div>
     </div>

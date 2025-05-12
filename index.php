@@ -107,7 +107,7 @@
             pagetitleSet("404");
             $tracking["page"] = "404";
 
-        } else if (isLoggedIn() && userIsAdmin($username) && isset($_GET["manage"]) && settingsGet("site.allowmanage") == true) {
+        } else if (isLoggedIn() && userIsAdmin($username) && isset($_GET["manage"]) && settingsGet("site.allowManage") == true) {
 
             // Manager Page
             include modulesGetPath("manage");

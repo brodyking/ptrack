@@ -1,10 +1,12 @@
 {
     "site.name": "Pouchtrack", 
     "site.version": "v5.6",
-    "site.allowmanage": true,
+    "site.allowManage": true,
 
-    "tracking.logs": true,
     "tracking.views": true,
+    "tracking.logs": true,
+    "tracking.logs.html": true,
+    "tracking.logs.txt": true,
 
     "users.allowNewAccounts": true,
     "users.allowLogin": true
