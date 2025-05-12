@@ -124,7 +124,6 @@
             // Dashboard w/ Graph
             include modulesGetPath("welcome");
             include modulesGetPath("dashboard");
-            pagetitleSet("Dashboard");
             $tracking["page"] = "dashboard";
 
         } else {
