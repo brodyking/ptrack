@@ -19,6 +19,10 @@
                     <a class="nav-link" href="/?changes">
                         <i class="bi bi-clock-history"></i> Changelog</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/?bugreport">
+                        <i class="bi bi-bug-fill"></i> Bug Report</a>
+                </li>
             </ul>
             <?php
 

@@ -93,6 +93,13 @@
             pagetitleSet("Register");
             $tracking["page"] = "register";
 
+        } else if (isset($_GET["bugreport"])) {
+
+            // Login
+            include modulesGetPath("bugreport");
+            pagetitleSet("Bug Reporting");
+            $tracking["page"] = "bugreport";
+
         } else if (isset($_GET["changes"])) {
 
             // Changelog
@@ -106,6 +113,13 @@
             include modulesGetPath("404");
             pagetitleSet("404");
             $tracking["page"] = "404";
+
+        } else if (isset($_GET["401"])) {
+
+            // 404 Page
+            include modulesGetPath("401");
+            pagetitleSet("401");
+            $tracking["page"] = "401";
 
         } else if (isLoggedIn() && userIsAdmin($username) && isset($_GET["manage"]) && settingsGet("site.allowManage") == true) {
 

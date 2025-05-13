@@ -2,9 +2,23 @@
     "404": {
         "name": "404",
         "description": "404 page",
-        "version": 1.0,
+        "version": 1.1,
         "author": "Brody King",
         "source": "modules/source/404.php"
+    },
+    "401": {
+        "name": "401",
+        "description": "401 page",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/401.php"
+    },
+    "bugreport": {
+        "name": "bugreport",
+        "description": "bug reporting",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/bugreport.php"
     },
     "changes": {
         "name": "changes",
@@ -65,7 +79,7 @@
     "nav": {
         "name": "nav",
         "description": "Global navigation bar",
-        "version": 1.1,
+        "version": 1.2,
         "author": "Brody King",
         "source": "modules/source/nav.php"
     },
@@ -100,7 +114,7 @@
     "settings": {
         "name": "settings",
         "description": "Setting popup for when a user is logged in. Also contains change password popup.",
-        "version": 1.5,
+        "version": 1.6,
         "author" : "Brody King",
         "source": "modules/source/settings.php"
     },
