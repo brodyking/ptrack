@@ -17,9 +17,9 @@ Some good places to get started.
 Version 5.6 has included the following changes:
 
 - **Fixed issues when logging user actions**
-  - When writing logs in JSON format, it could cause writing issues and would hault site functionality. We now write to HTML, which when courrupted wont cause issues.
+  - When writing logs in JSON format, it could cause writing issues and would hault site functionality. We now write to HTML, which when corrupted wont cause issues.
 - **Bug Reporting**
-  - Users can now report bugs into a seperate database instead of making a github account
+  - Users can now report bugs into a separate database instead of making a github account
 - **New Navigation Bar and Splash Page**
   - Navbar has been cleaned up. Splash page now has more information on reasons to use Pouchtrack
 - **New Font**
