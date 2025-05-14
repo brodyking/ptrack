@@ -18,12 +18,12 @@
 
 
 <nav id="nav-manager" class="navbar navbar-expand-lg bg-body-tertiary border rounded"
-    style="background-color: #dee2e608!important;">
+    style="background-color: #dee2e608!important;border-radius: 1.25rem!important;">
     <div class="container-fluid pe-1 ps-2">
         <a class="navbar-brand me-0" href="/?manage">
             <i class="bi bi-hammer"></i> Manage
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             Menu <i class="bi bi-list"></i></span>
         </button>
@@ -45,6 +45,9 @@
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="config-tab" data-bs-toggle="tab" data-bs-target="#config" type="button"
                         role="tab" aria-selected="false"><i class="bi bi-gear-fill"></i> Config</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" href="data/db_bugreports/"><i class="bi bi-bug-fill"></i> Bug Reports</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">

@@ -77,6 +77,10 @@ nav{
     background-color: #dee2e608;
 }
 
+.dropdown-item>i {
+    margin-right: 3px;
+}
+
 .selection {
     gap: 0.5rem;
 }

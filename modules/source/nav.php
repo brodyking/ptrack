@@ -1,11 +1,10 @@
 <nav id="nav" class="navbar navbar-expand-lg bg-body-tertiary border rounded"
-    style="background-color: #dee2e608!important;">
-    <div class="container-fluid pe-1 ps-2">
+    style="background-color: #dee2e608!important;border-radius: 1.25rem!important;">
+    <div class="container-fluid pe-2 ps-3">
         <a class="navbar-brand me-0" href="/">
-            <img src="/assets/logo.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
-            <?php echo settingsGet("site.name"); ?>
+            <i class="bi bi-bar-chart-fill"></i> <?php echo settingsGet("site.name"); ?>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             Menu <i class="bi bi-list"></i></span>
         </button>
@@ -15,14 +14,28 @@
                     <a class="nav-link" href="/?paperwork">
                         <i class="bi bi-paperclip"></i> Paperwork</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/?changes">
-                        <i class="bi bi-clock-history"></i> Changelog</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi bi-git"></i> Development
+                    </a>
+                    <ul class="dropdown-menu mb-2">
+                        <li>
+                            <a class="dropdown-item" href="/?changes">
+                                <i class="bi bi-clock-history"></i> Changelog</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/?bugreport">
+                                <i class="bi bi-bug-fill"></i> Bug Report</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://github.com/brodyking/ptrack">
+                                <i class="bi bi-github"></i> Github</a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/?bugreport">
-                        <i class="bi bi-bug-fill"></i> Bug Report</a>
-                </li>
+            </ul>
             </ul>
             <?php
 
