@@ -6,9 +6,10 @@
 
     /*
 
-    (c) 2025 Brody King. All Rights Reserved
+    (c) 2025 Brody King. Read licence before modification.
 
     https://github.com/brodyking/ptrack/
+    https://github.com/brodyking/ptrack/blob/main/LICENSE.md
 
     */
 
@@ -92,6 +93,13 @@
             pagetitleSet("Register");
             $tracking["page"] = "register";
 
+        } else if (isset($_GET["bugreport"])) {
+
+            // Login
+            include modulesGetPath("bugreport");
+            pagetitleSet("Bug Reporting");
+            $tracking["page"] = "bugreport";
+
         } else if (isset($_GET["changes"])) {
 
             // Changelog
@@ -106,7 +114,14 @@
             pagetitleSet("404");
             $tracking["page"] = "404";
 
-        } else if (isLoggedIn() && userIsAdmin($username) && isset($_GET["manage"]) && settingsGet("site.allowmanage") == true) {
+        } else if (isset($_GET["401"])) {
+
+            // 404 Page
+            include modulesGetPath("401");
+            pagetitleSet("401");
+            $tracking["page"] = "401";
+
+        } else if (isLoggedIn() && userIsAdmin($username) && isset($_GET["manage"]) && settingsGet("site.allowManage") == true) {
 
             // Manager Page
             include modulesGetPath("manage");
@@ -123,7 +138,6 @@
             // Dashboard w/ Graph
             include modulesGetPath("welcome");
             include modulesGetPath("dashboard");
-            pagetitleSet("Dashboard");
             $tracking["page"] = "dashboard";
 
         } else {

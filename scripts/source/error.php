@@ -76,6 +76,10 @@ function errorPretty()
             return "No user exists under that username.";
         case "cans.invalidsession":
             return "Invalid Session.";
+        case "bugreport.missingparams":
+            return "Missing parameters while submitting a Bug Report.";
+        case "bugreport.disabled":
+            return "Bug Reports are currently disabled.";
         default:
             return "Unknown Error.";
     }

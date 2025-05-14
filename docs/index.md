@@ -1,4 +1,4 @@
-# 📖 Pouchtrack Docs v5.5 📖
+# 📖 Pouchtrack Docs v5.6 📖
 
 <b><a href="../README.md">« Back to Readme</a></b>
 
@@ -22,7 +22,7 @@ Here are all of the available pages. They are listed in order from install to de
 | Name                                     | Description                            | Modified |
 | :--------------------------------------- | :------------------------------------- | :------- |
 | **[API »](references/api.md)**           | Interactions.                          | 04/05/25 |
-| **[Database »](references/database.md)** | Pouchtrack's custom database software. | 04/26/25 |
+| **[Database »](references/database.md)** | Pouchtrack's custom database software. | 05/14/25 |
 | **[Error »](references/error.md)**       | Error Handling.                        | 03/15/25 |
 | **[Modules »](references/modules.md)**   | Basic Modules Info                     | 04/26/25 |
 | **[Scripts »](references/scripts.md)**   | Basic Scripts Info                     | 04/26/25 |

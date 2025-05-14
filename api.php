@@ -12,6 +12,7 @@ include scriptsGet("deleteaccount");
 include scriptsGet("changepswd");
 include scriptsGet("changeemail");
 include scriptsGet("resetdata");
+include scriptsGet(name: "bugreport");
 
 function apiError($msg)
 {
@@ -74,6 +75,10 @@ switch ($_GET["action"]) {
 
     case "resetdata":
         resetdata();
+        break;
+
+    case "bugreport":
+        bugreport();
         break;
 
     default:

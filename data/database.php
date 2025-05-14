@@ -328,29 +328,60 @@ function trackingViewsAdd($date)
 function trackingLogsAdd($username, $page, $date, $device, $ip, $url)
 {
 
-
     if (settingsGet("tracking.logs")) {
 
-        if (!file_exists("data/db_tracking/logs.json")) {
-            fopen("data/db_tracking/logs.json", "w");
-            write("data/db_tracking/logs.json", "{}");
+
+
+        // tracking logs in txt
+        if (settingsGet("tracking.logs.txt")) {
+
+            // check if there is a text file, creates one if not.
+            if (!file_exists("data/db_tracking/logs.txt")) {
+                fopen("data/db_tracking/logs.txt", "w");
+                write("data/db_tracking/logs.txt", "");
+            }
+            $logs = file_get_contents("data/db_tracking/logs.txt");
+            // adds new log
+            $logs = $logs . "\n[{$date}] " .
+                "[{$username}@{$page}] " .
+                "[{$url}] " .
+                "[{$ip}@{$device}] ";
+            file_put_contents("data/db_tracking/logs.txt", $logs);
         }
 
-        $logs = file_get_contents("data/db_tracking/logs.json");
-        $logs = json_decode($logs, true);
+        // tracking logs in html
+        if (settingsGet("tracking.logs.html")) {
 
-        $tosend = ["username" => $username, "page" => $page, "date" => $date, "device" => $device, "ip" => $ip, "url" => $url];
+            // check if html file exists, if not create one.
+            if (!file_exists("data/db_tracking/logs.html")) {
+                fopen("data/db_tracking/logs.html", "w");
+                write("data/db_tracking/logs.html", "");
+            }
+            $logs = file_get_contents("data/db_tracking/logs.html");
+            // adds new log
+            $logs = $logs . "\n[<span class='text-primary'>{$date}</span>] " .
+                "[<span class='text-success'>{$username}</span>@<span class='text-warning'>{$page}</span>] " .
+                "[<span class='text-primary'>{$url}</span>] " .
+                "[<span class='text-info'>{$ip}</span>@<span class='text-danger'>{$device}</span>] ";
+            file_put_contents("data/db_tracking/logs.html", $logs);
+        }
 
-        array_push($logs, $tosend);
-
-        $logs = json_encode($logs, JSON_PRETTY_PRINT);
-        file_put_contents("data/db_tracking/logs.json", $logs);
     }
 }
 
-function trackingLogsGet()
+function trackingLogsGetHtml()
 {
-    return json_decode(file_get_contents("data/db_tracking/logs.json"), true);
+    return file_get_contents("data/db_tracking/logs.html");
+}
+
+function bugReportNew($email, $version, $subject, $body)
+{
+    $subjectOutName = $subject . random_int(0, 9999) . ".html";
+    $subjectOutBody = "<h1>{$subject}</h1>
+    <b>Email:</b> {$email}<br>
+    <b>Version:</b> {$version}<br>
+    <code>{$body}</code>";
+    file_put_contents("data/db_bugreports/{$subjectOutName}", $subjectOutBody);
 }
 
 // ?>

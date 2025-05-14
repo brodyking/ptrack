@@ -1,6 +1,6 @@
 # Database
 
-**Page Modified**: April 26, 2025
+**Page Modified**: May 14, 2025
 \
 **Author**: Brody King
 \
@@ -27,6 +27,7 @@
   - [Tracking Functins](#tracking-functins)
     - [Tracking Views](#tracking-views)
     - [Tracking Logs](#tracking-logs)
+  - [Bug Report Functions](#bug-report-functions)
 
 ## Introduction
 
@@ -36,11 +37,12 @@ This software does not use any "real" database. The intention is to make this so
 
 These are the locations of important database functions and actual data.
 
-| Path                                       | Description                        |
-| ------------------------------------------ | ---------------------------------- |
-| [`/data/database.php`](/data/database.php) | Holds all database functions.      |
-| [`/config.json`](/config.json)             | Configuration for site as a whole. |
-| [`/data/db_users/`](/data/db_users/)       | Holds all user data.               |
+| Path                                           | Description                        |
+| ---------------------------------------------- | ---------------------------------- |
+| [`/data/database.php`](/data/database.php)     | Holds all database functions.      |
+| [`/config.json`](/config.json)                 | Configuration for site as a whole. |
+| [`/data/db_users/`](/data/db_users/)           | Holds all user data.               |
+| [`/data/db_bugreports/`](/data/db_bugreports/) | Holds bug reports                  |
 
 ## Accessing the File System
 
@@ -153,7 +155,13 @@ These are used for analytics. There are views and logs.
 
 ### Tracking Logs
 
-| Function            | Parameter                                       | Description                  |
-| ------------------- | ----------------------------------------------- | ---------------------------- |
-| `trackingLogsAdd()` | `$username`, `$page`, `$date`, `$device`, `$ip` | Adds that day into the logs  |
-| `trackingLogsGet()` |                                                 | Returns all logs in an array |
+| Function                | Parameter                                       | Description                      |
+| ----------------------- | ----------------------------------------------- | -------------------------------- |
+| `trackingLogsAdd()`     | `$username`, `$page`, `$date`, `$device`, `$ip` | Adds that day into the logs      |
+| `trackingLogsGetHtml()` |                                                 | Returns all logs in an html file |
+
+## Bug Report Functions
+
+| Function         | Parameter                                 | Description                                                 |
+| ---------------- | ----------------------------------------- | ----------------------------------------------------------- |
+| `bugReportNew()` | `$email`, `$version`, `$subject`, `$body` | Adds a new bug report in html format to the `db_bugreports` |
