@@ -1,4 +1,11 @@
 {
+    "bugreport": {
+        "name": "bugreport",
+        "description": "Stores bug reporting information",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/bugreport.php"
+    },
     "cans": {
         "name": "cans",
         "description": "Adding and resetting cans",
@@ -44,7 +51,7 @@
     "error": {
         "name": "error",
         "description": "Error Handling",
-        "version": 1.4,
+        "version": 1.5,
         "author": "Brody King",
         "source": "scripts/source/error.php"
     },

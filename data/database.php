@@ -374,4 +374,14 @@ function trackingLogsGetHtml()
     return file_get_contents("data/db_tracking/logs.html");
 }
 
+function bugReportNew($email, $version, $subject, $body)
+{
+    $subjectOutName = $subject . random_int(0, 9999) . ".html";
+    $subjectOutBody = "<h1>{$subject}</h1>
+    <b>Email:</b> {$email}<br>
+    <b>Version:</b> {$version}<br>
+    <code>{$body}</code>";
+    file_put_contents("data/db_bugreports/{$subjectOutName}", $subjectOutBody);
+}
+
 // ?>

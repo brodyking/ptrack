@@ -1,0 +1,1 @@
+New bug reports will show up as text files in this folder. You can delete this file.

@@ -8,6 +8,8 @@
     "tracking.logs.html": true,
     "tracking.logs.txt": true,
 
+    "bugreports": true,
+
     "users.allowNewAccounts": true,
     "users.allowLogin": true
 }

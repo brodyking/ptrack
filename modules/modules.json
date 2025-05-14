@@ -65,7 +65,7 @@
     "login": {
         "name": "login",
         "description": "Login form. Used in splash-content",
-        "version": 2.0,
+        "version": 2.1,
         "author": "Brody King",
         "source": "modules/source/login.php"
     },
