@@ -1,2 +1,5 @@
 ErrorDocument 404 /index.php?404
 ErrorDocument 401 /index.php?401
+<Files "config.json">  
+ Require all denied
+</Files>
