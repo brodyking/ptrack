@@ -1,6 +1,6 @@
 # API
 
-**Page Modified**: April 5, 2025
+**Page Modified**: May 16, 2025
 \
 **Author**: Brody King
 \
@@ -24,6 +24,9 @@
     - [Logout](#logout)
     - [Delete Account](#delete-account)
     - [Change Password](#change-password)
+    - [Change Email](#change-email)
+    - [Reset Data](#reset-data)
+    - [Bug Reporting](#bug-reporting)
 
 ## Definition
 
@@ -39,10 +42,10 @@ The API handles basic actions and processes user input. It isnt a "true api" in 
 
 A few functions are included in the api for error handling and such.
 
-| Function Name     | Parameters | Definition                                                                                                                                             |
-| ----------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `apiError()`      | `$msg`     | Redirects to `/?error=` to display the error                                                                                                           |
-| `apiFinish()`     |            | Redirects to `/` |
+| Function Name     | Parameters | Definition                                                                                                                                                |
+| ----------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `apiError()`      | `$msg`     | Redirects to `/?error=` to display the error                                                                                                              |
+| `apiFinish()`     |            | Redirects to `/`                                                                                                                                          |
 | `apiFinishMode()` | `$input`   | Adds `cmonth` or `pmonth` as GET in the url, so that the user is sent to the tab they were on before using the API. Valid inputs are `pouches` and `cans` |
 
 ## Usage
@@ -183,3 +186,60 @@ Allows the user to change their password
 | `changepswd.missingparams` |                       |
 | `changepswd.incorrectold`  | Old password is wrong |
 | `changepswd.invalidid`     | Invalid Session       |
+
+### Change Email
+
+Allows the user to change their email
+
+| Scripts Used                                   | URL                          |
+| ---------------------------------------------- | ---------------------------- |
+| [changeemail](/scripts/source/changeemail.php) | `api.php?action=changeemail` |
+
+| Parameter Needed | Method |
+| ---------------- | ------ |
+| `username`       | `POST` |
+| `id`             | `POST` |
+| `newemail`       | `POST` |
+
+| Error                       | Description     |
+| --------------------------- | --------------- |
+| `changeemail.missingparams` |                 |
+| `changepswd.invalidid`      | Invalid Session |
+
+### Reset Data
+
+Allows the user to reset all their account data (pouches,cans)
+
+| Scripts Used                               | URL                        |
+| ------------------------------------------ | -------------------------- |
+| [resetdata](/scripts/source/resetdata.php) | `api.php?action=resetdata` |
+
+| Parameter Needed | Method   |
+| ---------------- | -------- |
+| `username`       | `COOKIE` |
+| `id`             | `COOKIE` |
+
+| Error                       | Description     |
+| --------------------------- | --------------- |
+| `changeemail.missingparams` |                 |
+| `changepswd.invalidsession` | Invalid Session |
+
+### Bug Reporting
+
+Creates bug reports
+
+| Scripts Used                               | URL                        |
+| ------------------------------------------ | -------------------------- |
+| [bugreport](/scripts/source/bugreport.php) | `api.php?action=bugreport` |
+
+| Parameter Needed | Method |
+| ---------------- | ------ |
+| `email`          | `POST` |
+| `version`        | `POST` |
+| `subject`        | `POST` |
+| `bodytext`       | `POST` |
+
+| Error                     | Description             |
+| ------------------------- | ----------------------- |
+| `bugreport.missingparams` |                         |
+| `bugreport.disabled`      | Disabled in config.json |
