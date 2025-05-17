@@ -173,23 +173,3 @@
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="reset-cans" tabindex="-1" aria-labelledby="reset-cans" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="register"><i class="bi bi-exclamation-triangle-fill"></i> Warning
-                    </h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>You are about to reset your <b>pouches</b> for today. You cannot undo this action. And no
-                        cheating!!</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="api.php?action=cans&deed=reset" class="btn btn-danger">Reset</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
