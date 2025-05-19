@@ -67,7 +67,7 @@
                     once you click Reset. Do you wish to continue?</p>
             </div>
             <div class="modal-footer">
-                <a href="api.php?action=resetdata" class="btn btn-primary-new">Reset Data</a>
+                <a href="api.php?action=resetdata" class="btn btn-danger-new">Reset Data</a>
             </div>
         </div>
     </div>
@@ -87,7 +87,7 @@
                     once you click Delete. Do you wish to continue?</p>
             </div>
             <div class="modal-footer">
-                <a href="api.php?action=deleteaccount" class="btn btn-primary-new">Delete
+                <a href="api.php?action=deleteaccount" class="btn btn-danger-new">Delete
                     my
                     Account</a>
             </div>

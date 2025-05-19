@@ -122,11 +122,26 @@ nav{
     border: 1px solid #6c757d;
 }
 
-.btn-secondary-new:hover {
+.btn-secondary-new:hover,.btn-secondary-new:active {
     color: white;
     background-color: rgba(230, 230, 230, 0.2)!important;
     border: 1px solid #6c757d;
 }
+
+.btn-danger-new {
+    border-radius: 2rem;
+    background-color: #dc3545;
+    padding-top: 0.5rem!important;
+    padding-bottom: 0.5rem!important;
+    font-weight: 600 !important;
+    color: white;
+}
+
+.btn-danger-new:hover,.btn-danger-new:active {
+    background-color: #b52c39;
+}
+
+
 
 .card,
 .form-control,
