@@ -29,7 +29,7 @@ function whichTabPane($modeinput)
 ?>
 <style>
     body {
-        background: linear-gradient(180deg, rgba(14, 23, 41, 1) 47%, rgba(2, 41, 29, 1) 100%) !important;
+        background: linear-gradient(180deg, rgba(14, 23, 41, 1) 47%, rgba(2, 41, 29, 1) 100%);
         background-repeat: no-repeat !important;
         background-attachment: fixed !important;
     }

@@ -27,6 +27,7 @@
     include scriptsGet("error");
     include scriptsGet("checktoday");
     include scriptsGet("pagetitle");
+    include scriptsGet("theme");
 
     ?>
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
@@ -107,19 +108,10 @@
             pagetitleSet("Changes");
             $tracking["page"] = "changes";
 
-        } else if (isset($_GET["404"])) {
+        } else if (isset($_GET["httperror"])) {
 
             // 404 Page
-            include modulesGetPath("404");
-            pagetitleSet("404");
-            $tracking["page"] = "404";
-
-        } else if (isset($_GET["401"])) {
-
-            // 404 Page
-            include modulesGetPath("401");
-            pagetitleSet("401");
-            $tracking["page"] = "401";
+            include modulesGetPath("httperror");
 
         } else if (isLoggedIn() && userIsAdmin($username) && isset($_GET["manage"]) && settingsGet("site.allowManage") == true) {
 
@@ -158,6 +150,8 @@
             $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             trackingLogsAdd($tracking["username"], $tracking["page"], $tracking["date"], $tracking["device"], $_SERVER['REMOTE_ADDR'], $url);
         }
+
+
 
         ?>
     </main>

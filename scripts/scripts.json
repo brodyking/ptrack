@@ -96,5 +96,12 @@
         "version": 1.2,
         "author": "Brody King",
         "source": "scripts/source/resetdata.php"
+    },
+    "theme": {
+        "name": "theme",
+        "description": "User themes",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/theme.php"
     }
 }
