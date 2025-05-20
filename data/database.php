@@ -86,6 +86,7 @@ function userCreate($username, $email, $password)
     $accountdata["isadmin"] = "false";
     $accountdata = json_encode($accountdata, JSON_PRETTY_PRINT);
     write($pathto . "account.json", $accountdata);
+    setcookie("newuserpopup", "true");
     return 0;
 }
 function userDelete($username)
