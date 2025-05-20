@@ -27,7 +27,6 @@
     include scriptsGet("error");
     include scriptsGet("checktoday");
     include scriptsGet("pagetitle");
-    include scriptsGet("theme");
 
     ?>
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
