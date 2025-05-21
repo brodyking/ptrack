@@ -31,6 +31,15 @@
                         ID</span>
                     <input type="text" class="form-control" disabled value="<?php echo $id; ?>">
                 </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" style="background-color: #dee2e608!important" id="basic-addon1"><i
+                            class="bi bi-hammer"></i> API</span>
+                    <input type="text" class="form-control" disabled value="<?php if (userSettingsGet($username, "allowapi") == "true") {
+                        echo "Enabled";
+                    } else {
+                        echo "Disabled";
+                    } ?>">
+                </div>
             </div>
         </div>
     </div>
@@ -46,6 +55,25 @@
                     data-bs-target="#changeemail"><i class="bi bi-envelope-fill"></i> Change Email</a>
                 <a class="btn btn-secondary-new w-100" style="text-decoration: none;" href="#" data-bs-dismiss="modal"
                     data-bs-toggle="modal" data-bs-target="#delete"><i class="bi bi-trash"></i> Delete Account</a>
+            </div>
+        </div>
+        <div class="card">
+            <h5 class="card-header"><i class="bi bi-hammer"></i> API</h5>
+            <div class="card-body">
+                <a class="btn btn-secondary-new w-100 mb-3" style="text-decoration: none;"
+                    href="/api.php?action=rawdata&username=<?php echo $username . '&id=' . $id . '&source=pouches'; ?>">
+                    <i class="bi bi-filetype-json"></i> Get Pouches JSON
+                </a>
+                <a class="btn btn-secondary-new w-100 mb-3" style="text-decoration: none;"
+                    href="/api.php?action=rawdata&username=<?php echo $username . '&id=' . $id . '&source=cans'; ?>">
+                    <i class="bi bi-filetype-json"></i> Get Cans JSON
+                </a>
+                <a class="btn btn-secondary-new w-100" style="text-decoration: none;"
+                    href="/api.php?action=rawdata&username=<?php echo $username . '&id=' . $id . '&source=account'; ?>">
+                    <i class="bi bi-filetype-json"></i> Get Account Info JSON
+                </a>
+
+
             </div>
         </div>
     </div>
