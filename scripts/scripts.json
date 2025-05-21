@@ -51,7 +51,7 @@
     "error": {
         "name": "error",
         "description": "Error Handling",
-        "version": 1.6,
+        "version": 1.7,
         "author": "Brody King",
         "source": "scripts/source/error.php"
     },
@@ -103,5 +103,12 @@
         "version": 1.2,
         "author": "Brody King",
         "source": "scripts/source/resetdata.php"
+    },
+    "toggleapi": {
+        "name": "toggleapi",
+        "description": "Toggles the API for users.",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/toggleapi.php"
     }
 }

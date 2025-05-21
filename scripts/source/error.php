@@ -90,6 +90,12 @@ function errorPretty()
             return "You must enable the API on your account to access this information.";
         case "rawdata.invalidparams":
             return "Invalid Source.";
+        case "toggleapi.missingparams":
+            return "Missing parameters while changing access to API.";
+        case "toggleapi.nouser":
+            return "No user exists under that username.";
+        case "toggleapi.invalidsession":
+            return "Invalid Session.";
         default:
             return "Unknown Error.";
     }

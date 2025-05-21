@@ -16,6 +16,7 @@ include scriptsGet("changeemail");
 include scriptsGet("resetdata");
 include scriptsGet(name: "bugreport");
 include scriptsGet(name: "rawdata");
+include scriptsGet(name: "toggleapi");
 
 function apiError($msg)
 {
@@ -86,6 +87,10 @@ switch ($_GET["action"]) {
 
     case "rawdata":
         rawdata();
+        break;
+
+    case "toggleapi":
+        toggleapi();
         break;
 
     default:

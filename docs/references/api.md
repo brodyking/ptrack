@@ -28,6 +28,7 @@
     - [Reset Data](#reset-data)
     - [Bug Reporting](#bug-reporting)
     - [Raw Data](#raw-data)
+    - [Toggle API](#toggle-api)
 
 ## Definition
 
@@ -266,3 +267,22 @@ Allows users to get raw data directly through the web browser
 | `rawdata.invalidsession` | Invalid Session              |
 | `rawdata.apidisabled`    | API is disabled for the user |
 | `rawdata.invalidparams`  | Invalid Source               |
+
+### Toggle API
+
+Allows users to toggle API access on their account.
+
+| Scripts Used                               | URL                        |
+| ------------------------------------------ | -------------------------- |
+| [toggleapi](/scripts/source/toggleapi.php) | `api.php?action=toggleapi` |
+
+| Parameter Needed | Method   |
+| ---------------- | -------- |
+| `username`       | `COOKIE` |
+| `id`             | `COOKIE` |
+
+| Error                      | Description        |
+| -------------------------- | ------------------ |
+| `toggleapi.missingparams`  |                    |
+| `toggleapi.nouser`         | User dosent exist. |
+| `toggleapi.invalidsession` | Invalid Session    |

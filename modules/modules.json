@@ -107,7 +107,7 @@
     "settings": {
         "name": "settings",
         "description": "Setting popup for when a user is logged in. Also contains change password popup.",
-        "version": 1.6,
+        "version": 1.7,
         "author" : "Brody King",
         "source": "modules/source/settings.php"
     },

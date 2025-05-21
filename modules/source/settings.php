@@ -53,8 +53,11 @@
                     data-bs-target="#changepswd"><i class="bi bi-key"></i> Change Password</a>
                 <a class="btn btn-secondary-new w-100 mb-3" href="#" data-bs-toggle="modal"
                     data-bs-target="#changeemail"><i class="bi bi-envelope-fill"></i> Change Email</a>
+                <a class="btn btn-secondary-new w-100 mb-3" style="text-decoration: none;" href="#"
+                    data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#delete"><i class="bi bi-trash"></i>
+                    Delete Account</a>
                 <a class="btn btn-secondary-new w-100" style="text-decoration: none;" href="#" data-bs-dismiss="modal"
-                    data-bs-toggle="modal" data-bs-target="#delete"><i class="bi bi-trash"></i> Delete Account</a>
+                    data-bs-toggle="modal" data-bs-target="#toggleapi"><i class="bi bi-hammer"></i> Toggle API</a>
             </div>
         </div>
         <div class="card">
@@ -170,6 +173,34 @@
                     </div>
                     <button type="submit" class="btn btn-secondary-new">Change Email</button>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Toggle API popup -->
+<div class="modal fade" id="toggleapi" tabindex="-1" aria-labelledby="reset" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="delete"><i class="bi bi-exclamation-triangle-fill"></i> Warning</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>If you enable the API, those with your current session ID can see information in your account. We
+                    recommend turning this off when you are done using it.</p>
+            </div>
+            <div class="modal-footer">
+                <?php
+
+                if (userSettingsGet($username, "allowapi") == "true") {
+                    echo '<a href="api.php?action=toggleapi" class="btn btn-primary-new">Disable API</a>';
+                } else {
+                    echo '<a href="api.php?action=toggleapi" class="btn btn-danger-new">Enable API</a>';
+                }
+
+                ?></a>
             </div>
         </div>
     </div>
