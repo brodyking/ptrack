@@ -1,4 +1,4 @@
-# 📖 Pouchtrack Docs v5.7 📖
+# 📖 Pouchtrack Docs v6.0 📖
 
 <b><a href="../README.md">« Back to Readme</a></b>
 
