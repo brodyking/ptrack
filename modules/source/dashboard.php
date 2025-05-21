@@ -42,7 +42,7 @@ function whichTabPane($modeinput)
             aria-selected="true"><i class="bi bi-clock-fill"></i> Pouches</button>
     </li>
     <li class="nav-item" role="presentation">
-        <button class="nav-link <?php echo whichTabLink("cans") ?>"" id=" cans-tab" onclick="alltabsCans()"
+        <button class="nav-link <?php echo whichTabLink("cans") ?>" id=" cans-tab" onclick="alltabsCans()"
             data-bs-toggle="tab" data-bs-target="#cans" type="button" role="tab" aria-controls="cans"
             aria-selected="false"><i class="bi bi-wallet-fill"></i>
             Cans</button>

@@ -16,7 +16,7 @@
     "dashboard": {
         "name": "dashboard",
         "description": "Selections and Graph for index.php",
-        "version": 1.3,
+        "version": 1.4,
         "author" : "Brody King",
         "source": "modules/source/dashboard.php"
     },
@@ -30,14 +30,14 @@
     "graph-cans": {
         "name": "graph-cans",
         "description": "Graph card for cans used on dashboard.",
-        "version": 2.2,
+        "version": 2.3,
         "author": "Brody King",
         "source": "modules/source/graph-cans.php"
     },
     "graph-pouches": {
         "name": "graph-pouches",
         "description": "Graph card for pouches used on dashboard.",
-        "version": 2.2,
+        "version": 2.3,
         "author": "Brody King",
         "source": "modules/source/graph-pouches.php"
     },

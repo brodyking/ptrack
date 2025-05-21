@@ -92,7 +92,7 @@
             Chart.defaults.borderColor = '#495057';
             const xValues = <?php echo $pouchesgraphxvals; ?>;
             const yValues = <?php echo $pouchesgraphyvals; ?>;
-            new Chart("poucheschart", {
+            var graphpouches = new Chart("poucheschart", {
                 type: "line",
                 data: {
                     labels: xValues,
@@ -122,6 +122,13 @@
                     },
                     layout: {
                         padding: 20
+                    },
+                    animation: {
+                        onComplete: function () {
+                            console.log(graphpouches.toBase64Image());
+                            document.getElementById("pouches-export-png").href = graphpouches.toBase64Image();
+                            document.getElementById("pouches-export-png").download = 'pouches-pouchtrack.png';
+                        }
                     }
                 }
             });
@@ -129,9 +136,12 @@
 
 
         <p class="d-grid gap-2 d-md-flex justify-content-md-end mb-0">
+            <a class="btn btn-secondary-new btn-sm" id="pouches-export-png">
+                <i class="bi bi-image me-1"></i> Export as PNG
+            </a>
             <a class="btn btn-secondary-new btn-sm" data-bs-toggle="collapse" href="#graphtable" role="button"
                 aria-expanded="false" aria-controls="graphtable">
-                View Table
+                <i class="bi bi-table me-1"></i> View Table
             </a>
         </p>
         <div class="collapse" id="graphtable">

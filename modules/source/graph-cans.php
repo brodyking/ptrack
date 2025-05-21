@@ -92,7 +92,7 @@
             Chart.defaults.borderColor = '#495057';
             const cansxValues = <?php echo $cansgraphxvals; ?>;
             const cansyValues = <?php echo $cansgraphyvals; ?>;
-            new Chart("canschart", {
+            var graphcans = new Chart("canschart", {
                 type: "line",
                 data: {
                     labels: cansxValues,
@@ -122,16 +122,28 @@
                     },
                     layout: {
                         padding: 20
+                    },
+                    animation: {
+                        onComplete: function () {
+                            console.log(graphcans.toBase64Image());
+                            document.getElementById("cans-export-png").href = graphcans.toBase64Image();
+                            document.getElementById("cans-export-png").download = 'cans-pouchtrack.png';
+                        }
                     }
                 }
             });
+
+
         </script>
 
 
         <p class="d-grid gap-2 d-md-flex justify-content-md-end mb-0">
+            <a class="btn btn-secondary-new btn-sm" id="cans-export-png">
+                <i class="bi bi-image me-1"></i> Export as PNG
+            </a>
             <a class="btn btn-secondary-new btn-sm" data-bs-toggle="collapse" href="#cansgraphtable" role="button"
                 aria-expanded="false" aria-controls="graphtable">
-                View Table
+                <i class="bi bi-table me-1"></i> View Table
             </a>
         </p>
         <div class="collapse" id="cansgraphtable">
