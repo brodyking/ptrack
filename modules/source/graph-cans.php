@@ -133,10 +133,6 @@
                 aria-expanded="false" aria-controls="graphtable">
                 View Table
             </a>
-            <a class="btn btn-secondary-new btn-sm" data-bs-toggle="collapse" href="#cansgraphjson" role="button"
-                aria-expanded="false" aria-controls="graphjson">
-                View JSON
-            </a>
         </p>
         <div class="collapse" id="cansgraphtable">
             <br>
@@ -160,15 +156,6 @@
                         }
                         ?>
                     </table>
-                </div>
-            </div>
-        </div>
-        <div class="collapse" id="cansgraphjson">
-            <br>
-            <div class="card">
-                <h5 class="card-header">JSON Data</h5>
-                <div class="card-body">
-                    <code><pre><?php echo file_get_contents("data/db_users/" . $username . "/cans.json"); ?></pre></code>
                 </div>
             </div>
         </div>
