@@ -14,9 +14,10 @@ Some good places to get started.
 
 ## Release Notes
 
-Version 5.7 has included the following changes:
+Version 6.0 has included the following changes:
 
-TBD
+- **Accessible API!**
+  - You can now get information about pouches, cans, and your account through the web browser. This was done to cut load times on pages as before, it was all loaded into the dasboard. (it added about 2000 lines to the HTML)
 
 ## Development and Roadmap
 
