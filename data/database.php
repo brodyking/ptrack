@@ -84,6 +84,7 @@ function userCreate($username, $email, $password)
     $accountdata["isdeleted"] = "false";
     $accountdata["secureid"] = "false";
     $accountdata["isadmin"] = "false";
+    $accountdata["allowapi"] = "false";
     $accountdata = json_encode($accountdata, JSON_PRETTY_PRINT);
     write($pathto . "account.json", $accountdata);
     setcookie("newuserpopup", "true");

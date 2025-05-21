@@ -27,6 +27,7 @@
     - [Change Email](#change-email)
     - [Reset Data](#reset-data)
     - [Bug Reporting](#bug-reporting)
+    - [Raw Data](#raw-data)
 
 ## Definition
 
@@ -243,3 +244,25 @@ Creates bug reports
 | ------------------------- | ----------------------- |
 | `bugreport.missingparams` |                         |
 | `bugreport.disabled`      | Disabled in config.json |
+
+### Raw Data
+
+Allows users to get raw data directly through the web browser
+
+| Scripts Used                           | URL                      |
+| -------------------------------------- | ------------------------ |
+| [rawdata](/scripts/source/rawdata.php) | `api.php?action=rawdata` |
+
+| Parameter Needed | Method |
+| ---------------- | ------ |
+| `username`       | `GET`  |
+| `id`             | `GET`  |
+| `source`         | `GET`  |
+
+| Error                    | Description                  |
+| ------------------------ | ---------------------------- |
+| `rawdata.missingparams`  |                              |
+| `rawdata.nouser`         | User dosent exist.           |
+| `rawdata.invalidsession` | Invalid Session              |
+| `rawdata.apidisabled`    | API is disabled for the user |
+| `rawdata.invalidparams`  | Invalid Source               |

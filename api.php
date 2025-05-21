@@ -1,5 +1,7 @@
 <?php
 
+header('Content-type: text/plain; charset=utf-8');
+
 include "data/database.php";
 include "scripts/scripts.php";
 
@@ -13,6 +15,7 @@ include scriptsGet("changepswd");
 include scriptsGet("changeemail");
 include scriptsGet("resetdata");
 include scriptsGet(name: "bugreport");
+include scriptsGet(name: "rawdata");
 
 function apiError($msg)
 {
@@ -79,6 +82,10 @@ switch ($_GET["action"]) {
 
     case "bugreport":
         bugreport();
+        break;
+
+    case "rawdata":
+        rawdata();
         break;
 
     default:

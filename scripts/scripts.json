@@ -51,7 +51,7 @@
     "error": {
         "name": "error",
         "description": "Error Handling",
-        "version": 1.5,
+        "version": 1.6,
         "author": "Brody King",
         "source": "scripts/source/error.php"
     },
@@ -82,6 +82,13 @@
         "version": 1.0,
         "author": "Brody King",
         "source": "scripts/source/pagetitle.php"
+    },
+    "rawdata": {
+        "name": "rawdata",
+        "description": "Get raw data for the user.",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/rawdata.php"
     },
     "register": {
         "name": "register",

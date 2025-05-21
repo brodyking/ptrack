@@ -80,6 +80,16 @@ function errorPretty()
             return "Missing parameters while submitting a Bug Report.";
         case "bugreport.disabled":
             return "Bug Reports are currently disabled.";
+        case "rawdata.missingparams":
+            return "Missing parameters while accessing API.";
+        case "rawdata.nouser":
+            return "No user exists under that username.";
+        case "rawdata.invalidsession":
+            return "Invalid Session.";
+        case "rawdata.apidisabled":
+            return "You must enable the API on your account to access this information.";
+        case "rawdata.invalidparams":
+            return "Invalid Source.";
         default:
             return "Unknown Error.";
     }
