@@ -1,6 +1,6 @@
 # Error
 
-**Page Modified**: March 15, 2025
+**Page Modified**: May 22, 2025
 \
 **Author**: Brody King
 \
@@ -35,6 +35,7 @@ It is located in the scripts folder.
 | Variable Name  | Description                                       |
 | -------------- | ------------------------------------------------- |
 | `$errorOutput` | Where the error is stored that will be displayed. |
+| `$errorCodes`  | All error codes are kept in this array.           |
 
 ## Functions
 
