@@ -21,9 +21,9 @@
         <input required type="password" class="form-control" name="password">
       </div>
       <div class="mb-3">
-        <label class="col-form-label"><input type="checkbox" class="form-input" required> I agree to the
+        <label class="col-form-label"><input type="checkbox" class="form-input" required> I have read and agree to the
           Terms of Service, Privacy Policy, and
-          Cookie Policy located <a href="/?paperwork">here</a>.</label>
+          Cookie Policy located <a href="/?paperwork" target="_blank">here</a>.</label>
       </div>
       <div class="mb-3">
         <button type="submit" class="btn btn-secondary-new">Register</button>
