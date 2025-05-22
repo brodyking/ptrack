@@ -70,6 +70,7 @@ function userAuth($username, $password)
 }
 function userCreate($username, $email, $password)
 {
+    $username = strtolower($username);
     $pathto = userPathTo($username);
     mkdir($pathto);
     write($pathto . "pouches.json", "");

@@ -16,9 +16,9 @@ function register()
         apiError("register.taken");
     } else {
         // Create user
-        userCreate($_POST["username"], $_POST["email"], $_POST["password"]);
-        setcookie("username", $_POST['username'], time() + (86400 * 30), "/");
-        setcookie("id", userSessionCreate($_POST['username']), time() + (86400 * 30), "/");
+        userCreate(strtolower($_POST["username"]), $_POST["email"], $_POST["password"]);
+        setcookie("username", strtolower($_POST['username']), time() + (86400 * 30), "/");
+        setcookie("id", userSessionCreate(strtolower($_POST['username'])), time() + (86400 * 30), "/");
         Header("Location: /");
     }
 }
