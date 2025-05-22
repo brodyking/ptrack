@@ -18,6 +18,20 @@ Version 6.0 has included the following changes:
 
 - **Accessible API!**
   - You can now get information about pouches, cans, and your account through the web browser. This was done to cut load times on pages as before, it was all loaded into the dasboard. (it added about 2000 lines to the HTML)
+  - It is disabled by default on every new users account for security reasons.
+- **Export as PNG!**
+  - Can't believe it took until version 6.0 for this! You can export cans and pouches chart into a PNG file.
+- **More Efficient Error Handling**
+  - Errors are now stored in an array instead of a giant switch statement.
+- **New Splash Page**
+  - Added more to the "Why use Pouchtrack" section.
+  - Removed picture of app on mobile.
+- **Config File Security**
+  - The `config.json` file is now hidden from public view.
+- **New users Welcome Message**
+  - New users will now have a popup on their first launch of the app after registration. This shows them how to install the iOS version.
+- **New Apache Error Handling**
+  - We now have a one module solution for errors 404, 500, etc.
 
 ## Development and Roadmap
 
@@ -32,6 +46,7 @@ Our current roadmap looks sort of like this. (nothing is promised, these are mor
 - [x] Track Cans.
 - [x] Allow for multiple years in chart.
 - [x] Session Expires.
+- [x] API
 - [ ] Database Backups to prevent Data Loss while writing.
 - [ ] Edit previous days.
 
