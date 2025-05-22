@@ -136,12 +136,16 @@
 
 
         <p class="d-grid gap-2 d-md-flex justify-content-md-end mb-0">
-            <a class="btn btn-secondary-new btn-sm" id="pouches-export-png">
-                <i class="bi bi-image me-1"></i> Export as PNG
-            </a>
             <a class="btn btn-secondary-new btn-sm" data-bs-toggle="collapse" href="#graphtable" role="button"
                 aria-expanded="false" aria-controls="graphtable">
                 <i class="bi bi-table me-1"></i> View Table
+            </a>
+            <a class="btn btn-secondary-new btn-sm" id="pouches-export-png">
+                <i class="bi bi-image me-1"></i> Export as PNG
+            </a>
+            <a class="btn btn-secondary-new btn-sm"
+                href="/api.php?action=rawdata&username=<?php echo $username . '&id=' . $id . '&source=pouches'; ?>">
+                <i class="bi bi-filetype-json me-1"></i> Export as JSON
             </a>
         </p>
         <div class="collapse" id="graphtable">
