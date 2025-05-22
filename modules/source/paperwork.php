@@ -8,7 +8,8 @@
     <i class="bi bi-cookie"></i> Cookie Policy
   </h5>
   <div class="card-body">
-    This website uses Cookies to store your login data and session ID. Nothing else is stored in cookies.
+    This website uses Cookies to store information such as your login data and Session ID. We do not use any third-party
+    cookies. No cookies are active unless you are logged in.
   </div>
 </div>
 
@@ -32,6 +33,12 @@
       <li>
         You are responsible for data you enter into this site. If a data-breach were to occour, we are not
         responsible for any losses/damages. Please use different names and/or passwords when using this site.
+      </li>
+      <li>
+        Using service to access, or to attempt to access without authority, the accounts of others, or to penetrate, or
+        attempt to penetrate, security measures of Pouchtrack or a third party's computer software or hardware,
+        electronic communications system, or telecommunications system, whether or not the intrusion results in
+        disruption of service or the corruption or loss of data, is forbidden.
       </li>
       <li>
         We do not encourage the use of Nicotine Pouches, Cigarettes, Vaping, and/or any other Tobacco products
@@ -65,7 +72,8 @@
       </li>
       <li>
         Your IP address, Geolocation, Browser information, Date of usage, Which page you are viewing, and more are all
-        collected and stored by either <a href="https://namecheap.com">Namecheap</a> or Pouchtrack.
+        collected and stored by either <a href="https://www.namecheap.com/legal/general/privacy-policy/">Namecheap</a>
+        or <a href="https://pouchtrack.net">Pouchtrack</a>.
       </li>
     </ol>
   </div>
