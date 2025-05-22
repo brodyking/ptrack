@@ -70,45 +70,55 @@
         </script>
     </div>
 </div>
+<h1 class="fw-semibold text-center">Why use Pouchtrack?</h1>
+<p class="text-center p-2" style="margin-bottom: 6em !important;">
+    We have a few advantages over our competitors.
+</p>
 <div class="row g-0" style="margin: 0px!important; margin-bottom: 6em!important;">
-    <div class="col-sm-6 col-md-6 ps-0 nomobile">
-        <img src="assets/iphonemockup.png" style="max-width:100%;">
-    </div>
-    <div class="col-sm-6 col-md-6 ps-0">
-        <h1 class="fw-semibold">Why use Pouchtrack?</h1>
-        <p>
-            We have a few advantages over our competitors.
-        <div class="card">
+    <div class="col-sm-6 col-md-6 pt-0 p-2">
+        <div class="card mb-3">
             <div style="display: block; background-color: #dee2e608!important;" class="card-body">
-                <h5>We are <u>ad free</u> and <u>subscription free</u>.</h5>
+                <h5>We <i class="bi bi-heart-fill ms-1 me-1"></i>️ Open Source.</h5>
                 <hr>
-                That means you wont be bothered by a subscription draining your wallet. You are
-                already paying for overpriced cans anyways!
+                We allow anyone to view the source code of Pouchtrack. That means vulernabilities can be patched by the
+                community, and a more transparent relationship between the user and us.
+                <br><br>
+                <a class="btn btn-secondary-new" href="https://github.com/brodyking/ptrack">
+                    Check our our GitHub! <i class="bi bi-arrow-right-short"></i>
+                </a>
             </div>
         </div>
-        <br>
         <div class="card">
             <div style="display: block; background-color: #dee2e608!important;" class="card-body">
                 <h5>You can export your data.</h5>
                 <hr>
-                We allow you to export all your data into JSON format, which keeps you in control. Even if you decide
-                this app
-                isnt right for you.
+                While exporting as a picture is included, we also allow you to export all your data into JSON format,
+                which keeps you in control. Even if you decide this app isn't right for you.
             </div>
         </div>
-        <br>
+    </div>
+    <div class="col-sm-6 col-md-6 pt-0 p-2">
+        <div class="card mb-3">
+            <div style="display: block; background-color: #dee2e608!important;" class="card-body">
+                <h5>We are <u>ad free</u> and <u>subscription free</u>.</h5>
+                <hr>
+                That means you won't be bothered by a subscription draining your wallet. You are
+                already paying for overpriced cans anyways!
+            </div>
+        </div>
         <div class="card">
             <div style="display: block; background-color: #dee2e608!important;" class="card-body">
-                <h5>We <i class="bi bi-heart-fill ms-1 me-1"></i>️ Open Source.</h5>
+                <h5>How are you making money? Are you selling my data?</h5>
                 <hr>
-                We allow anyone to view the code running this service. That means vulernabilities can be patched by the
-                community, and a more transparent relationship between the user and us.
+                <u>We do not sell user data.</u>
+                This app has a small userbase, and php hosting has never been cheaper. If server costs rise, I will
+                start accepting donations. If you are worried about privacy, feel free to self host Pouchtrack!
                 <br><br>
-                <a class="btn btn-secondary-new" href="https://github.com/brodyking/ptrack">Check our our GitHub!</a>
-
+                <a href="https://github.com/brodyking/ptrack/blob/main/docs/guides/getting-started.md"
+                    class="btn btn-secondary-new">
+                    Self Hosting Guide <i class="bi bi-arrow-right-short"></i></a>
             </div>
         </div>
-        </p>
     </div>
 </div>
 <div class="container p-3 text-center mb-5">
