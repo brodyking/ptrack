@@ -24,81 +24,66 @@ function errorIsRecieved()
     return false;
 }
 
+$errorCodes = [
+    // API is missing action 
+    "api.missingparams" => "Missing parameters while accessing API.",
+    // Login Errors
+    "login.disabled" => "Login is currently disabled.",
+    "login.missingparams" => "Missing parameters while logging in.",
+    "login.nouser" => "No user exists under that username.",
+    "login.userdeleted" => "User has deleted their account.",
+    "login.incorrect" => "Incorrect Password.",
+    // Registration Errors
+    "register.disabled" => "Registration is currently disabled.",
+    "register.missingparams" => "Missing parameters while registering.",
+    "register.invalidchars" => "Invalid characters in username. Please only use letters and numbers.",
+    "register.taken" => "That username has already been taken.",
+    // Counting Errors for Pouches
+    "count.missingparams" => "Missing parameters while Counting.",
+    "count.nouser" => "No user exists under that username.",
+    "count.invalidsession" => "Invalid Session.",
+    // Logout Errors
+    "logout.nouser" => "No user exists under that username.",
+    // Account Deletion errors
+    "deleteaccount.missingparams" => "Missing parameters while deleting account.",
+    "deleteaccount.invalidsession" => "Invalid Session.",
+    // Secure ID errors
+    //  No longer needed. Kept in case.
+    "secureid.missingparams" => "Missing parameters while changing Secure ID status.",
+    "secureid.invalidid" => "Invalid Session.",
+    // Change Password Errors
+    "changepswd.missingparams" => "Missing parameters while changing password.",
+    "changepswd.incorrectold" => "Incorrect old password.",
+    "changepswd.invalidid" => "Invalid Session.",
+    // Counting Errors for Pouches
+    "cans.missingparams" => "Missing parameters while modifying Cans.",
+    "cans.nouser" => "No user exists under that username.",
+    "cans.invalidsession" => "Invalid Session.",
+    // Bug Reporting Errors
+    "bugreport.missingparams" => "Missing parameters while submitting a Bug Report.",
+    "bugreport.disabled" => "Bug Reports are currently disabled.",
+    // Raw Data API Errors
+    "rawdata.missingparams" => "Missing parameters while accessing API.",
+    "rawdata.nouser" => "No user exists under that username.",
+    "rawdata.invalidsession" => "Invalid Session.",
+    "rawdata.apidisabled" => "You must enable the API on your account to access this information.",
+    "rawdata.invalidparams" => "Invalid Source.",
+    // Toggling Raw Data API Errors
+    "toggleapi.missingparams" => "Missing parameters while changing access to API.",
+    "toggleapi.nouser" => "No user exists under that username.",
+    "toggleapi.invalidsession" => "Invalid Session."
+];
+
 function errorPretty()
 {
     global $errorOutput;
-    switch ($errorOutput) {
-        case "api.missingparams":
-            return "Missing parameters while accessing API.";
-        case "login.disabled":
-            return "Login is currently disabled.";
-        case "login.missingparams":
-            return "Missing parameters while logging in.";
-        case "login.nouser":
-            return "No user exists under that username.";
-        case "login.userdeleted":
-            return "User has deleted their account.";
-        case "login.incorrect":
-            return "Incorrect Password.";
-        case "register.disabled":
-            return "Registration is currently disabled.";
-        case "register.missingparams":
-            return "Missing parameters while registering.";
-        case "register.invalidchars":
-            return 'Invalid characters in username. Please only use letters and numbers.';
-        case "register.taken":
-            return "That username has already been taken.";
-        case "count.missingparams":
-            return "Missing parameters while Counting.";
-        case "count.nouser":
-            return "No user exists under that username.";
-        case "count.invalidsession":
-            return "Invalid Session.";
-        case "logout.nouser":
-            return "No user exists under that username.";
-        case "deleteaccount.missingparams":
-            return "Missing parameters while deleting account.";
-        case "deleteaccount.invalidsession":
-            return "Invalid Session.";
-        case "secureid.missingparams":
-            return "Missing parameters while changing Secure ID status.";
-        case "secureid.invalidid":
-            return "Invalid Session.";
-        case "changepswd.missingparams":
-            return "Missing parameters while changing password.";
-        case "changepswd.incorrectold":
-            return "Incorrect old password.";
-        case "changepswd.invalidid":
-            return "Invalid Session.";
-        case "cans.missingparams":
-            return "Missing parameters while modifying Cans.";
-        case "cans.nouser":
-            return "No user exists under that username.";
-        case "cans.invalidsession":
-            return "Invalid Session.";
-        case "bugreport.missingparams":
-            return "Missing parameters while submitting a Bug Report.";
-        case "bugreport.disabled":
-            return "Bug Reports are currently disabled.";
-        case "rawdata.missingparams":
-            return "Missing parameters while accessing API.";
-        case "rawdata.nouser":
-            return "No user exists under that username.";
-        case "rawdata.invalidsession":
-            return "Invalid Session.";
-        case "rawdata.apidisabled":
-            return "You must enable the API on your account to access this information.";
-        case "rawdata.invalidparams":
-            return "Invalid Source.";
-        case "toggleapi.missingparams":
-            return "Missing parameters while changing access to API.";
-        case "toggleapi.nouser":
-            return "No user exists under that username.";
-        case "toggleapi.invalidsession":
-            return "Invalid Session.";
-        default:
-            return "Unknown Error.";
+    global $errorCodes;
+    // Checks for an error code, returns one if it exists
+    if (isset($errorCodes[$errorOutput])) {
+        return $errorCodes[$errorOutput];
     }
+    // If no error code is found.
+    return "Unknown Error.";
 }
 
 function errorPrint()
