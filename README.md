@@ -32,6 +32,8 @@ Version 6.0 has included the following changes:
   - New users will now have a popup on their first launch of the app after registration. This shows them how to install the iOS version.
 - **New Apache Error Handling**
   - We now have a one module solution for errors 404, 500, etc.
+- **Database File Checks**
+  - When the database is being written to, it now checks if the file contents are correct. If they are corroupted, it is rewritten.
 
 ## Development and Roadmap
 

@@ -3,6 +3,8 @@
     "site.version": "v6.0",
     "site.allowManage": true,
 
+    "database.checkContents": true,
+
     "tracking.views": true,
     "tracking.logs": true,
     "tracking.logs.html": true,

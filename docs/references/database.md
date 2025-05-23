@@ -1,6 +1,6 @@
 # Database
 
-**Page Modified**: May 14, 2025
+**Page Modified**: May 23, 2025
 \
 **Author**: Brody King
 \
@@ -48,11 +48,12 @@ These are the locations of important database functions and actual data.
 
 These functions are here to save time writing out the long php defaults. Feel free to use both.
 
-| Function    | Parameter        | Description                                |
-| ----------- | ---------------- | ------------------------------------------ |
-| `read()`    | `$file`          | Returns content of file at specified path. |
-| `write()`   | `$file`, `$data` | Writes `$data` to `$file`.                 |
-| `isEmpty()` | `$file`          | Returns if content is empty.               |
+| Function          | Parameter        | Description                                                                                |
+| ----------------- | ---------------- | ------------------------------------------------------------------------------------------ |
+| `read()`          | `$file`          | Returns content of file at specified path.                                                 |
+| `write()`         | `$file`, `$data` | Writes `$data` to `$file`.                                                                 |
+| `isEmpty()`       | `$file`          | Returns if content is empty.                                                               |
+| `checkContents()` | `$file`, `$data` | Verifys the content of the file with the data provided. If it is not correct, it fixes it. |
 
 ## Accessing Configuration
 

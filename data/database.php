@@ -10,6 +10,21 @@ function write($file, $data)
     file_put_contents($file, $data);
     return 0;
 }
+function checkContents($file, $data)
+{
+    if (settingsGet("database.checkContents") == true) {
+        while (true) {
+
+            if (read($file) != $data) {
+                write($file, $data);
+            } else {
+                break;
+            }
+        }
+        write("chekced.json", "working");
+    }
+    return true;
+}
 function isEmpty($file)
 {
     return (read($file) == '');
@@ -70,7 +85,6 @@ function userAuth($username, $password)
 }
 function userCreate($username, $email, $password)
 {
-    $username = strtolower($username);
     $pathto = userPathTo($username);
     mkdir($pathto);
     write($pathto . "pouches.json", "");
@@ -159,6 +173,7 @@ function pouchInit($username, $day)
     $old[$day] = [0, 0];
     $new = json_encode($old, JSON_PRETTY_PRINT);
     write($pathto . "pouches.json", $new);
+    checkContents($pathto . "pouches.json", $new);
     return 0;
 }
 function pouchExists($username, $day)
@@ -175,6 +190,7 @@ function pouchAdd($username, $day, $strength)
     $old[$day] = array((int) $old[$day][0] + 1, (int) $old[$day][1] + $strength);
     $new = json_encode($old, JSON_PRETTY_PRINT);
     write($pathto . "pouches.json", $new);
+    checkContents($pathto . "pouches.json", $new);
 }
 
 function pouchReset($username)
@@ -182,6 +198,7 @@ function pouchReset($username)
     $pathto = userPathTo($username);
     $new = json_encode(array(), JSON_PRETTY_PRINT);
     write($pathto . "pouches.json", $new);
+    checkContents($pathto . "pouches.json", $new);
 }
 
 function pouchGetMgs($username, $day)
@@ -239,6 +256,7 @@ function canInit($username, $day)
     $old[$day] = 0;
     $new = json_encode($old, JSON_PRETTY_PRINT);
     write($pathto . "cans.json", $new);
+    checkContents($pathto . "cans.json", $new);
     return 0;
 }
 
@@ -257,6 +275,7 @@ function canAdd($username, $day)
     $old[$day] = $old[$day] + 1;
     $new = json_encode($old, JSON_PRETTY_PRINT);
     write($pathto . "cans.json", $new);
+    checkContents($pathto . "cans.json", $new);
 }
 
 function canReset($username)
@@ -264,6 +283,7 @@ function canReset($username)
     $pathto = userPathTo($username);
     $new = json_encode(array(), JSON_PRETTY_PRINT);
     write($pathto . "cans.json", $new);
+    checkContents($pathto . "cans.json", $new);
 }
 
 function canGet($username, $day)
@@ -325,6 +345,7 @@ function trackingViewsAdd($date)
         }
         $new = json_encode($old, JSON_PRETTY_PRINT);
         file_put_contents("data/db_tracking/views.json", $new);
+        checkContents("data/db_tracking/views.json", $new);
     }
 }
 

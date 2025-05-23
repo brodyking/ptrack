@@ -42,6 +42,8 @@ You can edit a few settings in `config.json`, such as the site name:
   "site.version": "v5.6",
   "site.allowManage": true,
 
+  "databse.checkContents": true,
+
   "tracking.views": true,
   "tracking.logs": true,
   "tracking.logs.html": true,
