@@ -1,6 +1,6 @@
 # API
 
-**Page Modified**: May 16, 2025
+**Page Modified**: May 23, 2025
 \
 **Author**: Brody King
 \
@@ -248,7 +248,10 @@ Creates bug reports
 
 ### Raw Data
 
-Allows users to get raw data directly through the web browser
+Allows users to get raw data directly through the web browser.
+
+> [!NOTE]  
+> All errors are shown directly inside of the browser. No redirects happen with the error scipt.
 
 | Scripts Used                           | URL                      |
 | -------------------------------------- | ------------------------ |
