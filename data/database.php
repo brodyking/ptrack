@@ -21,7 +21,6 @@ function checkContents($file, $data)
                 break;
             }
         }
-        write("chekced.json", "working");
     }
     return true;
 }
