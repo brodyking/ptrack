@@ -1,4 +1,4 @@
-# Pouchtrack
+# Pouchtrack 🎉v6.0🎉
 
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 
@@ -9,7 +9,7 @@ Some good places to get started.
 - **<a href="https://pouchtrack.net">Pouchtrack.net</a>** - Public Instance. Using the current stable release.
 - **<a href="LICENSE.md">License</a>** - Its short, trust me.
 - **<a href="docs/index.md">Documentation</a>** - Markdown documentation included in the source code directly. (in `docs/` directory)
-  - **<a href="docs/guides/gettingstarted.md">Get Started</a>** - The few easy steps to get Pouchtrack working.
+  - **<a href="docs/guides/getting-started.md">Get Started</a>** - The few easy steps to get Pouchtrack working.
   - **<a href="docs/guides/design-philosophy.md">Design Philosophy</a>** - The structure of the codebase.
 
 ## Release Notes
