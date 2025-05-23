@@ -84,7 +84,7 @@
                 community, and a more transparent relationship between the user and us.
                 <br><br>
                 <a class="btn btn-secondary-new" href="https://github.com/brodyking/ptrack">
-                    Check our our GitHub! <i class="bi bi-arrow-right-short"></i>
+                    Check out our GitHub! <i class="bi bi-arrow-right-short"></i>
                 </a>
             </div>
         </div>
