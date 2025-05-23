@@ -189,7 +189,8 @@
             </div>
             <div class="modal-body">
                 <p>If you enable the API, those with your current session ID can see information in your account. We
-                    recommend turning this off when you are done using it.</p>
+                    recommend turning this off when you are done using it, or logging out once you have finished your
+                    session.</p>
             </div>
             <div class="modal-footer">
                 <?php
