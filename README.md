@@ -49,7 +49,7 @@ Our current roadmap looks sort of like this. (nothing is promised, these are mor
 - [x] Allow for multiple years in chart.
 - [x] Session Expires.
 - [x] API
-- [ ] Database Backups to prevent Data Loss while writing.
+- [x] Database Checks to prevent Data Loss while writing.
 - [ ] Edit previous days.
 
 If you would like to contribute, fork it! I doubt anyone wants to touch this dumpster-fire of a codebase but if you feel like it, go ahead!
