@@ -32,7 +32,8 @@ Done!
 
 ## Configuration and Security
 
-> [!CAUTION] > **IMPORTANT SECURITY NOTICE:** Make sure to deny the public access to `/data/`. This folder contains all the data for users. You can [read more here](/docs/references/database.md). If you fail to do so, any and all data put into this site is exposed to the public internet.
+> [!CAUTION]
+> **IMPORTANT SECURITY NOTICE:** Make sure to deny the public access to `/data/`. This folder contains all the data for users. You can [read more here](/docs/references/database.md). If you fail to do so, any and all data put into this site is exposed to the public internet.
 
 You can edit a few settings in `config.json`, such as the site name:
 
