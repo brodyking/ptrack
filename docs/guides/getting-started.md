@@ -1,6 +1,6 @@
 # Getting Started
 
-**Page Modified**: May 16, 2025
+**Page Modified**: May 23, 2025
 \
 **Author**: Brody King
 \
@@ -42,7 +42,7 @@ You can edit a few settings in `config.json`, such as the site name:
   "site.version": "v5.6",
   "site.allowManage": true,
 
-  "databse.checkContents": true,
+  "database.checkContents": true,
 
   "tracking.views": true,
   "tracking.logs": true,
