@@ -18,6 +18,8 @@ Version 6.0 has included the following changes:
 
 - **Edit Previous days!**
   - A long awaited feature has finally been added! You can now edit previous days of pouches and cans.
+- **See All Time Usage**
+  - In addition to sorting by months, you can now sort by all time.
 - **Accessible API!**
   - You can now get information about pouches, cans, and your account through the web browser. This was done to cut load times on pages as before, it was all loaded into the dasboard. (it added about 2000 lines to the HTML)
   - It is disabled by default on every new users account for security reasons.

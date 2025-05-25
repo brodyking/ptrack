@@ -230,6 +230,9 @@ function pouchGetHistoryArrayMonth($username, $month)
 {
     $pathto = userPathTo($username);
     $old = array_keys(json_decode(read($pathto . "pouches.json"), true));
+    if ($month == 13) {
+        return $old;
+    }
     $new = [];
     $newspot = 0;
     for ($i = 0; $i < count($old); $i++) {
@@ -243,7 +246,7 @@ function pouchGetHistoryArrayMonth($username, $month)
 
 function monthsIsValid($input)
 {
-    $months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+    $months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13"];
     foreach ($months as $month) {
         if ($input == $month)
             return true;
@@ -253,7 +256,7 @@ function monthsIsValid($input)
 
 function monthsGet()
 {
-    return [["01", "January"], ["02", "February"], ["03", "March"], ["04", "April"], ["05", "May"], ["06", "June"], ["07", "July"], ["08", "August"], ["09", "September"], ["10", "October"], ["11", "November"], ["12", "December"]];
+    return [["01", "January"], ["02", "February"], ["03", "March"], ["04", "April"], ["05", "May"], ["06", "June"], ["07", "July"], ["08", "August"], ["09", "September"], ["10", "October"], ["11", "November"], ["12", "December"], ["13", "All"]];
 }
 
 function canInit($username, $day)
@@ -320,6 +323,9 @@ function canGetHistoryArrayMonth($username, $month)
 {
     $pathto = userPathTo($username);
     $old = array_keys(json_decode(read($pathto . "cans.json"), true));
+    if ($month == 13) {
+        return $old;
+    }
     $new = [];
     $newspot = 0;
     for ($i = 0; $i < count($old); $i++) {

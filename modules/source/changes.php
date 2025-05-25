@@ -34,6 +34,14 @@
         </ul>
       </li>
       <li>
+        <b>See All Time Usage</b>
+        <ul>
+          <li>
+            In addition to sorting by months, you can now sort by all time.
+          </li>
+        </ul>
+      </li>
+      <li>
         <b>Accessible API!</b>
         <ul>
           <li>
