@@ -60,10 +60,7 @@
 
 
         $history = canGetHistoryArrayMonth($username, $cansmonth);
-        if (sizeof($history) == 1) {
-            echo '<script> document.getElementById("canschart").remove();</script>';
-            echo "<div class='card-body border rounded mt-2 mb-2' role='alert'>A graph will be available when 2 or more days have been logged.</div>";
-        } else if (sizeof($history) == 0) {
+        if (sizeof($history) == 0) {
             echo '<script> document.getElementById("canschart").remove();</script>';
             echo "<div class='card-body border rounded mt-2 mb-2' role='alert'>No entries for this month</div>";
         } else {
