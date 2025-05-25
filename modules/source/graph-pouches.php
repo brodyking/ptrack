@@ -178,7 +178,7 @@
                             $historytotalmgs = pouchGetMgs($username, $historydate);
                             $historytotalpouches = pouchGetPouches($username, $historydate);
 
-                            echo "<tr><td>" . $historydate . "</td><td>" . $historytotalpouches . "</td><td>" . $historytotalmgs . "</td><td><a href='#' class='btn btn-secondary-new' style='float:right;width: 100%;' data-bs-toggle='modal' data-bs-target='#editpouches' onclick='pouchesSetEditDate(" . '"' . $historydate . '"' . ")'><i class='bi bi-pencil-fill'></i> Edit</tr>";
+                            echo "<tr><td>" . $historydate . "</td><td>" . $historytotalpouches . "</td><td>" . $historytotalmgs . "</td><td><a href='#' class='btn btn-secondary-new' style='float:right;width: 100%;' data-bs-toggle='modal' data-bs-target='#editpouches' onclick='pouchesSetEditDate(" . '"' . $historydate . '"' . ")'><i class='bi bi-pencil-fill'></i> Edit</a></td></tr>";
                         }
                         ?>
                     </table>
