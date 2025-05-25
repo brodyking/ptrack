@@ -25,8 +25,6 @@
             }
 
             ?>
-            <input type="text" name="username" value="<?php echo $username; ?>" style="display: none;">
-            <input type="text" name="id" value="<?php echo $id; ?>" style="display: none;">
 
             <select onchange="this.form.submit()" class="form-select" name="pmonth" aria-label="Default select example">
                 <?php
