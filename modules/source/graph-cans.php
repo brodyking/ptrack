@@ -140,7 +140,7 @@
         <p class="d-grid gap-2 d-md-flex justify-content-md-end mb-0">
             <a class="btn btn-secondary-new btn-sm" data-bs-toggle="collapse" href="#cansgraphtable" role="button"
                 aria-expanded="false" aria-controls="graphtable">
-                <i class="bi bi-table me-1"></i> View Table
+                <i class="bi bi-pencil-fill me-1"></i> Edit
             </a>
             <a class="btn btn-secondary-new btn-sm" id="cans-export-png">
                 <i class="bi bi-image me-1"></i> Export as PNG
@@ -153,7 +153,7 @@
         <div class="collapse" id="cansgraphtable">
             <br>
             <div class="card">
-                <h5 class="card-header">Table Data</h5>
+                <h5 class="card-header"><i class="bi bi-pencil-fill me-1"></i> Edit</h5>
                 <div class="card-body">
                     <table class="table table-bordered table-striped">
                         <tr>
@@ -178,7 +178,7 @@
 
                             $historytotalcans = canGet($username, $historydate);
 
-                            echo "<tr><td>" . $historydate . "</td><td>" . $historytotalcans . "</td><td><a href='#' class='btn btn-secondary-new' style='float:right;width: 100%;' data-bs-toggle='modal' data-bs-target='#editcans' onclick='cansSetEditDate(" . '"' . $historydate . '"' . ")'><i class='bi bi-pencil-fill'></i> Edit</tr>";
+                            echo "<tr><td>" . $historydate . "</td><td>" . $historytotalcans . "</td><td><a href='#' class='btn btn-secondary-new' style='float:right;width: 100%;' data-bs-toggle='modal' data-bs-target='#editcans' onclick='cansSetEditDate(" . '"' . $historydate . '"' . ")'><i class='bi bi-pencil-fill me-1'></i> Edit</tr>";
                         }
                         ?>
                     </table>
