@@ -44,7 +44,7 @@
     "error": {
         "name": "error",
         "description": "Error Handling",
-        "version": 2.0,
+        "version": 2.1,
         "author": "Brody King",
         "source": "scripts/source/error.php"
     },

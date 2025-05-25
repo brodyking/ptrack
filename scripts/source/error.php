@@ -38,10 +38,6 @@ $errorCodes = [
     "register.missingparams" => "Missing parameters while registering.",
     "register.invalidchars" => "Invalid characters in username. Please only use letters and numbers.",
     "register.taken" => "That username has already been taken.",
-    // Counting Errors for Pouches
-    "count.missingparams" => "Missing parameters while Counting.",
-    "count.nouser" => "No user exists under that username.",
-    "count.invalidsession" => "Invalid Session.",
     // Logout Errors
     "logout.nouser" => "No user exists under that username.",
     // Account Deletion errors
@@ -55,10 +51,6 @@ $errorCodes = [
     "changepswd.missingparams" => "Missing parameters while changing password.",
     "changepswd.incorrectold" => "Incorrect old password.",
     "changepswd.invalidid" => "Invalid Session.",
-    // Counting Errors for Pouches
-    "cans.missingparams" => "Missing parameters while modifying Cans.",
-    "cans.nouser" => "No user exists under that username.",
-    "cans.invalidsession" => "Invalid Session.",
     // Bug Reporting Errors
     "bugreport.missingparams" => "Missing parameters while submitting a Bug Report.",
     "bugreport.disabled" => "Bug Reports are currently disabled.",
@@ -71,7 +63,12 @@ $errorCodes = [
     // Toggling Raw Data API Errors
     "toggleapi.missingparams" => "Missing parameters while changing access to API.",
     "toggleapi.nouser" => "No user exists under that username.",
-    "toggleapi.invalidsession" => "Invalid Session."
+    "toggleapi.invalidsession" => "Invalid Session.",
+    // Counting errors for Pouches and Cans
+    "data.missingparams" => "Missing parameters while modifying data.",
+    "data.nouser" => "No user exists under that username.",
+    "data.invalidsession" => "Invalid Session",
+    "data.invalidparams" => "Invalid Parameters."
 ];
 
 function errorPretty()
