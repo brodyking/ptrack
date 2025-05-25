@@ -14,11 +14,11 @@
     */
 
     // Database
-    include "data/database.php";
+    include_once "data/database.php";
     // Modules
-    include "modules/modules.php";
+    include_once "modules/modules.php";
     // Scripts
-    include "scripts/scripts.php";
+    include_once "scripts/scripts.php";
 
     // Script Importing 
     include scriptsGet("isloggedin");
