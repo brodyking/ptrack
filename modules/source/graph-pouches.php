@@ -192,7 +192,7 @@
                         cheating!!</p>
                 </div>
                 <div class="modal-footer">
-                    <a href="api.php?action=count&strength=reset" class="btn btn-danger-new">Reset</a>
+                    <a href="api.php?action=data&type=pouches&deed=reset" class="btn btn-danger-new">Reset</a>
                 </div>
             </div>
         </div>

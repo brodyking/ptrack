@@ -19,14 +19,13 @@
   - [Usage](#usage)
     - [Login](#login)
     - [Register](#register)
-    - [Count](#count)
-    - [Cans](#cans)
     - [Logout](#logout)
     - [Delete Account](#delete-account)
     - [Change Password](#change-password)
     - [Change Email](#change-email)
     - [Reset Data](#reset-data)
     - [Bug Reporting](#bug-reporting)
+    - [Data](#data)
     - [Raw Data](#raw-data)
     - [Toggle API](#toggle-api)
 
@@ -94,46 +93,6 @@ Create a new account
 | `register.missingparams` |                                        |
 | `register.invalidchhars` | If an account contains a `&`           |
 | `register.taken`         | If a users account already exists      |
-
-### Count
-
-Modify the amount of pouches for the current day.
-
-| Scripts Used                       | URL                    |
-| ---------------------------------- | ---------------------- |
-| [count](/scripts/source/count.php) | `api.php?action=count` |
-
-| Parameter Needed | Method |
-| ---------------- | ------ |
-| `username`       | `GET`  |
-| `id`             | `GET`  |
-| `strength`       | `GET`  |
-
-| Error                  | Description       |
-| ---------------------- | ----------------- |
-| `count.missingparams`  |                   |
-| `count.nouser`         | User dosent exist |
-| `count.invalidsession` | Wrong ID          |
-
-### Cans
-
-Modify the amount of cans for the current day.
-
-| Scripts Used                     | URL                   |
-| -------------------------------- | --------------------- |
-| [cans](/scripts/source/cans.php) | `api.php?action=cans` |
-
-| Parameter Needed | Method |
-| ---------------- | ------ |
-| `username`       | `GET`  |
-| `id`             | `GET`  |
-| `deed`           | `GET`  |
-
-| Error                 | Description       |
-| --------------------- | ----------------- |
-| `cans.missingparams`  |                   |
-| `cans.nouser`         | User dosent exist |
-| `cans.invalidsession` | Wrong ID          |
 
 ### Logout
 
@@ -245,6 +204,32 @@ Creates bug reports
 | ------------------------- | ----------------------- |
 | `bugreport.missingparams` |                         |
 | `bugreport.disabled`      | Disabled in config.json |
+
+### Data
+
+Allows users to add, edit, and reset pouches and cans
+
+| Scripts Used                     | URL                   |
+| -------------------------------- | --------------------- |
+| [data](/scripts/source/data.php) | `api.php?action=data` |
+
+| Parameter Needed | Method   |
+| ---------------- | -------- |
+| `username`       | `COOKIE` |
+| `id`             | `COOKIE` |
+| `type`           | `GET`    |
+| `deed`           | `GET`    |
+| `strength`       | `GET`    |
+
+> ![NOTE]
+> The `strength` parameter is only required if you are adding pouches. Resetting pouches does not matter.
+
+| Error                 | Description             |
+| --------------------- | ----------------------- |
+| `data.missingparams`  |                         |
+| `data.nouser`         | Disabled in config.json |
+| `data.invalidsession` | Invalid Session.        |
+| `data.invalidparams`  |                         |
 
 ### Raw Data
 

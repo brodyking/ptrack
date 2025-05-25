@@ -190,7 +190,7 @@
                         cheating!!</p>
                 </div>
                 <div class="modal-footer">
-                    <a href="api.php?action=cans&deed=reset" class="btn btn-danger-new">Reset</a>
+                    <a href="api.php?action=data&type=cans&deed=reset" class="btn btn-danger-new">Reset</a>
                 </div>
             </div>
         </div>
