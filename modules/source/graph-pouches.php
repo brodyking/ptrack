@@ -178,7 +178,7 @@
                             $historytotalmgs = pouchGetMgs($username, $historydate);
                             $historytotalpouches = pouchGetPouches($username, $historydate);
 
-                            echo "<tr><td>" . $historydate . "</td><td>" . $historytotalpouches . "</td><td>" . $historytotalmgs . "</td><td><a href='#' class='btn btn-secondary-new' style='float:right;width: 100%;' data-bs-toggle='modal' data-bs-target='#editpouches' onclick='pouchesSetEditDate(" . '"' . $historydate . '"' . ")'>Edit</tr>";
+                            echo "<tr><td>" . $historydate . "</td><td>" . $historytotalpouches . "</td><td>" . $historytotalmgs . "</td><td><a href='#' class='btn btn-secondary-new' style='float:right;width: 100%;' data-bs-toggle='modal' data-bs-target='#editpouches' onclick='pouchesSetEditDate(" . '"' . $historydate . '"' . ")'><i class='bi bi-pencil-fill'></i> Edit</tr>";
                         }
                         ?>
                     </table>
@@ -211,7 +211,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="editpouches"><i class="bi bi-key"></i> Edit Day</h1>
+                <h1 class="modal-title fs-5" id="editpouches"><i class="bi bi-pencil-fill"></i> Edit Day</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
