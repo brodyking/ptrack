@@ -93,14 +93,14 @@
     "selection-cans": {
         "name": "selection-cans",
         "description": "Selection for adding cans for current day",
-        "version": 1.2,
+        "version": 1.3,
         "author": "Brody King",
         "source": "modules/source/selection-cans.php"
     },
     "selection-pouches": {
         "name": "selection-pouches",
         "description": "Slection for picking pouches used on dashboard.",
-        "version": 1.2,
+        "version": 1.3,
         "author": "Brody King",
         "source": "modules/source/selection-pouches.php"
     },
