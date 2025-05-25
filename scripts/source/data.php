@@ -24,6 +24,14 @@ function data()
                             apiFinishMode("pouches");
                         }
                         break;
+                    case "set":
+                        if (!isset($_GET["strength"]) || !isset($_GET["amount"]) || !isset($_GET["date"])) {
+                            apiError("data.missingparams");
+                        } else {
+                            pouchSet($_COOKIE["username"], $_GET["date"], $_GET["amount"], $_GET["strength"]);
+                            apiFinishMode("pouches");
+                        }
+                        break;
                     default:
                         apiError("data.invalidparams");
                         break;
@@ -38,6 +46,14 @@ function data()
                     case "add":
                         canAdd($_COOKIE["username"], date("m-d-Y"));
                         apiFinishMode("cans");
+                        break;
+                    case "set":
+                        if (!isset($_GET["date"]) || !isset($_GET["amount"])) {
+                            apiError("data.missingparams");
+                        } else {
+                            canSet($_COOKIE["username"], $_GET["date"], $_GET["amount"]);
+                            apiFinishMode("cans");
+                        }
                         break;
                     default:
                         apiError("data.invalidparams");

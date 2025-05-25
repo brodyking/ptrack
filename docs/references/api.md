@@ -1,6 +1,6 @@
 # API
 
-**Page Modified**: May 23, 2025
+**Page Modified**: May 24, 2025
 \
 **Author**: Brody King
 \
@@ -26,6 +26,8 @@
     - [Reset Data](#reset-data)
     - [Bug Reporting](#bug-reporting)
     - [Data](#data)
+      - [Pouches](#pouches)
+      - [Cans](#cans)
     - [Raw Data](#raw-data)
     - [Toggle API](#toggle-api)
 
@@ -213,6 +215,8 @@ Allows users to add, edit, and reset pouches and cans
 | -------------------------------- | --------------------- |
 | [data](/scripts/source/data.php) | `api.php?action=data` |
 
+#### Pouches
+
 | Parameter Needed | Method   |
 | ---------------- | -------- |
 | `username`       | `COOKIE` |
@@ -220,9 +224,25 @@ Allows users to add, edit, and reset pouches and cans
 | `type`           | `GET`    |
 | `deed`           | `GET`    |
 | `strength`       | `GET`    |
+| `amount`         | `GET`    |
+| `date`           | `GET`    |
 
-> ![NOTE]
-> The `strength` parameter is only required if you are adding pouches. Resetting pouches does not matter.
+#### Cans
+
+| Parameter Needed | Method   |
+| ---------------- | -------- |
+| `username`       | `COOKIE` |
+| `id`             | `COOKIE` |
+| `type`           | `GET`    |
+| `deed`           | `GET`    |
+| `amount`         | `GET`    |
+| `date`           | `GET`    |
+
+> [!NOTE]
+> The `strength` parameter is only required if you are adding/setting pouches. Resetting pouches does not matter.
+
+> [!NOTE]
+> The `amount` and `date` parameter is only required if you are setting pouches/cans on an older date.
 
 | Error                 | Description             |
 | --------------------- | ----------------------- |

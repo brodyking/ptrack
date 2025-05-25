@@ -191,7 +191,15 @@ function pouchAdd($username, $day, $strength)
     write($pathto . "pouches.json", $new);
     checkContents($pathto . "pouches.json", $new);
 }
-
+function pouchSet($username, $day, $amount, $strength)
+{
+    $pathto = userPathTo($username);
+    $old = json_decode(read($pathto . "pouches.json"), true);
+    $old[$day] = array((int) $amount, (int) $strength);
+    $new = json_encode($old, JSON_PRETTY_PRINT);
+    write($pathto . "pouches.json", $new);
+    checkContents($pathto . "pouches.json", $new);
+}
 function pouchReset($username)
 {
     $pathto = userPathTo($username);
@@ -276,6 +284,16 @@ function canAdd($username, $day)
     write($pathto . "cans.json", $new);
     checkContents($pathto . "cans.json", $new);
 }
+function canSet($username, $day, $amount)
+{
+    $pathto = userPathTo($username);
+    $old = json_decode(read($pathto . "cans.json"), true);
+    $old[$day] = $amount;
+    $new = json_encode($old, JSON_PRETTY_PRINT);
+    write($pathto . "cans.json", $new);
+    checkContents($pathto . "cans.json", $new);
+}
+
 
 function canReset($username)
 {
