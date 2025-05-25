@@ -14,8 +14,8 @@ if (isset(($_COOKIE["newuserpopup"]))) {
   <hr>
   This page here shows your pouches and can usage. To install the app, click the button below.
   <br>
-  <a class="btn btn-primary-new mt-2" href="#" data-bs-toggle="modal" data-bs-target="#install"><i class="bi bi-download"></i> Install</a>
-  <a class="btn btn-secondary-new mt-2 ms-2" href="#" onclick="closenewuserpopup()"><i class="bi bi-x-lg"></i> Close</a>
+  <a class="btn btn-primary-new mt-3" href="#" data-bs-toggle="modal" data-bs-target="#install"><i class="bi bi-download"></i> Install</a>
+  <a class="btn btn-secondary-new mt-3 ms-2" href="#" onclick="closenewuserpopup()"><i class="bi bi-x-lg"></i> Close</a>
   </div>
   <script>
   
