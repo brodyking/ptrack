@@ -23,11 +23,15 @@
                     <ul class="dropdown-menu mb-2">
                         <li>
                             <a class="dropdown-item" href="/?changes">
-                                <i class="bi bi-clock-history"></i> Changelog</a>
+                                <i class="bi bi-clock-fill"></i> Changelog</a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="/?bugreport">
                                 <i class="bi bi-bug-fill"></i> Bug Report</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://github.com/brodyking/ptrack/blob/main/docs/index.md">
+                                <i class="bi bi-book-fill"></i> Documentation</a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="https://github.com/brodyking/ptrack">
