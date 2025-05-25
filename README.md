@@ -16,9 +16,13 @@ Some good places to get started.
 
 Version 6.0 has included the following changes:
 
+- **Edit Previous days!**
+  - A long awaited feature has finally been added! You can now edit previous days of pouches and cans.
 - **Accessible API!**
   - You can now get information about pouches, cans, and your account through the web browser. This was done to cut load times on pages as before, it was all loaded into the dasboard. (it added about 2000 lines to the HTML)
   - It is disabled by default on every new users account for security reasons.
+- **New Counting API for Pouches and Cans**
+  - See the new script `data.php`.
 - **Export as PNG!**
   - Can't believe it took until version 6.0 for this! You can export cans and pouches chart into a PNG file.
 - **More Efficient Error Handling**
