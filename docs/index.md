@@ -1,10 +1,19 @@
-# 📖 Pouchtrack Docs v6.0 📖
+<h1 align='center'> 📖 Pouchtrack Docs v6.0 📖 </h1>
 
-<b><a href="../README.md">« Back to Readme</a></b>
+| **[« Back to Readme](../README.md)** |
+| ------------------------------------ |
 
-Welcome to the Pouchtrack Docs. This resource has helpful information reguarding installing, developing, and troubleshooting this awful codebase.
+## Introduction
+
+Welcome to the Pouchtrack Docs. This resource has information reguarding installing, developing, and troubleshooting this codebase.
 
 Here are all of the available pages. They are listed in order from install to development. If you dont know where to start, head to [Getting Started](gettingstarted.md). If you plan on developing for Pouchtrack, PLEASE look at the [Design Philosophy](guides/design-philosophy.md).
+
+## Development
+
+If you plan on modification without contribution, please conform with the current design to make migration to new versions easier.
+
+If you would like to contribute, fork it! If your contribution is simple, you can submit an issue with the fix and I will implement it in the next release.
 
 > [!NOTE]
 > This documentation is **not complete**. There may be outdated information. I have tried to document most of this codebase, but it is very challenging.
