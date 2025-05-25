@@ -161,14 +161,24 @@
                             <th>
                                 Cans Used
                             </th>
+                            <th>
+
+                            </th>
                         </tr>
+                        <script>
+
+                            function cansSetEditDate(date) {
+                                document.getElementById("editcansdate").value = date;
+                            }
+
+                        </script>
                         <?php
                         for ($i = 0; $i < sizeof($history); $i++) {
                             $historydate = $history[$i];
 
                             $historytotalcans = canGet($username, $historydate);
 
-                            echo "<tr><td>" . $historydate . "</td><td>" . $historytotalcans . "</td></tr>";
+                            echo "<tr><td>" . $historydate . "</td><td>" . $historytotalcans . "</td><td><a href='#' class='btn btn-secondary-new' style='float:right;width: 100%;' data-bs-toggle='modal' data-bs-target='#editcans' onclick='cansSetEditDate(" . '"' . $historydate . '"' . ")'><i class='bi bi-pencil-fill'></i> Edit</tr>";
                         }
                         ?>
                     </table>
@@ -192,6 +202,34 @@
                 <div class="modal-footer">
                     <a href="api.php?action=data&type=cans&deed=reset" class="btn btn-danger-new">Reset</a>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editcans" tabindex="-1" aria-labelledby="editcans" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editcans"><i class="bi bi-pencil-fill"></i> Edit Day</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="GET" action="api.php?action=data&type=cans&deed=set">
+                    <input type="text" name="action" value="data" style="display: none;" readonly>
+                    <input type="text" name="type" value="cans" style="display: none;" readonly>
+                    <input type="text" name="deed" value="set" style="display: none;" readonly>
+
+                    <div class="mb-3">
+                        <label class="col-form-label">Date</label>
+                        <input type="text" name="date" id="editcansdate" value="" class="form-control" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-form-label">Cans Used</label>
+                        <input type="number" class="form-control" name="amount">
+                    </div>
+                    <button type="submit" class="btn btn-secondary-new">Save</button>
+                </form>
             </div>
         </div>
     </div>
