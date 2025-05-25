@@ -13,8 +13,6 @@
 
     */
 
-    // Timezone
-    
     // Database
     include "data/database.php";
     // Modules
@@ -57,6 +55,7 @@
         // If the user is logged in, we set cookies and local variables that are used later. 
         if (isLoggedIn()) {
 
+            // These are used in almost every part of the app. DO NOT TOUCH.
             $username = $_COOKIE['username'];
             $tracking["username"] = $username;
             $id = $_COOKIE['id'];
@@ -139,6 +138,7 @@
 
         }
 
+        // Sets the title of the page.
         pagetitleShow();
 
 

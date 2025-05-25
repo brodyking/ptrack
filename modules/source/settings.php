@@ -126,6 +126,7 @@
     </div>
 </div>
 
+<!-- Password Reset popup -->
 <div class="modal fade" id="changepswd" tabindex="-1" aria-labelledby="changepswd" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -156,6 +157,7 @@
     </div>
 </div>
 
+<!-- Change Email popup -->
 <div class="modal fade" id="changeemail" tabindex="-1" aria-labelledby="changeemail" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
