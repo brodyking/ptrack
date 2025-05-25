@@ -17,161 +17,106 @@
 </style>
 <div class="container p-0 m-0 mb-4 text-center" style="min-width: 100%;">
   <h1 class="mb-5 fw-semibold lh-1" style="margin-top:50px;font-size:38pt;">
-    Changes
+    Recent Changes
   </h1>
 </div>
 <div class="card">
-  <h5 class="card-header"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-      class="bi bi-megaphone-fill" viewBox="0 0 16 16" style="vertical-align: 0%;">
-      <path
-        d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25 25 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009l.496.008a64 64 0 0 1 1.51.048m1.39 1.081q.428.032.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a66 66 0 0 1 1.692.064q.491.026.966.06">
-      </path>
-    </svg> v5.6 Minor Update</h5>
-  <div class="card-body">
-    <ul>
-      <li>Fixed issues when logging user actions
-        <ul>
-          <li>When writing logs in JSON format, it could cause writing issues and would hault site functionality. We
-            now
-            write to HTML, which when corrupted wont cause issues. </li>
-        </ul>
-      </li>
-      <li>Bug Reporting
-        <ul>
-          <li>Users can now report bugs into a seperate database instead of making a github account </li>
-        </ul>
-      </li>
-      <li>New Navigation Bar and Splash Page
-        <ul>
-          <li>Navbar has been cleaned up. Splash page now has more information on reasons to use Pouchtrack </li>
-        </ul>
-      </li>
-      <li> New Font
-        <ul>
-          <li>We have switched to CalSans, because it looks much better than our old font. </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
+  <div style="display: block; background-color: #dee2e608!important;" class="card-body">
+    <h2 class="mb-4 mt-3 pb-3 ps-3 fw-semibold lh-1 border-bottom">Version 6.0 Release Notes</h2>
 
-<div class="card">
-  <h5 class="card-header"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-      class="bi bi-megaphone-fill" viewBox="0 0 16 16" style="vertical-align: 0%;">
-      <path
-        d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25 25 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009l.496.008a64 64 0 0 1 1.51.048m1.39 1.081q.428.032.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a66 66 0 0 1 1.692.064q.491.026.966.06">
-      </path>
-    </svg> v5.5 Minor Update</h5>
-  <div class="card-body">
-    <p>This minor update includes the following
     <ul>
-      <li> User's can now reset all data from previous days.</li>
-      <li> New settings page.</li>
-      <li> Seperate pages finally have their own title in the tab bar.</li>
-      <li> Slight logo and navbar changes.</li>
-      <li> Now using Roboto as our font.</li>
-    </ul>
-    </p>
-  </div>
-</div>
-<div class="card">
-  <h5 class="card-header"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-      class="bi bi-megaphone-fill" viewBox="0 0 16 16" style="vertical-align: 0%;">
-      <path
-        d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25 25 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009l.496.008a64 64 0 0 1 1.51.048m1.39 1.081q.428.032.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a66 66 0 0 1 1.692.064q.491.026.966.06">
-      </path>
-    </svg> v5.4 Minor Update</h5>
-  <div class="card-body">
-    <p>This Minor Update includes the following
-    <ul>
-      <li>Email for creating new accounts.
+      <li>
+        <b>Edit Previous days!</b>
         <ul>
-          <li>New registration page and Settings menu additions.</li>
-          <li>Email is still optional.</li>
+          <li>
+            A long awaited feature has finally been added! You can now edit previous days of pouches and cans.
+          </li>
         </ul>
       </li>
-      <li>New Domain (pt.benadryl.dev -> pouchtrack.net)</li>
-      <li>New Logo</li>
-    </ul>
-    </p>
-  </div>
-</div>
-
-<div class="card">
-  <h5 class="card-header"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-      class="bi bi-megaphone-fill" viewBox="0 0 16 16" style="vertical-align: 0%;">
-      <path
-        d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25 25 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009l.496.008a64 64 0 0 1 1.51.048m1.39 1.081q.428.032.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a66 66 0 0 1 1.692.064q.491.026.966.06">
-      </path>
-    </svg> v5.3 Minor Update</h5>
-  <div class="card-body">
-    <p>This Minor Update includes the following
-    <ul>
-      <li>Consistent navbar when changing pages</li>
-      <li>404 page</li>
-      <li>Better routing</li>
-    </ul>
-    </p>
-  </div>
-</div>
-
-<div class="card">
-  <h5 class="card-header"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-      class="bi bi-megaphone-fill" viewBox="0 0 16 16" style="vertical-align: 0%;">
-      <path
-        d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25 25 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009l.496.008a64 64 0 0 1 1.51.048m1.39 1.081q.428.032.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a66 66 0 0 1 1.692.064q.491.026.966.06">
-      </path>
-    </svg> v5.2 Minor Update</h5>
-  <div class="card-body">
-    <p>This Minor Release includes general bug fixes and the following UI improvements:
-    <ul>
-      <li>New buttons for increased readability.</li>
-      <li>New landing and settings page.</li>
-      <li>Login and Register are on seperate pages.</li>
-      <li>Solid background color when logged in for better readability.</li>
-      <li>Fixed centered text rendering issues when on mobile.</li>
-    </ul>
-    </p>
-  </div>
-</div>
-
-<div class="card">
-  <h5 class="card-header"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-      class="bi bi-megaphone-fill" viewBox="0 0 16 16" style="vertical-align: 0%;">
-      <path
-        d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25 25 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009l.496.008a64 64 0 0 1 1.51.048m1.39 1.081q.428.032.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a66 66 0 0 1 1.692.064q.491.026.966.06">
-      </path>
-    </svg> v5.1 Minor Update</h5>
-  <div class="card-body">
-    <p>This Minor Update includes the following updates.
-    <ul>
-      <li>Slightly Improved UI</li>
-      <li>Cookies for Improved Security.</li>
-    </ul>
-    </p>
-  </div>
-</div>
-
-<div class="card">
-  <h5 class="card-header"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-      class="bi bi-megaphone-fill" viewBox="0 0 16 16" style="vertical-align: 0%;">
-      <path
-        d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25 25 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009l.496.008a64 64 0 0 1 1.51.048m1.39 1.081q.428.032.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a66 66 0 0 1 1.692.064q.491.026.966.06">
-      </path>
-    </svg> v5.0 Major Release</h5>
-  <div class="card-body">
-    <p>This Minor Update includes the following updates.
-    <ul>
-      <li>You can now sort cans and pouches by month.</li>
-      <li>Adding to pouches or cans keeps you on the same tab.</li>
-      <li>Minor Bug Fixes
+      <li>
+        <b>Accessible API!</b>
         <ul>
-          <li>Better error handling when API receives no action</li>
-          <li>Spelling fixes in documentation</li>
+          <li>
+            You can now get information about pouches, cans, and your account through the web browser. This was done
+            to cut load times on pages as before, it was all loaded into the dasboard. (it added about 2000 lines to
+            the HTML)
+          </li>
+          <li>
+            It is disabled by default on every new users account for security reasons.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>New Counting API for Pouches and Cans</b>
+        <ul>
+          <li>
+            See the new script `data.php`.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Export as PNG!</b>
+        <ul>
+          <li>
+            Can't believe it took until version 6.0 for this! You can export cans and pouches chart into a PNG
+            file.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>More Efficient Error Handling</b>
+        <ul>
+          <li>
+            Errors are now stored in an array instead of a giant switch statement.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>New Splash Page</b>
+        <ul>
+          <li>
+            Added more to the "Why use Pouchtrack" section.
+          </li>
+          <li>
+            Removed picture of app on mobile.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Config File Security</b>
+        <ul>
+          <li>
+            The `config.json` file is now hidden from public view.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>New users Welcome Message</b>
+        <ul>
+          <li>
+            New users will now have a popup on their first launch of the app after registration. This shows them how
+            to install the iOS version.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>New Apache Error Handling</b>
+        <ul>
+          <li>
+            We now have a one module solution for errors 404, 500, etc.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Database File Checks</b>
+        <ul>
+          <li>
+            When the database is being written to, it now checks if the file contents are correct. If they are
+            corroupted, it is rewritten.
+          </li>
         </ul>
       </li>
     </ul>
-    </p>
   </div>
 </div>
 

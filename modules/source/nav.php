@@ -23,7 +23,7 @@
                     <ul class="dropdown-menu mb-2">
                         <li>
                             <a class="dropdown-item" href="/?changes">
-                                <i class="bi bi-clock-fill"></i> Changelog</a>
+                                <i class="bi bi-clock-fill"></i> Recent Changes</a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="/?bugreport">

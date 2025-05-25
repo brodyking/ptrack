@@ -103,7 +103,7 @@
 
             // Changelog
             include modulesGetPath("changes");
-            pagetitleSet("Changes");
+            pagetitleSet("Recent Changes");
             $tracking["page"] = "changes";
 
         } else if (isset($_GET["httperror"])) {

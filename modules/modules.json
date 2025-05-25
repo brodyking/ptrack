@@ -9,7 +9,7 @@
     "changes": {
         "name": "changes",
         "description": "Recent updates",
-        "version": 1.0,
+        "version": 2.0,
         "author": "Brody King",
         "source": "modules/source/changes.php"
     },
