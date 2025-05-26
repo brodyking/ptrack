@@ -303,28 +303,21 @@ and (max-width : 795px) {
         padding: 0px;
     }
     #footer {
-            flex-direction: column;
-            margin: 10px!important;
-            margin-top: 60px!important;
-            padding-bottom: 10px!important;
+        flex-wrap: wrap!important;
+        margin: 10px!important;
+        margin-top: 60px!important;
+        padding-bottom: 10px!important;
     }
     #footer > li {
-        border-left: 1px solid #495057!important;
-        border-right: 1px solid #495057!important;
-        border-top: none;
-        border-bottom: none;
+        border: none!important;
         text-align: center;
+        padding: 5px!important;
+                background: none!important;
     }
-    #footer >li:first-child {
-        border-radius: 0;
-        border-top-left-radius: 0.375rem;
-        border-top-right-radius: 0.375rem;
-        border-top: 1px solid #495057;
+    #footer > li:first-child {
+        width: 100%!important;
     }
-    #footer >li:last-child {
-        border-radius: 0;
-        border-bottom: 1px solid #495057;
-        border-bottom-left-radius: 0.375rem;
-        border-bottom-right-radius: 0.375rem;
+    #footer > li:last-child {
+        width: 100%!important;
     }
 }
