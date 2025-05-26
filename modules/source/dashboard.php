@@ -27,14 +27,6 @@ function whichTabPane($modeinput)
 }
 
 ?>
-<style>
-    body {
-        background: linear-gradient(180deg, rgba(14, 23, 41, 1) 47%, rgba(2, 41, 29, 1) 100%);
-        background-repeat: no-repeat !important;
-        background-attachment: fixed !important;
-    }
-</style>
-
 <ul class="nav nav-underline border-0 ps-2 pe-2 modepicker">
     <li class="nav-item" role="presentation">
         <button class="nav-link <?php echo whichTabLink("pouches") ?>" id="pouches-tab" onclick="alltabsPouches()"

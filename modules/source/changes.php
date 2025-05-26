@@ -58,8 +58,15 @@
         <b>New Counting API for Pouches and Cans</b>
         <ul>
           <li>
-            See the new script `data.php`.
+            See the new script, data.php.
           </li>
+        </ul>
+      </li>
+      <li>
+        <b>Redesigned Navigation Bar</b>
+        <ul>
+          <li>
+            New transparency effects, follows on scroll, and opens in fullscreen on mobile devices.</li>
         </ul>
       </li>
       <li>

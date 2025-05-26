@@ -129,10 +129,18 @@
         Create an Account <i class="bi bi-arrow-right-short"></i>
     </a>
     <style>
+        @media only screen and (max-width : 795px) {
+            body {
+                background-image: linear-gradient(0deg, rgb(39, 32, 87), rgb(10, 11, 30), rgb(39, 32, 87)) !important;
+                background-attachment: fixed !important;
+            }
+        }
+
         body {
-            background-image: radial-gradient(circle at 99% 0%, rgba(235, 235, 235, 0.03) 0%, rgba(235, 235, 235, 0.03) 50%, rgba(142, 142, 142, 0.03) 50%, rgba(142, 142, 142, 0.03) 100%), radial-gradient(circle at 84% 89%, rgba(229, 229, 229, 0.03) 0%, rgba(229, 229, 229, 0.03) 50%, rgba(1, 1, 1, 0.03) 50%, rgba(1, 1, 1, 0.03) 100%), radial-gradient(circle at 89% 20%, rgba(219, 219, 219, 0.03) 0%, rgba(219, 219, 219, 0.03) 50%, rgba(38, 38, 38, 0.03) 50%, rgba(38, 38, 38, 0.03) 100%), radial-gradient(circle at 90% 0%, rgba(48, 48, 48, 0.03) 0%, rgba(48, 48, 48, 0.03) 50%, rgba(109, 109, 109, 0.03) 50%, rgba(109, 109, 109, 0.03) 100%), linear-gradient(257deg, rgb(31, 12, 90), rgb(2, 41, 29));
-            /*background-image: radial-gradient(circle at 90% 24%, rgba(209, 209, 209, 0.04) 0%, rgba(209, 209, 209, 0.04) 50%, rgba(160, 160, 160, 0.04) 50%, rgba(160, 160, 160, 0.04) 100%), radial-gradient(circle at 91% 63%, rgba(45, 45, 45, 0.04) 0%, rgba(45, 45, 45, 0.04) 50%, rgba(87, 87, 87, 0.04) 50%, rgba(87, 87, 87, 0.04) 100%), radial-gradient(circle at 17% 2%, rgba(124, 124, 124, 0.04) 0%, rgba(124, 124, 124, 0.04) 50%, rgba(117, 117, 117, 0.04) 50%, rgba(117, 117, 117, 0.04) 100%), linear-gradient(88deg, rgb(33, 20, 105), rgb(1, 15, 13)) !important;*/
+            /* Thank you https://app.haikei.app/ */
+            background-image: url('/assets/splash.svg');
             background-repeat: no-repeat !important;
-            background-attachment: fixed !important;
+            background-attachment: scroll !important;
+            background-size: 100%;
         }
     </style>

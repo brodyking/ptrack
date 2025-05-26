@@ -4,15 +4,6 @@
 <head>
     <?php
 
-    /*
-
-    (c) 2025 Brody King. Read licence before modification.
-
-    https://github.com/brodyking/ptrack/
-    https://github.com/brodyking/ptrack/blob/main/LICENSE.md
-
-    */
-
     // Database
     include_once "data/database.php";
     // Modules
@@ -27,17 +18,47 @@
     include scriptsGet("pagetitle");
 
     ?>
+
+    <!--- 
+
+    Pouchtrack.net - Nicotine Pouch Tracker
+    (c) 2025 Brody King. Read license before modification.
+    
+    -> https://github.com/brodyking/ptrack/
+    -> https://github.com/brodyking/ptrack/blob/main/LICENSE.md
+    
+    --->
+
+    <!--- Styles --->
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
     <link href="/assets/icons/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="/assets/main.css" rel="stylesheet">
+
+    <!--- Title (Changed by JS) --->
     <title>Pouchtrack</title>
+
+    <!--- Meta Tags --->
+    <meta name="title" content="Pouchtrack">
+    <meta name="description" content="Track your Nicotine Pouch usage for free, without ads.">
+    <meta name="keywords"
+        content="nicotine, nicotine pouch, nicotine pouch tracker, pouch tracker, zyn tracker, nicotine pouches, pouchtrack, pouch track, pouchbuddy">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="30 days">
+    <meta name="author" content="Brody King">
+
+    <!--- PWA and Icons --->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="assets/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo-180.png">
+    <link href="assets/logo-180.png" rel="apple-touch-icon" sizes="180x180">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Pouchtrack">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#272057">
+
 </head>
 
 <body data-bs-theme="dark">

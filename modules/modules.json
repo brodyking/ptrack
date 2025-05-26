@@ -16,7 +16,7 @@
     "dashboard": {
         "name": "dashboard",
         "description": "Selections and Graph for index.php",
-        "version": 1.4,
+        "version": 1.5,
         "author" : "Brody King",
         "source": "modules/source/dashboard.php"
     },
@@ -72,7 +72,7 @@
     "nav": {
         "name": "nav",
         "description": "Global navigation bar",
-        "version": 1.2,
+        "version": 2.0,
         "author": "Brody King",
         "source": "modules/source/nav.php"
     },
@@ -114,7 +114,7 @@
     "splash": {
         "name": "splash",
         "description": "Title and buttons for registration/login shown when user is not logged in",
-        "version": 2.3,
+        "version": 3.0,
         "author": "Brody King",
         "source": "modules/source/splash.php"
     },

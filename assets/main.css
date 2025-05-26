@@ -4,7 +4,9 @@
 }
 
 body{
-    background-color: #0E1729;
+    background: linear-gradient(180deg, #272057 17%, #171837 100%);
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
     padding: 10px;
     margin-bottom: 0px!important;
     min-height: 100vh;
@@ -12,10 +14,42 @@ body{
     letter-spacing: .5px!important;
 }
 
-html {
-    background-color: #0E1729;
+html, .offcanvas {
+    background-color: #272057!important;
+    height: 100%;
 }
 
+.offcanvas-header{
+    background-color: #dee2e608!important;
+}
+
+.offcanvas-body > .navbar-nav > li {
+    padding: 10px!important;
+    font-size: 1.25em;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.offcanvas-body > .navbar-nav > .nav-item > .dropdown-menu {
+    padding: 0px!important;
+}
+
+.offcanvas-body > .navbar-nav > .nav-item > .dropdown-menu > li {
+    padding-top: 5px!important;
+    padding-bottom: 5px!important;
+    margin: 0!important;
+    font-size: 1.25em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.offcanvas-body > .navbar-nav > li:hover{
+    color: white;
+}
+
+.offcanvas-body > .navbar-nav > .nav-item > .dropdown-menu > li:last-child {
+    border-bottom: 0px;
+}
 
 .splash-title-primary {
     line-height:normal!important;
@@ -32,7 +66,7 @@ html {
 }
 
 .modal-content,.dropdown-menu {
-    background-color: #121828;
+    background-color: #171837;
 }
 .modal-header,.modal-footer {
     border: none!important;
@@ -62,6 +96,9 @@ main {
 
 nav{
     padding: 0px!important;
+    margin-left: 4em!important;
+    margin-right: 4em!important;
+    box-shadow: inset 0px 0px 2px #0F2E27;
 }
 
 .navbar-toggler {
@@ -75,6 +112,18 @@ nav{
 
 .dropdown-item:hover, .dropdown-item:focus {
     background-color: #dee2e608;
+}
+
+.nav-link, .navbar-brand {
+    filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.704));
+}
+
+.nav-link {
+    color: rgb(224, 222, 222);
+}
+
+.nav-link:hover {
+    color: rgb(255, 255, 255);
 }
 
 .dropdown-item>i,.nav-link>i {
@@ -169,7 +218,7 @@ th{
 
 /* Smartphones (landscape) ----------- */
 @media only screen 
-and (max-width : 450px) {
+and (max-width : 795px) {
     body {
         padding: 0px;
     }
@@ -198,6 +247,10 @@ and (max-width : 450px) {
     margin: 0.5rem!important; 
     }
     */
+    nav{
+        margin-left: 0.5em!important;
+        margin-right: 0.5em!important;
+    }
     body {
         margin-bottom: 100px;
     }
@@ -228,7 +281,12 @@ and (max-width : 450px) {
     }
     .splash-title-mobile {
         font-size: 45pt!important;
+        font-weight: 500!important;
     }
+    .fw-semibold,.btn-primary-new,.btn-secondary-new,.btn-danger-new {
+        font-weight: 500!important;
+    }
+    
     .row > .col-md {
         padding: 0px;
     }

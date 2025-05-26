@@ -173,7 +173,7 @@
 
                             $historytotalcans = canGet($username, $historydate);
 
-                            echo "<tr><td>" . $historydate . "</td><td>" . $historytotalcans . "</td><td><a href='#' class='btn btn-secondary-new' style='float:right;width: 100%;' data-bs-toggle='modal' data-bs-target='#editcans' onclick='cansSetEditDate(" . '"' . $historydate . '"' . ")'><i class='bi bi-pencil-fill me-1'></i> Edit</tr>";
+                            echo "<tr><td>" . $historydate . "</td><td>" . $historytotalcans . "</td><td><a href='#' class='btn btn-secondary-new' style='float:right;width: 100%;' data-bs-toggle='modal' data-bs-target='#editcans' onclick='cansSetEditDate(" . '"' . $historydate . '"' . ")'><i class='bi bi-pencil-fill'></i> <span class='nomobile ms-1'>Edit</span></tr>";
                         }
                         ?>
                     </table>

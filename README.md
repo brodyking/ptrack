@@ -25,6 +25,8 @@ Version 6.0 has included the following changes:
   - It is disabled by default on every new users account for security reasons.
 - **New Counting API for Pouches and Cans**
   - See the new script `data.php`.
+- **Redesigned Navigation Bar**
+  - New transparency effects, follows on scroll, and opens in fullscreen on mobile devices.
 - **Export as PNG!**
   - Can't believe it took until version 6.0 for this! You can export cans and pouches chart into a PNG file.
 - **More Efficient Error Handling**
