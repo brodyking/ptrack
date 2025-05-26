@@ -1,11 +1,7 @@
 <script src="/assets/js/chart.umd.js"></script>
 <style>
-    body {
-        background-color: rgb(14, 37, 41) !important;
-    }
-
     main {
-        max-width: 1200px;
+        max-width: 1250px !important;
     }
 
     #nav {
@@ -17,11 +13,11 @@
 
 
 
-<nav id="nav-manager" class="navbar navbar-expand-lg bg-body-tertiary border rounded"
-    style="background-color: #dee2e608!important;border-radius: 1.25rem!important;">
+<nav id="nav-manager" class="navbar navbar-expand-lg bg-body-tertiary border rounded m-0 mb-2"
+    style="background-color: #dee2e608!important;">
     <div class="container-fluid pe-1 ps-2">
         <a class="navbar-brand me-0" href="/?manage">
-            <i class="bi bi-hammer"></i> Manage
+            <i class="bi bi-hammer"></i> Pouchtrack Admin Panel
         </a>
         <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +48,7 @@
             </ul>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/?settings"><i class="bi bi-person-circle"></i>
+                    <a class="nav-link" href="#"><i class="bi bi-person-circle"></i>
                         <?php echo $username; ?></a>
                 </li>
                 <li class="nav-item">

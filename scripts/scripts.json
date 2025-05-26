@@ -6,13 +6,6 @@
         "author": "Brody King",
         "source": "scripts/source/bugreport.php"
     },
-    "cans": {
-        "name": "cans",
-        "description": "Adding and resetting cans",
-        "version": 1.2,
-        "author": "Brody King",
-        "source": "scripts/source/cans.php"
-    },
     "changeemail": {
         "name": "changeemail",
         "description": "Change a users email.",
@@ -34,12 +27,12 @@
         "author": "Brody King",
         "source": "scripts/source/checktoday.php"
     },
-    "count": {
-        "name": "count",
-        "description": "Used in api.php for adding, and resetting pouch usage",
-        "version": 1.2,
+    "data": {
+        "name": "data",
+        "description": "Used in api.php for adding, editing, and resetting pouch/can usage.",
+        "version": 1.0,
         "author": "Brody King",
-        "source": "scripts/source/count.php"
+        "source": "scripts/source/data.php"
     },
     "deleteaccount": {
         "name": "deleteaccount",
@@ -51,7 +44,7 @@
     "error": {
         "name": "error",
         "description": "Error Handling",
-        "version": 1.5,
+        "version": 2.1,
         "author": "Brody King",
         "source": "scripts/source/error.php"
     },
@@ -83,10 +76,17 @@
         "author": "Brody King",
         "source": "scripts/source/pagetitle.php"
     },
+    "rawdata": {
+        "name": "rawdata",
+        "description": "Get raw data for the user.",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/rawdata.php"
+    },
     "register": {
         "name": "register",
         "description": "All registration code used in api.php",
-        "version": 1.2,
+        "version": 1.3,
         "author": "Brody King",
         "source": "scripts/source/register.php"
     },
@@ -96,5 +96,12 @@
         "version": 1.2,
         "author": "Brody King",
         "source": "scripts/source/resetdata.php"
+    },
+    "toggleapi": {
+        "name": "toggleapi",
+        "description": "Toggles the API for users.",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "scripts/source/toggleapi.php"
     }
 }

@@ -25,8 +25,6 @@
             }
 
             ?>
-            <input type="text" name="username" value="<?php echo $username; ?>" style="display: none;">
-            <input type="text" name="id" value="<?php echo $id; ?>" style="display: none;">
 
             <select onchange="this.form.submit()" class="form-select" name="cmonth" aria-label="Default select example">
                 <?php
@@ -62,10 +60,7 @@
 
 
         $history = canGetHistoryArrayMonth($username, $cansmonth);
-        if (sizeof($history) == 1) {
-            echo '<script> document.getElementById("canschart").remove();</script>';
-            echo "<div class='card-body border rounded mt-2 mb-2' role='alert'>A graph will be available when 2 or more days have been logged.</div>";
-        } else if (sizeof($history) == 0) {
+        if (sizeof($history) == 0) {
             echo '<script> document.getElementById("canschart").remove();</script>';
             echo "<div class='card-body border rounded mt-2 mb-2' role='alert'>No entries for this month</div>";
         } else {
@@ -92,7 +87,7 @@
             Chart.defaults.borderColor = '#495057';
             const cansxValues = <?php echo $cansgraphxvals; ?>;
             const cansyValues = <?php echo $cansgraphyvals; ?>;
-            new Chart("canschart", {
+            var graphcans = new Chart("canschart", {
                 type: "line",
                 data: {
                     labels: cansxValues,
@@ -122,26 +117,38 @@
                     },
                     layout: {
                         padding: 20
+                    },
+                    animation: {
+                        onComplete: function () {
+                            console.log(graphcans.toBase64Image());
+                            document.getElementById("cans-export-png").href = graphcans.toBase64Image();
+                            document.getElementById("cans-export-png").download = 'cans-pouchtrack.png';
+                        }
                     }
                 }
             });
+
+
         </script>
 
 
         <p class="d-grid gap-2 d-md-flex justify-content-md-end mb-0">
             <a class="btn btn-secondary-new btn-sm" data-bs-toggle="collapse" href="#cansgraphtable" role="button"
                 aria-expanded="false" aria-controls="graphtable">
-                View Table
+                <i class="bi bi-pencil-fill me-1"></i> Edit
             </a>
-            <a class="btn btn-secondary-new btn-sm" data-bs-toggle="collapse" href="#cansgraphjson" role="button"
-                aria-expanded="false" aria-controls="graphjson">
-                View JSON
+            <a class="btn btn-secondary-new btn-sm" id="cans-export-png">
+                <i class="bi bi-image me-1"></i> Export as PNG
+            </a>
+            <a class="btn btn-secondary-new btn-sm"
+                href="/api.php?action=rawdata&username=<?php echo $username . '&id=' . $id . '&source=cans'; ?>">
+                <i class="bi bi-filetype-json me-1"></i> Export as JSON
             </a>
         </p>
         <div class="collapse" id="cansgraphtable">
             <br>
             <div class="card">
-                <h5 class="card-header">Table Data</h5>
+                <h5 class="card-header"><i class="bi bi-pencil-fill me-1"></i> Edit</h5>
                 <div class="card-body">
                     <table class="table table-bordered table-striped">
                         <tr>
@@ -149,26 +156,27 @@
                             <th>
                                 Cans Used
                             </th>
+                            <th>
+
+                            </th>
                         </tr>
+                        <script>
+
+                            function cansSetEditDate(date) {
+                                document.getElementById("editcansdate").value = date;
+                            }
+
+                        </script>
                         <?php
                         for ($i = 0; $i < sizeof($history); $i++) {
                             $historydate = $history[$i];
 
                             $historytotalcans = canGet($username, $historydate);
 
-                            echo "<tr><td>" . $historydate . "</td><td>" . $historytotalcans . "</td></tr>";
+                            echo "<tr><td>" . $historydate . "</td><td>" . $historytotalcans . "</td><td><a href='#' class='btn btn-secondary-new' style='float:right;width: 100%;' data-bs-toggle='modal' data-bs-target='#editcans' onclick='cansSetEditDate(" . '"' . $historydate . '"' . ")'><i class='bi bi-pencil-fill'></i> <span class='nomobile ms-1'>Edit</span></tr>";
                         }
                         ?>
                     </table>
-                </div>
-            </div>
-        </div>
-        <div class="collapse" id="cansgraphjson">
-            <br>
-            <div class="card">
-                <h5 class="card-header">JSON Data</h5>
-                <div class="card-body">
-                    <code><pre><?php echo file_get_contents("data/db_users/" . $username . "/cans.json"); ?></pre></code>
                 </div>
             </div>
         </div>
@@ -187,8 +195,36 @@
                         cheating!!</p>
                 </div>
                 <div class="modal-footer">
-                    <a href="api.php?action=cans&deed=reset" class="btn btn-danger">Reset</a>
+                    <a href="api.php?action=data&type=cans&deed=reset" class="btn btn-danger-new">Reset</a>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editcans" tabindex="-1" aria-labelledby="editcans" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editcans"><i class="bi bi-pencil-fill"></i> Edit Day</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="GET" action="api.php?action=data&type=cans&deed=set">
+                    <input type="text" name="action" value="data" style="display: none;" readonly>
+                    <input type="text" name="type" value="cans" style="display: none;" readonly>
+                    <input type="text" name="deed" value="set" style="display: none;" readonly>
+
+                    <div class="mb-3">
+                        <label class="col-form-label">Date</label>
+                        <input type="text" name="date" id="editcansdate" value="" class="form-control" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-form-label">Cans Used</label>
+                        <input type="number" class="form-control" name="amount">
+                    </div>
+                    <button type="submit" class="btn btn-secondary-new">Save</button>
+                </form>
             </div>
         </div>
     </div>

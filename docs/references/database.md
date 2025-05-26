@@ -1,6 +1,6 @@
 # Database
 
-**Page Modified**: May 14, 2025
+**Page Modified**: May 25, 2025
 \
 **Author**: Brody King
 \
@@ -48,11 +48,12 @@ These are the locations of important database functions and actual data.
 
 These functions are here to save time writing out the long php defaults. Feel free to use both.
 
-| Function    | Parameter        | Description                                |
-| ----------- | ---------------- | ------------------------------------------ |
-| `read()`    | `$file`          | Returns content of file at specified path. |
-| `write()`   | `$file`, `$data` | Writes `$data` to `$file`.                 |
-| `isEmpty()` | `$file`          | Returns if content is empty.               |
+| Function          | Parameter        | Description                                                                                |
+| ----------------- | ---------------- | ------------------------------------------------------------------------------------------ |
+| `read()`          | `$file`          | Returns content of file at specified path.                                                 |
+| `write()`         | `$file`, `$data` | Writes `$data` to `$file`.                                                                 |
+| `isEmpty()`       | `$file`          | Returns if content is empty.                                                               |
+| `checkContents()` | `$file`, `$data` | Verifys the content of the file with the data provided. If it is not correct, it fixes it. |
 
 ## Accessing Configuration
 
@@ -111,28 +112,30 @@ Inside of `account.json`, there are multiple variables pre-defined.
 
 ### Pouch Functions
 
-| Function                      | Parameter                        | Description                                                |
-| ----------------------------- | -------------------------------- | ---------------------------------------------------------- |
-| `pouchInit()`                 | `$username`, `$day`              | Creates a blank day on `$day`.                             |
-| `pouchExists()`               | `$username`, `$day`              | Checks if the day exists in `pouches.json`.                |
-| `pouchAdd()`                  | `$username`, `$day`, `$strength` | Adds a new pouch to `pouches.json`                         |
-| `pouchReset()`                | `$username`                      | Replaces `pouches.json` with an empty array.               |
-| `pouchGetMgs()`               | `$username`, `$day`              | Returns the amount of mgs used on `$day`                   |
-| `pouchGetPouches()`           | `$username`, `$day`              | Returns the amount of pouches used on`$day`                |
-| `pouchGetHistoryArray()`      | `$username`                      | Returns an array of all dates with entries.                |
-| `pouchGetHistoryArrayMonth()` | `$username`, `$month`            | Same as above, but takes in a month. Months are `01`-`12`. |
+| Function                      | Parameter                                   | Description                                                                      |
+| ----------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------- |
+| `pouchInit()`                 | `$username`, `$day`                         | Creates a blank day on `$day`.                                                   |
+| `pouchExists()`               | `$username`, `$day`                         | Checks if the day exists in `pouches.json`.                                      |
+| `pouchAdd()`                  | `$username`, `$day`, `$strength`            | Adds a new pouch to `pouches.json`                                               |
+| `pouchSet()`                  | `$username`, `$day`, `$amount`, `$strength` | Sets the amount of pouches and strength for that day.                            |
+| `pouchReset()`                | `$username`                                 | Replaces `pouches.json` with an empty array.                                     |
+| `pouchGetMgs()`               | `$username`, `$day`                         | Returns the amount of mgs used on `$day`                                         |
+| `pouchGetPouches()`           | `$username`, `$day`                         | Returns the amount of pouches used on`$day`                                      |
+| `pouchGetHistoryArray()`      | `$username`                                 | Returns an array of all dates with entries.                                      |
+| `pouchGetHistoryArrayMonth()` | `$username`, `$month`                       | Same as above, but takes in a month. Months are `01`-`13`. (`13` Shows all time) |
 
 ### Can Functions
 
-| Function                    | Parameter             | Description                                                |
-| --------------------------- | --------------------- | ---------------------------------------------------------- |
-| `canInit()`                 | `$username`, `$day`   | Creates a blank day on `$day`.                             |
-| `canExists()`               | `$username`, `$day`   | Checks if the day exists in `cans.json`.                   |
-| `canAdd()`                  | `$username`, `$day`   | Adds a new can to `cans.json`                              |
-| `canReset()`                | `$username`           | Replaces `cans.json` with an empty array.                  |
-| `canGet()`                  | `$username`, `$day`   | Returns the amount of cans used on `$day`                  |
-| `canGetHistoryArray()`      | `$username`           | Returns an array of all dates with entries of cans.        |
-| `canGetHistoryArrayMonth()` | `$username`, `$month` | Same as above, but takes in a month. Months are `01`-`12`. |
+| Function                    | Parameter                      | Description                                                                      |
+| --------------------------- | ------------------------------ | -------------------------------------------------------------------------------- |
+| `canInit()`                 | `$username`, `$day`            | Creates a blank day on `$day`.                                                   |
+| `canExists()`               | `$username`, `$day`            | Checks if the day exists in `cans.json`.                                         |
+| `canAdd()`                  | `$username`, `$day`            | Adds a new can to `cans.json`                                                    |
+| `canSet()`                  | `$username`, `$day`, `$amount` | Sets the amount of cans for the day specified.                                   |
+| `canReset()`                | `$username`                    | Replaces `cans.json` with an empty array.                                        |
+| `canGet()`                  | `$username`, `$day`            | Returns the amount of cans used on `$day`                                        |
+| `canGetHistoryArray()`      | `$username`                    | Returns an array of all dates with entries of cans.                              |
+| `canGetHistoryArrayMonth()` | `$username`, `$month`          | Same as above, but takes in a month. Months are `01`-`12`. (`13` Shows all time) |
 
 ### Month/Date Functions
 

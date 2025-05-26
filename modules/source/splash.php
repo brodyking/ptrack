@@ -70,45 +70,55 @@
         </script>
     </div>
 </div>
+<h1 class="fw-semibold text-center">Why use Pouchtrack?</h1>
+<p class="text-center p-2" style="margin-bottom: 6em !important;">
+    We have a few advantages over our competitors.
+</p>
 <div class="row g-0" style="margin: 0px!important; margin-bottom: 6em!important;">
-    <div class="col-sm-6 col-md-6 ps-0 nomobile">
-        <img src="assets/iphonemockup.png" style="max-width:100%;">
-    </div>
-    <div class="col-sm-6 col-md-6 ps-0">
-        <h1 class="fw-semibold">Why use Pouchtrack?</h1>
-        <p>
-            We have a few advantages over our competitors.
-        <div class="card">
+    <div class="col-sm-6 col-md-6 pt-0 p-2">
+        <div class="card mb-3">
             <div style="display: block; background-color: #dee2e608!important;" class="card-body">
-                <h5>We are <u>ad free</u> and <u>subscription free</u>.</h5>
+                <h5>We <i class="bi bi-heart-fill ms-1 me-1"></i>️ Open Source.</h5>
                 <hr>
-                That means you wont be bothered by a subscription draining your wallet. You are
-                already paying for overpriced cans anyways!
+                We allow anyone to view the source code of Pouchtrack. That means vulernabilities can be patched by the
+                community, and a more transparent relationship between the user and us.
+                <br><br>
+                <a class="btn btn-secondary-new" href="https://github.com/brodyking/ptrack">
+                    Check out our GitHub! <i class="bi bi-arrow-right-short"></i>
+                </a>
             </div>
         </div>
-        <br>
         <div class="card">
             <div style="display: block; background-color: #dee2e608!important;" class="card-body">
                 <h5>You can export your data.</h5>
                 <hr>
-                We allow you to export all your data into JSON format, which keeps you in control. Even if you decide
-                this app
-                isnt right for you.
+                While exporting as a picture is included, we also allow you to export all your data into JSON format,
+                which keeps you in control. Even if you decide this app isn't right for you.
             </div>
         </div>
-        <br>
+    </div>
+    <div class="col-sm-6 col-md-6 pt-0 p-2">
+        <div class="card mb-3">
+            <div style="display: block; background-color: #dee2e608!important;" class="card-body">
+                <h5>We are <u>ad free</u> and <u>subscription free</u>.</h5>
+                <hr>
+                That means you won't be bothered by a subscription draining your wallet. You are
+                already paying for overpriced cans anyways!
+            </div>
+        </div>
         <div class="card">
             <div style="display: block; background-color: #dee2e608!important;" class="card-body">
-                <h5>We <i class="bi bi-heart-fill ms-1 me-1"></i>️ Open Source.</h5>
+                <h5>How are you making money? Are you selling my data?</h5>
                 <hr>
-                We allow anyone to view the code running this service. That means vulernabilities can be patched by the
-                community, and a more transparent relationship between the user and us.
+                <u>We do not sell user data.</u>
+                This app has a small userbase, and php hosting has never been cheaper. If server costs rise, I will
+                start accepting donations. If you are worried about privacy, feel free to self host Pouchtrack!
                 <br><br>
-                <a class="btn btn-secondary-new" href="https://github.com/brodyking/ptrack">Check our our GitHub!</a>
-
+                <a href="https://github.com/brodyking/ptrack/blob/main/docs/guides/getting-started.md"
+                    class="btn btn-secondary-new">
+                    Self Hosting Guide <i class="bi bi-arrow-right-short"></i></a>
             </div>
         </div>
-        </p>
     </div>
 </div>
 <div class="container p-3 text-center mb-5">
@@ -119,10 +129,18 @@
         Create an Account <i class="bi bi-arrow-right-short"></i>
     </a>
     <style>
+        @media only screen and (max-width : 795px) {
+            body {
+                background-image: linear-gradient(0deg, rgb(39, 32, 87), rgb(10, 11, 30), rgb(39, 32, 87)) !important;
+                background-attachment: fixed !important;
+            }
+        }
+
         body {
-            background-image: radial-gradient(circle at 99% 0%, rgba(235, 235, 235, 0.03) 0%, rgba(235, 235, 235, 0.03) 50%, rgba(142, 142, 142, 0.03) 50%, rgba(142, 142, 142, 0.03) 100%), radial-gradient(circle at 84% 89%, rgba(229, 229, 229, 0.03) 0%, rgba(229, 229, 229, 0.03) 50%, rgba(1, 1, 1, 0.03) 50%, rgba(1, 1, 1, 0.03) 100%), radial-gradient(circle at 89% 20%, rgba(219, 219, 219, 0.03) 0%, rgba(219, 219, 219, 0.03) 50%, rgba(38, 38, 38, 0.03) 50%, rgba(38, 38, 38, 0.03) 100%), radial-gradient(circle at 90% 0%, rgba(48, 48, 48, 0.03) 0%, rgba(48, 48, 48, 0.03) 50%, rgba(109, 109, 109, 0.03) 50%, rgba(109, 109, 109, 0.03) 100%), linear-gradient(257deg, rgb(31, 12, 90), rgb(2, 41, 29));
-            /*background-image: radial-gradient(circle at 90% 24%, rgba(209, 209, 209, 0.04) 0%, rgba(209, 209, 209, 0.04) 50%, rgba(160, 160, 160, 0.04) 50%, rgba(160, 160, 160, 0.04) 100%), radial-gradient(circle at 91% 63%, rgba(45, 45, 45, 0.04) 0%, rgba(45, 45, 45, 0.04) 50%, rgba(87, 87, 87, 0.04) 50%, rgba(87, 87, 87, 0.04) 100%), radial-gradient(circle at 17% 2%, rgba(124, 124, 124, 0.04) 0%, rgba(124, 124, 124, 0.04) 50%, rgba(117, 117, 117, 0.04) 50%, rgba(117, 117, 117, 0.04) 100%), linear-gradient(88deg, rgb(33, 20, 105), rgb(1, 15, 13)) !important;*/
+            /* Thank you https://app.haikei.app/ */
+            background-image: url('/assets/splash.svg');
             background-repeat: no-repeat !important;
-            background-attachment: fixed !important;
+            background-attachment: scroll !important;
+            background-size: cover;
         }
     </style>

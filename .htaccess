@@ -1,2 +1,41 @@
-ErrorDocument 404 /index.php?404
-ErrorDocument 401 /index.php?401
+ErrorDocument 400 /index.php?httperror=400
+ErrorDocument 401 /index.php?httperror=401
+ErrorDocument 402 /index.php?httperror=402
+ErrorDocument 403 /index.php?httperror=403
+ErrorDocument 404 /index.php?httperror=404
+ErrorDocument 405 /index.php?httperror=405
+ErrorDocument 406 /index.php?httperror=406
+ErrorDocument 407 /index.php?httperror=407
+ErrorDocument 408 /index.php?httperror=408
+ErrorDocument 409 /index.php?httperror=409
+ErrorDocument 410 /index.php?httperror=410
+ErrorDocument 411 /index.php?httperror=411
+ErrorDocument 412 /index.php?httperror=412
+ErrorDocument 413 /index.php?httperror=413
+ErrorDocument 414 /index.php?httperror=414
+ErrorDocument 415 /index.php?httperror=415
+ErrorDocument 416 /index.php?httperror=416
+ErrorDocument 417 /index.php?httperror=417
+ErrorDocument 422 /index.php?httperror=422
+ErrorDocument 423 /index.php?httperror=423
+ErrorDocument 424 /index.php?httperror=424
+ErrorDocument 426 /index.php?httperror=426
+ErrorDocument 428 /index.php?httperror=428
+ErrorDocument 429 /index.php?httperror=429
+ErrorDocument 431 /index.php?httperror=431
+ErrorDocument 451 /index.php?httperror=451
+ErrorDocument 500 /index.php?httperror=500
+ErrorDocument 501 /index.php?httperror=501
+ErrorDocument 502 /index.php?httperror=502
+ErrorDocument 503 /index.php?httperror=503
+ErrorDocument 504 /index.php?httperror=504
+ErrorDocument 505 /index.php?httperror=505
+ErrorDocument 506 /index.php?httperror=506
+ErrorDocument 507 /index.php?httperror=507
+ErrorDocument 508 /index.php?httperror=408
+ErrorDocument 510 /index.php?httperror=510
+ErrorDocument 511 /index.php?httperror=511
+
+<Files "config.json">  
+ Require all denied
+</Files>

@@ -1,6 +1,6 @@
 # Getting Started
 
-**Page Modified**: March 27, 2025
+**Page Modified**: May 23, 2025
 \
 **Author**: Brody King
 \
@@ -40,8 +40,17 @@ You can edit a few settings in `config.json`, such as the site name:
 ```json
 {
   "site.name": "Pouchtrack",
-  "site.version": "v0",
-  "site.isindev": false,
+  "site.version": "v5.6",
+  "site.allowManage": true,
+
+  "database.checkContents": true,
+
+  "tracking.views": true,
+  "tracking.logs": true,
+  "tracking.logs.html": true,
+  "tracking.logs.txt": true,
+
+  "bugreports": true,
 
   "users.allowNewAccounts": true,
   "users.allowLogin": true

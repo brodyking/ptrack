@@ -1,18 +1,10 @@
 <?php
 
-include "data/database.php";
-include "scripts/scripts.php";
+header('Content-type: text/plain; charset=utf-8');
 
-include scriptsGet("login");
-include scriptsGet("register");
-include scriptsGet("count");
-include scriptsGet("cans");
-include scriptsGet("logout");
-include scriptsGet("deleteaccount");
-include scriptsGet("changepswd");
-include scriptsGet("changeemail");
-include scriptsGet("resetdata");
-include scriptsGet(name: "bugreport");
+include_once "data/database.php";
+include_once "scripts/scripts.php";
+
 
 function apiError($msg)
 {
@@ -42,43 +34,58 @@ if (!isset($_GET["action"])) {
 switch ($_GET["action"]) {
 
     case "login":
+        include scriptsGet("login");
         login();
         break;
 
     case "register":
+        include scriptsGet("register");
         register();
         break;
 
-    case "count":
-        countAPI();
-        break;
-
-    case "cans":
-        cans();
-        break;
-
     case "logout":
+        include scriptsGet("logout");
         logout();
         break;
 
     case "deleteaccount":
+        include scriptsGet("deleteaccount");
         deleteaccount();
         break;
 
     case "changepswd":
+        include scriptsGet("changepswd");
         changepswd();
         break;
 
     case "changeemail":
+        include scriptsGet("changeemail");
         changeemail();
         break;
 
     case "resetdata":
+        include scriptsGet("resetdata");
         resetdata();
         break;
 
     case "bugreport":
+        include scriptsGet(name: "bugreport");
         bugreport();
+        break;
+
+    case "rawdata":
+        include scriptsGet(name: "rawdata");
+        rawdata();
+        break;
+
+    case "toggleapi":
+        include scriptsGet(name: "toggleapi");
+        toggleapi();
+        break;
+
+    case "data":
+        include scriptsGet("data");
+        data();
         break;
 
     default:

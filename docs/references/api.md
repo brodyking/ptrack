@@ -1,6 +1,6 @@
 # API
 
-**Page Modified**: April 5, 2025
+**Page Modified**: May 24, 2025
 \
 **Author**: Brody King
 \
@@ -19,11 +19,17 @@
   - [Usage](#usage)
     - [Login](#login)
     - [Register](#register)
-    - [Count](#count)
-    - [Cans](#cans)
     - [Logout](#logout)
     - [Delete Account](#delete-account)
     - [Change Password](#change-password)
+    - [Change Email](#change-email)
+    - [Reset Data](#reset-data)
+    - [Bug Reporting](#bug-reporting)
+    - [Data](#data)
+      - [Pouches](#pouches)
+      - [Cans](#cans)
+    - [Raw Data](#raw-data)
+    - [Toggle API](#toggle-api)
 
 ## Definition
 
@@ -39,10 +45,10 @@ The API handles basic actions and processes user input. It isnt a "true api" in 
 
 A few functions are included in the api for error handling and such.
 
-| Function Name     | Parameters | Definition                                                                                                                                             |
-| ----------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `apiError()`      | `$msg`     | Redirects to `/?error=` to display the error                                                                                                           |
-| `apiFinish()`     |            | Redirects to `/` |
+| Function Name     | Parameters | Definition                                                                                                                                                |
+| ----------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `apiError()`      | `$msg`     | Redirects to `/?error=` to display the error                                                                                                              |
+| `apiFinish()`     |            | Redirects to `/`                                                                                                                                          |
 | `apiFinishMode()` | `$input`   | Adds `cmonth` or `pmonth` as GET in the url, so that the user is sent to the tab they were on before using the API. Valid inputs are `pouches` and `cans` |
 
 ## Usage
@@ -89,46 +95,6 @@ Create a new account
 | `register.missingparams` |                                        |
 | `register.invalidchhars` | If an account contains a `&`           |
 | `register.taken`         | If a users account already exists      |
-
-### Count
-
-Modify the amount of pouches for the current day.
-
-| Scripts Used                       | URL                    |
-| ---------------------------------- | ---------------------- |
-| [count](/scripts/source/count.php) | `api.php?action=count` |
-
-| Parameter Needed | Method |
-| ---------------- | ------ |
-| `username`       | `GET`  |
-| `id`             | `GET`  |
-| `strength`       | `GET`  |
-
-| Error                  | Description       |
-| ---------------------- | ----------------- |
-| `count.missingparams`  |                   |
-| `count.nouser`         | User dosent exist |
-| `count.invalidsession` | Wrong ID          |
-
-### Cans
-
-Modify the amount of cans for the current day.
-
-| Scripts Used                     | URL                   |
-| -------------------------------- | --------------------- |
-| [cans](/scripts/source/cans.php) | `api.php?action=cans` |
-
-| Parameter Needed | Method |
-| ---------------- | ------ |
-| `username`       | `GET`  |
-| `id`             | `GET`  |
-| `deed`           | `GET`  |
-
-| Error                 | Description       |
-| --------------------- | ----------------- |
-| `cans.missingparams`  |                   |
-| `cans.nouser`         | User dosent exist |
-| `cans.invalidsession` | Wrong ID          |
 
 ### Logout
 
@@ -183,3 +149,148 @@ Allows the user to change their password
 | `changepswd.missingparams` |                       |
 | `changepswd.incorrectold`  | Old password is wrong |
 | `changepswd.invalidid`     | Invalid Session       |
+
+### Change Email
+
+Allows the user to change their email
+
+| Scripts Used                                   | URL                          |
+| ---------------------------------------------- | ---------------------------- |
+| [changeemail](/scripts/source/changeemail.php) | `api.php?action=changeemail` |
+
+| Parameter Needed | Method |
+| ---------------- | ------ |
+| `username`       | `POST` |
+| `id`             | `POST` |
+| `newemail`       | `POST` |
+
+| Error                       | Description     |
+| --------------------------- | --------------- |
+| `changeemail.missingparams` |                 |
+| `changepswd.invalidid`      | Invalid Session |
+
+### Reset Data
+
+Allows the user to reset all their account data (pouches,cans)
+
+| Scripts Used                               | URL                        |
+| ------------------------------------------ | -------------------------- |
+| [resetdata](/scripts/source/resetdata.php) | `api.php?action=resetdata` |
+
+| Parameter Needed | Method   |
+| ---------------- | -------- |
+| `username`       | `COOKIE` |
+| `id`             | `COOKIE` |
+
+| Error                       | Description     |
+| --------------------------- | --------------- |
+| `changeemail.missingparams` |                 |
+| `changepswd.invalidsession` | Invalid Session |
+
+### Bug Reporting
+
+Creates bug reports
+
+| Scripts Used                               | URL                        |
+| ------------------------------------------ | -------------------------- |
+| [bugreport](/scripts/source/bugreport.php) | `api.php?action=bugreport` |
+
+| Parameter Needed | Method |
+| ---------------- | ------ |
+| `email`          | `POST` |
+| `version`        | `POST` |
+| `subject`        | `POST` |
+| `bodytext`       | `POST` |
+
+| Error                     | Description             |
+| ------------------------- | ----------------------- |
+| `bugreport.missingparams` |                         |
+| `bugreport.disabled`      | Disabled in config.json |
+
+### Data
+
+Allows users to add, edit, and reset pouches and cans
+
+| Scripts Used                     | URL                   |
+| -------------------------------- | --------------------- |
+| [data](/scripts/source/data.php) | `api.php?action=data` |
+
+#### Pouches
+
+| Parameter Needed | Method   |
+| ---------------- | -------- |
+| `username`       | `COOKIE` |
+| `id`             | `COOKIE` |
+| `type`           | `GET`    |
+| `deed`           | `GET`    |
+| `strength`       | `GET`    |
+| `amount`         | `GET`    |
+| `date`           | `GET`    |
+
+#### Cans
+
+| Parameter Needed | Method   |
+| ---------------- | -------- |
+| `username`       | `COOKIE` |
+| `id`             | `COOKIE` |
+| `type`           | `GET`    |
+| `deed`           | `GET`    |
+| `amount`         | `GET`    |
+| `date`           | `GET`    |
+
+> [!NOTE]
+> The `strength` parameter is only required if you are adding/setting pouches. Resetting pouches does not matter.
+
+> [!NOTE]
+> The `amount` and `date` parameter is only required if you are setting pouches/cans on an older date.
+
+| Error                 | Description             |
+| --------------------- | ----------------------- |
+| `data.missingparams`  |                         |
+| `data.nouser`         | Disabled in config.json |
+| `data.invalidsession` | Invalid Session.        |
+| `data.invalidparams`  |                         |
+
+### Raw Data
+
+Allows users to get raw data directly through the web browser.
+
+> [!NOTE]  
+> All errors are shown directly inside of the browser. No redirects happen with the error scipt.
+
+| Scripts Used                           | URL                      |
+| -------------------------------------- | ------------------------ |
+| [rawdata](/scripts/source/rawdata.php) | `api.php?action=rawdata` |
+
+| Parameter Needed | Method |
+| ---------------- | ------ |
+| `username`       | `GET`  |
+| `id`             | `GET`  |
+| `source`         | `GET`  |
+
+| Error                    | Description                  |
+| ------------------------ | ---------------------------- |
+| `rawdata.missingparams`  |                              |
+| `rawdata.nouser`         | User dosent exist.           |
+| `rawdata.invalidsession` | Invalid Session              |
+| `rawdata.apidisabled`    | API is disabled for the user |
+| `rawdata.invalidparams`  | Invalid Source               |
+
+### Toggle API
+
+Allows users to toggle API access on their account.
+
+| Scripts Used                               | URL                        |
+| ------------------------------------------ | -------------------------- |
+| [toggleapi](/scripts/source/toggleapi.php) | `api.php?action=toggleapi` |
+
+| Parameter Needed | Method   |
+| ---------------- | -------- |
+| `username`       | `COOKIE` |
+| `id`             | `COOKIE` |
+
+| Error                      | Description        |
+| -------------------------- | ------------------ |
+| `toggleapi.missingparams`  |                    |
+| `toggleapi.nouser`         | User dosent exist. |
+| `toggleapi.invalidsession` | Invalid Session    |

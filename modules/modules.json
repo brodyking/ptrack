@@ -1,36 +1,22 @@
 {
-    "404": {
-        "name": "404",
-        "description": "404 page",
-        "version": 1.1,
-        "author": "Brody King",
-        "source": "modules/source/404.php"
-    },
-    "401": {
-        "name": "401",
-        "description": "401 page",
-        "version": 1.0,
-        "author": "Brody King",
-        "source": "modules/source/401.php"
-    },
     "bugreport": {
         "name": "bugreport",
         "description": "bug reporting",
-        "version": 1.0,
+        "version": 1.1,
         "author": "Brody King",
         "source": "modules/source/bugreport.php"
     },
     "changes": {
         "name": "changes",
         "description": "Recent updates",
-        "version": 1.0,
+        "version": 2.0,
         "author": "Brody King",
         "source": "modules/source/changes.php"
     },
     "dashboard": {
         "name": "dashboard",
         "description": "Selections and Graph for index.php",
-        "version": 1.3,
+        "version": 1.5,
         "author" : "Brody King",
         "source": "modules/source/dashboard.php"
     },
@@ -44,16 +30,23 @@
     "graph-cans": {
         "name": "graph-cans",
         "description": "Graph card for cans used on dashboard.",
-        "version": 2.2,
+        "version": 2.3,
         "author": "Brody King",
         "source": "modules/source/graph-cans.php"
     },
     "graph-pouches": {
         "name": "graph-pouches",
         "description": "Graph card for pouches used on dashboard.",
-        "version": 2.2,
+        "version": 2.3,
         "author": "Brody King",
         "source": "modules/source/graph-pouches.php"
+    },
+    "httperror": {
+        "name": "httperror",
+        "description": "Apache server error messages.",
+        "version": 1.0,
+        "author": "Brody King",
+        "source": "modules/source/httperror.php"
     },
     "install": {
         "name": "install",
@@ -79,49 +72,49 @@
     "nav": {
         "name": "nav",
         "description": "Global navigation bar",
-        "version": 1.2,
+        "version": 2.0,
         "author": "Brody King",
         "source": "modules/source/nav.php"
     },
     "paperwork": {
         "name": "paperwork",
         "description": "Terms and Conditions and Privacy Policy.",
-        "version": 1.0,
+        "version": 1.1,
         "author" : "Brody King",
         "source": "modules/source/paperwork.php"
     },
     "register": {
         "name": "register",
         "description": "Registration popup. Does not include button",
-        "version": 2.1,
+        "version": 2.2,
         "author": "Brody King",
         "source": "modules/source/register.php"
     },
     "selection-cans": {
         "name": "selection-cans",
         "description": "Selection for adding cans for current day",
-        "version": 1.2,
+        "version": 1.3,
         "author": "Brody King",
         "source": "modules/source/selection-cans.php"
     },
     "selection-pouches": {
         "name": "selection-pouches",
         "description": "Slection for picking pouches used on dashboard.",
-        "version": 1.2,
+        "version": 1.3,
         "author": "Brody King",
         "source": "modules/source/selection-pouches.php"
     },
     "settings": {
         "name": "settings",
         "description": "Setting popup for when a user is logged in. Also contains change password popup.",
-        "version": 1.6,
+        "version": 1.7,
         "author" : "Brody King",
         "source": "modules/source/settings.php"
     },
     "splash": {
         "name": "splash",
         "description": "Title and buttons for registration/login shown when user is not logged in",
-        "version": 2.1,
+        "version": 3.0,
         "author": "Brody King",
         "source": "modules/source/splash.php"
     },

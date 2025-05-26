@@ -1,4 +1,4 @@
-# Pouchtrack
+<h1> <img src="assets/logo.png" height="25px"> Pouchtrack v6.0</h1>
 
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 
@@ -9,21 +9,40 @@ Some good places to get started.
 - **<a href="https://pouchtrack.net">Pouchtrack.net</a>** - Public Instance. Using the current stable release.
 - **<a href="LICENSE.md">License</a>** - Its short, trust me.
 - **<a href="docs/index.md">Documentation</a>** - Markdown documentation included in the source code directly. (in `docs/` directory)
-  - **<a href="docs/guides/gettingstarted.md">Get Started</a>** - The few easy steps to get Pouchtrack working.
+  - **<a href="docs/guides/getting-started.md">Get Started</a>** - The few easy steps to get Pouchtrack working.
   - **<a href="docs/guides/design-philosophy.md">Design Philosophy</a>** - The structure of the codebase.
 
 ## Release Notes
 
-Version 5.6 has included the following changes:
+Version 6.0 has included the following changes:
 
-- **Fixed issues when logging user actions**
-  - When writing logs in JSON format, it could cause writing issues and would hault site functionality. We now write to HTML, which when corrupted wont cause issues.
-- **Bug Reporting**
-  - Users can now report bugs into a separate database instead of making a github account
-- **New Navigation Bar and Splash Page**
-  - Navbar has been cleaned up. Splash page now has more information on reasons to use Pouchtrack
-- **New Font**
-  - We have switched to CalSans, because it looks much better than our old font.
+- **Edit Previous days!**
+  - A long awaited feature has finally been added! You can now edit previous days of pouches and cans.
+- **See All Time Usage**
+  - In addition to sorting by months, you can now sort by all time.
+- **Accessible API!**
+  - You can now get information about pouches, cans, and your account through the web browser. This was done to cut load times on pages as before, it was all loaded into the dasboard. (it added about 2000 lines to the HTML)
+  - It is disabled by default on every new users account for security reasons.
+- **New Counting API for Pouches and Cans**
+  - See the new script `data.php`.
+- **Redesigned Navigation Bar and Footer**
+  - Navbar has new transparency effects, follows on scroll, and opens in fullscreen on mobile devices.
+  - Footer has new transparency effects and is mobile responsive.
+- **Export as PNG!**
+  - Can't believe it took until version 6.0 for this! You can export cans and pouches chart into a PNG file.
+- **More Efficient Error Handling**
+  - Errors are now stored in an array instead of a giant switch statement.
+- **New Splash Page**
+  - Added more to the "Why use Pouchtrack" section.
+  - Removed picture of app on mobile.
+- **Config File Security**
+  - The `config.json` file is now hidden from public view.
+- **New users Welcome Message**
+  - New users will now have a popup on their first launch of the app after registration. This shows them how to install the iOS version.
+- **New Apache Error Handling**
+  - We now have a one module solution for errors 404, 500, etc.
+- **Database File Checks**
+  - When the database is being written to, it now checks if the file contents are correct. If they are corroupted, it is rewritten.
 
 ## Development and Roadmap
 
@@ -38,8 +57,9 @@ Our current roadmap looks sort of like this. (nothing is promised, these are mor
 - [x] Track Cans.
 - [x] Allow for multiple years in chart.
 - [x] Session Expires.
-- [ ] Database Backups to prevent Data Loss while writing.
-- [ ] Edit previous days.
+- [x] API
+- [x] Database Checks to prevent Data Loss while writing.
+- [x] Edit previous days.
 
 If you would like to contribute, fork it! I doubt anyone wants to touch this dumpster-fire of a codebase but if you feel like it, go ahead!
 You can find useful information in the **[docs](docs/index.md)**. I'm an idiot and make all my own tools, which is why they suck and are a confusing mess.

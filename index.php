@@ -4,23 +4,12 @@
 <head>
     <?php
 
-    /*
-
-    (c) 2025 Brody King. Read licence before modification.
-
-    https://github.com/brodyking/ptrack/
-    https://github.com/brodyking/ptrack/blob/main/LICENSE.md
-
-    */
-
-    // Timezone
-    
     // Database
-    include "data/database.php";
+    include_once "data/database.php";
     // Modules
-    include "modules/modules.php";
+    include_once "modules/modules.php";
     // Scripts
-    include "scripts/scripts.php";
+    include_once "scripts/scripts.php";
 
     // Script Importing 
     include scriptsGet("isloggedin");
@@ -29,17 +18,47 @@
     include scriptsGet("pagetitle");
 
     ?>
+
+    <!--- 
+
+    Pouchtrack.net - Nicotine Pouch Tracker
+    (c) 2025 Brody King. Read license before modification.
+    
+    -> https://github.com/brodyking/ptrack/
+    -> https://github.com/brodyking/ptrack/blob/main/LICENSE.md
+    
+    --->
+
+    <!--- Styles --->
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
     <link href="/assets/icons/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="/assets/main.css" rel="stylesheet">
+
+    <!--- Title (Changed by JS) --->
     <title>Pouchtrack</title>
+
+    <!--- Meta Tags --->
+    <meta name="title" content="Pouchtrack">
+    <meta name="description" content="Track your Nicotine Pouch usage for free, without ads.">
+    <meta name="keywords"
+        content="nicotine, nicotine pouch, nicotine pouch tracker, pouch tracker, zyn tracker, nicotine pouches, pouchtrack, pouch track, pouchbuddy">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="30 days">
+    <meta name="author" content="Brody King">
+
+    <!--- PWA and Icons --->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="assets/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo-180.png">
+    <link href="assets/logo-180.png" rel="apple-touch-icon" sizes="180x180">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Pouchtrack">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#272057">
+
 </head>
 
 <body data-bs-theme="dark">
@@ -47,7 +66,11 @@
         <?php
 
         // Tracking
-        $tracking = ["username" => null, "page" => null, "date" => date("m-d-Y h:i:s A"), "device" => $_SERVER['HTTP_USER_AGENT']];
+        if (!isset($_SERVER['HTTP_USER_AGENT'])) {
+            $tracking = ["username" => null, "page" => null, "date" => date("m-d-Y h:i:s A"), "device" => "undefined"];
+        } else {
+            $tracking = ["username" => null, "page" => null, "date" => date("m-d-Y h:i:s A"), "device" => $_SERVER["HTTP_USER_AGENT"]];
+        }
 
         // Errors 
         if (errorIsRecieved()) {
@@ -57,6 +80,7 @@
         // If the user is logged in, we set cookies and local variables that are used later. 
         if (isLoggedIn()) {
 
+            // These are used in almost every part of the app. DO NOT TOUCH.
             $username = $_COOKIE['username'];
             $tracking["username"] = $username;
             $id = $_COOKIE['id'];
@@ -104,22 +128,13 @@
 
             // Changelog
             include modulesGetPath("changes");
-            pagetitleSet("Changes");
+            pagetitleSet("Recent Changes");
             $tracking["page"] = "changes";
 
-        } else if (isset($_GET["404"])) {
+        } else if (isset($_GET["httperror"])) {
 
             // 404 Page
-            include modulesGetPath("404");
-            pagetitleSet("404");
-            $tracking["page"] = "404";
-
-        } else if (isset($_GET["401"])) {
-
-            // 404 Page
-            include modulesGetPath("401");
-            pagetitleSet("401");
-            $tracking["page"] = "401";
+            include modulesGetPath("httperror");
 
         } else if (isLoggedIn() && userIsAdmin($username) && isset($_GET["manage"]) && settingsGet("site.allowManage") == true) {
 
@@ -148,6 +163,7 @@
 
         }
 
+        // Sets the title of the page.
         pagetitleShow();
 
 
@@ -158,6 +174,8 @@
             $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             trackingLogsAdd($tracking["username"], $tracking["page"], $tracking["date"], $tracking["device"], $_SERVER['REMOTE_ADDR'], $url);
         }
+
+
 
         ?>
     </main>

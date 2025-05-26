@@ -31,6 +31,15 @@
                         ID</span>
                     <input type="text" class="form-control" disabled value="<?php echo $id; ?>">
                 </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" style="background-color: #dee2e608!important" id="basic-addon1"><i
+                            class="bi bi-hammer"></i> API</span>
+                    <input type="text" class="form-control" disabled value="<?php if (userSettingsGet($username, "allowapi") == "true") {
+                        echo "Enabled";
+                    } else {
+                        echo "Disabled";
+                    } ?>">
+                </div>
             </div>
         </div>
     </div>
@@ -44,8 +53,30 @@
                     data-bs-target="#changepswd"><i class="bi bi-key"></i> Change Password</a>
                 <a class="btn btn-secondary-new w-100 mb-3" href="#" data-bs-toggle="modal"
                     data-bs-target="#changeemail"><i class="bi bi-envelope-fill"></i> Change Email</a>
+                <a class="btn btn-secondary-new w-100 mb-3" style="text-decoration: none;" href="#"
+                    data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#delete"><i class="bi bi-trash"></i>
+                    Delete Account</a>
                 <a class="btn btn-secondary-new w-100" style="text-decoration: none;" href="#" data-bs-dismiss="modal"
-                    data-bs-toggle="modal" data-bs-target="#delete"><i class="bi bi-trash"></i> Delete Account</a>
+                    data-bs-toggle="modal" data-bs-target="#toggleapi"><i class="bi bi-hammer"></i> Toggle API</a>
+            </div>
+        </div>
+        <div class="card">
+            <h5 class="card-header"><i class="bi bi-hammer"></i> API</h5>
+            <div class="card-body">
+                <a class="btn btn-secondary-new w-100 mb-3" style="text-decoration: none;"
+                    href="/api.php?action=rawdata&username=<?php echo $username . '&id=' . $id . '&source=pouches'; ?>">
+                    <i class="bi bi-filetype-json"></i> Get Pouches JSON
+                </a>
+                <a class="btn btn-secondary-new w-100 mb-3" style="text-decoration: none;"
+                    href="/api.php?action=rawdata&username=<?php echo $username . '&id=' . $id . '&source=cans'; ?>">
+                    <i class="bi bi-filetype-json"></i> Get Cans JSON
+                </a>
+                <a class="btn btn-secondary-new w-100" style="text-decoration: none;"
+                    href="/api.php?action=rawdata&username=<?php echo $username . '&id=' . $id . '&source=account'; ?>">
+                    <i class="bi bi-filetype-json"></i> Get Account Info JSON
+                </a>
+
+
             </div>
         </div>
     </div>
@@ -67,7 +98,7 @@
                     once you click Reset. Do you wish to continue?</p>
             </div>
             <div class="modal-footer">
-                <a href="api.php?action=resetdata" class="btn btn-primary-new">Reset Data</a>
+                <a href="api.php?action=resetdata" class="btn btn-danger-new">Reset Data</a>
             </div>
         </div>
     </div>
@@ -87,7 +118,7 @@
                     once you click Delete. Do you wish to continue?</p>
             </div>
             <div class="modal-footer">
-                <a href="api.php?action=deleteaccount" class="btn btn-primary-new">Delete
+                <a href="api.php?action=deleteaccount" class="btn btn-danger-new">Delete
                     my
                     Account</a>
             </div>
@@ -95,6 +126,7 @@
     </div>
 </div>
 
+<!-- Password Reset popup -->
 <div class="modal fade" id="changepswd" tabindex="-1" aria-labelledby="changepswd" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -125,6 +157,7 @@
     </div>
 </div>
 
+<!-- Change Email popup -->
 <div class="modal fade" id="changeemail" tabindex="-1" aria-labelledby="changeemail" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -142,6 +175,35 @@
                     </div>
                     <button type="submit" class="btn btn-secondary-new">Change Email</button>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Toggle API popup -->
+<div class="modal fade" id="toggleapi" tabindex="-1" aria-labelledby="reset" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="delete"><i class="bi bi-exclamation-triangle-fill"></i> Warning</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>If you enable the API, those with your current session ID can see information in your account. We
+                    recommend turning this off when you are done using it, or logging out once you have finished your
+                    session.</p>
+            </div>
+            <div class="modal-footer">
+                <?php
+
+                if (userSettingsGet($username, "allowapi") == "true") {
+                    echo '<a href="api.php?action=toggleapi" class="btn btn-primary-new">Disable API</a>';
+                } else {
+                    echo '<a href="api.php?action=toggleapi" class="btn btn-danger-new">Enable API</a>';
+                }
+
+                ?></a>
             </div>
         </div>
     </div>

@@ -6,8 +6,8 @@
   <div class="card-body">
 
     <div class="selection d-grid d-md-flex justify-content-md-center">
-      <a href="api.php?action=cans&deed=add" class="btn btn-lg btn-secondary-new w-100 text-start text-center"><i
-          class="bi bi-plus-circle-fill"></i> Can</a>
+      <a href="api.php?action=data&type=cans&deed=add"
+        class="btn btn-lg btn-secondary-new w-100 text-start text-center"><i class="bi bi-plus-circle-fill"></i> Can</a>
       <br>
       <a data-bs-toggle="modal" data-bs-target="#reset-cans"
         class="btn btn-lg btn-primary-new w-100 text-start text-center"><i class="bi bi-x-circle-fill"></i> Reset</a>

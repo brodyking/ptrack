@@ -15,7 +15,7 @@ if (isset($_GET["success"])) {
   <div class="card-body">
     This site is constantly being worked and improved on. Use this page to submit information about bugs/issues with the
     sites functionality. <u>Do not submit feature requests.</u> Feel free to also submit an issue on our <a
-      href="https://github.com/brodyking/ptrack/">GitHub</a>, for a open and public line of
+      href="https://github.com/brodyking/ptrack/">GitHub</a>, for an open and public line of
     communication.<br><br>Please be as detailed as possible when
     describing your issue. Thank you for improving the site!
   </div>
