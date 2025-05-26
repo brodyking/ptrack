@@ -59,7 +59,7 @@ Our current roadmap looks sort of like this. (nothing is promised, these are mor
 - [x] Session Expires.
 - [x] API
 - [x] Database Checks to prevent Data Loss while writing.
-- [ ] Edit previous days.
+- [x] Edit previous days.
 
 If you would like to contribute, fork it! I doubt anyone wants to touch this dumpster-fire of a codebase but if you feel like it, go ahead!
 You can find useful information in the **[docs](docs/index.md)**. I'm an idiot and make all my own tools, which is why they suck and are a confusing mess.
