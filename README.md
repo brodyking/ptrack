@@ -1,4 +1,4 @@
-<h1> <img src="assets/logo.png" height="20px"> Pouchtrack v6.0</h1>
+<h1> <img src="assets/logo.png" height="25px"> Pouchtrack v6.0</h1>
 
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 
