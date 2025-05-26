@@ -63,10 +63,14 @@
         </ul>
       </li>
       <li>
-        <b>Redesigned Navigation Bar</b>
+        <b>Redesigned Navigation Bar and Footer</b>
         <ul>
           <li>
-            New transparency effects, follows on scroll, and opens in fullscreen on mobile devices.</li>
+            New transparency effects, follows on scroll, and opens in fullscreen on mobile devices.
+          </li>
+          <li>
+            Footer has new transparency effects and is mobile responsive.
+          </li>
         </ul>
       </li>
       <li>
