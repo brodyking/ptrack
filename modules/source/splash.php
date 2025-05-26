@@ -141,6 +141,6 @@
             background-image: url('/assets/splash.svg');
             background-repeat: no-repeat !important;
             background-attachment: scroll !important;
-            background-size: 100%;
+            background-size: cover;
         }
     </style>
