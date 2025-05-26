@@ -17,20 +17,15 @@
         <div class="collapse navbar-collapse ms-1" id="navbarNavDropdown">
             <ul class="navbar-nav ms-0 ps-0 me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/?paperwork">
-                        <i class="bi bi-paperclip"></i> Paperwork</a>
+                    <a class="nav-link" href="/?changes">
+                        <i class="bi bi-clock-fill"></i> Changes</a>
                 </li>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="bi bi-git"></i> Development
                     </a>
                     <ul class="dropdown-menu mb-2">
-                        <li>
-                            <a class="dropdown-item" href="/?changes">
-                                <i class="bi bi-clock-fill"></i> Recent Changes</a>
-                        </li>
                         <li>
                             <a class="dropdown-item" href="/?bugreport">
                                 <i class="bi bi-bug-fill"></i> Bug Report</a>
@@ -92,7 +87,7 @@
 
 <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        <div class="offcanvas offcanvas-end text-bg-dark w-100 border-0" tabindex="-1" id="offcanvasDarkNavbar"
             aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header ps-3 pe-2 mt-4 border m-3"
                 style="border-radius:1.25rem;padding-top:5px;padding-bottom:5px;border-color:#45406C!important;">
@@ -110,21 +105,18 @@
                         <a class="nav-link" href="/">
                             <i class="bi bi-house-fill"></i> Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/?paperwork">
-                            <i class="bi bi-paperclip"></i> Paperwork</a>
-                    </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="/?changes">
+                            <i class="bi bi-clock-fill"></i> Changes</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="bi bi-git"></i> Development
                         </a>
                         <ul class="dropdown-menu mb-2">
-                            <li>
-                                <a class="dropdown-item" href="/?changes">
-                                    <i class="bi bi-clock-fill"></i> Recent Changes</a>
-                            </li>
+
                             <li>
                                 <a class="dropdown-item" href="/?bugreport">
                                     <i class="bi bi-bug-fill"></i> Bug Report</a>
