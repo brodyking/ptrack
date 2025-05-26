@@ -1,11 +1,7 @@
 <script src="/assets/js/chart.umd.js"></script>
 <style>
-    body {
-        background: linear-gradient(180deg, rgb(19, 19, 19) 17%, rgb(0, 0, 0) 100%) !important;
-    }
-
     main {
-        max-width: none !important;
+        max-width: 1250px !important;
     }
 
     #nav {
