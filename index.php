@@ -66,7 +66,11 @@
         <?php
 
         // Tracking
-        $tracking = ["username" => null, "page" => null, "date" => date("m-d-Y h:i:s A"), "device" => $_SERVER['HTTP_USER_AGENT']];
+        if (!isset($_SERVER['HTTP_USER_AGENT'])) {
+            $tracking = ["username" => null, "page" => null, "date" => date("m-d-Y h:i:s A"), "device" => "undefined"];
+        } else {
+            $tracking = ["username" => null, "page" => null, "date" => date("m-d-Y h:i:s A"), "device" => $_SERVER["HTTP_USER_AGENT"]];
+        }
 
         // Errors 
         if (errorIsRecieved()) {
