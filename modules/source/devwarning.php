@@ -32,8 +32,8 @@ the url params, or set a hidewarn cookie.
 
 <span class="text-info"><b><i class="bi bi-git"></i> <u>Configuration</u> <i class="bi bi-git"></i></b></span>
 
-site.name => <span class="text-primary"><?php echo settingsGetPrettyBool("site.name"); ?></span>
-site.version => <span class="text-primary"><?php echo settingsGetPrettyBool("site.version"); ?></span>
+site.name => <span class="text-primary"><?php echo settingsGet("site.name"); ?></span>
+site.version => <span class="text-primary"><?php echo settingsGet("site.version"); ?></span>
 site.allowmanage => <span class="text-primary"><?php echo settingsGetPrettyBool("site.allowManage"); ?></span>
 site.isdev => <span class="text-primary"><?php echo settingsGetPrettyBool("site.isdev"); ?></span>
 
