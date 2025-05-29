@@ -20,6 +20,13 @@
         "author" : "Brody King",
         "source": "modules/source/dashboard.php"
     },
+    "devwarning": {
+        "name": "devwarning",
+        "description": "Warning for if site is in development mode (site.isdev)",
+        "version": 1.0,
+        "author" : "Brody King",
+        "source": "modules/source/devwarning.php"
+    },
     "footer": {
         "name": "footer",
         "description": "Small footer text shown at the bottom of the page",

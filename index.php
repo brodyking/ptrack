@@ -62,6 +62,11 @@
 </head>
 
 <body data-bs-theme="dark">
+    <?php if (settingsGet("site.isdev") == true && !isset($_GET["hidewarn"]) && !isset($_COOKIE["hidewarn"])) {
+        include modulesGetPath("devwarning");
+    } else if (isset($_GET["hidewarn"]) || isset($_COOKIE["hidewarn"])) {
+        echo "<script>alert('You are using a dev version of Pouchtrack. NEVER INPUT ANY REAL DATA HERE.');</script>";
+    } ?>
     <main>
         <?php
 
