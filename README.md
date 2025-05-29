@@ -1,4 +1,4 @@
-<h1> <img src="assets/logo.png" height="25px"> Pouchtrack v6.0</h1>
+<h1> <img src="assets/logo.png" height="25px"> Pouchtrack v6.1</h1>
 
 This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
 
@@ -14,35 +14,7 @@ Some good places to get started.
 
 ## Release Notes
 
-Version 6.0 has included the following changes:
-
-- **Edit Previous days!**
-  - A long awaited feature has finally been added! You can now edit previous days of pouches and cans.
-- **See All Time Usage**
-  - In addition to sorting by months, you can now sort by all time.
-- **Accessible API!**
-  - You can now get information about pouches, cans, and your account through the web browser. This was done to cut load times on pages as before, it was all loaded into the dasboard. (it added about 2000 lines to the HTML)
-  - It is disabled by default on every new users account for security reasons.
-- **New Counting API for Pouches and Cans**
-  - See the new script `data.php`.
-- **Redesigned Navigation Bar and Footer**
-  - Navbar has new transparency effects, follows on scroll, and opens in fullscreen on mobile devices.
-  - Footer has new transparency effects and is mobile responsive.
-- **Export as PNG!**
-  - Can't believe it took until version 6.0 for this! You can export cans and pouches chart into a PNG file.
-- **More Efficient Error Handling**
-  - Errors are now stored in an array instead of a giant switch statement.
-- **New Splash Page**
-  - Added more to the "Why use Pouchtrack" section.
-  - Removed picture of app on mobile.
-- **Config File Security**
-  - The `config.json` file is now hidden from public view.
-- **New users Welcome Message**
-  - New users will now have a popup on their first launch of the app after registration. This shows them how to install the iOS version.
-- **New Apache Error Handling**
-  - We now have a one module solution for errors 404, 500, etc.
-- **Database File Checks**
-  - When the database is being written to, it now checks if the file contents are correct. If they are corroupted, it is rewritten.
+Version 6.1 has included the following changes:
 
 ## Development and Roadmap
 

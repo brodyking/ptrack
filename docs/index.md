@@ -1,4 +1,4 @@
-<h1 align='center'> 📖 Pouchtrack Docs v6.0 📖 </h1>
+<h1 align='center'> 📖 Pouchtrack Docs v6.1 📖 </h1>
 
 | **[« Back to Readme](../README.md)** |
 | ------------------------------------ |
