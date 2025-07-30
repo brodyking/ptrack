@@ -1,30 +1,25 @@
 <?php
 
-$httperrormessage = "";
+// $httperrormessage = "";
 
-switch ($_GET["httperror"]) {
-    case "400":
-        $httperrormessage = "Bad Request";
-        break;
-    case "401":
-        $httperrormessage = "Unauthorized.";
-        break;
-    case "403":
-        $httperrormessage = "Forbidden.";
-        break;
-    case "404":
-        $httperrormessage = "Page not Found.";
-        break;
-    case "405":
-        $httperrormessage = "Method not Allowed.";
-        break;
-    case "406":
-        $httperrormessage = "Not Acceptable.";
-        break;
-    case "500":
-        $httperrormessage = "Internal Server Error";
-        break;
-}
+$httperrormessageList = [
+    "400" =>
+    "Bad Request",
+    "401" =>
+    "Unauthorized.",
+    "403" =>
+    "Forbidden.",
+    "404" =>
+    "Page not Found.",
+    "405" =>
+    "Method not Allowed.",
+    "406" =>
+    "Not Acceptable.",
+    "500" =>
+    "Internal Server Error"
+];
+
+$httperrormessage = $httperrormessageList[$_GET["httperror"]];
 
 ?>
 
