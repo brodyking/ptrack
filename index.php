@@ -105,8 +105,10 @@
         include modulesGetPath("nav");
 
 
-        $pages = ["paperwork", "login", "register", "bugreport", "changes"];
-        $pagesPretty = ["Paperwork", "Login", "Register", "Bug Reporting", "Changes"];
+        // This next section is just pages that dont require the user to be logged in,
+        // and that can be added via one modulesGetPath() with the same name as the url
+        $pages = ["paperwork", "login", "register", "bugreport", "changes", "httperror"];
+        $pagesPretty = ["Paperwork", "Login", "Register", "Bug Reporting", "Changes", "Error"];
 
         // This is incremented by one every iteration of the loop.
         // Used to pick out of the pretty page names array shown above.
@@ -129,16 +131,13 @@
             $pagesIndex++;
         }
 
+        // Pages that require specific conditions
         if ($tracking["page"] == null) {
-            if (isset($_GET["httperror"])) {
-                // 404 Page
-                include modulesGetPath("httperror");
-            } else if (isLoggedIn() && userIsAdmin($username) && isset($_GET["manage"]) && settingsGet("site.allowManage") == true) {
+            if (isLoggedIn() && userIsAdmin($username) && isset($_GET["manage"]) && settingsGet("site.allowManage") == true) {
                 // Manager Page
                 include modulesGetPath("manage");
                 pagetitleSet("Manage");
             } else if (isLoggedIn() && isset($_GET["settings"])) {
-
                 // Settings Page
                 include modulesGetPath("settings");
                 pagetitleSet("Settings");
@@ -153,6 +152,8 @@
                 $tracking["page"] = "splash";
             }
         }
+
+
         // Sets the title of the page.
         pagetitleShow();
 
@@ -164,8 +165,6 @@
             $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             trackingLogsAdd($tracking["username"], $tracking["page"], $tracking["date"], $tracking["device"], $_SERVER['REMOTE_ADDR'], $url);
         }
-
-
 
         ?>
     </main>
