@@ -80,7 +80,8 @@ function userSettingsDelete($username, $key)
 }
 function userAuth($username, $password)
 {
-    return $password == userSettingsGet($username, "password");
+    $hashedpassword = userSettingsGet($username, "password");
+    return password_verify($password, $hashedpassword);
 }
 function userCreate($username, $email, $password)
 {
@@ -93,7 +94,7 @@ function userCreate($username, $email, $password)
     if ($email != "") {
         $accountdata["email"] = $email;
     }
-    $accountdata["password"] = $password;
+    $accountdata["password"] = password_hash($password, PASSWORD_DEFAULT);
     $accountdata["joindate"] = date("m-d-Y");
     $accountdata["isdeleted"] = "false";
     $accountdata["secureid"] = "false";
@@ -180,7 +181,6 @@ function pouchExists($username, $day)
     $pathto = userPathTo($username);
     $old = json_decode(read($pathto . "pouches.json"), true);
     return isset($old[$day]);
-
 }
 function pouchAdd($username, $day, $strength)
 {
@@ -275,7 +275,6 @@ function canExists($username, $day)
     $pathto = userPathTo($username);
     $old = json_decode(read($pathto . "cans.json"), true);
     return isset($old[$day]);
-
 }
 
 function canAdd($username, $day)
@@ -412,7 +411,6 @@ function trackingLogsAdd($username, $page, $date, $device, $ip, $url)
                 "[<span class='text-info'>{$ip}</span>@<span class='text-danger'>{$device}</span>] ";
             file_put_contents("data/db_tracking/logs.html", $logs);
         }
-
     }
 }
 
@@ -431,4 +429,4 @@ function bugReportNew($email, $version, $subject, $body)
     file_put_contents("data/db_bugreports/{$subjectOutName}", $subjectOutBody);
 }
 
-// ?>
+// 
