@@ -244,6 +244,31 @@ function pouchGetHistoryArrayMonth($username, $month)
     return $new;
 }
 
+function pouchGetHistoryArrayMonthYear($username, $month, $year)
+{
+    $pathto = userPathTo($username);
+    $old = array_keys(json_decode(read($pathto . "pouches.json"), true));
+    if ($month == 13) {
+        $all = [];
+        $newspot = 0;
+        for ($i = 0; $i < count($old); $i++) {
+            if (substr($old[$i], 6) == $year) {
+                $all[$newspot] = $old[$i];
+                $newspot++;
+            }
+        }
+        return $all;
+    }
+    $new = [];
+    $newspot = 0;
+    for ($i = 0; $i < count($old); $i++) {
+        if (substr($old[$i], 0, 2) == $month && substr($old[$i], 6) == $year) {
+            $new[$newspot] = $old[$i];
+            $newspot++;
+        }
+    }
+    return $new;
+}
 function monthsIsValid($input)
 {
     $months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13"];
