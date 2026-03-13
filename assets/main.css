@@ -113,6 +113,11 @@ nav{
     box-shadow: inset 0px 0px 2px #0F2E27;
 }
 
+select > option {
+    background-color: #272057;
+    color: white;
+}
+
 .navbar-toggler {
     padding: 5px!important;
     font-size: 15px;

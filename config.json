@@ -1,17 +1,14 @@
 {
-    "site.name": "Pouchtrack", 
-    "site.version": "v6.0",
-    "site.allowManage": true,
-
-    "database.checkContents": true,
-
-    "tracking.views": true,
-    "tracking.logs": true,
-    "tracking.logs.html": true,
-    "tracking.logs.txt": true,
-
-    "bugreports": true,
-
-    "users.allowNewAccounts": true,
-    "users.allowLogin": true
+  "site.name": "Pouchtrack",
+  "site.version": "v6.1",
+  "site.allowManage": true,
+  "site.isdev": false,
+  "database.checkContents": true,
+  "tracking.views": true,
+  "tracking.logs": true,
+  "tracking.logs.html": true,
+  "tracking.logs.txt": true,
+  "bugreports": true,
+  "users.allowNewAccounts": true,
+  "users.allowLogin": true
 }

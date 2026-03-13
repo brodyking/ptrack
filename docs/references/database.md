@@ -1,9 +1,7 @@
 # Database
 
-**Page Modified**: May 25, 2025
-\
-**Author**: Brody King
-\
+**Page Modified**: March 13, 2026\
+**Author**: Brody King\
 **Type**: Reference
 
 | **[« Index](/docs/index.md)** |
@@ -31,7 +29,9 @@
 
 ## Introduction
 
-This software does not use any "real" database. The intention is to make this software easy to run, backup, and move. No one wants to manage a mySQL server. Instead, all data is stored in json files.
+This software does not use any "real" database. The intention is to make this
+software easy to run, backup, and move. No one wants to manage a mySQL server.
+Instead, all data is stored in json files.
 
 ## Locations
 
@@ -46,7 +46,8 @@ These are the locations of important database functions and actual data.
 
 ## Accessing the File System
 
-These functions are here to save time writing out the long php defaults. Feel free to use both.
+These functions are here to save time writing out the long php defaults. Feel
+free to use both.
 
 | Function          | Parameter        | Description                                                                                |
 | ----------------- | ---------------- | ------------------------------------------------------------------------------------------ |
@@ -67,7 +68,8 @@ These functions are used to interact with `config.json`
 
 ## Accessing User Information
 
-User Information is stored in a sub-directory at `/data/db_users/USERNAME/`. There are 4 files by default in the users folder.
+User Information is stored in a sub-directory at `/data/db_users/USERNAME/`.
+There are 4 files by default in the users folder.
 
 ### User Data Locations
 
@@ -104,7 +106,7 @@ Inside of `account.json`, there are multiple variables pre-defined.
 | `userDelete()`         | `$username`                        | Set `isdeleted` to true, locks account by changing password.                                     |
 | `userSessionClear()`   | `$username`                        | Deletes all the users cookies, and deletes `session.json`                                        |
 | `userSessionGet()`     | `$username`                        | Returns the users current ID.                                                                    |
-| `userSessionCreate() ` | `$username`                        | Creates a new session, stores in `session.json`, returns the new id                              |
+| `userSessionCreate()`  | `$username`                        | Creates a new session, stores in `session.json`, returns the new id                              |
 | `userPasswordGet()`    | `$username`                        | Calls `userSettingsGet()`, returns the users password                                            |
 | `userChangePassword()` | `$username`, `$password`           | Calls `userSettingsSet()` to set a new password                                                  |
 | `userIsAdmin()`        | `$username`                        | Calls `userSettingsGet()`, returns if `isadmin` is set to true                                   |
@@ -112,30 +114,32 @@ Inside of `account.json`, there are multiple variables pre-defined.
 
 ### Pouch Functions
 
-| Function                      | Parameter                                   | Description                                                                      |
-| ----------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------- |
-| `pouchInit()`                 | `$username`, `$day`                         | Creates a blank day on `$day`.                                                   |
-| `pouchExists()`               | `$username`, `$day`                         | Checks if the day exists in `pouches.json`.                                      |
-| `pouchAdd()`                  | `$username`, `$day`, `$strength`            | Adds a new pouch to `pouches.json`                                               |
-| `pouchSet()`                  | `$username`, `$day`, `$amount`, `$strength` | Sets the amount of pouches and strength for that day.                            |
-| `pouchReset()`                | `$username`                                 | Replaces `pouches.json` with an empty array.                                     |
-| `pouchGetMgs()`               | `$username`, `$day`                         | Returns the amount of mgs used on `$day`                                         |
-| `pouchGetPouches()`           | `$username`, `$day`                         | Returns the amount of pouches used on`$day`                                      |
-| `pouchGetHistoryArray()`      | `$username`                                 | Returns an array of all dates with entries.                                      |
-| `pouchGetHistoryArrayMonth()` | `$username`, `$month`                       | Same as above, but takes in a month. Months are `01`-`13`. (`13` Shows all time) |
+| Function                          | Parameter                                   | Description                                                                      |
+| --------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------- |
+| `pouchInit()`                     | `$username`, `$day`                         | Creates a blank day on `$day`.                                                   |
+| `pouchExists()`                   | `$username`, `$day`                         | Checks if the day exists in `pouches.json`.                                      |
+| `pouchAdd()`                      | `$username`, `$day`, `$strength`            | Adds a new pouch to `pouches.json`                                               |
+| `pouchSet()`                      | `$username`, `$day`, `$amount`, `$strength` | Sets the amount of pouches and strength for that day.                            |
+| `pouchReset()`                    | `$username`                                 | Replaces `pouches.json` with an empty array.                                     |
+| `pouchGetMgs()`                   | `$username`, `$day`                         | Returns the amount of mgs used on `$day`                                         |
+| `pouchGetPouches()`               | `$username`, `$day`                         | Returns the amount of pouches used on`$day`                                      |
+| `pouchGetHistoryArray()`          | `$username`                                 | Returns an array of all dates with entries.                                      |
+| `pouchGetHistoryArrayMonth()`     | `$username`, `$month`                       | Same as above, but takes in a month. Months are `01`-`13`. (`13` Shows all time) |
+| `pouchGetHistoryArrayMonthYear()` | `$username`, `$month`, `$year`              | Same as above, but takes in the year aswell.                                     |
 
 ### Can Functions
 
-| Function                    | Parameter                      | Description                                                                      |
-| --------------------------- | ------------------------------ | -------------------------------------------------------------------------------- |
-| `canInit()`                 | `$username`, `$day`            | Creates a blank day on `$day`.                                                   |
-| `canExists()`               | `$username`, `$day`            | Checks if the day exists in `cans.json`.                                         |
-| `canAdd()`                  | `$username`, `$day`            | Adds a new can to `cans.json`                                                    |
-| `canSet()`                  | `$username`, `$day`, `$amount` | Sets the amount of cans for the day specified.                                   |
-| `canReset()`                | `$username`                    | Replaces `cans.json` with an empty array.                                        |
-| `canGet()`                  | `$username`, `$day`            | Returns the amount of cans used on `$day`                                        |
-| `canGetHistoryArray()`      | `$username`                    | Returns an array of all dates with entries of cans.                              |
-| `canGetHistoryArrayMonth()` | `$username`, `$month`          | Same as above, but takes in a month. Months are `01`-`12`. (`13` Shows all time) |
+| Function                        | Parameter                      | Description                                                                      |
+| ------------------------------- | ------------------------------ | -------------------------------------------------------------------------------- |
+| `canInit()`                     | `$username`, `$day`            | Creates a blank day on `$day`.                                                   |
+| `canExists()`                   | `$username`, `$day`            | Checks if the day exists in `cans.json`.                                         |
+| `canAdd()`                      | `$username`, `$day`            | Adds a new can to `cans.json`                                                    |
+| `canSet()`                      | `$username`, `$day`, `$amount` | Sets the amount of cans for the day specified.                                   |
+| `canReset()`                    | `$username`                    | Replaces `cans.json` with an empty array.                                        |
+| `canGet()`                      | `$username`, `$day`            | Returns the amount of cans used on `$day`                                        |
+| `canGetHistoryArray()`          | `$username`                    | Returns an array of all dates with entries of cans.                              |
+| `canGetHistoryArrayMonth()`     | `$username`, `$month`          | Same as above, but takes in a month. Months are `01`-`12`. (`13` Shows all time) |
+| `canGetHistoryArrayMonthYear()` | `$username`, `$month`, `$year` | Same as above, but takes in the year aswell.                                     |
 
 ### Month/Date Functions
 
@@ -150,11 +154,11 @@ These are used for analytics. There are views and logs.
 
 ### Tracking Views
 
-| Function                   | Parameter | Description                    |
-| -------------------------- | --------- | ------------------------------ |
-| `trackingViewsGetKeys() `  |           | Returns all days with views    |
-| `trackingViewsGetValue() ` | `$key`    | Returns the amount on that day |
-| `trackingViewsAdd()`       | `$date`   | Adds a view on that day        |
+| Function                  | Parameter | Description                    |
+| ------------------------- | --------- | ------------------------------ |
+| `trackingViewsGetKeys()`  |           | Returns all days with views    |
+| `trackingViewsGetValue()` | `$key`    | Returns the amount on that day |
+| `trackingViewsAdd()`      | `$date`   | Adds a view on that day        |
 
 ### Tracking Logs
 

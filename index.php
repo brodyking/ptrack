@@ -62,14 +62,23 @@
 </head>
 
 <body data-bs-theme="dark">
+    <?php if (settingsGet("site.isdev") == true && !isset($_GET["hidewarn"]) && !isset($_COOKIE["hidewarn"])) {
+        include modulesGetPath("devwarning");
+    } else if (isset($_GET["hidewarn"]) || isset($_COOKIE["hidewarn"])) {
+        echo "<script>alert('You are using a dev version of Pouchtrack. NEVER INPUT ANY REAL DATA HERE.');</script>";
+    } ?>
     <main>
         <?php
 
         // Tracking
+
+
+        $tracking = ["username" => null, "page" => null, "date" => date("m-d-Y h:i:s A")];
+
         if (!isset($_SERVER['HTTP_USER_AGENT'])) {
-            $tracking = ["username" => null, "page" => null, "date" => date("m-d-Y h:i:s A"), "device" => "undefined"];
+            $tracking["device"] = "undefined";
         } else {
-            $tracking = ["username" => null, "page" => null, "date" => date("m-d-Y h:i:s A"), "device" => $_SERVER["HTTP_USER_AGENT"]];
+            $tracking["device"] = $_SERVER["HTTP_USER_AGENT"];
         }
 
         // Errors 
@@ -95,73 +104,55 @@
         // Global navigation
         include modulesGetPath("nav");
 
-        // Individual pages
-        if (isset($_GET["paperwork"])) {
 
-            // Paperwork/TOS
-            include modulesGetPath("paperwork");
-            pagetitleSet("Paperwork");
-            $tracking["page"] = "paperwork";
+        // This next section is just pages that dont require the user to be logged in,
+        // and that can be added via one modulesGetPath() with the same name as the url
+        $pages = ["paperwork", "login", "register", "bugreport", "changes", "httperror"];
+        $pagesPretty = ["Paperwork", "Login", "Register", "Bug Reporting", "Changes", "Error"];
 
-        } else if (isset($_GET["login"])) {
+        // This is incremented by one every iteration of the loop.
+        // Used to pick out of the pretty page names array shown above.
+        $pagesIndex = 0;
 
-            // Login
-            include modulesGetPath("login");
-            pagetitleSet("Login");
-            $tracking["page"] = "login";
 
-        } else if (isset($_GET["register"])) {
 
-            // Register
-            include modulesGetPath("register");
-            pagetitleSet("Register");
-            $tracking["page"] = "register";
-
-        } else if (isset($_GET["bugreport"])) {
-
-            // Login
-            include modulesGetPath("bugreport");
-            pagetitleSet("Bug Reporting");
-            $tracking["page"] = "bugreport";
-
-        } else if (isset($_GET["changes"])) {
-
-            // Changelog
-            include modulesGetPath("changes");
-            pagetitleSet("Recent Changes");
-            $tracking["page"] = "changes";
-
-        } else if (isset($_GET["httperror"])) {
-
-            // 404 Page
-            include modulesGetPath("httperror");
-
-        } else if (isLoggedIn() && userIsAdmin($username) && isset($_GET["manage"]) && settingsGet("site.allowManage") == true) {
-
-            // Manager Page
-            include modulesGetPath("manage");
-            pagetitleSet("Manage");
-
-        } else if (isLoggedIn() && isset($_GET["settings"])) {
-
-            // Settings Page
-            include modulesGetPath("settings");
-            pagetitleSet("Settings");
-
-        } else if (isLoggedIn()) {
-
-            // Dashboard w/ Graph
-            include modulesGetPath("welcome");
-            include modulesGetPath("dashboard");
-            $tracking["page"] = "dashboard";
-
-        } else {
-
-            // Splash
-            include modulesGetPath("splash");
-            $tracking["page"] = "splash";
-
+        // This checks for individual pages that can be seen by everyone*
+        // $tracking["page"] is set to null by default
+        // If a page is found here, it is set.
+        // that determines if the other areas after this loop
+        // are allowed to run
+        foreach ($pages as $page) {
+            if (isset($_GET[$page])) {
+                include modulesGetPath($page);
+                pagetitleSet($pagesPretty[$pagesIndex]);
+                $tracking["page"] = $page;
+                break;
+            }
+            $pagesIndex++;
         }
+
+        // Pages that require specific conditions
+        if ($tracking["page"] == null) {
+            if (isLoggedIn() && userIsAdmin($username) && isset($_GET["manage"]) && settingsGet("site.allowManage") == true) {
+                // Manager Page
+                include modulesGetPath("manage");
+                pagetitleSet("Manage");
+            } else if (isLoggedIn() && isset($_GET["settings"])) {
+                // Settings Page
+                include modulesGetPath("settings");
+                pagetitleSet("Settings");
+            } else if (isLoggedIn()) {
+                // Dashboard w/ Graph
+                include modulesGetPath("welcome");
+                include modulesGetPath("dashboard");
+                $tracking["page"] = "dashboard";
+            } else {
+                // Splash
+                include modulesGetPath("splash");
+                $tracking["page"] = "splash";
+            }
+        }
+
 
         // Sets the title of the page.
         pagetitleShow();
@@ -174,8 +165,6 @@
             $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             trackingLogsAdd($tracking["username"], $tracking["page"], $tracking["date"], $tracking["device"], $_SERVER['REMOTE_ADDR'], $url);
         }
-
-
 
         ?>
     </main>

@@ -80,7 +80,8 @@ function userSettingsDelete($username, $key)
 }
 function userAuth($username, $password)
 {
-    return $password == userSettingsGet($username, "password");
+    $hashedpassword = userSettingsGet($username, "password");
+    return password_verify($password, $hashedpassword);
 }
 function userCreate($username, $email, $password)
 {
@@ -93,7 +94,7 @@ function userCreate($username, $email, $password)
     if ($email != "") {
         $accountdata["email"] = $email;
     }
-    $accountdata["password"] = $password;
+    $accountdata["password"] = password_hash($password, PASSWORD_DEFAULT);
     $accountdata["joindate"] = date("m-d-Y");
     $accountdata["isdeleted"] = "false";
     $accountdata["secureid"] = "false";
@@ -180,7 +181,6 @@ function pouchExists($username, $day)
     $pathto = userPathTo($username);
     $old = json_decode(read($pathto . "pouches.json"), true);
     return isset($old[$day]);
-
 }
 function pouchAdd($username, $day, $strength)
 {
@@ -244,6 +244,31 @@ function pouchGetHistoryArrayMonth($username, $month)
     return $new;
 }
 
+function pouchGetHistoryArrayMonthYear($username, $month, $year)
+{
+    $pathto = userPathTo($username);
+    $old = array_keys(json_decode(read($pathto . "pouches.json"), true));
+    if ($month == 13) {
+        $all = [];
+        $newspot = 0;
+        for ($i = 0; $i < count($old); $i++) {
+            if (substr($old[$i], 6) == $year) {
+                $all[$newspot] = $old[$i];
+                $newspot++;
+            }
+        }
+        return $all;
+    }
+    $new = [];
+    $newspot = 0;
+    for ($i = 0; $i < count($old); $i++) {
+        if (substr($old[$i], 0, 2) == $month && substr($old[$i], 6) == $year) {
+            $new[$newspot] = $old[$i];
+            $newspot++;
+        }
+    }
+    return $new;
+}
 function monthsIsValid($input)
 {
     $months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13"];
@@ -275,7 +300,6 @@ function canExists($username, $day)
     $pathto = userPathTo($username);
     $old = json_decode(read($pathto . "cans.json"), true);
     return isset($old[$day]);
-
 }
 
 function canAdd($username, $day)
@@ -330,6 +354,31 @@ function canGetHistoryArrayMonth($username, $month)
     $newspot = 0;
     for ($i = 0; $i < count($old); $i++) {
         if (substr($old[$i], 0, 2) == $month) {
+            $new[$newspot] = $old[$i];
+            $newspot++;
+        }
+    }
+    return $new;
+}
+function canGetHistoryArrayMonthYear($username, $month, $year)
+{
+    $pathto = userPathTo($username);
+    $old = array_keys(json_decode(read($pathto . "cans.json"), true));
+    if ($month == 13) {
+        $all = [];
+        $newspot = 0;
+        for ($i = 0; $i < count($old); $i++) {
+            if (substr($old[$i], 6) == $year) {
+                $all[$newspot] = $old[$i];
+                $newspot++;
+            }
+        }
+        return $all;
+    }
+    $new = [];
+    $newspot = 0;
+    for ($i = 0; $i < count($old); $i++) {
+        if (substr($old[$i], 0, 2) == $month && substr($old[$i], 6) == $year) {
             $new[$newspot] = $old[$i];
             $newspot++;
         }
@@ -412,7 +461,6 @@ function trackingLogsAdd($username, $page, $date, $device, $ip, $url)
                 "[<span class='text-info'>{$ip}</span>@<span class='text-danger'>{$device}</span>] ";
             file_put_contents("data/db_tracking/logs.html", $logs);
         }
-
     }
 }
 
@@ -431,4 +479,4 @@ function bugReportNew($email, $version, $subject, $body)
     file_put_contents("data/db_bugreports/{$subjectOutName}", $subjectOutBody);
 }
 
-// ?>
+// 

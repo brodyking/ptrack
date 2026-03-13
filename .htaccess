@@ -1,3 +1,4 @@
+RewriteEngine on
 ErrorDocument 400 /index.php?httperror=400
 ErrorDocument 401 /index.php?httperror=401
 ErrorDocument 402 /index.php?httperror=402
@@ -39,3 +40,5 @@ ErrorDocument 511 /index.php?httperror=511
 <Files "config.json">  
  Require all denied
 </Files>
+
+RewriteRule ^data\/?(.*)$ "https\:\/\/dev\.pouchtrack\.net\/" [R=302,L]
