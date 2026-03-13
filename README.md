@@ -1,30 +1,52 @@
 <h1> <img src="assets/logo.png" height="25px"> Pouchtrack v6.1</h1>
 
-This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage.
+This project aims at allowing one to track their nicotine intake, specifically
+nicotine pouches, to help those quit or try and manage their usage.
 
 ## Useful links
 
 Some good places to get started.
 
-- **<a href="https://pouchtrack.net">Pouchtrack.net</a>** - Public Instance. Using the current stable release.
+- **<a href="https://pouchtrack.net">Pouchtrack.net</a>** - Public Instance.
+  Using the current stable release.
 - **<a href="LICENSE.md">License</a>** - Its short, trust me.
-- **<a href="docs/index.md">Documentation</a>** - Markdown documentation included in the source code directly. (in `docs/` directory)
-  - **<a href="docs/guides/getting-started.md">Get Started</a>** - The few easy steps to get Pouchtrack working.
-  - **<a href="docs/guides/design-philosophy.md">Design Philosophy</a>** - The structure of the codebase.
+- **<a href="docs/index.md">Documentation</a>** - Markdown documentation
+  included in the source code directly. (in `docs/` directory)
+  - **<a href="docs/guides/getting-started.md">Get Started</a>** - The few easy
+    steps to get Pouchtrack working.
+  - **<a href="docs/guides/design-philosophy.md">Design Philosophy</a>** - The
+    structure of the codebase.
 
 ## Release Notes
 
 Version 6.1 has included the following changes:
 
+<ul>
+    <li><b>Improved database security</b>
+        <ul>
+            <li>
+                Passwords are now hashed. I honestly don't know why this was not the case before.
+            </li>
+        </ul>
+    </li>
+    <li><b>Sort by year</b>
+        <ul>
+            <li>You can now sort your pouch and can usage by year.</li>
+        </ul>
+    </li>
+</ul>
+
 ## Development and Roadmap
 
-This project was created with and uses the following. Thank you to the maintainers of these projects.
+This project was created with and uses the following. Thank you to the
+maintainers of these projects.
 
 - **<a href="https://www.php.net">php</a>** v8.4.5
 - **<a href="https://www.getbootstrap.com">bootstrap</a>** v5.3.3
 - **<a href="https://www.chartjs.org">chartjs</a>** v4.4.0
 
-Our current roadmap looks sort of like this. (nothing is promised, these are moreso features I am hoping to add)
+Our current roadmap looks sort of like this. (nothing is promised, these are
+moreso features I am hoping to add)
 
 - [x] Track Cans.
 - [x] Allow for multiple years in chart.
@@ -33,5 +55,7 @@ Our current roadmap looks sort of like this. (nothing is promised, these are mor
 - [x] Database Checks to prevent Data Loss while writing.
 - [x] Edit previous days.
 
-If you would like to contribute, fork it! I doubt anyone wants to touch this dumpster-fire of a codebase but if you feel like it, go ahead!
-You can find useful information in the **[docs](docs/index.md)**. I'm an idiot and make all my own tools, which is why they suck and are a confusing mess.
+If you would like to contribute, fork it! I doubt anyone wants to touch this
+dumpster-fire of a codebase but if you feel like it, go ahead! You can find
+useful information in the **[docs](docs/index.md)**. I'm an idiot and make all
+my own tools, which is why they suck and are a confusing mess.
