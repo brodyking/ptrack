@@ -1,8 +1,8 @@
 {
   "site.name": "Pouchtrack",
-  "site.version": "v6.1",
+  "site.version": "v6.2",
   "site.allowManage": true,
-  "site.isdev": false,
+  "site.isdev": true,
   "database.checkContents": true,
   "tracking.views": true,
   "tracking.logs": true,
