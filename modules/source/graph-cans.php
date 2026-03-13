@@ -7,6 +7,15 @@
         <form method="GET" class="mb-2 input-group" action="/">
             <?php
 
+
+            // Handle Year Logic
+            if (!isset($_GET["cyear"]) || !is_numeric($_GET["cyear"])) {
+                $cansyear = date("Y");
+            } else {
+                $cansyear = $_GET["cyear"];
+            }
+
+            // Handle Month Logic
             if (!isset($_GET["cmonth"])) {
                 $cansmonth = date("m");
             } else if (!monthsIsValid($_GET["cmonth"])) {
@@ -16,40 +25,54 @@
             }
 
             ?>
-            <?php
 
-            if ($cansmonth == "01") {
-                echo '<a class="btn btn-outline-light disabled"><i class="bi bi-rewind-fill"></i></a>';
-            } else {
-                echo '<a href="/?cmonth=' . ($cansmonth - 1) . '" class="btn btn-outline-light"><i class="bi bi-rewind-fill"></i></a>';
-            }
+            <div class="input-group mb-2">
+                <span class="input-group-text">Year</span>
+                <input type="number" name="cyear" class="form-control"
+                    value="<?php echo $cansyear; ?>"
+                    onchange="this.form.submit()"
+                    min="2000" max="2099">
+            </div>
 
-            ?>
 
-            <select onchange="this.form.submit()" class="form-select" name="cmonth" aria-label="Default select example">
+            <div class="input-group">
                 <?php
 
-                $monthslist = monthsGet();
-
-                foreach ($monthslist as $monthoption) {
-                    if ($monthoption[0] == $cansmonth) {
-                        echo '<option selected value="' . $monthoption[0] . '">' . $monthoption[1] . '</option>';
-                    } else {
-                        echo '<option value="' . $monthoption[0] . '">' . $monthoption[1] . '</option>';
-                    }
+                if ($cansmonth == "01") {
+                    echo '<a class="btn btn-outline-light disabled"><i class="bi bi-rewind-fill"></i></a>';
+                } else {
+                    echo '<a href="/?cmonth=' . ($cansmonth - 1) . '" class="btn btn-outline-light"><i class="bi bi-rewind-fill"></i></a>';
                 }
 
                 ?>
-            </select>
-            <?php
 
-            if ($cansmonth == "12") {
-                echo '<a class="btn btn-outline-light disabled"><i class="bi bi-fast-forward-fill"></i></a>';
-            } else {
-                echo '<a href="/?cmonth=' . ($cansmonth + 1) . '" class="btn btn-outline-light"><i class="bi bi-fast-forward-fill"></i></a>';
-            }
 
-            ?>
+                <select onchange="this.form.submit()" class="form-select" name="cmonth" aria-label="Default select example">
+                    <?php
+
+                    $monthslist = monthsGet();
+
+                    foreach ($monthslist as $monthoption) {
+                        if ($monthoption[0] == $cansmonth) {
+                            echo '<option selected value="' . $monthoption[0] . '">' . $monthoption[1] . '</option>';
+                        } else {
+                            echo '<option value="' . $monthoption[0] . '">' . $monthoption[1] . '</option>';
+                        }
+                    }
+
+                    ?>
+                </select>
+
+                <?php
+
+                if ($cansmonth == "12") {
+                    echo '<a class="btn btn-outline-light disabled"><i class="bi bi-fast-forward-fill"></i></a>';
+                } else {
+                    echo '<a href="/?cmonth=' . ($cansmonth + 1) . '" class="btn btn-outline-light"><i class="bi bi-fast-forward-fill"></i></a>';
+                }
+
+                ?>
+            </div>
         </form>
         <canvas id="canschart" style="width:100%;" class="border rounded"></canvas>
         <script src="/assets/js/chart.umd.js"></script>
@@ -59,7 +82,7 @@
 
 
 
-        $history = canGetHistoryArrayMonth($username, $cansmonth);
+        $history = canGetHistoryArrayMonthYear($username, $cansmonth, $cansyear);
         if (sizeof($history) == 0) {
             echo '<script> document.getElementById("canschart").remove();</script>';
             echo "<div class='card-body border rounded mt-2 mb-2' role='alert'>No entries for this month</div>";
@@ -119,7 +142,7 @@
                         padding: 20
                     },
                     animation: {
-                        onComplete: function () {
+                        onComplete: function() {
                             console.log(graphcans.toBase64Image());
                             document.getElementById("cans-export-png").href = graphcans.toBase64Image();
                             document.getElementById("cans-export-png").download = 'cans-pouchtrack.png';
@@ -127,8 +150,6 @@
                     }
                 }
             });
-
-
         </script>
 
 
@@ -161,11 +182,9 @@
                             </th>
                         </tr>
                         <script>
-
                             function cansSetEditDate(date) {
                                 document.getElementById("editcansdate").value = date;
                             }
-
                         </script>
                         <?php
                         for ($i = 0; $i < sizeof($history); $i++) {

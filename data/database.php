@@ -360,6 +360,31 @@ function canGetHistoryArrayMonth($username, $month)
     }
     return $new;
 }
+function canGetHistoryArrayMonthYear($username, $month, $year)
+{
+    $pathto = userPathTo($username);
+    $old = array_keys(json_decode(read($pathto . "cans.json"), true));
+    if ($month == 13) {
+        $all = [];
+        $newspot = 0;
+        for ($i = 0; $i < count($old); $i++) {
+            if (substr($old[$i], 6) == $year) {
+                $all[$newspot] = $old[$i];
+                $newspot++;
+            }
+        }
+        return $all;
+    }
+    $new = [];
+    $newspot = 0;
+    for ($i = 0; $i < count($old); $i++) {
+        if (substr($old[$i], 0, 2) == $month && substr($old[$i], 6) == $year) {
+            $new[$newspot] = $old[$i];
+            $newspot++;
+        }
+    }
+    return $new;
+}
 
 // TRACKING
 

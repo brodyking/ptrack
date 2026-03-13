@@ -1,6 +1,6 @@
 # Database
 
-**Page Modified**: March 9, 2026\
+**Page Modified**: March 13, 2026\
 **Author**: Brody King\
 **Type**: Reference
 
@@ -129,16 +129,17 @@ Inside of `account.json`, there are multiple variables pre-defined.
 
 ### Can Functions
 
-| Function                    | Parameter                      | Description                                                                      |
-| --------------------------- | ------------------------------ | -------------------------------------------------------------------------------- |
-| `canInit()`                 | `$username`, `$day`            | Creates a blank day on `$day`.                                                   |
-| `canExists()`               | `$username`, `$day`            | Checks if the day exists in `cans.json`.                                         |
-| `canAdd()`                  | `$username`, `$day`            | Adds a new can to `cans.json`                                                    |
-| `canSet()`                  | `$username`, `$day`, `$amount` | Sets the amount of cans for the day specified.                                   |
-| `canReset()`                | `$username`                    | Replaces `cans.json` with an empty array.                                        |
-| `canGet()`                  | `$username`, `$day`            | Returns the amount of cans used on `$day`                                        |
-| `canGetHistoryArray()`      | `$username`                    | Returns an array of all dates with entries of cans.                              |
-| `canGetHistoryArrayMonth()` | `$username`, `$month`          | Same as above, but takes in a month. Months are `01`-`12`. (`13` Shows all time) |
+| Function                        | Parameter                      | Description                                                                      |
+| ------------------------------- | ------------------------------ | -------------------------------------------------------------------------------- |
+| `canInit()`                     | `$username`, `$day`            | Creates a blank day on `$day`.                                                   |
+| `canExists()`                   | `$username`, `$day`            | Checks if the day exists in `cans.json`.                                         |
+| `canAdd()`                      | `$username`, `$day`            | Adds a new can to `cans.json`                                                    |
+| `canSet()`                      | `$username`, `$day`, `$amount` | Sets the amount of cans for the day specified.                                   |
+| `canReset()`                    | `$username`                    | Replaces `cans.json` with an empty array.                                        |
+| `canGet()`                      | `$username`, `$day`            | Returns the amount of cans used on `$day`                                        |
+| `canGetHistoryArray()`          | `$username`                    | Returns an array of all dates with entries of cans.                              |
+| `canGetHistoryArrayMonth()`     | `$username`, `$month`          | Same as above, but takes in a month. Months are `01`-`12`. (`13` Shows all time) |
+| `canGetHistoryArrayMonthYear()` | `$username`, `$month`, `$year` | Same as above, but takes in the year aswell.                                     |
 
 ### Month/Date Functions
 
