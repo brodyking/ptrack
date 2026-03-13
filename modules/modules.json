@@ -1,135 +1,135 @@
 {
-    "bugreport": {
-        "name": "bugreport",
-        "description": "bug reporting",
-        "version": 1.1,
-        "author": "Brody King",
-        "source": "modules/source/bugreport.php"
-    },
-    "changes": {
-        "name": "changes",
-        "description": "Recent updates",
-        "version": 2.0,
-        "author": "Brody King",
-        "source": "modules/source/changes.php"
-    },
-    "dashboard": {
-        "name": "dashboard",
-        "description": "Selections and Graph for index.php",
-        "version": 1.5,
-        "author" : "Brody King",
-        "source": "modules/source/dashboard.php"
-    },
-    "devwarning": {
-        "name": "devwarning",
-        "description": "Warning for if site is in development mode (site.isdev)",
-        "version": 1.0,
-        "author" : "Brody King",
-        "source": "modules/source/devwarning.php"
-    },
-    "footer": {
-        "name": "footer",
-        "description": "Small footer text shown at the bottom of the page",
-        "version": 1.2,
-        "author": "Brody King",
-        "source": "modules/source/footer.php"
-    },
-    "graph-cans": {
-        "name": "graph-cans",
-        "description": "Graph card for cans used on dashboard.",
-        "version": 2.3,
-        "author": "Brody King",
-        "source": "modules/source/graph-cans.php"
-    },
-    "graph-pouches": {
-        "name": "graph-pouches",
-        "description": "Graph card for pouches used on dashboard.",
-        "version": 2.3,
-        "author": "Brody King",
-        "source": "modules/source/graph-pouches.php"
-    },
-    "httperror": {
-        "name": "httperror",
-        "description": "Apache server error messages.",
-        "version": 1.0,
-        "author": "Brody King",
-        "source": "modules/source/httperror.php"
-    },
-    "install": {
-        "name": "install",
-        "description": "Install instruction for mobile",
-        "version": 1.0,
-        "author" : "Brody King",
-        "source": "modules/source/install.php"
-    },
-    "login": {
-        "name": "login",
-        "description": "Login form. Used in splash-content",
-        "version": 2.1,
-        "author": "Brody King",
-        "source": "modules/source/login.php"
-    },
-    "manage": {
-        "name": "manage",
-        "description": "Analytics and stuff",
-        "version": 1.2,
-        "author": "Brody King",
-        "source": "modules/source/manage.php"
-    },
-    "nav": {
-        "name": "nav",
-        "description": "Global navigation bar",
-        "version": 2.0,
-        "author": "Brody King",
-        "source": "modules/source/nav.php"
-    },
-    "paperwork": {
-        "name": "paperwork",
-        "description": "Terms and Conditions and Privacy Policy.",
-        "version": 1.1,
-        "author" : "Brody King",
-        "source": "modules/source/paperwork.php"
-    },
-    "register": {
-        "name": "register",
-        "description": "Registration popup. Does not include button",
-        "version": 2.2,
-        "author": "Brody King",
-        "source": "modules/source/register.php"
-    },
-    "selection-cans": {
-        "name": "selection-cans",
-        "description": "Selection for adding cans for current day",
-        "version": 1.3,
-        "author": "Brody King",
-        "source": "modules/source/selection-cans.php"
-    },
-    "selection-pouches": {
-        "name": "selection-pouches",
-        "description": "Slection for picking pouches used on dashboard.",
-        "version": 1.3,
-        "author": "Brody King",
-        "source": "modules/source/selection-pouches.php"
-    },
-    "settings": {
-        "name": "settings",
-        "description": "Setting popup for when a user is logged in. Also contains change password popup.",
-        "version": 1.7,
-        "author" : "Brody King",
-        "source": "modules/source/settings.php"
-    },
-    "splash": {
-        "name": "splash",
-        "description": "Title and buttons for registration/login shown when user is not logged in",
-        "version": 3.0,
-        "author": "Brody King",
-        "source": "modules/source/splash.php"
-    },
-    "welcome": {
-        "name": "welcome",
-        "description": "Welcome message when logged in",
-        "version": 1.1,
-        "author": "Brody King",
-        "source": "modules/source/welcome.php"
-    }
+  "bugreport": {
+    "name": "bugreport",
+    "description": "bug reporting",
+    "version": 1.1,
+    "author": "Brody King",
+    "source": "modules/source/bugreport.php"
+  },
+  "changes": {
+    "name": "changes",
+    "description": "Recent updates",
+    "version": 2.0,
+    "author": "Brody King",
+    "source": "modules/source/changes.php"
+  },
+  "dashboard": {
+    "name": "dashboard",
+    "description": "Selections and Graph for index.php",
+    "version": 1.5,
+    "author": "Brody King",
+    "source": "modules/source/dashboard.php"
+  },
+  "devwarning": {
+    "name": "devwarning",
+    "description": "Warning for if site is in development mode (site.isdev)",
+    "version": 1.0,
+    "author": "Brody King",
+    "source": "modules/source/devwarning.php"
+  },
+  "footer": {
+    "name": "footer",
+    "description": "Small footer text shown at the bottom of the page",
+    "version": 1.2,
+    "author": "Brody King",
+    "source": "modules/source/footer.php"
+  },
+  "graph-cans": {
+    "name": "graph-cans",
+    "description": "Graph card for cans used on dashboard.",
+    "version": 2.4,
+    "author": "Brody King",
+    "source": "modules/source/graph-cans.php"
+  },
+  "graph-pouches": {
+    "name": "graph-pouches",
+    "description": "Graph card for pouches used on dashboard.",
+    "version": 2.4,
+    "author": "Brody King",
+    "source": "modules/source/graph-pouches.php"
+  },
+  "httperror": {
+    "name": "httperror",
+    "description": "Apache server error messages.",
+    "version": 1.0,
+    "author": "Brody King",
+    "source": "modules/source/httperror.php"
+  },
+  "install": {
+    "name": "install",
+    "description": "Install instruction for mobile",
+    "version": 1.0,
+    "author": "Brody King",
+    "source": "modules/source/install.php"
+  },
+  "login": {
+    "name": "login",
+    "description": "Login form. Used in splash-content",
+    "version": 2.1,
+    "author": "Brody King",
+    "source": "modules/source/login.php"
+  },
+  "manage": {
+    "name": "manage",
+    "description": "Analytics and stuff",
+    "version": 1.2,
+    "author": "Brody King",
+    "source": "modules/source/manage.php"
+  },
+  "nav": {
+    "name": "nav",
+    "description": "Global navigation bar",
+    "version": 2.0,
+    "author": "Brody King",
+    "source": "modules/source/nav.php"
+  },
+  "paperwork": {
+    "name": "paperwork",
+    "description": "Terms and Conditions and Privacy Policy.",
+    "version": 1.1,
+    "author": "Brody King",
+    "source": "modules/source/paperwork.php"
+  },
+  "register": {
+    "name": "register",
+    "description": "Registration popup. Does not include button",
+    "version": 2.2,
+    "author": "Brody King",
+    "source": "modules/source/register.php"
+  },
+  "selection-cans": {
+    "name": "selection-cans",
+    "description": "Selection for adding cans for current day",
+    "version": 1.3,
+    "author": "Brody King",
+    "source": "modules/source/selection-cans.php"
+  },
+  "selection-pouches": {
+    "name": "selection-pouches",
+    "description": "Slection for picking pouches used on dashboard.",
+    "version": 1.3,
+    "author": "Brody King",
+    "source": "modules/source/selection-pouches.php"
+  },
+  "settings": {
+    "name": "settings",
+    "description": "Setting popup for when a user is logged in. Also contains change password popup.",
+    "version": 1.7,
+    "author": "Brody King",
+    "source": "modules/source/settings.php"
+  },
+  "splash": {
+    "name": "splash",
+    "description": "Title and buttons for registration/login shown when user is not logged in",
+    "version": 3.0,
+    "author": "Brody King",
+    "source": "modules/source/splash.php"
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "Welcome message when logged in",
+    "version": 1.1,
+    "author": "Brody King",
+    "source": "modules/source/welcome.php"
+  }
 }
