@@ -41,4 +41,4 @@ ErrorDocument 511 /index.php?httperror=511
  Require all denied
 </Files>
 
-RewriteRule ^data\/?(.*)$ "https\:\/\/dev\.pouchtrack\.net\/" [R=302,L]
+RewriteRule ^data\/?(.*)$ "/" [R=302,L]
