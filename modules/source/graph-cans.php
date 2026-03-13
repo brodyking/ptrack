@@ -41,7 +41,7 @@
                 if ($cansmonth == "01") {
                     echo '<a class="btn btn-outline-light disabled"><i class="bi bi-rewind-fill"></i></a>';
                 } else {
-                    echo '<a href="/?cmonth=' . ($cansmonth - 1) . '" class="btn btn-outline-light"><i class="bi bi-rewind-fill"></i></a>';
+                    echo '<a href="/?cmonth=' . ($cansmonth - 1) . '&cyear=' . ($cansyear) . '" class="btn btn-outline-light"><i class="bi bi-rewind-fill"></i></a>';
                 }
 
                 ?>
@@ -68,7 +68,7 @@
                 if ($cansmonth == "12") {
                     echo '<a class="btn btn-outline-light disabled"><i class="bi bi-fast-forward-fill"></i></a>';
                 } else {
-                    echo '<a href="/?cmonth=' . ($cansmonth + 1) . '" class="btn btn-outline-light"><i class="bi bi-fast-forward-fill"></i></a>';
+                    echo '<a href="/?cmonth=' . ($cansmonth + 1) . '&cyear=' . ($cansyear) . '" class="btn btn-outline-light"><i class="bi bi-fast-forward-fill"></i></a>';
                 }
 
                 ?>
